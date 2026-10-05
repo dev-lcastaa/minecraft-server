@@ -1,0 +1,34 @@
+name: minecraft-forge
+
+services:
+  minecraft:
+    image: ${MINECRAFT_IMAGE:-minecraft-forge:local}
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      EULA: ${EULA:?Set EULA=TRUE only after accepting the Minecraft EULA}
+      FORGE_VERSION: ${FORGE_VERSION:-recommended}
+      MEMORY: "14G"
+      ENABLE_RCON: "TRUE"
+      RCON_PASSWORD: ${RCON_PASSWORD:?Set a strong RCON_PASSWORD outside source control}
+      CFG_RCON_PASSWORD: ${RCON_PASSWORD:?Set a strong RCON_PASSWORD outside source control}
+    ports:
+      - "25565:25565"
+      - "${RCON_BIND_IP:-192.168.1.208}:25575:25575"
+    volumes:
+      - minecraft-data:/data
+    restart: unless-stopped
+    mem_limit: 16g
+    memswap_limit: 16g
+    stop_grace_period: 2m
+    healthcheck:
+      test: ["CMD", "mc-health"]
+      interval: 30s
+      timeout: 10s
+      start_period: 5m
+      retries: 10
+
+volumes:
+  minecraft-data:
+    name: minecraft-forge-data
