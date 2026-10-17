@@ -52,6 +52,15 @@ discarded merely because client mods also use them. Every added JAR matched a
 published Modrinth file hash; client-only exclusions also use project documentation
 and the earlier exact-file review where appropriate.
 
+The subsequent dedicated-server launch exposed a runtime defect in
+`ToadLib-1.20.1-1.3.5S-3.jar` (internal version `1.3.5S-2`): it loads
+`com.mr_toad.lib.api.config.ToadConfig`, which is annotated for the client only.
+This unused library was removed, leaving **231 top-level JARs**. No other
+installed mod, including nested libraries, declares a ToadLib dependency or
+references its classes. This is a broken-build exclusion, not a classification
+of all ToadLib versions as client-only. Rebuild and redeploy to remove the old
+JAR from the persistent server's mod directory; do not delete the world volume.
+
 Shared mods remain, including AppleSkin, Jade, JEI, ShulkerBoxTooltip, Xaero's
 maps, EnhancedVisuals, AtomicStryker's Dynamic Lights, and What Are They Up To.
 Their server components provide synchronization or other functionality.
