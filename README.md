@@ -24,18 +24,33 @@ server, including optional server features and shared libraries. A dependency's
 not prove that the declaring mod supports dedicated servers. Check the project's
 documentation or distribution metadata when its supported side is unclear.
 
-Keep Connector and Forgified Fabric API: Simple Copper Pipes is a Fabric mod
-in this pack, and its FrozenLib dependency is bundled inside its JAR. Do not
+Keep Connector and Forgified Fabric API: Hardcore Totem Nerf is a Fabric mod
+in this pack, and its MidnightLib dependency is bundled inside its JAR. Do not
 replace Forgified Fabric API with the regular Fabric API. Cloth Config is also
 required on the server by Bosses of Mass Destruction, even though several
 client-only mods use it too.
 
 The initial review inspected 172 top-level JARs and 145 nested archives and
 removed 27 client-only JARs, leaving 145 top-level JARs for the server.
-[`client-only-mods.json`](./client-only-mods.json) records the exact removed
+[`client-only-mods.json`](./client-only-mods.json) records the exact excluded
 filenames and verification sources. It is a review record, not an automatic
 filter for future mod versions. Keep those removed mods in your separate client
 installation if you want their UI and rendering features.
+
+The October 17, 2026 import reviewed 225 incoming JARs by filename, internal mod
+ID, bundled dependencies, and published side/version metadata. It added 87 JARs,
+bringing the server to 232 top-level JARs, without replacing or removing any
+installed JARs. It skipped 98 duplicates/alternate versions, 39 client-only JARs,
+and Canary, which is an alternative Lithium port to the installed Radium.
+Even differently named versions and same-named files with different hashes were
+left unchanged when their mod was already installed.
+
+Additions include Alex's Caves, Mekanism, Quark/Zeta, Oh The Biomes We've Gone,
+Serene Seasons, Weather2, Bountiful, structure/content mods, and their libraries.
+Shared libraries and optional server components were retained rather than
+discarded merely because client mods also use them. Every added JAR matched a
+published Modrinth file hash; client-only exclusions also use project documentation
+and the earlier exact-file review where appropriate.
 
 Shared mods remain, including AppleSkin, Jade, JEI, ShulkerBoxTooltip, Xaero's
 maps, EnhancedVisuals, AtomicStryker's Dynamic Lights, and What Are They Up To.
@@ -48,7 +63,11 @@ The dependency review found no missing declared mandatory server dependencies,
 including nested libraries and the Connector/Forgified Fabric API compatibility
 layer. This is not a runtime compatibility guarantee: verify startup through the
 Compose health check and inspect the server logs after deploying. Current retained
-mods require Forge **47.3.0 or newer**; use a compatible version matching the clients.
+mods require Forge **47.4.0 or newer**; use a compatible version matching the clients.
+Forge's recommended 1.20.1 release at the time of this import is **47.4.10**.
+The import's static checks found no missing or out-of-range mandatory server
+dependencies and no duplicate top-level mod IDs; a dedicated-server startup test
+is still required after rebuilding and deploying.
 
 The Docker build copies this directory into `/mods` in the image. On startup,
 the base image copies the bundled mods into `/data/mods`. Old mod JARs are removed
@@ -78,8 +97,10 @@ whitelist is disabled.
 Edit this file, then rebuild and redeploy to apply settings. Change the MOTD here,
 not in `.env`. Keep `server-ip` empty so the server can bind inside the container.
 If you change `server-port`, update the Compose port mapping and health-check
-configuration to match. Keep `level-name=world` to continue using the same world;
-changing the seed does not regenerate an existing world.
+configuration to match. The configured world folder is `level-name=new-world`;
+changing this setting selects a different world folder rather than deleting the
+old one. Keep it unchanged to continue that world. Changing the seed does not
+regenerate an existing world.
 
 ## Run locally
 
