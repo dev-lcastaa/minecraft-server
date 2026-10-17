@@ -82,8 +82,42 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                sh 'docker compose up -d --no-build --wait --wait-timeout 900'
-                sh 'docker compose ps'
+                sh '''
+                    set -eu
+                    START=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+                    docker compose up -d --no-build
+
+                    # Stream live container logs into the Jenkins console while waiting for health.
+                    docker compose logs --no-color --follow --since "$START" minecraft &
+                    LOGS_PID=$!
+                    trap 'kill "$LOGS_PID" 2>/dev/null || true' EXIT
+
+                    CONTAINER_ID=$(docker compose ps -q minecraft)
+                    DEADLINE=$(( $(date +%s) + 900 ))
+                    while :; do
+                        STATUS=$(docker inspect -f '{{.State.Status}}|{{if .State.Health}}{{.State.Health.Status}}{{end}}' "$CONTAINER_ID")
+                        case "$STATUS" in
+                            *"|healthy")
+                                echo "Minecraft server is healthy."
+                                break
+                                ;;
+                            *"|unhealthy"|exited*|dead*)
+                                echo "Minecraft server failed to start (state: $STATUS)." >&2
+                                exit 1
+                                ;;
+                        esac
+                        if [ "$(date +%s)" -ge "$DEADLINE" ]; then
+                            echo "Timed out waiting for the Minecraft server to become healthy (state: $STATUS)." >&2
+                            exit 1
+                        fi
+                        sleep 5
+                    done
+
+                    # Let the log follower flush the final lines before stopping it.
+                    sleep 2
+                    kill "$LOGS_PID" 2>/dev/null || true
+                    docker compose ps
+                '''
             }
             post {
                 failure {
