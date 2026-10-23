@@ -1,0 +1,381 @@
+﻿{
+    "reviewed_on":  "2026-10-22",
+    "scope":  "Current imported pack only; only confirmed client-only top-level JARs removed.",
+    "original_jar_count":  243,
+    "removed_jar_count":  47,
+    "retained_jar_count":  196,
+    "policy":  "Retain server-only, client/server, optional-server, and unconfirmed mods; do not remove shared libraries merely because client mods use them.",
+    "validation":  "Scanned metadata in 342 top-level/nested mod archives. No retained mandatory server dependency references a removed mod ID. This is not a dedicated-server startup test or a full compatibility guarantee.",
+    "removed":  [
+                    {
+                        "file":  "AdvancementPlaques-1.20.1-forge-1.6.9.jar",
+                        "sha1":  "6e7b01db61f9646977bd06e9d85492a667d4a8bd",
+                        "project":  "https://modrinth.com/mod/advancement-plaques",
+                        "exact_file_metadata":  "https://api.modrinth.com/v2/version_file/6e7b01db61f9646977bd06e9d85492a667d4a8bd?algorithm=sha1",
+                        "client_side":  "required",
+                        "server_side":  "unsupported"
+                    },
+                    {
+                        "file":  "AmbientSounds_FORGE_v6.3.11_mc1.20.1.jar",
+                        "sha1":  "61f0bcbfd404de4aeb0627b5b83a72d069fb1825",
+                        "project":  "https://modrinth.com/mod/ambientsounds",
+                        "exact_file_metadata":  "https://api.modrinth.com/v2/version_file/61f0bcbfd404de4aeb0627b5b83a72d069fb1825?algorithm=sha1",
+                        "client_side":  "required",
+                        "server_side":  "unsupported"
+                    },
+                    {
+                        "file":  "BetterAdvancements-Forge-1.20.1-0.6.0.73.jar",
+                        "sha1":  "a62ed641fe95d9fea041dea8689f5a037aece597",
+                        "project":  "https://modrinth.com/mod/better-advancements",
+                        "exact_file_metadata":  "https://api.modrinth.com/v2/version_file/a62ed641fe95d9fea041dea8689f5a037aece597?algorithm=sha1",
+                        "client_side":  "required",
+                        "server_side":  "unsupported"
+                    },
+                    {
+                        "file":  "betterbiomeblend-forge-1.20.1-1.4.0.jar",
+                        "sha1":  "dddd13b1f45cd89bd17c4ad5519eb09bbe925079",
+                        "project":  "https://modrinth.com/mod/better-biome-blend",
+                        "exact_file_metadata":  "https://api.modrinth.com/v2/version_file/dddd13b1f45cd89bd17c4ad5519eb09bbe925079?algorithm=sha1",
+                        "client_side":  "required",
+                        "server_side":  "unsupported"
+                    },
+                    {
+                        "file":  "BetterF3-7.0.2-Forge-1.20.1.jar",
+                        "sha1":  "b65cba59e87dc6c6d1aa9c47f09b9996b4e5075d",
+                        "project":  "https://modrinth.com/mod/betterf3",
+                        "exact_file_metadata":  "https://api.modrinth.com/v2/version_file/b65cba59e87dc6c6d1aa9c47f09b9996b4e5075d?algorithm=sha1",
+                        "client_side":  "required",
+                        "server_side":  "unsupported"
+                    },
+                    {
+                        "file":  "BetterThirdPerson-Forge-1.20-1.9.0.jar",
+                        "sha1":  "0b0a3ff3b244fa191b3f9580547071dee46f7276",
+                        "project":  "https://modrinth.com/mod/better-third-person",
+                        "exact_file_metadata":  "https://api.modrinth.com/v2/version_file/0b0a3ff3b244fa191b3f9580547071dee46f7276?algorithm=sha1",
+                        "client_side":  "required",
+                        "server_side":  "unsupported"
+                    },
+                    {
+                        "file":  "Better_Modlist-20.1.1-all.jar",
+                        "sha1":  "4fd43f06e400dcfc06f0659ee1caca7f60a77d7d",
+                        "project":  "https://modrinth.com/mod/better-modlist",
+                        "exact_file_metadata":  "https://api.modrinth.com/v2/version_file/4fd43f06e400dcfc06f0659ee1caca7f60a77d7d?algorithm=sha1",
+                        "client_side":  "required",
+                        "server_side":  "unsupported"
+                    },
+                    {
+                        "file":  "Boat-Item-View-Forge-1.20.1-0.0.5.jar",
+                        "sha1":  "8367bf496550dff3c9ed957df134201d550700fc",
+                        "project":  "https://modrinth.com/mod/boat-item-view",
+                        "exact_file_metadata":  "https://api.modrinth.com/v2/version_file/8367bf496550dff3c9ed957df134201d550700fc?algorithm=sha1",
+                        "client_side":  "required",
+                        "server_side":  "unsupported"
+                    },
+                    {
+                        "file":  "brb-1.10.0-rc5+1.20.0-1.jar",
+                        "sha1":  "d8b97895d15fb79335965bf7b59c1380963e8471",
+                        "project":  "https://modrinth.com/mod/brb",
+                        "exact_file_metadata":  "https://api.modrinth.com/v2/version_file/d8b97895d15fb79335965bf7b59c1380963e8471?algorithm=sha1",
+                        "client_side":  "required",
+                        "server_side":  "unsupported"
+                    },
+                    {
+                        "file":  "BridgingMod-2.5.1+1.20.1.forge-release.jar",
+                        "sha1":  "8336aa12271473fa9ef1850215d38627b789de77",
+                        "project":  "https://modrinth.com/mod/bridging-mod",
+                        "exact_file_metadata":  "https://api.modrinth.com/v2/version_file/8336aa12271473fa9ef1850215d38627b789de77?algorithm=sha1",
+                        "client_side":  "required",
+                        "server_side":  "unsupported"
+                    },
+                    {
+                        "file":  "chatanimation-forge-1.3.5+mc1.20.1.jar",
+                        "sha1":  "814537aa51bfe0446f50ac466f6935a5f80c2b22",
+                        "project":  "https://modrinth.com/mod/chatanimation",
+                        "exact_file_metadata":  "https://api.modrinth.com/v2/version_file/814537aa51bfe0446f50ac466f6935a5f80c2b22?algorithm=sha1",
+                        "client_side":  "required",
+                        "server_side":  "unsupported"
+                    },
+                    {
+                        "file":  "chat_heads-0.15.7-forge-1.20.jar",
+                        "sha1":  "80582e413216eb014d83252b05c731a4a151fe9b",
+                        "project":  "https://modrinth.com/mod/chat-heads",
+                        "exact_file_metadata":  "https://api.modrinth.com/v2/version_file/80582e413216eb014d83252b05c731a4a151fe9b?algorithm=sha1",
+                        "client_side":  "required",
+                        "server_side":  "unsupported"
+                    },
+                    {
+                        "file":  "Clear-Water-2.1.jar",
+                        "sha1":  "52398c73662b66dae4d47d960236e37e0e980281",
+                        "project":  "https://modrinth.com/mod/clear-water",
+                        "exact_file_metadata":  "https://api.modrinth.com/v2/version_file/52398c73662b66dae4d47d960236e37e0e980281?algorithm=sha1",
+                        "client_side":  "required",
+                        "server_side":  "unsupported"
+                    },
+                    {
+                        "file":  "continuity-3.0.0+1.20.1.forge.jar",
+                        "sha1":  "816c1bb15c3686f67143dabced87bd4811cc43d2",
+                        "project":  "https://modrinth.com/mod/continuity",
+                        "exact_file_metadata":  "https://api.modrinth.com/v2/version_file/816c1bb15c3686f67143dabced87bd4811cc43d2?algorithm=sha1",
+                        "client_side":  "required",
+                        "server_side":  "unsupported"
+                    },
+                    {
+                        "file":  "CrashAssistant-forge-1.19-1.20.1-1.11.12.jar",
+                        "sha1":  "b309bd4803d5fcf27397b5ea60bbe4bb332bc809",
+                        "project":  "https://modrinth.com/mod/crash-assistant",
+                        "exact_file_metadata":  "https://api.modrinth.com/v2/version_file/b309bd4803d5fcf27397b5ea60bbe4bb332bc809?algorithm=sha1",
+                        "client_side":  "required",
+                        "server_side":  "unsupported"
+                    },
+                    {
+                        "file":  "CullLessLeaves-Reforged-1.20.1-1.0.5.jar",
+                        "sha1":  "71b1603071461e036a3ba2aaeeb52cc10fa3d348",
+                        "project":  "https://modrinth.com/mod/cull-less-leaves-reforged",
+                        "exact_file_metadata":  "https://api.modrinth.com/v2/version_file/71b1603071461e036a3ba2aaeeb52cc10fa3d348?algorithm=sha1",
+                        "client_side":  "required",
+                        "server_side":  "unsupported"
+                    },
+                    {
+                        "file":  "CutThrough-v8.0.2-1.20.1-Forge.jar",
+                        "sha1":  "47b151e9a38fa6052671cc74bb21ffd7a8494d41",
+                        "project":  "https://modrinth.com/mod/cut-through",
+                        "exact_file_metadata":  "https://api.modrinth.com/v2/version_file/47b151e9a38fa6052671cc74bb21ffd7a8494d41?algorithm=sha1",
+                        "client_side":  "required",
+                        "server_side":  "unsupported"
+                    },
+                    {
+                        "file":  "darkness-forge-1.20.1-2.0.103-fork.jar",
+                        "sha1":  "56be989675f110d74c04567c4ccc3c1941f7472c",
+                        "evidence":  "Embedded META-INF/mods.toml identifies True Darkness; javap of grondag.darkness.DarknessMod shows unconditional client ConfigScreenHandler registration; bundled mixins target client lighting/rendering classes."
+                    },
+                    {
+                        "file":  "durabilitytooltip-1.2.0-forge-mc1.20.jar",
+                        "sha1":  "e909cb910899e0ea38ec987e536345dc5c0822f9",
+                        "project":  "https://modrinth.com/mod/durability-tooltip",
+                        "exact_file_metadata":  "https://api.modrinth.com/v2/version_file/e909cb910899e0ea38ec987e536345dc5c0822f9?algorithm=sha1",
+                        "client_side":  "required",
+                        "server_side":  "unsupported"
+                    },
+                    {
+                        "file":  "EBE-1.20-1.20.1-0.9.1B.jar",
+                        "sha1":  "581ac917ce1708a708fe5c66eef82e1978972743",
+                        "project":  "https://modrinth.com/mod/ebe-forge",
+                        "exact_file_metadata":  "https://api.modrinth.com/v2/version_file/581ac917ce1708a708fe5c66eef82e1978972743?algorithm=sha1",
+                        "client_side":  "required",
+                        "server_side":  "unsupported"
+                    },
+                    {
+                        "file":  "EffectTimerPlus-Forge-1.20.1-1.1.1.jar",
+                        "sha1":  "236247054bd3fa6a727c4ada0c0ffe660dd2cb73",
+                        "project":  "https://modrinth.com/mod/effecttimerplus",
+                        "exact_file_metadata":  "https://api.modrinth.com/v2/version_file/236247054bd3fa6a727c4ada0c0ffe660dd2cb73?algorithm=sha1",
+                        "client_side":  "required",
+                        "server_side":  "unsupported"
+                    },
+                    {
+                        "file":  "embeddium-0.3.31+mc1.20.1.jar",
+                        "sha1":  "bb2fa8f3e493af16af9160d049f96c614a1faf2f",
+                        "project":  "https://modrinth.com/mod/embeddium",
+                        "exact_file_metadata":  "https://api.modrinth.com/v2/version_file/bb2fa8f3e493af16af9160d049f96c614a1faf2f?algorithm=sha1",
+                        "client_side":  "required",
+                        "server_side":  "unsupported"
+                    },
+                    {
+                        "file":  "enhanced_boss_bars-1.1.2-1.20.1-forge.jar",
+                        "sha1":  "7bdeb7ebcec80b0ebed73fa124fbeaebb5d7b2de",
+                        "project":  "https://modrinth.com/mod/enhanced-boss-bars-mod",
+                        "exact_file_metadata":  "https://api.modrinth.com/v2/version_file/7bdeb7ebcec80b0ebed73fa124fbeaebb5d7b2de?algorithm=sha1",
+                        "client_side":  "required",
+                        "server_side":  "unsupported"
+                    },
+                    {
+                        "file":  "entityculling-forge-1.11.3-mc1.20.1.jar",
+                        "sha1":  "d3c513e88ef9f5cdd7e27d17d923d4dca69c6d55",
+                        "project":  "https://modrinth.com/mod/entityculling",
+                        "exact_file_metadata":  "https://api.modrinth.com/v2/version_file/d3c513e88ef9f5cdd7e27d17d923d4dca69c6d55?algorithm=sha1",
+                        "client_side":  "required",
+                        "server_side":  "unsupported"
+                    },
+                    {
+                        "file":  "entity_model_features-3.3.12-1.20.1-forge.jar",
+                        "sha1":  "adcec598039ec59a805a974de9d23ff5eede8299",
+                        "project":  "https://modrinth.com/mod/entity-model-features",
+                        "exact_file_metadata":  "https://api.modrinth.com/v2/version_file/adcec598039ec59a805a974de9d23ff5eede8299?algorithm=sha1",
+                        "client_side":  "required",
+                        "server_side":  "unsupported"
+                    },
+                    {
+                        "file":  "entity_texture_features-7.2.6-1.20.1-forge.jar",
+                        "sha1":  "61f8c27ea487064f674a587780f3b6f24f22a74f",
+                        "project":  "https://modrinth.com/mod/entitytexturefeatures",
+                        "exact_file_metadata":  "https://api.modrinth.com/v2/version_file/61f8c27ea487064f674a587780f3b6f24f22a74f?algorithm=sha1",
+                        "client_side":  "required",
+                        "server_side":  "unsupported"
+                    },
+                    {
+                        "file":  "farsight-1.20.1-5.5.1.jar",
+                        "sha1":  "471274974706617095b5161ed503210f3088af6d",
+                        "evidence":  "Embedded META-INF/mods.toml describes client-side view distance independent of server settings; entrypoint, client chunk cache handlers, and farsight.mixins.json implement client rendering/chunk retention."
+                    },
+                    {
+                        "file":  "fast-ip-ping-v1.0.12-mc1.20.4-forge.jar",
+                        "sha1":  "64414cc4229c909af4095ab5e8a4f3762cd55185",
+                        "project":  "https://modrinth.com/mod/fast-ip-ping",
+                        "exact_file_metadata":  "https://api.modrinth.com/v2/version_file/64414cc4229c909af4095ab5e8a4f3762cd55185?algorithm=sha1",
+                        "client_side":  "required",
+                        "server_side":  "unsupported"
+                    },
+                    {
+                        "file":  "firstperson-forge-2.7.3-mc1.20.1.jar",
+                        "sha1":  "229a85332b026a027e960919a263742f1eafbbc2",
+                        "project":  "https://modrinth.com/mod/first-person-model",
+                        "exact_file_metadata":  "https://api.modrinth.com/v2/version_file/229a85332b026a027e960919a263742f1eafbbc2?algorithm=sha1",
+                        "client_side":  "required",
+                        "server_side":  "unsupported"
+                    },
+                    {
+                        "file":  "FpsReducer2-forge-1.20.1-2.5.1.jar",
+                        "sha1":  "4920a2e1d17090007179a568181624847fba0993",
+                        "project":  "https://modrinth.com/mod/fps-reducer",
+                        "exact_file_metadata":  "https://api.modrinth.com/v2/version_file/4920a2e1d17090007179a568181624847fba0993?algorithm=sha1",
+                        "client_side":  "required",
+                        "server_side":  "unsupported"
+                    },
+                    {
+                        "file":  "fusion-1.3.16-forge-mc1.20.1.jar",
+                        "sha1":  "bdaea06e0900a21d01b47389f256c99875f5824e",
+                        "project":  "https://modrinth.com/mod/fusion-connected-textures",
+                        "exact_file_metadata":  "https://api.modrinth.com/v2/version_file/bdaea06e0900a21d01b47389f256c99875f5824e?algorithm=sha1",
+                        "client_side":  "required",
+                        "server_side":  "unsupported"
+                    },
+                    {
+                        "file":  "ImmediatelyFast-Forge-1.5.5+1.20.4.jar",
+                        "sha1":  "9eacd407b7dea636d375dc47335d92f616484ea2",
+                        "project":  "https://modrinth.com/mod/immediatelyfast",
+                        "exact_file_metadata":  "https://api.modrinth.com/v2/version_file/9eacd407b7dea636d375dc47335d92f616484ea2?algorithm=sha1",
+                        "client_side":  "required",
+                        "server_side":  "unsupported"
+                    },
+                    {
+                        "file":  "InventoryProfilesNext-forge-1.20-1.10.20.jar",
+                        "sha1":  "979e74fa10b24a7d7c4d9aeb5824b80f4f9235cf",
+                        "project":  "https://modrinth.com/mod/inventory-profiles-next",
+                        "exact_file_metadata":  "https://api.modrinth.com/v2/version_file/979e74fa10b24a7d7c4d9aeb5824b80f4f9235cf?algorithm=sha1",
+                        "client_side":  "required",
+                        "server_side":  "unsupported"
+                    },
+                    {
+                        "file":  "Ixeris-4.6.10+1.20.1-forge.jar",
+                        "sha1":  "23392a830e5fb7fcaccf9204ee854f7d91267500",
+                        "project":  "https://modrinth.com/mod/ixeris",
+                        "exact_file_metadata":  "https://api.modrinth.com/v2/version_file/23392a830e5fb7fcaccf9204ee854f7d91267500?algorithm=sha1",
+                        "client_side":  "required",
+                        "server_side":  "unsupported"
+                    },
+                    {
+                        "file":  "jeed-1.20-2.2.6.jar",
+                        "sha1":  "c1bbf0193ba5cae59db7c273ebee26c4de37d7a9",
+                        "project":  "https://modrinth.com/mod/just-enough-effect-descriptions-jeed",
+                        "exact_file_metadata":  "https://api.modrinth.com/v2/version_file/c1bbf0193ba5cae59db7c273ebee26c4de37d7a9?algorithm=sha1",
+                        "client_side":  "required",
+                        "server_side":  "unsupported"
+                    },
+                    {
+                        "file":  "justenoughbreeding-forge-1.20.1-3.1.2.jar",
+                        "sha1":  "a3a7c8567cdb72f144a1b3c58c97d595956c6b3f",
+                        "project":  "https://modrinth.com/mod/justenoughbreeding",
+                        "exact_file_metadata":  "https://api.modrinth.com/v2/version_file/a3a7c8567cdb72f144a1b3c58c97d595956c6b3f?algorithm=sha1",
+                        "client_side":  "required",
+                        "server_side":  "unsupported"
+                    },
+                    {
+                        "file":  "JustEnoughMekanismMultiblocks-1.20.1-4.25.jar",
+                        "sha1":  "d2eb443739af3a481180b0d825f055640ef3bb76",
+                        "project":  "https://modrinth.com/mod/just-enough-mekanism-multiblocks",
+                        "exact_file_metadata":  "https://api.modrinth.com/v2/version_file/d2eb443739af3a481180b0d825f055640ef3bb76?algorithm=sha1",
+                        "client_side":  "required",
+                        "server_side":  "unsupported"
+                    },
+                    {
+                        "file":  "JustEnoughResources-1.20.1-1.4.0.247.jar",
+                        "sha1":  "526e788a9b38afc5171fab49b64a5a54e1bb25d7",
+                        "project":  "https://modrinth.com/mod/just-enough-resources-jer",
+                        "exact_file_metadata":  "https://api.modrinth.com/v2/version_file/526e788a9b38afc5171fab49b64a5a54e1bb25d7?algorithm=sha1",
+                        "client_side":  "required",
+                        "server_side":  "unsupported"
+                    },
+                    {
+                        "file":  "justzoom_forge_3.0.1_MC_1.20.1.jar",
+                        "sha1":  "a1b516b8bbdfac03f74b8b884eb2b1aacd8b60fe",
+                        "project":  "https://modrinth.com/mod/just-zoom",
+                        "exact_file_metadata":  "https://api.modrinth.com/v2/version_file/a1b516b8bbdfac03f74b8b884eb2b1aacd8b60fe?algorithm=sha1",
+                        "client_side":  "required",
+                        "server_side":  "unsupported"
+                    },
+                    {
+                        "file":  "libIPN-forge-1.20-4.0.2.jar",
+                        "sha1":  "3e7c7fcdc037a6ae3d9146e718d87fc83f88f6d5",
+                        "project":  "https://modrinth.com/mod/libipn",
+                        "exact_file_metadata":  "https://api.modrinth.com/v2/version_file/3e7c7fcdc037a6ae3d9146e718d87fc83f88f6d5?algorithm=sha1",
+                        "client_side":  "required",
+                        "server_side":  "unsupported"
+                    },
+                    {
+                        "file":  "MindfulDarkness-v8.0.3-1.20.1-Forge.jar",
+                        "sha1":  "8258fc2e01fe3180fa58a100d604fe20cab4d3f8",
+                        "project":  "https://modrinth.com/mod/mindful-darkness",
+                        "exact_file_metadata":  "https://api.modrinth.com/v2/version_file/8258fc2e01fe3180fa58a100d604fe20cab4d3f8?algorithm=sha1",
+                        "client_side":  "required",
+                        "server_side":  "unsupported"
+                    },
+                    {
+                        "file":  "notenoughanimations-forge-1.12.6-mc1.20.1.jar",
+                        "sha1":  "993252c9946e22aa4ba0b28cb5b81183d5bcf50d",
+                        "project":  "https://modrinth.com/mod/not-enough-animations",
+                        "exact_file_metadata":  "https://api.modrinth.com/v2/version_file/993252c9946e22aa4ba0b28cb5b81183d5bcf50d?algorithm=sha1",
+                        "client_side":  "required",
+                        "server_side":  "unsupported"
+                    },
+                    {
+                        "file":  "particle_core-0.3.3+1.20.1+forge.jar",
+                        "sha1":  "1da5744853d17979033d5ee3cd4251b8340ea7be",
+                        "project":  "https://modrinth.com/mod/particle-core",
+                        "exact_file_metadata":  "https://api.modrinth.com/v2/version_file/1da5744853d17979033d5ee3cd4251b8340ea7be?algorithm=sha1",
+                        "client_side":  "required",
+                        "server_side":  "unsupported"
+                    },
+                    {
+                        "file":  "rubidium-extra-0.5.4.4+mc1.20.1-build.131.jar",
+                        "sha1":  "bb422d5626bf69841e444a3e545c8e71b6928cf8",
+                        "project":  "https://modrinth.com/mod/rubidium-extra",
+                        "exact_file_metadata":  "https://api.modrinth.com/v2/version_file/bb422d5626bf69841e444a3e545c8e71b6928cf8?algorithm=sha1",
+                        "client_side":  "required",
+                        "server_side":  "unsupported"
+                    },
+                    {
+                        "file":  "skinlayers3d-forge-1.11.4-mc1.20.1.jar",
+                        "sha1":  "7091528b7228e12602e097afa14f34629067afaf",
+                        "project":  "https://modrinth.com/mod/3dskinlayers",
+                        "exact_file_metadata":  "https://api.modrinth.com/v2/version_file/7091528b7228e12602e097afa14f34629067afaf?algorithm=sha1",
+                        "client_side":  "required",
+                        "server_side":  "unsupported"
+                    },
+                    {
+                        "file":  "Sounds-2.2.1+1.20.1+forge.jar",
+                        "sha1":  "e75686799054958804d711b1b6ceef4d132764b8",
+                        "project":  "https://modrinth.com/mod/sound",
+                        "exact_file_metadata":  "https://api.modrinth.com/v2/version_file/e75686799054958804d711b1b6ceef4d132764b8?algorithm=sha1",
+                        "client_side":  "required",
+                        "server_side":  "unsupported"
+                    },
+                    {
+                        "file":  "TravelersTitles-1.20-Forge-4.0.2.jar",
+                        "sha1":  "64a435eaa6e08fff5af2c720c3b6a40fe292f2f7",
+                        "project":  "https://modrinth.com/mod/travelers-titles",
+                        "exact_file_metadata":  "https://api.modrinth.com/v2/version_file/64a435eaa6e08fff5af2c720c3b6a40fe292f2f7?algorithm=sha1",
+                        "client_side":  "required",
+                        "server_side":  "unsupported"
+                    }
+                ]
+}

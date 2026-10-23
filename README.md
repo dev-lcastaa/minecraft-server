@@ -32,9 +32,9 @@ client-only mods use it too.
 
 The initial review inspected 172 top-level JARs and 145 nested archives and
 removed 27 client-only JARs, leaving 145 top-level JARs for the server.
-[`client-only-mods.json`](./client-only-mods.json) records the exact excluded
-filenames and verification sources. It is a review record, not an automatic
-filter for future mod versions. Keep those removed mods in your separate client
+The current [`client-only-mods.json`](./client-only-mods.json) records the latest
+cleanup below, not that historical set. It is a review record, not an automatic
+filter for future mod versions. Keep removed mods in your separate client
 installation if you want their UI and rendering features.
 
 The October 17, 2026 import reviewed 225 incoming JARs by filename, internal mod
@@ -77,6 +77,29 @@ Forge's recommended 1.20.1 release at the time of this import is **47.4.10**.
 The import's static checks found no missing or out-of-range mandatory server
 dependencies and no duplicate top-level mod IDs; a dedicated-server startup test
 is still required after rebuilding and deploying.
+
+### October 22, 2026 client-only cleanup
+
+The replacement pack contained **243 top-level JARs**. This review removed
+**47 confirmed client-only JARs**, leaving **196**. Of the original JARs, 236
+matched exact published Modrinth file hashes. Forty-five removals have
+`server_side=unsupported` project metadata; the other two, Farsight and the
+installed True Darkness fork, were confirmed from embedded descriptions and
+client entrypoint/rendering code. The JSON review record lists every removed
+filename, SHA-1, and verification source or embedded evidence.
+
+Server-only and shared/optional-server mods remain, including JEI, Jade,
+AppleSkin, Enchantment Descriptions, Sound Physics Remastered, Xaero's maps,
+Konkrete, and shared libraries. Unknown-side mods were not removed speculatively.
+Metadata checks covered 342 top-level/nested mod archives; no retained mandatory
+server dependency references a removed mod ID. All 196 retained JARs were
+verified unchanged by hash.
+
+This cleanup is not a full compatibility or startup test. The replacement pack
+also reintroduced the ToadLib version with the previously observed server defect
+described above and contains two Alex's Mobs JARs. Both are left untouched because
+resolving those issues is separate from removing client-only mods. Review them
+before deployment.
 
 The Docker build copies this directory into `/mods` in the image. On startup,
 the base image copies the bundled mods into `/data/mods`. Old mod JARs are removed
@@ -205,6 +228,45 @@ docker compose logs --tail 200 minecraft
 **Do not run `docker compose down -v` unless you intend to delete the world.**
 Back up the named volume while the server is stopped for a consistent backup.
 Do not prune volumes that contain server data.
+
+### Weather2 storm performance
+
+Weather2 configuration persists in `/data/config/Weather2` in the container.
+On node004, inspect the actual host path with
+`docker volume inspect minecraft-forge-data --format '{{.Mountpoint}}'`.
+Back up configs before editing them and restart the server after server-side
+changes. These are persistent-volume settings, not defaults bundled in the image.
+
+To reduce sand/snow block updates while keeping storms and their frequency:
+
+| File | Setting | Tuned value | Original value |
+| --- | --- | --- | --- |
+| `Sand.toml` | `Sandstorm_Sand_Buildup_TickRate` | `100` | `40` |
+| `Sand.toml` | `Sandstorm_Sand_Buildup_LoopAmountBase` | `200` | `800` |
+| `Snow.toml` | `Snowstorm_Snow_Buildup_TickRate` | `100` | `40` |
+| `Snow.toml` | `Snowstorm_Snow_Buildup_LoopAmountBase` | `200` | `800` |
+
+At 20 ticks/second, this reduces maximum buildup attempts from 400 to 40 per
+second per storm. Accumulation is slower; this is not a measured 90% FPS gain.
+Tornado block grabbing and storm frequency are unchanged.
+
+For rendering-related FPS drops, each player should close Minecraft, back up
+their instance's `config/Weather2` folder, and try these **client-local** settings.
+Do not assume that editing the server's particle files updates clients:
+
+| File | Setting | Suggested starting value |
+| --- | --- | --- |
+| `Particle.toml` | `Particle_effect_rate` | `0.35` |
+| `Particle.toml` | `Precipitation_Particle_effect_rate` | `0.3` |
+| `Particle.toml` | `Particle_Tornado_extraParticleCubes` | `0` |
+| `Sand.toml` | `Sandstorm_Particle_Dust_effect_rate` | `0.2` |
+| `Sand.toml` | `Sandstorm_Particle_Debris_effect_rate` | `0.2` |
+
+Keep `Particle_engine_weather2 = true`; the mod warns that the vanilla particle
+renderer may perform worse. Restart the client and compare FPS/frame times
+during comparable storms, using the same location, view direction, render
+distance, and shader settings. These are starting values, not guaranteed FPS
+targets; server health alone cannot verify client rendering improvements.
 
 The game port **TCP 25565** is published on all host interfaces. RCON **TCP 25575**
 is published only on `RCON_BIND_IP`. Online authentication remains enabled.
