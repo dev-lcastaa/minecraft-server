@@ -13,3 +13,5 @@ ENV TYPE=FORGE \
 
 COPY mods/ /mods/
 COPY server.properties /config/server.properties
+COPY server-config/config/ /config/config/
+COPY --chmod=755 scripts/chunky-scheduler.sh /usr/local/bin/chunky-scheduler.sh

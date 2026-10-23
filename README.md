@@ -81,7 +81,7 @@ is still required after rebuilding and deploying.
 ### October 22, 2026 client-only cleanup
 
 The replacement pack contained **243 top-level JARs**. This review removed
-**47 confirmed client-only JARs**, leaving **196**. Of the original JARs, 236
+**47 confirmed client-only JARs**, leaving **195**. Of the original JARs, 236
 matched exact published Modrinth file hashes. Forty-five removals have
 `server_side=unsupported` project metadata; the other two, Farsight and the
 installed True Darkness fork, were confirmed from embedded descriptions and
@@ -93,13 +93,15 @@ AppleSkin, Enchantment Descriptions, Sound Physics Remastered, Xaero's maps,
 Konkrete, and shared libraries. Unknown-side mods were not removed speculatively.
 Metadata checks covered 342 top-level/nested mod archives; no retained mandatory
 server dependency references a removed mod ID. All 196 retained JARs were
-verified unchanged by hash.
+verified unchanged by hash. (An earlier count of 196 was a miscount; 195 were
+committed and deployed.)
 
 This cleanup is not a full compatibility or startup test. The replacement pack
 also reintroduced the ToadLib version with the previously observed server defect
-described above and contains two Alex's Mobs JARs. Both are left untouched because
-resolving those issues is separate from removing client-only mods. Review them
-before deployment.
+described above and contained two Alex's Mobs JARs. The shadowed
+`alexsmobs-1.22.9.jar` was later removed (Forge only loaded Alex's Mobs
+Continued 2.2.3), leaving **194** JARs. Players must remove it from their
+client `mods` folder too.
 
 The Docker build copies this directory into `/mods` in the image. On startup,
 the base image copies the bundled mods into `/data/mods`. Old mod JARs are removed
@@ -121,7 +123,7 @@ During copying, only `CFG_RCON_` placeholders in properties files are expanded
 to inject the RCON password at runtime; files already in `/data` are not interpolated.
 
 Defaults include survival mode, normal difficulty, 4 players, PvP enabled,
-online authentication, view distance 10, simulation distance 6, disabled query,
+online authentication, view distance 8, simulation distance 6, disabled query,
 and enabled RCON. Flight is allowed to avoid false flying kicks from movement mods; this
 does not grant players creative flight. Spawn protection is 16 blocks, and the
 whitelist is disabled.
@@ -207,6 +209,31 @@ Deployments restart the server when its image changes; schedule them when player
 can disconnect. Failed deployments are reported but are not automatically rolled
 back. Old images are retained; manage disk usage on the production host.
 
+## Client configuration
+
+[`client-config/config/`](./client-config/config/) mirrors the server's
+bundled common configs plus client-only Weather2 particle tuning. Each player
+should close Minecraft, back up their instance `config` folder, copy the
+contents of `client-config/config/` into it (overwrite), remove
+`alexsmobs-1.22.9.jar` from their `mods` folder, then restart.
+
+## World pregeneration (Chunky)
+
+The `chunky-scheduler` Compose service runs
+[`scripts/chunky-scheduler.sh`](./scripts/chunky-scheduler.sh) beside the
+server. It polls RCON every 10 seconds and:
+
+- Starts one overworld pregeneration (spawn center, circle, radius 15,000 blocks,
+  about 39 GB) the first time no players are online, then writes
+  `/data/.chunky-pregen-r15000-started`.
+- Runs `chunky pause` as soon as a player joins and `chunky continue` once
+  everyone leaves or after a server restart.
+- Pauses when free space on the data volume falls below 20 GiB.
+
+Change `CHUNKY_RADIUS` or `CHUNKY_MIN_FREE_GB` in [`compose.yaml`](./compose.yaml).
+Watch it with `docker compose logs -f chunky-scheduler` and
+`docker exec minecraft-forge-minecraft-1 rcon-cli chunky progress`.
+
 ## Persistent data and operations
 
 The named Docker volume **`minecraft-forge-data`** stores the world, server
@@ -229,13 +256,28 @@ docker compose logs --tail 200 minecraft
 Back up the named volume while the server is stopped for a consistent backup.
 Do not prune volumes that contain server data.
 
+### Bundled mod config overrides
+
+Files in [`server-config/config/`](./server-config/config/) are copied into the
+image at `/config/config/` and synced over `/data/config/` on **every start**.
+They override edits made directly in the volume; change them in the repo and
+redeploy. Other mod configs stay persistent in the volume.
+
+| File | Change | Reason |
+| --- | --- | --- |
+| `vanillabackport-common.toml` | `has_zombie_horses = false` | Zombie Horse Spawn already adds natural zombie horses |
+| `quark-common.toml` | `Expanded Item Interactions = false` | Duplicates Puzzles Lib/Easy Shulker Boxes container item interactions |
+| `quark-common.toml` | `Shulker Tooltips = false` | Duplicates Easy Shulker Boxes tooltips |
+| `quark-common.toml` | `Horses Swim = false` | Duplicates Horses Can Swim |
+| `quark-common.toml` | `Totem Of Holding = false` | Competes with Gravestone for death drops |
+| `Weather2/Sand.toml`, `Weather2/Snow.toml` | Buildup tuning below | Fewer block updates during storms |
+| `chunky/config.json` | `updateInterval = 60` | Pregeneration progress logs once a minute instead of every second |
+
+Quark common settings must match on clients; use the client package below.
+
 ### Weather2 storm performance
 
-Weather2 configuration persists in `/data/config/Weather2` in the container.
-On node004, inspect the actual host path with
-`docker volume inspect minecraft-forge-data --format '{{.Mountpoint}}'`.
-Back up configs before editing them and restart the server after server-side
-changes. These are persistent-volume settings, not defaults bundled in the image.
+The bundled overrides above persist this server-side tuning.
 
 To reduce sand/snow block updates while keeping storms and their frequency:
 
