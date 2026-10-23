@@ -3,3 +3,6 @@
 !server.properties
 !mods/
 !mods/**
+!server-config/
+!server-config/**
+!scripts/chunky-scheduler.sh
