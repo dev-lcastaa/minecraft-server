@@ -5,4 +5,3 @@
 !mods/**
 !server-config/
 !server-config/**
-!scripts/chunky-scheduler.sh

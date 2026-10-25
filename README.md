@@ -217,23 +217,6 @@ should close Minecraft, back up their instance `config` folder, copy the
 contents of `client-config/config/` into it (overwrite), remove
 `alexsmobs-1.22.9.jar` from their `mods` folder, then restart.
 
-## World pregeneration (Chunky)
-
-The `chunky-scheduler` Compose service runs
-[`scripts/chunky-scheduler.sh`](./scripts/chunky-scheduler.sh) beside the
-server. It polls RCON every 10 seconds and:
-
-- Starts one overworld pregeneration (spawn center, circle, radius 15,000 blocks,
-  about 39 GB) the first time no players are online, then writes
-  `/data/.chunky-pregen-r15000-started`.
-- Runs `chunky pause` as soon as a player joins and `chunky continue` once
-  everyone leaves or after a server restart.
-- Pauses when free space on the data volume falls below 20 GiB.
-
-Change `CHUNKY_RADIUS` or `CHUNKY_MIN_FREE_GB` in [`compose.yaml`](./compose.yaml).
-Watch it with `docker compose logs -f chunky-scheduler` and
-`docker exec minecraft-forge-minecraft-1 rcon-cli chunky progress`.
-
 ## Persistent data and operations
 
 The named Docker volume **`minecraft-forge-data`** stores the world, server

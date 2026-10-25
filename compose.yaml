@@ -29,23 +29,6 @@ services:
       start_period: 5m
       retries: 10
 
-  chunky-scheduler:
-    image: ${MINECRAFT_IMAGE:-minecraft-forge:local}
-    entrypoint: ["/usr/local/bin/chunky-scheduler.sh"]
-    environment:
-      RCON_HOST: minecraft
-      RCON_PASSWORD: ${RCON_PASSWORD:?Set a strong RCON_PASSWORD outside source control}
-      CHUNKY_RADIUS: "15000"
-      CHUNKY_MIN_FREE_GB: "20"
-    volumes:
-      - minecraft-data:/data
-    depends_on:
-      - minecraft
-    restart: unless-stopped
-    mem_limit: 64m
-    healthcheck:
-      disable: true
-
 volumes:
   minecraft-data:
     name: minecraft-forge-data
