@@ -11,6 +11,11 @@ base image.
 - Enough host RAM for a 19 GiB Minecraft container plus other services and the
   operating system. Java heap is 17 GiB, leaving approximately 2 GiB for JVM
   overhead within the container limit.
+- Host swap enabled to use the container's additional allowance of up to 4 GiB.
+  Compose sets a 19 GiB RAM limit and a 23 GiB combined RAM-plus-swap limit.
+  Swap is a safety net, not a substitute for RAM; heavy swapping can worsen lag
+  and host responsiveness. Recreate the container with
+  `docker compose up -d --force-recreate minecraft` after changing these limits.
 - Outbound internet access to download Forge and Minecraft during first startup.
 - Build-time access to Docker Hub for the Dockerfile frontend/base image and
   `cdn.modrinth.com` for the two externally hosted mod JARs.
@@ -248,11 +253,13 @@ rejects missing/invalid credentials. Rotate any password previously saved in
 but the runtime properties file and Docker container environment contain the
 password, so restrict host, Docker, volume-backup, and Jenkins access.
 
-Both local and Jenkins deployments use a fixed **17 GiB heap** and **19 GiB total
-container memory limit**. Swap is disabled for this container by setting the
-combined memory-plus-swap limit equal to the memory limit. Exceeding 19 GiB may
-trigger an out-of-memory kill. Monitor usage with `docker stats`; other services
-can grow beyond their current usage, so the remaining host RAM is not guaranteed.
+Both local and Jenkins deployments use a fixed **17 GiB heap**, **19 GiB RAM
+limit**, and **23 GiB combined RAM-plus-swap limit**, allowing up to **4 GiB of
+host swap**. The host must have swap enabled and Docker swap-limit support.
+Exhausting these limits may trigger an out-of-memory kill. Monitor usage with
+`docker stats` and host swap usage with `swapon --show`; heavy swapping can worsen
+lag, and other services can grow beyond their current usage, so the remaining
+host RAM and swap are not guaranteed.
 
 ### JVM tuning
 

@@ -22,7 +22,7 @@ services:
       - minecraft-data:/data
     restart: unless-stopped
     mem_limit: 19g
-    memswap_limit: 19g
+    memswap_limit: 23g # Total RAM + swap: allows up to 4 GiB of swap.
     stop_grace_period: 2m
     healthcheck:
       test: ["CMD", "mc-health"]
