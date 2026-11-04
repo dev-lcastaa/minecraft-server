@@ -32,10 +32,10 @@ client-only mods use it too.
 
 The initial review inspected 172 top-level JARs and 145 nested archives and
 removed 27 client-only JARs, leaving 145 top-level JARs for the server.
-The current [`client-only-mods.json`](./client-only-mods.json) records the latest
-cleanup below, not that historical set. It is a review record, not an automatic
-filter for future mod versions. Keep removed mods in your separate client
-installation if you want their UI and rendering features.
+[`client-only-mods.json`](./client-only-mods.json) records the October 22, 2026
+cleanup below, not the later November 3 review. It is a review record, not an
+automatic filter for future mod versions. Keep removed mods in your separate
+client installation if you want their UI and rendering features.
 
 The October 17, 2026 import reviewed 225 incoming JARs by filename, internal mod
 ID, bundled dependencies, and published side/version metadata. It added 87 JARs,
@@ -102,6 +102,16 @@ described above and contained two Alex's Mobs JARs. The shadowed
 `alexsmobs-1.22.9.jar` was later removed (Forge only loaded Alex's Mobs
 Continued 2.2.3), leaving **194** JARs. Players must remove it from their
 client `mods` folder too.
+
+### November 3, 2026 client-only cleanup
+
+The new list contained **313 top-level JARs**. This review removed **57
+confirmed client-only JARs**, leaving **256**. Fifty-five exact-file matches
+declare a client-only environment in Modrinth metadata. The other two, Farsight
+and the installed True Darkness fork, match the exact JARs previously verified
+from their embedded descriptions and client-only code. Mods declared shared,
+server-only, server-optional, or with unknown side support were retained. This
+is a side-support review, not a dedicated-server startup test.
 
 The Docker build copies this directory into `/mods` in the image. On startup,
 the base image copies the bundled mods into `/data/mods`. Old mod JARs are removed
@@ -196,6 +206,29 @@ container memory limit**. Swap is disabled for this container by setting the
 combined memory-plus-swap limit equal to the memory limit. Exceeding 16 GiB may
 trigger an out-of-memory kill. Monitor usage with `docker stats`; other services
 can grow beyond their current usage, so the remaining host RAM is not guaranteed.
+
+### JVM tuning
+
+Both deployment paths enable the image's
+[`USE_AIKAR_FLAGS`](https://docker-minecraft-server.readthedocs.io/en/latest/configuration/jvm-options/#enable-aikars-flags)
+G1GC preset on Java 17. The image adjusts its garbage-collection settings for the
+14 GiB heap (above the preset's 12 GiB threshold). Heap sizing stays controlled by
+`MEMORY`; do not add duplicate `-Xms`/`-Xmx` arguments or combine this preset with
+MeowIce's flags or another garbage collector.
+
+The November 3 hardware check of `node004` reported an Intel Core i7-4790
+(4 cores/8 threads) and about 23 GiB usable RAM, rather than the expected
+OptiPlex 3090 configuration. The existing 16 GiB container limit leaves roughly
+7 GiB for the host, with 2 GiB inside the container for non-heap allocations.
+GC thread counts remain JVM-managed rather than hardcoded to a CPU model.
+This is a tuning baseline, not a guarantee of improved tick times; monitor
+tick times and container memory during exploration and with players online.
+If native/non-heap usage approaches the container limit, reduce the heap or
+increase the limit while preserving host headroom.
+
+Apply the change with your normal Jenkins deployment or
+`docker compose up -d --no-build --wait --wait-timeout 900` for an existing local
+image. This recreates the container without deleting the world volume.
 
 The pipeline checks out the repository, validates prerequisites, builds a local
 image tagged with the Jenkins build number, and deploys it using
