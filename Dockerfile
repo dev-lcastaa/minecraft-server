@@ -1,3 +1,4 @@
+# syntax=docker/dockerfile:1.6
 FROM itzg/minecraft-server:java17
 
 ENV TYPE=FORGE \
@@ -12,5 +13,11 @@ ENV TYPE=FORGE \
     SKIP_SERVER_PROPERTIES=true
 
 COPY mods/ /mods/
+ADD --chmod=644 --checksum=sha256:5c43f283c671f8d34949e9a43c4348e95eeb7df86e8a232ada91333acaf442de \
+    https://cdn.modrinth.com/data/sdQwPACz/versions/XAVP7ehR/dreamshift-0.2.2-hotfix-forge.jar \
+    /mods/dreamshift-0.2.2-hotfix-forge.jar
+ADD --chmod=644 --checksum=sha256:0aa95b7aab2dbea44b6cbace2f3556670fd8bd613937c736df7cbd9b9de8e8a9 \
+    https://cdn.modrinth.com/data/38tpSycf/versions/XiIv5rDL/the_bumblezone-7.15.2%2B1.20.1-forge.jar \
+    /mods/the_bumblezone-7.15.2+1.20.1-forge.jar
 COPY server.properties /config/server.properties
 COPY server-config/config/ /config/config/

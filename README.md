@@ -7,11 +7,15 @@ base image.
 ## Requirements
 
 - Docker Engine and Docker Compose v2 with support for `up --wait`.
+- Docker BuildKit with Dockerfile frontend 1.6 support for checksum-verified downloads.
 - Enough host RAM for a 16 GiB Minecraft container plus other services and the
   operating system. Java heap is 14 GiB, leaving approximately 2 GiB for JVM
   overhead within the container limit.
 - Outbound internet access to download Forge and Minecraft during first startup.
+- Build-time access to Docker Hub for the Dockerfile frontend/base image and
+  `cdn.modrinth.com` for the two externally hosted mod JARs.
 - TCP port **25565** accessible to your players.
+- UDP port **24454** accessible to your players for Simple Voice Chat.
 
 ## Add your mods
 
@@ -32,8 +36,8 @@ client-only mods use it too.
 
 The initial review inspected 172 top-level JARs and 145 nested archives and
 removed 27 client-only JARs, leaving 145 top-level JARs for the server.
-[`client-only-mods.json`](./client-only-mods.json) records the October 22, 2026
-cleanup below, not the later November 3 review. It is a review record, not an
+[`client-only-mods.json`](./client-only-mods.json) records the latest November 4, 2026
+cleanup below; earlier counts describe historical reviews. It is a review record, not an
 automatic filter for future mod versions. Keep removed mods in your separate
 client installation if you want their UI and rendering features.
 
@@ -113,11 +117,54 @@ from their embedded descriptions and client-only code. Mods declared shared,
 server-only, server-optional, or with unknown side support were retained. This
 is a side-support review, not a dedicated-server startup test.
 
+### November 4, 2026 client-only cleanup
+
+The updated pack contained **316 top-level JARs**. This review removed **57
+confirmed client-only JARs**, leaving **259**. Of the original JARs, 301 matched
+exact published Modrinth hashes; 54 removals have unsupported server-side project
+metadata. Farsight and True Darkness match the exact JARs previously verified
+from embedded descriptions and code. Punchy Moves explicitly declares
+`clientSideOnly=true` in its embedded `META-INF/mods.toml`, despite unknown sides
+in the exact-file project's API metadata.
+
+The review inspected **589 top-level/nested archives**. No retained mandatory
+Forge server/BOTH dependency or Fabric `depends` entry references an exclusively
+removed mod ID, and all 259 retained JARs were verified unchanged by SHA-1.
+Simple Voice Chat, shared libraries, and optional-server mods remain, including
+JEI, EMI, Jade, AppleSkin, Sound Physics Remastered, and Xaero's maps. Thirteen
+retained JARs lack exact Modrinth matches; they were not removed speculatively.
+The JSON record lists each removal, its hash, and its classification evidence.
+Keep client-only mods in players' separate client installations.
+
+This pass does not establish runtime compatibility. It also found three duplicate
+mod IDs: Ecliptic Seasons **0.15.4.1 / 0.15.5**, Alex's Mobs **1.22.9** / Alex's
+Mobs Continued **2.2.4**, and EMI Loot **0.7.9 / 0.7.10**.
+`nofriendlyfire-1.1-neoforge-1.21.1.jar` targets NeoForge/Minecraft 1.21.1 rather
+than this Forge/Minecraft 1.20.1 server. These are not client-only exclusions. The subsequent compatibility cleanup
+removed Ecliptic Seasons 0.15.4.1, EMI Loot 0.7.9, Alex's Mobs 1.22.9,
+and the incompatible NoFriendlyFire JAR, leaving **255 top-level JARs**.
+No duplicate top-level Forge mod IDs remain. A dedicated-server startup test
+is still required.
+
 The Docker build copies this directory into `/mods` in the image. On startup,
 the base image copies the bundled mods into `/data/mods`. Old mod JARs are removed
 before copying so deleted or upgraded mods do not linger in the persistent
 volume. Do not manually install additional JARs in `/data/mods`; manage them in
 the image instead. World data and mod configuration remain persistent.
+
+Dreamshift `0.2.2-hotfix` and The Bumblezone `7.15.2` are exceptions to Git storage:
+their large JARs are downloaded into `/mods` during the Docker build from pinned
+Modrinth version URLs in [`Dockerfile`](./Dockerfile). Each download is verified
+against its pinned SHA-256; a failed download or checksum mismatch fails the build.
+Local copies may remain in `mods/`, but are ignored by Git and excluded from the
+Docker build context. A clean checkout therefore contains **253 bundled JARs**;
+the built image contains **255** including these downloads. Jenkins uses the same
+Docker build and needs no separate download step.
+
+To update either externally hosted mod, change its URL and SHA-256 in
+[`Dockerfile`](./Dockerfile) together, verifying the hash against the intended JAR.
+If its filename changes, update the matching `.gitignore` and `.dockerignore`
+entries too.
 
 Rebuild and redeploy whenever the bundled mods change. Back up the world before
 changing mods, especially when removing mods that add blocks or items.
@@ -326,9 +373,10 @@ during comparable storms, using the same location, view direction, render
 distance, and shader settings. These are starting values, not guaranteed FPS
 targets; server health alone cannot verify client rendering improvements.
 
-The game port **TCP 25565** is published on all host interfaces. RCON **TCP 25575**
+The game port **TCP 25565** and Simple Voice Chat port **UDP 24454** are published
+on all host interfaces. RCON **TCP 25575**
 is published only on `RCON_BIND_IP`. Online authentication remains enabled.
-Allow the game port through your host firewall and configure router forwarding
+Allow both player-facing ports through your host firewall and configure router forwarding
 if needed. RCON grants administrative control and is unencrypted: restrict it to
 trusted LAN/VPN clients using Docker-aware firewall rules and never forward it
 publicly through your router. A LAN bind alone is not a firewall rule.
