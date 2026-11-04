@@ -9,7 +9,7 @@ services:
     environment:
       EULA: ${EULA:?Set EULA=TRUE only after accepting the Minecraft EULA}
       FORGE_VERSION: ${FORGE_VERSION:-recommended}
-      MEMORY: "14G"
+      MEMORY: "17G"
       USE_AIKAR_FLAGS: "TRUE"
       ENABLE_RCON: "TRUE"
       RCON_PASSWORD: ${RCON_PASSWORD:?Set a strong RCON_PASSWORD outside source control}
@@ -21,8 +21,8 @@ services:
     volumes:
       - minecraft-data:/data
     restart: unless-stopped
-    mem_limit: 16g
-    memswap_limit: 16g
+    mem_limit: 19g
+    memswap_limit: 19g
     stop_grace_period: 2m
     healthcheck:
       test: ["CMD", "mc-health"]

@@ -8,8 +8,8 @@ base image.
 
 - Docker Engine and Docker Compose v2 with support for `up --wait`.
 - Docker BuildKit with Dockerfile frontend 1.6 support for checksum-verified downloads.
-- Enough host RAM for a 16 GiB Minecraft container plus other services and the
-  operating system. Java heap is 14 GiB, leaving approximately 2 GiB for JVM
+- Enough host RAM for a 19 GiB Minecraft container plus other services and the
+  operating system. Java heap is 17 GiB, leaving approximately 2 GiB for JVM
   overhead within the container limit.
 - Outbound internet access to download Forge and Minecraft during first startup.
 - Build-time access to Docker Hub for the Dockerfile frontend/base image and
@@ -248,9 +248,9 @@ rejects missing/invalid credentials. Rotate any password previously saved in
 but the runtime properties file and Docker container environment contain the
 password, so restrict host, Docker, volume-backup, and Jenkins access.
 
-Both local and Jenkins deployments use a fixed **14 GiB heap** and **16 GiB total
+Both local and Jenkins deployments use a fixed **17 GiB heap** and **19 GiB total
 container memory limit**. Swap is disabled for this container by setting the
-combined memory-plus-swap limit equal to the memory limit. Exceeding 16 GiB may
+combined memory-plus-swap limit equal to the memory limit. Exceeding 19 GiB may
 trigger an out-of-memory kill. Monitor usage with `docker stats`; other services
 can grow beyond their current usage, so the remaining host RAM is not guaranteed.
 
@@ -259,14 +259,14 @@ can grow beyond their current usage, so the remaining host RAM is not guaranteed
 Both deployment paths enable the image's
 [`USE_AIKAR_FLAGS`](https://docker-minecraft-server.readthedocs.io/en/latest/configuration/jvm-options/#enable-aikars-flags)
 G1GC preset on Java 17. The image adjusts its garbage-collection settings for the
-14 GiB heap (above the preset's 12 GiB threshold). Heap sizing stays controlled by
+17 GiB heap (above the preset's 12 GiB threshold). Heap sizing stays controlled by
 `MEMORY`; do not add duplicate `-Xms`/`-Xmx` arguments or combine this preset with
 MeowIce's flags or another garbage collector.
 
 The November 3 hardware check of `node004` reported an Intel Core i7-4790
 (4 cores/8 threads) and about 23 GiB usable RAM, rather than the expected
-OptiPlex 3090 configuration. The existing 16 GiB container limit leaves roughly
-7 GiB for the host, with 2 GiB inside the container for non-heap allocations.
+OptiPlex 3090 configuration. The 19 GiB container limit leaves roughly
+4 GiB for the host, with 2 GiB inside the container for non-heap allocations.
 GC thread counts remain JVM-managed rather than hardcoded to a CPU model.
 This is a tuning baseline, not a guarantee of improved tick times; monitor
 tick times and container memory during exploration and with players online.
@@ -488,7 +488,7 @@ docker compose exec -T minecraft rcon-cli list
 docker stats --no-stream
 ```
 
-Both memory values should be **17179869184** bytes (16 GiB). The RCON command
+Both memory values should be **20401094656** bytes (19 GiB). The RCON command
 should return the player list without displaying the password. Also test from
 your trusted remote RCON client at `192.168.1.208:25575` (or your configured IP)
 to verify host network/firewall access.
