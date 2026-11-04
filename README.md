@@ -297,6 +297,16 @@ should close Minecraft, back up their instance `config` folder, copy the
 contents of `client-config/config/` into it (overwrite), remove
 `alexsmobs-1.22.9.jar` from their `mods` folder, then restart.
 
+See the [client import instructions](./client-config/README.md). Extract the
+client config ZIP into the instance directory, merging `config/` and `mods/`;
+it includes Quark Oddities, not a complete launcher-importable modpack.
+Do not delete other configs or mods.
+To reproduce the ZIP from the repository:
+
+```sh
+(cd client-config && zip -r ../minecraft-client-config.zip README.md config mods -x '*/.DS_Store')
+```
+
 ## Persistent data and operations
 
 The named Docker volume **`minecraft-forge-data`** stores the world, server
@@ -332,11 +342,81 @@ redeploy. Other mod configs stay persistent in the volume.
 | `quark-common.toml` | `Expanded Item Interactions = false` | Duplicates Puzzles Lib/Easy Shulker Boxes container item interactions |
 | `quark-common.toml` | `Shulker Tooltips = false` | Duplicates Easy Shulker Boxes tooltips |
 | `quark-common.toml` | `Horses Swim = false` | Duplicates Horses Can Swim |
-| `quark-common.toml` | `Totem Of Holding = false` | Competes with Gravestone for death drops |
+| `quark-common.toml` | `Totem Of Holding = true` | Explicitly selected death-recovery totem; Backrooms random retention remains disabled |
+| `quark-common.toml` | `Automatic Tool Restock = false`, `Inventory Sorting = false` | Selected inventory profile |
+| `quark-common.toml` | `Quick Armor Swapping = true` | Sneak-right-click armor stands to exchange equipped armor |
+| `quark-common.toml` | `Villagers Use Simple Harvest = false` | Leave villager farming to Smarter Farmers; player harvesting stays enabled |
+| `thirst/item_settings.toml` | 48 explicit drink IDs | Extend hydration to installed Delight drinks; fix `strong_coffee`, remove duplicates, invalid IDs, and unloaded-mod defaults |
+| `thirst/common.toml`, `thirst/keyword.toml` | Preserve current balance; keyword matching off | Match client gameplay settings without matching decorative food-display items |
+| `mbackrooms/Mbackrooms-Config-Common.toml` | `partialLootKeeping = false` | Backrooms otherwise saves about 30% of inventory even outside its dimensions |
+| `Weather2/Storm.toml` | Storm limit `4`, hail per tick `2` | Reduce simultaneous weather simulations and hail entities |
+| `Weather2/Tornado.toml` | Flying blocks `40`, grabbed blocks per tick `1` | Keep destructive tornadoes with capped workload |
 | `Weather2/Sand.toml`, `Weather2/Snow.toml` | Buildup tuning below | Fewer block updates during storms |
 | `chunky/config.json` | `updateInterval = 60` | Pregeneration progress logs once a minute instead of every second |
 
 Quark common settings must match on clients; use the client package below.
+
+The November 4 overrides were seeded from the running server's configs, not
+regenerated defaults. Existing Quark overlap protections, zombie-horse
+exclusion, and sand/snow tuning are preserved.
+
+The subsequent Quark feature review selected **86 enabled / 78 disabled** across
+all **164 feature toggles**. Both server and client copies contain the same
+profile. Category-wide switches and internal settings are unchanged. Matrix
+Enchanting is disabled by choice, not because its separate station conflicts
+with Easy Magic. Quick Armor Swapping is enabled: it exchanges armor with an
+armor stand and is distinct from Better Inventory's armor-pack swap.
+
+Runtime validation checked all 164 modules. Two selected-true features remain
+automatically suppressed by Quark's anti-overlap rules: Automatic Recipe Unlock
+with NERB, and Map Washing with Supplementaries. Their `Ignore Anti Overlap`
+options stay `false`; the 86/78 totals describe selected toggles, not 86 active
+modules. The three Quark block IDs found in the pre-rollout terrain palettes
+(`limestone`, `shale`, and `monster_box`) remain registered after the change.
+
+Disabled world features are Chorus Vegetation, Glimmering Weald, New Stone
+Types, and Spiral Spires. This changes future generation, not existing terrain.
+Many building palettes and a few automation/mob features are also disabled;
+consult `quark-common.toml` for the complete selected profile. Disabled content
+can lose recipes/behavior even if its registry entries and existing blocks
+remain. Back up saves before applying the profile.
+
+Totem of Holding requires the separate **Quark Oddities 1.20.1** marker add-on.
+The [Dockerfile](./Dockerfile) downloads its exact published Modrinth artifact
+with SHA-256 verification; the client overlay includes the same JAR. All other
+Oddities features remain disabled. The add-on itself contains no gameplay code;
+it unlocks the implementations already in Quark. Its mandatory Quark dependency
+is satisfied by the installed Quark 4.0-462.
+
+Thirst now includes drinks from Delightful, Abnormals Delight, Ender's Delight,
+Festive Delight, Dungeons Delight, Oceanic Delight, and Miner's Delight, plus
+missing Farmer's Delight/Respite drinks. All listed drink and food IDs were
+checked against the live item registry. Keyword matching stays off; displayed
+food props and hazardous Mekanism drinks are not automatically made hydrating.
+The existing food values and drink effects are preserved.
+
+`keepInventory` must remain `false` in the active world; it is a world gamerule,
+not a property set by these files. Totem of Holding is now deliberately enabled
+for death-drop recovery, with its existing PvP and collection rules unchanged.
+This intentionally replaces the earlier loose-drop-only preference; it does not
+keep a random subset of inventory on respawn. Backrooms' loot-retention feature is disabled
+entirely, not merely set to a zero random percentage (tagged items could otherwise
+still be retained). Test main inventory, armor, offhand, and Better Inventory
+storage after respawning; modded storage is not covered by the gamerule alone.
+
+Before a rollout, gracefully stop the server and back up the volume. Rebuild and
+redeploy to include these files in the image. For a live config-only rollout,
+copy the same overrides into both `/data/config/` and `/config/config/` in the
+existing container, then start it again. The latter is the startup sync source;
+the former is persistent volume data. A future image must also be rebuilt from
+this repository so it carries the same overrides.
+
+Validate TOML syntax, client/server parity, hydration entries, and intended
+gameplay/particle limits with Python 3.11 or newer:
+
+```sh
+python3 -m unittest discover -s tests -v
+```
 
 ### Weather2 storm performance
 
@@ -355,9 +435,27 @@ At 20 ticks/second, this reduces maximum buildup attempts from 400 to 40 per
 second per storm. Accumulation is slower; this is not a measured 90% FPS gain.
 Tornado block grabbing and storm frequency are unchanged.
 
+The additional November 4 profile changes the storm limit from `20` to `4` per
+player/layer, hail output from `10` to `2` per tick, flying-block budget from
+`200` to `40`, and grabbed blocks from `5` to `1` per tick. Tornado block grabbing,
+mob/player grabbing, storm probabilities, and cooldowns stay enabled/unchanged.
+The entity cap stops creating additional flying-block entities; it is not a
+promise that storms cause no further block damage. Existing storms may take
+time to expire; the config does not delete weather state or force new storms.
+
+These are workload limits, not a measured FPS/TPS improvement. Compare server
+tick times during comparable storms and client FPS after importing the overlay.
+Target 20 TPS with mean server tick time below 50 ms; an idle-server snapshot
+alone does not validate storm performance. Storms of the Wild is also installed;
+its lightning behavior is unchanged pending profiling rather than guessed tuning.
+
 For rendering-related FPS drops, each player should close Minecraft, back up
 their instance's `config/Weather2` folder, and try these **client-local** settings.
 Do not assume that editing the server's particle files updates clients:
+
+These values are now included in the client overlay, along with cloud and storm
+particle spawn delays of `6` ticks each. The server copy intentionally keeps
+its existing particle-only values; rendering changes must be imported locally.
 
 | File | Setting | Suggested starting value |
 | --- | --- | --- |

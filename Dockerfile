@@ -13,6 +13,9 @@ ENV TYPE=FORGE \
     SKIP_SERVER_PROPERTIES=true
 
 COPY mods/ /mods/
+ADD --chmod=644 --checksum=sha256:230af45e645ebe36f621d0b4362afed6ad0faf940129f4363aaba8058f245576 \
+    https://cdn.modrinth.com/data/qeEEslrN/versions/NrzERFzz/QuarkOddities-1.20.1.jar \
+    /mods/QuarkOddities-1.20.1.jar
 ADD --chmod=644 --checksum=sha256:5c43f283c671f8d34949e9a43c4348e95eeb7df86e8a232ada91333acaf442de \
     https://cdn.modrinth.com/data/sdQwPACz/versions/XAVP7ehR/dreamshift-0.2.2-hotfix-forge.jar \
     /mods/dreamshift-0.2.2-hotfix-forge.jar
