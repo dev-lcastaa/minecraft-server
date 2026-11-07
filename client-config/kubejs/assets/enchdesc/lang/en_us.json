@@ -1,0 +1,10 @@
+{
+  "enchantment.fangs_n_claws.critical_backstab.desc": "Fang Dagger / Netherite Dagger only. Backstabs deal bonus damage, increasing with level.",
+  "enchantment.fangs_n_claws.quick_killer.desc": "Fang Dagger / Netherite Dagger only. Shortens the backstab cooldown and grants a burst of Speed after a successful backstab.",
+  "enchantment.fangs_n_claws.item_catcher.desc": "Catching Claw only. The hook can grab dropped items and reel them back to you.",
+  "enchantment.fangs_n_claws.scratch.desc": "Catching Claw only. Increases its melee attack damage, scaling with level.",
+  "enchantment.fangs_n_claws.blazing.desc": "Fire / Hellfire Pitchfork only. Deals bonus damage to targets that are on fire.",
+  "enchantment.storms_of_the_wild.stormcaller.desc": "Calls down a lightning bolt on use; depending on the stormcallerCreatesStorm gamerule it also summons a one-minute thunderstorm.",
+  "enchantment.storms_of_the_wild.thunder_helm.desc": "Helmet enchantment that protects the wearer from lightning strikes; blocking a strike may consume durability.",
+  "enchantment.endofherobrine.blessing.desc": "Deals extra damage to Herobrine and to mobs he has possessed."
+}

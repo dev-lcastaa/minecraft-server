@@ -154,8 +154,8 @@ class ConfigOverridesTest(unittest.TestCase):
         config = load(SERVER, "thirst/item_settings.toml")
         drinks = config["Drinks"]["drinks"]
         foods = config["Foods"]["foods"]
-        self.assertEqual(len(drinks), 92)
-        self.assertEqual(len(foods), 126)
+        self.assertEqual(len(drinks), 103)
+        self.assertEqual(len(foods), 165)
         self.assertEqual(
             len({row[0] for row in drinks + foods}), len(drinks) + len(foods)
         )

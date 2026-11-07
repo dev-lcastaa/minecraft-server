@@ -1,0 +1,250 @@
+{
+  "type": "minecraft:entity",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:loot_table",
+              "name": "minecraft:slicing/blaze",
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "type": "minecraft:blaze"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:loot_table",
+              "name": "minecraft:slicing/cave_spider",
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "type": "minecraft:cave_spider"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:loot_table",
+              "name": "minecraft:slicing/creeper",
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "type": "minecraft:creeper"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:loot_table",
+              "name": "minecraft:slicing/enderman",
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "type": "minecraft:enderman"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:loot_table",
+              "name": "minecraft:slicing/iron_golem",
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "type": "minecraft:iron_golem"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:loot_table",
+              "name": "minecraft:slicing/ravager",
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "type": "minecraft:ravager"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:loot_table",
+              "name": "minecraft:slicing/slime",
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "type": "minecraft:slime"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:loot_table",
+              "name": "minecraft:slicing/snow_golem",
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "type": "minecraft:snow_golem"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:loot_table",
+              "name": "minecraft:slicing/spider",
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "type": "minecraft:spider"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:loot_table",
+              "name": "minecraft:slicing/strider",
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "type": "minecraft:strider"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:loot_table",
+              "name": "serverfixes:sons_of_sins/random_organ"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "name": "ender_sins:golem_heart",
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "type": "unusualend:endstone_golem"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "ender_sins:enderling_muscle",
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "type": "unusualend:undead_enderling"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "ender_sins:warped_ribs",
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "type": "unusualend:bolok"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "ender_sins:warped_ribs",
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "type": "unusualend:bluk"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "ender_sins:firefly_muscle",
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "type": "unusualend:ender_firefly"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "ender_sins:sticky_muscle",
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "type": "unusualend:ender_blob"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "ender_sins:sticky_muscle",
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "type": "unusualend:enderbulb"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -4,14 +4,15 @@ For the Minecraft 1.20.1 Forge pack used by this server.
 
 1. Close Minecraft completely.
 2. Back up your instance's `config/` directory.
-3. Extract the client ZIP into the **instance directory**, merging its `config/`
-   and `mods/` folders with yours. Alternatively copy this directory's `config/`
-   contents into the instance's `config/` folder and copy
+3. Extract the client ZIP into the **instance directory**, merging its `config/`,
+   `kubejs/`, and `mods/` folders with yours. Alternatively copy this directory's
+   `config/` and `kubejs/` contents into the instance's matching folders and copy
    `mods/QuarkOddities-1.20.1.jar` into the instance's `mods/` folder. Overwrite
    matching files; do not delete other configs, and do not create `config/config/`.
 4. Restart Minecraft and connect to the server.
 
-Remove `weather2-1.20.1-2.8.3.jar` from the client `mods/` folder.
+Remove `weather2-1.20.1-2.8.3.jar` and the outdated duplicate
+`alexsmobs-1.22.9.jar` (keep Alex's Mobs 2.2.4) from the client `mods/` folder.
 Weather2 was removed from the server after profiling showed storm biome checks
 blocking the server thread on chunk loads. Its config overlay is no longer included.
 Keep CoroUtil: What Are They Up To and Zombie Awareness still require it.
@@ -40,8 +41,10 @@ SHA-256: `230af45e645ebe36f621d0b4362afed6ad0faf940129f4363aaba8058f245576`
   Quark still suppresses Automatic Recipe Unlock when NERB is installed and Map
   Washing when Supplementaries is installed; their selected toggles remain True
   without overriding Quark's compatibility protection.
-- Thirst Was Taken: 92 drinks and 126 foods, verified against the live item
-  registry. Includes suspicious stew, bee soup, royal jelly, hot cocoa, all 23
+- Thirst Was Taken: 103 drinks and 165 foods, verified against the live item
+  registry. Includes milk buckets, Cold Sweat's filled waterskin, Doggy Talents
+  drinks, Farmer's Respite strong hot cocoa, and the remaining Delight soups,
+  salads, fruit, and jellies. Includes suspicious stew, bee soup, royal jelly, hot cocoa, all 23
   SCP drinks, Miner's Delight soup cups, My Nether's Delight, Unusual End,
   Biomes We've Gone, Delightful, Alex's Delight/Caves, Dungeons Delight,
   Backrooms, Ender's Delight, and Abnormals Delight drinks. Existing values
@@ -49,9 +52,13 @@ SHA-256: `230af45e645ebe36f621d0b4362afed6ad0faf940129f4363aaba8058f245576`
   fruit 1/2 or 2/3, juices/milkshakes 8/13, teas 10/14, and water/cocoa/potions
   6/8. Water/milk cups use 3/4. Keyword matching remains off.
   Unusual End's brewed potions already use the vanilla potion entry; its
-  Warped Potion is now explicit. Mekanism Delight's two drinks require
-  Mekanism Generators, absent on this server, so only its available stews
-  are added. Harmful drink effects and crafting recipes are unchanged.
+  Warped Potion is now explicit. Mekanism Delight drinks that require
+  uninstalled Mekanism add-ons are excluded. Harmful drink effects and crafting recipes are unchanged.
+- Tooltips (`kubejs/assets/`, loaded automatically by KubeJS): restores 33
+  Farmer's Respite, Dungeons Delight, and My Nether's Delight item tooltips
+  that use Farmer's Delight's old key format, adds Enchantment Descriptions text
+  for 8 Fangs & Claws, Storms of the Wild, and End of Herobrine enchantments,
+  and names 134 unnamed Dawn of Time blocks.
 - Backrooms: disable its 30% partial-loot retention. The server still determines
   multiplayer death drops. This also applies to a local singleplayer world.
 - Vanilla Backport: preserve disabled natural zombie horses to avoid duplicating

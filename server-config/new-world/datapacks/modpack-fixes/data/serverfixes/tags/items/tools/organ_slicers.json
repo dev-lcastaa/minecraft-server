@@ -1,0 +1,43 @@
+{
+  "replace": false,
+  "values": [
+    "#forge:tools/knives",
+    "#farmersdelight:tools/knives",
+    {
+      "id": "#dungeonsdelight:cleavers",
+      "required": false
+    },
+    {
+      "id": "butchersdelight:cleaver",
+      "required": false
+    },
+    {
+      "id": "#nethersdelight:tools/machetes",
+      "required": false
+    },
+    {
+      "id": "graveyard:bone_dagger",
+      "required": false
+    },
+    {
+      "id": "alexscaves:desolate_dagger",
+      "required": false
+    },
+    {
+      "id": "fangs_n_claws:fang_dagger",
+      "required": false
+    },
+    {
+      "id": "fangs_n_claws:netherite_dagger",
+      "required": false
+    },
+    {
+      "id": "unusualend:bouncy_dagger",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_1728_knife",
+      "required": false
+    }
+  ]
+}

@@ -1,5 +1,10 @@
 [Drinks]
 	#Format: [item ID, hydration, quenching]. Explicit IDs avoid matching decorative food displays.
+	#Scale (bar = 20): water-like 6/8, juice/soda/shake 8/13, tea 10/14 (herbal 12/22), coffee/alcohol 6/11,
+	#milk 6/8, hot drinks 6/8, novelty/radioactive 4/5. Items that are not drinkable (e.g. miners_delight:water_cup,
+	#a bucket-style CopperCupItem) are intentionally omitted.
+	#Entries 92..103 are additions from the thirst audit (Cold Sweat waterskin, milk bucket,
+	#Mekanism Delight shakes, Doggy Talents soy milk/sake, FR strong hot cocoa, etc).
 	drinks = [
 		["minecraft:potion", 6, 8],
 		["thirst:terracotta_water_bowl", 4, 5],
@@ -53,7 +58,6 @@
 		["farmersdelight:hot_cocoa", 6, 8],
 		["the_bumblezone:royal_jelly_bottle", 6, 8],
 		["the_bumblezone:sugar_water_bottle", 6, 8],
-		["miners_delight:water_cup", 3, 4],
 		["unusualend:warped_potion", 6, 8],
 		["unusualend:chorus_juice", 8, 13],
 		["unusualend:chorus_tea", 10, 14],
@@ -93,9 +97,23 @@
 		["scp_ultimate:drink_21", 8, 13],
 		["scp_ultimate:drink_22", 8, 13],
 		["scp_ultimate:drink_23", 8, 13],
+		["minecraft:milk_bucket", 6, 8],
+		["cold_sweat:filled_waterskin", 6, 8],
+		["doggytalents:soy_milk", 6, 8],
+		["dungeonsdelight:spider_extract", 6, 8],
+		["unusualend:warped_infusion", 6, 8],
+		["farmersrespite:strong_hot_cocoa", 6, 8],
+		["doggytalents:sake", 6, 11],
+		["scp_ultimate:scp_207", 8, 13],
+		["mekanismdelight:atomic_shake", 8, 13],
+		["mekanismdelight:infused_shake", 8, 13],
+		["mekanismdelight:reinforced_shake", 8, 13],
+		["mynethersdelight:hot_cream", 3, 4],
 	]
 
 [Foods]
+	#Format: [item ID, hydration, quenching]. Only water-bearing foods are listed; dry foods/meats are omitted on purpose.
+	#Scale: bowl soup/stew/curry/salad 4/5, cup soup or ice cream/jelly/gelatin 2/3, juicy fruit 1-4, popsicle 7/9.
 	foods = [
 		["minecraft:apple", 2, 3],
 		["minecraft:golden_apple", 2, 3],
@@ -223,7 +241,47 @@
 		["alexscaves:sundae", 2, 3],
 		["mekanismdelight:antimatter_stew", 4, 5],
 		["mekanismdelight:robit_stew", 4, 5],
+		["farmersdelight:bone_broth", 4, 5],
+		["doggytalents:miso_soup", 4, 5],
+		["alexsmobs:mosquito_repellent_stew", 4, 5],
+		["alexsmobs:sopa_de_macaco", 4, 5],
+		["endersdelight:chicken_curry", 4, 5],
+		["endersdelight:amberveiled_curry", 4, 5],
+		["farmersrespite:blazing_chili", 4, 5],
+		["farmersrespite:tea_curry", 4, 5],
+		["mynethersdelight:spicy_curry", 4, 5],
+		["oceanic_delight:fish_egg_noodle_soup", 4, 5],
+		["oceanic_delight:glow_squid_stew", 4, 5],
+		["oceanic_delight:shrimp_stew", 4, 5],
+		["farmersdelight:nether_salad", 4, 5],
+		["farmersdelight:gleaming_salad", 4, 5],
+		["oceanic_delight:caesar_salad", 4, 5],
+		["oceanic_delight:sea_salad", 4, 5],
+		["oceanic_delight:squid_salad", 4, 5],
+		["miners_delight:bone_broth_cup", 2, 3],
+		["alexsmobs:banana", 2, 3],
+		["quark:ancient_fruit", 2, 3],
+		["endergetic:bolloom_fruit", 2, 3],
+		["bosses_of_mass_destruction:crystal_fruit", 2, 3],
+		["yungscavebiomes:prickly_peach", 2, 3],
+		["create:honeyed_apple", 2, 3],
+		["alexscaves:caramel_apple", 2, 3],
+		["mekanismdelight:polonium_ice_cream", 2, 3],
+		["nethersdelight:magma_gelatin", 2, 3],
+		["alexsmobs:rainbow_jelly", 2, 3],
+		["dungeonsdelight:soft_serve_sniffer_egg", 2, 3],
+		["farmersdelight:glow_berry_custard", 2, 3],
+		["mekanismdelight:alloy_jelly_medley", 2, 3],
+		["mekanismdelight:atomic_jelly", 2, 3],
+		["mekanismdelight:infused_jelly", 2, 3],
+		["mekanismdelight:reinforced_jelly", 2, 3],
+		["farmersdelight:tomato", 1, 2],
+		["oceanic_delight:sea_grape", 1, 2],
+		["minecraft:chorus_fruit", 1, 2],
+		["create:chocolate_glazed_berries", 1, 2],
+		["mynethersdelight:tear_popsicle", 7, 9],
 	]
 
 [Blacklist]
+	#Format: ["examplemod:example_item_1", ...]. Nothing registers thirst values via code on this pack, so this stays empty.
 	itemsBlacklist = []

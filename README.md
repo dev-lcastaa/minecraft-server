@@ -335,13 +335,15 @@ contents of `client-config/config/` into it (overwrite), remove
 then restart.
 
 See the [client import instructions](./client-config/README.md). Extract the
-client config ZIP into the instance directory, merging `config/` and `mods/`;
-it includes Quark Oddities, not a complete launcher-importable modpack.
-Do not delete other configs or mods.
+client config ZIP into the instance directory, merging `config/`, `kubejs/`, and
+`mods/`; it includes Quark Oddities, not a complete launcher-importable modpack.
+Do not delete other configs or mods. `kubejs/assets/` contains missing English
+tooltip, enchantment-description, and block-name text; KubeJS loads it
+automatically, so no resource pack needs enabling.
 To reproduce the ZIP from the repository:
 
 ```sh
-(cd client-config && zip -r ../minecraft-client-config.zip README.md config mods -x '*/.DS_Store')
+(cd client-config && zip -r ../minecraft-client-config.zip README.md config kubejs mods -x '*/.DS_Store')
 ```
 
 ## Persistent data and operations
@@ -382,6 +384,45 @@ No restart is needed. Keep the pack enabled and edit the repository copy rather
 than the volume copy. Clients do not need the pack.
 Validate with `python3 -m unittest discover -s tests -p 'test_loot_compat.py'`.
 
+### Bundled modpack fixes datapack and KubeJS script
+
+The server-only [`modpack-fixes` datapack](./server-config/new-world/datapacks/modpack-fixes/)
+is deployed and enabled the same way as `loot-compat`:
+
+- **Bone meal from bones:** Legionary replaces `minecraft:bone_meal` with a
+  forgotten-bone recipe. `serverfixes:bone_meal_from_bone` restores
+  1 bone → 3 bone meal; Legionary's recipe still works.
+- **Mutant More crash:** Mutant More's wandering-trader mixin searches for
+  `#mutantmore:on_suspicious_entrance_maps` and builds a map using a
+  client-only decoration type, crashing the server. The tag is replaced with an
+  empty list, so the search finds nothing and the map is never created.
+- **Sons of Sins organs from blades:** a Farmer's Delight `add_loot_table`
+  global loot modifier rolls Sons of Sins' per-mob slicing tables (or a random
+  heart, muscle, or ribs) when a **player** kills a non-player mob with an item
+  in `#serverfixes:tools/organ_slicers`: Forge/Farmer's Delight knives, Dungeons
+  Delight and Butcher's Delight cleavers, Nether's Delight machetes, and the
+  Graveyard, Alex's Caves, Fangs & Claws, Unusual End, and SCP daggers/knives.
+  Sons of Sins' own slicers, skeletons, flesh creatures, and ether ghosts are
+  excluded to avoid double drops. Knives are deliberately not added to
+  `sons_of_sins:is_slicer`, which would also remove hit cooldowns and fill
+  bottles with blood. This depends on Farmer's Delight's
+  `generateFDChestLoot = true`, which enables its loot modifiers.
+- **Graveyard corrupted illagers:** the corrupted evoker, vindicator, and pillager
+  keep Graveyard's corruption drop and also roll the vanilla illager table
+  (Dungeons & Taverns' versions for pillager/vindicator). The evoker also rolls
+  Illager Invasion's Sorcerer loot and the vindicator its Basher loot. The
+  evoker therefore always drops a Totem of Undying, like a vanilla evoker.
+
+[`server-config/kubejs/startup_scripts/htn_extra_totems.js`](./server-config/kubejs/startup_scripts/htn_extra_totems.js)
+is copied to `/config/kubejs/` and synced into `/data/kubejs/`. It applies
+Hardcore Totem Nerf's post-totem penalties to totems that bypass its vanilla
+hook: the seven More Totems totems, Fangs & Claws' Totem of Frost, and
+Unusual End's (Linked) Void Totem. HTN's pre-use cooldown still blocks More
+Totems, but cannot block Totem of Frost or the Void Totem. Startup scripts load
+only at boot, so restart the server after changing it. Clients do not need it.
+
+Validate with `python3 -m unittest discover -s tests -p 'test_modpack_fixes.py'`.
+
 ### Bundled mod config overrides
 
 Files in [`server-config/config/`](./server-config/config/) are copied into the
@@ -399,7 +440,7 @@ redeploy. Other mod configs stay persistent in the volume.
 | `quark-common.toml` | `Automatic Tool Restock = false`, `Inventory Sorting = false` | Selected inventory profile |
 | `quark-common.toml` | `Quick Armor Swapping = true` | Sneak-right-click armor stands to exchange equipped armor |
 | `quark-common.toml` | `Villagers Use Simple Harvest = false` | Leave villager farming to Smarter Farmers; player harvesting stays enabled |
-| `thirst/item_settings.toml` | 92 explicit drink IDs and 126 food IDs | Add verified drinks, soups, cups, fruit, and moist foods from the installed pack |
+| `thirst/item_settings.toml` | 103 explicit drink IDs and 165 food IDs | Add verified drinks, soups, cups, fruit, and moist foods from the installed pack |
 | `thirst/common.toml`, `thirst/keyword.toml` | Preserve current balance; keyword matching off | Match client gameplay settings without matching decorative food-display items |
 | `mbackrooms/Mbackrooms-Config-Common.toml` | `partialLootKeeping = false` | Backrooms otherwise saves about 30% of inventory even outside its dimensions |
 | `chunky/config.json` | `updateInterval = 60` | Pregeneration progress logs once a minute instead of every second |
@@ -438,10 +479,20 @@ Oddities features remain disabled. The add-on itself contains no gameplay code;
 it unlocks the implementations already in Quark. Its mandatory Quark dependency
 is satisfied by the installed Quark 4.0-462.
 
-Thirst now has **92 drinks and 126 foods**, with identical server and client
+Thirst now has **103 drinks and 165 foods**, with identical server and client
 item settings. The November 4 expansion adds 44 drinks and 101 foods without
-changing the previous entries. Every configured ID was checked against node004's
-live item registry using `clear @a <item> 0`, which does not remove items.
+changing the previous entries. The November 7 pass adds 52 more IDs: milk
+buckets, Cold Sweat's filled waterskin (`6/8`), Doggy Talents soy milk and sake,
+Farmer's Respite strong hot cocoa, the remaining Mekanism Delight shakes, and
+additional soups, curries, salads, fruit, and jellies across the Delight mods.
+`miners_delight:water_cup` was removed because it is not drinkable. Every
+configured ID was checked against node004's live item registry using
+`clear @a <item> 0`, which does not remove items.
+
+Cold Sweat's own Thirst integration requires Thirst 3.x, so the waterskin is
+configured manually; pouring it over yourself may also hydrate. Mekanism
+Delight items registered only by Mekanism Generators, Evolved Mekanism, or
+Mekanism Extras (none installed) are excluded.
 
 Coverage includes suspicious stew, Bumblezone bee soup and royal jelly, hot
 cocoa, all 23 SCP Ultimate drinks, Miner's Delight soups and cups (including

@@ -23,3 +23,4 @@ COPY server.properties /config/server.properties
 COPY server-config/config/ /config/config/
 COPY server-config/new-world/serverconfig/ /config/new-world/serverconfig/
 COPY server-config/new-world/datapacks/ /config/new-world/datapacks/
+COPY server-config/kubejs/ /config/kubejs/
