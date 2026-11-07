@@ -1,0 +1,18 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "#serverfixes:spawn_balance/quark/glimmering_weald",
+  "spawners": [
+    {
+      "type": "minecraft:mooshroom",
+      "weight": 7,
+      "minCount": 4,
+      "maxCount": 8
+    },
+    {
+      "type": "alexsmobs:fly",
+      "weight": 7,
+      "minCount": 2,
+      "maxCount": 3
+    }
+  ]
+}

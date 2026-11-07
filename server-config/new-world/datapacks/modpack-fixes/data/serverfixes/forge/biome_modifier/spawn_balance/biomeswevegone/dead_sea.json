@@ -1,0 +1,18 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "#serverfixes:spawn_balance/biomeswevegone/dead_sea",
+  "spawners": [
+    {
+      "type": "minecraft:cod",
+      "weight": 8,
+      "minCount": 3,
+      "maxCount": 6
+    },
+    {
+      "type": "alexsmobs:fly",
+      "weight": 7,
+      "minCount": 2,
+      "maxCount": 3
+    }
+  ]
+}

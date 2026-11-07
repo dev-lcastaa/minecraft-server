@@ -1,0 +1,18 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "#serverfixes:spawn_balance/minecraft/warm_ocean",
+  "spawners": [
+    {
+      "type": "alexsmobs:flying_fish",
+      "weight": 40,
+      "minCount": 3,
+      "maxCount": 6
+    },
+    {
+      "type": "alexsmobs:fly",
+      "weight": 7,
+      "minCount": 2,
+      "maxCount": 3
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "#serverfixes:spawn_balance/minecraft/windswept_forest",
+  "spawners": [
+    {
+      "type": "alexsmobs:bald_eagle",
+      "weight": 41,
+      "minCount": 2,
+      "maxCount": 4
+    }
+  ]
+}

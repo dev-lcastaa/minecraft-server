@@ -58,7 +58,16 @@ SHA-256: `230af45e645ebe36f621d0b4362afed6ad0faf940129f4363aaba8058f245576`
   Farmer's Respite, Dungeons Delight, and My Nether's Delight item tooltips
   that use Farmer's Delight's old key format, adds Enchantment Descriptions text
   for 8 Fangs & Claws, Storms of the Wild, and End of Herobrine enchantments,
-  and names 134 unnamed Dawn of Time blocks.
+  and names 134 unnamed Dawn of Time blocks. Farmer's Delight Backstabbing's
+  description is mapped to the key Enchantment Descriptions reads, so all
+  enchantments in the pack now show a description.
+- Item stat tooltips (`kubejs/client_scripts/item_stat_tooltips.js`): every
+  item shows gray stat lines. Tools, weapons, armor, shields, and bows show
+  durability, armor/toughness, mining level/speed, enchantability, and repair
+  material; other items show food values, fuel value, block hardness, blast
+  resistance and light level, and stack size.
+- Alex's Mobs (`config/amc.json`): matches the server's lowered spawn weights
+  for 36 dominant animals; only matters in singleplayer.
 - Backrooms: disable its 30% partial-loot retention. The server still determines
   multiplayer death drops. This also applies to a local singleplayer world.
 - Vanilla Backport: preserve disabled natural zombie horses to avoid duplicating

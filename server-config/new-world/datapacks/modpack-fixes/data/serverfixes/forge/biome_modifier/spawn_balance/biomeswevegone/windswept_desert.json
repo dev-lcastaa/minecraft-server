@@ -1,0 +1,12 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "#serverfixes:spawn_balance/biomeswevegone/windswept_desert",
+  "spawners": [
+    {
+      "type": "minecraft:salmon",
+      "weight": 8,
+      "minCount": 1,
+      "maxCount": 5
+    }
+  ]
+}

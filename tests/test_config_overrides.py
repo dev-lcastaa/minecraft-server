@@ -51,6 +51,8 @@ DISABLED_QUARK_FEATURES = {
 
 
 def load(root, name):
+    if str(name).endswith(".json"):
+        return json.loads((root / name).read_text())
     with (root / name).open("rb") as stream:
         return tomllib.load(stream)
 

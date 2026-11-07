@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "biomeswevegone:white_mangrove_marshes",
+      "required": false
+    }
+  ]
+}

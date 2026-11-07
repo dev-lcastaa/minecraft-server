@@ -6,5 +6,6 @@
   "enchantment.fangs_n_claws.blazing.desc": "Fire / Hellfire Pitchfork only. Deals bonus damage to targets that are on fire.",
   "enchantment.storms_of_the_wild.stormcaller.desc": "Calls down a lightning bolt on use; depending on the stormcallerCreatesStorm gamerule it also summons a one-minute thunderstorm.",
   "enchantment.storms_of_the_wild.thunder_helm.desc": "Helmet enchantment that protects the wearer from lightning strikes; blocking a strike may consume durability.",
-  "enchantment.endofherobrine.blessing.desc": "Deals extra damage to Herobrine and to mobs he has possessed."
+  "enchantment.endofherobrine.blessing.desc": "Deals extra damage to Herobrine and to mobs he has possessed.",
+  "enchantment.farmersdelight.backstabbing.desc": "Amplifies damage when striking a target from behind."
 }

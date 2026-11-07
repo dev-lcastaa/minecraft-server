@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "biomeswevegone:crag_gardens",
+      "required": false
+    }
+  ]
+}

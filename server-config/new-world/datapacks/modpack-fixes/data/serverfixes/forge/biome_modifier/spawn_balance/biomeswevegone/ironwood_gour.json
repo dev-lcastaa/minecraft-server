@@ -1,0 +1,30 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "#serverfixes:spawn_balance/biomeswevegone/ironwood_gour",
+  "spawners": [
+    {
+      "type": "minecraft:rabbit",
+      "weight": 9,
+      "minCount": 2,
+      "maxCount": 3
+    },
+    {
+      "type": "minecraft:horse",
+      "weight": 10,
+      "minCount": 2,
+      "maxCount": 6
+    },
+    {
+      "type": "minecraft:armadillo",
+      "weight": 14,
+      "minCount": 2,
+      "maxCount": 3
+    },
+    {
+      "type": "minecraft:wolf",
+      "weight": 13,
+      "minCount": 4,
+      "maxCount": 8
+    }
+  ]
+}

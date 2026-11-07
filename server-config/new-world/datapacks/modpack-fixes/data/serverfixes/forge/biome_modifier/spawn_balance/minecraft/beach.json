@@ -1,0 +1,18 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "#serverfixes:spawn_balance/minecraft/beach",
+  "spawners": [
+    {
+      "type": "minecraft:turtle",
+      "weight": 23,
+      "minCount": 2,
+      "maxCount": 5
+    },
+    {
+      "type": "minecraft:cod",
+      "weight": 7,
+      "minCount": 3,
+      "maxCount": 6
+    }
+  ]
+}

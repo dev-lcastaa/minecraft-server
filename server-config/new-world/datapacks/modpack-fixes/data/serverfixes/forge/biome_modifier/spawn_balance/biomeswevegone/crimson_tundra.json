@@ -1,0 +1,30 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "#serverfixes:spawn_balance/biomeswevegone/crimson_tundra",
+  "spawners": [
+    {
+      "type": "alexsmobs:raccoon",
+      "weight": 12,
+      "minCount": 2,
+      "maxCount": 4
+    },
+    {
+      "type": "alexsmobs:crow",
+      "weight": 12,
+      "minCount": 3,
+      "maxCount": 5
+    },
+    {
+      "type": "alexsmobs:bison",
+      "weight": 11,
+      "minCount": 6,
+      "maxCount": 10
+    },
+    {
+      "type": "minecraft:bat",
+      "weight": 7,
+      "minCount": 8,
+      "maxCount": 8
+    }
+  ]
+}

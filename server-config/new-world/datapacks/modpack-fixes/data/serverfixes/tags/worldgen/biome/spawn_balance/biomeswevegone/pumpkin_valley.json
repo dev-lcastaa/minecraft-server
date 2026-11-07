@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "biomeswevegone:pumpkin_valley",
+      "required": false
+    }
+  ]
+}

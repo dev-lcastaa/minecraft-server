@@ -1,0 +1,30 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "#serverfixes:spawn_balance/minecraft/taiga",
+  "spawners": [
+    {
+      "type": "alexsmobs:grizzly_bear",
+      "weight": 8,
+      "minCount": 2,
+      "maxCount": 3
+    },
+    {
+      "type": "alexsmobs:raccoon",
+      "weight": 9,
+      "minCount": 2,
+      "maxCount": 4
+    },
+    {
+      "type": "alexsmobs:crow",
+      "weight": 9,
+      "minCount": 3,
+      "maxCount": 5
+    },
+    {
+      "type": "alexsmobs:blue_jay",
+      "weight": 11,
+      "minCount": 2,
+      "maxCount": 4
+    }
+  ]
+}

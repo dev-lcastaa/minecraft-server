@@ -1,0 +1,30 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "#serverfixes:spawn_balance/minecraft/snowy_beach",
+  "spawners": [
+    {
+      "type": "backported_animal_variants:cold_chicken",
+      "weight": 6,
+      "minCount": 2,
+      "maxCount": 4
+    },
+    {
+      "type": "backported_animal_variants:cold_cow",
+      "weight": 6,
+      "minCount": 2,
+      "maxCount": 4
+    },
+    {
+      "type": "backported_animal_variants:cold_pig",
+      "weight": 6,
+      "minCount": 2,
+      "maxCount": 4
+    },
+    {
+      "type": "minecraft:salmon",
+      "weight": 7,
+      "minCount": 1,
+      "maxCount": 5
+    }
+  ]
+}

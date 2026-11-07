@@ -1,0 +1,24 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "#serverfixes:spawn_balance/biomeswevegone/cypress_swamplands",
+  "spawners": [
+    {
+      "type": "minecraft:frog",
+      "weight": 21,
+      "minCount": 2,
+      "maxCount": 5
+    },
+    {
+      "type": "alexsmobs:terrapin",
+      "weight": 13,
+      "minCount": 1,
+      "maxCount": 2
+    },
+    {
+      "type": "alexsmobs:catfish",
+      "weight": 21,
+      "minCount": 1,
+      "maxCount": 3
+    }
+  ]
+}

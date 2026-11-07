@@ -1,0 +1,18 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "#serverfixes:spawn_balance/minecraft/stony_peaks",
+  "spawners": [
+    {
+      "type": "alexsmobs:bald_eagle",
+      "weight": 25,
+      "minCount": 2,
+      "maxCount": 4
+    },
+    {
+      "type": "alexsmobs:gelada_monkey",
+      "weight": 15,
+      "minCount": 9,
+      "maxCount": 16
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "#serverfixes:spawn_balance/biomeswevegone/forgotten_forest",
+  "spawners": [
+    {
+      "type": "minecraft:allay",
+      "weight": 4,
+      "minCount": 1,
+      "maxCount": 1
+    },
+    {
+      "type": "minecraft:rabbit",
+      "weight": 9,
+      "minCount": 2,
+      "maxCount": 3
+    },
+    {
+      "type": "minecraft:fox",
+      "weight": 12,
+      "minCount": 2,
+      "maxCount": 4
+    },
+    {
+      "type": "minecraft:horse",
+      "weight": 10,
+      "minCount": 2,
+      "maxCount": 6
+    },
+    {
+      "type": "minecraft:bat",
+      "weight": 7,
+      "minCount": 8,
+      "maxCount": 8
+    }
+  ]
+}

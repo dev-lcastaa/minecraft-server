@@ -1,0 +1,30 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "#serverfixes:spawn_balance/minecraft/deep_frozen_ocean",
+  "spawners": [
+    {
+      "type": "minecraft:squid",
+      "weight": 3,
+      "minCount": 1,
+      "maxCount": 4
+    },
+    {
+      "type": "minecraft:nautilus",
+      "weight": 4,
+      "minCount": 1,
+      "maxCount": 1
+    },
+    {
+      "type": "minecraft:salmon",
+      "weight": 11,
+      "minCount": 1,
+      "maxCount": 5
+    },
+    {
+      "type": "alexsmobs:fly",
+      "weight": 7,
+      "minCount": 2,
+      "maxCount": 3
+    }
+  ]
+}

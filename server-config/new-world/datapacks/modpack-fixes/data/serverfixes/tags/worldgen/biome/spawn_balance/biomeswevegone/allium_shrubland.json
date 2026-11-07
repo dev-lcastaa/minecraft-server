@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "biomeswevegone:allium_shrubland",
+      "required": false
+    }
+  ]
+}

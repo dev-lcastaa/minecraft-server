@@ -1,0 +1,12 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "#serverfixes:spawn_balance/minecraft/pale_garden",
+  "spawners": [
+    {
+      "type": "minecraft:horse",
+      "weight": 48,
+      "minCount": 2,
+      "maxCount": 6
+    }
+  ]
+}

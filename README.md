@@ -340,6 +340,17 @@ client config ZIP into the instance directory, merging `config/`, `kubejs/`, and
 Do not delete other configs or mods. `kubejs/assets/` contains missing English
 tooltip, enchantment-description, and block-name text; KubeJS loads it
 automatically, so no resource pack needs enabling.
+`kubejs/client_scripts/item_stat_tooltips.js` adds generated gray stat lines to
+every item, read from the item's own data:
+- breakable items (tools, weapons, armor, shields, bows, …): durability (hidden in
+  F3+H advanced mode, where vanilla already shows it), armor and toughness,
+  mining level and speed, enchantability, and repair material;
+- all other items: food hunger/saturation, fuel value (items smelted), block
+  hardness, blast resistance, and light level, and stack size, so every item
+  shows at least one line. Enchanted books also show Enchantment Descriptions text.
+
+It was checked against all 11,935 registered items on node004: every item
+receives at least one line, with no errors.
 To reproduce the ZIP from the repository:
 
 ```sh
@@ -412,6 +423,29 @@ is deployed and enabled the same way as `loot-compat`:
   (Dungeons & Taverns' versions for pillager/vindicator). The evoker also rolls
   Illager Invasion's Sorcerer loot and the vindicator its Basher loot. The
   evoker therefore always drops a Totem of Undying, like a vanilla evoker.
+- **Alex's Mobs / vanilla spawn balance:** 91 `forge:add_spawns` biome
+  modifiers under `serverfixes:spawn_balance/<namespace>/<biome>` bring the
+  passive pools (`creature`, `water_creature`, `water_ambient`, `ambient`) of
+  overworld biomes to roughly 50/50 Alex's Mobs vs vanilla spawn weight (every
+  adjusted pool lands within 40-60%). Backported Animal Variants counts as
+  vanilla; other mods' mobs are not counted. Together with the lowered weights in
+  `amc.json` (see config overrides), they work as follows:
+  - Where one side dominates, its weight is matched by extra copies of the other
+    side's existing mobs.
+  - Where a side is missing, mobs are borrowed from a similar biome. For example,
+    windswept hills/stony peaks gain bald eagles and gelada monkeys, rivers gain
+    plains livestock, and beaches/shores gain cod.
+  - End biomes have no vanilla animals, so vanilla placeholders (cow, pig,
+    chicken, bat) are added. They cannot spawn on end stone, which roughly halves
+    Alex's Mobs End spawns.
+  - Hostile pools (Alex's Mobs is about 4%) and the Nether and other dimensions
+    are untouched. So are ocean `creature` pools, Devil's Hole pupfish (limited
+    to rare chunks), the deep dark, lush-cave pools, and river squid.
+  - Each biome is referenced through an optional (`required: false`) biome tag,
+    so removing a biome mod does not break the pack.
+  - Mob caps are per category, so the total number of mobs is unchanged.
+  - Biome modifiers load only at startup, so this part needs a **server
+    restart** rather than `reload`; it then applies to existing chunks too.
 
 [`server-config/kubejs/startup_scripts/htn_extra_totems.js`](./server-config/kubejs/startup_scripts/htn_extra_totems.js)
 is copied to `/config/kubejs/` and synced into `/data/kubejs/`. It applies
@@ -444,6 +478,7 @@ redeploy. Other mod configs stay persistent in the volume.
 | `thirst/common.toml`, `thirst/keyword.toml` | Preserve current balance; keyword matching off | Match client gameplay settings without matching decorative food-display items |
 | `mbackrooms/Mbackrooms-Config-Common.toml` | `partialLootKeeping = false` | Backrooms otherwise saves about 30% of inventory even outside its dimensions |
 | `chunky/config.json` | `updateInterval = 60` | Pregeneration progress logs once a minute instead of every second |
+| `amc.json` | 36 Alex's Mobs spawn weights lowered (e.g. gazelle 40→20, elephant 30→15, tiger 30→21, kangaroo 25→12); all other settings are the live server's values | AM animals outweighed vanilla animals in savanna, jungle, cherry grove, swamp, beach, and ocean pools; works with the `modpack-fixes` spawn-balance modifiers. The full file is synced, so make AM config edits here, not in the volume |
 
 Quark common settings must match on clients; use the client package below.
 

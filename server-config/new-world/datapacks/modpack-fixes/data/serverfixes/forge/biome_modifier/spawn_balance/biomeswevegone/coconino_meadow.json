@@ -1,0 +1,24 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "#serverfixes:spawn_balance/biomeswevegone/coconino_meadow",
+  "spawners": [
+    {
+      "type": "alexsmobs:raccoon",
+      "weight": 13,
+      "minCount": 2,
+      "maxCount": 4
+    },
+    {
+      "type": "alexsmobs:crow",
+      "weight": 13,
+      "minCount": 3,
+      "maxCount": 5
+    },
+    {
+      "type": "alexsmobs:bison",
+      "weight": 13,
+      "minCount": 6,
+      "maxCount": 10
+    }
+  ]
+}

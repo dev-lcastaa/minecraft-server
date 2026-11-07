@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "stellarity:the_hallow",
+      "required": false
+    }
+  ]
+}

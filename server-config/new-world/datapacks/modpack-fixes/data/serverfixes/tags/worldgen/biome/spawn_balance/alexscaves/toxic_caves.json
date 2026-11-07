@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "alexscaves:toxic_caves",
+      "required": false
+    }
+  ]
+}

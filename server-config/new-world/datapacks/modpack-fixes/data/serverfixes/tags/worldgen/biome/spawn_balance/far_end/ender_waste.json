@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "far_end:ender_waste",
+      "required": false
+    }
+  ]
+}

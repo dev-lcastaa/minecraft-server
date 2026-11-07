@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "far_end:end_wilds",
+      "required": false
+    }
+  ]
+}

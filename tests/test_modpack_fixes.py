@@ -124,8 +124,59 @@ class ModpackFixesTest(unittest.TestCase):
         self.assertTrue(all(key.startswith("tooltip.farmersdelight.") for key in tooltips))
         descriptions = json.loads((lang / "enchdesc/lang/en_us.json").read_text())
         self.assertTrue(all(key.endswith(".desc") for key in descriptions))
+        self.assertIn("enchantment.farmersdelight.backstabbing.desc", descriptions)
         names = json.loads((lang / "dawnoftimebuilder/lang/en_us.json").read_text())
         self.assertEqual(len(names), 134)
+
+    def test_spawn_balance_modifiers(self):
+        modifiers = sorted((DATA / "serverfixes/forge/biome_modifier/spawn_balance").rglob("*.json"))
+        self.assertGreater(len(modifiers), 80)
+        for path in modifiers:
+            with self.subTest(path=path):
+                modifier = json.loads(path.read_text())
+                self.assertEqual(modifier["type"], "forge:add_spawns")
+                rel = path.relative_to(DATA / "serverfixes/forge/biome_modifier").with_suffix("")
+                self.assertEqual(modifier["biomes"], f"#serverfixes:{rel.as_posix()}")
+                tag = load(f"serverfixes/tags/worldgen/biome/{rel.as_posix()}.json")
+                biome = f"{rel.parts[1]}:{rel.parts[2]}"
+                self.assertEqual(tag["values"], [{"id": biome, "required": False}])
+                self.assertTrue(modifier["spawners"])
+                for spawner in modifier["spawners"]:
+                    namespace = spawner["type"].split(":")[0]
+                    self.assertIn(namespace, {"minecraft", "alexsmobs", "backported_animal_variants"})
+                    self.assertGreater(spawner["weight"], 0)
+                    self.assertLessEqual(1, spawner["minCount"])
+                    self.assertLessEqual(spawner["minCount"], spawner["maxCount"])
+
+    def test_alexs_mobs_dominant_weights_lowered(self):
+        spawning = json.loads((ROOT / "server-config/config/amc.json").read_text())["spawning"]
+        for key, weight in {
+            "gazelleSpawnWeight": 20,
+            "elephantSpawnWeight": 15,
+            "kangarooSpawnWeight": 12,
+            "tigerSpawnWeight": 21,
+            "hummingbirdSpawnWeight": 10,
+        }.items():
+            self.assertEqual(spawning[key], weight, key)
+
+    def test_client_stat_tooltips(self):
+        script = (ROOT / "client-config/kubejs/client_scripts/item_stat_tooltips.js").read_text()
+        self.assertIn("ItemEvents.tooltip", script)
+        self.assertIn("addAdvancedToAll", script)
+        for label in (
+            "Durability: ",
+            "Armor: ",
+            "Enchantability: ",
+            "Mining level: ",
+            "Repair material: ",
+            "Food: ",
+            "Fuel: smelts ",
+            "Hardness: ",
+            "Blast resistance: ",
+            "Stacks to ",
+        ):
+            self.assertIn(label, script)
+        self.assertNotIn("const ", script)
 
     def test_image_includes_fixes(self):
         dockerfile = (ROOT / "Dockerfile").read_text()

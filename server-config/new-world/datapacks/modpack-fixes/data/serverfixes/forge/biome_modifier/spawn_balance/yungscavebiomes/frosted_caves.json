@@ -1,0 +1,24 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "#serverfixes:spawn_balance/yungscavebiomes/frosted_caves",
+  "spawners": [
+    {
+      "type": "alexsmobs:snow_leopard",
+      "weight": 10,
+      "minCount": 1,
+      "maxCount": 2
+    },
+    {
+      "type": "alexsmobs:froststalker",
+      "weight": 11,
+      "minCount": 5,
+      "maxCount": 7
+    },
+    {
+      "type": "alexsmobs:tusklin",
+      "weight": 7,
+      "minCount": 3,
+      "maxCount": 5
+    }
+  ]
+}

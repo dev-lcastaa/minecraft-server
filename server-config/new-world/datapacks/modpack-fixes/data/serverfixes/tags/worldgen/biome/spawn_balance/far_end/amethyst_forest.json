@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "far_end:amethyst_forest",
+      "required": false
+    }
+  ]
+}

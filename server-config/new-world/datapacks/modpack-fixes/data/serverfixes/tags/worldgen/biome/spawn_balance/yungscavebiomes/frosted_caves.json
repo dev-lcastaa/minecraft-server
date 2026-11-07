@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "yungscavebiomes:frosted_caves",
+      "required": false
+    }
+  ]
+}

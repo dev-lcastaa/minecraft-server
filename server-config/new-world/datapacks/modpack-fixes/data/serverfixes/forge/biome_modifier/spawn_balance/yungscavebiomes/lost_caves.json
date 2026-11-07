@@ -1,0 +1,24 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "#serverfixes:spawn_balance/yungscavebiomes/lost_caves",
+  "spawners": [
+    {
+      "type": "alexsmobs:roadrunner",
+      "weight": 9,
+      "minCount": 2,
+      "maxCount": 2
+    },
+    {
+      "type": "alexsmobs:rattlesnake",
+      "weight": 11,
+      "minCount": 1,
+      "maxCount": 2
+    },
+    {
+      "type": "alexsmobs:tarantula_hawk",
+      "weight": 8,
+      "minCount": 1,
+      "maxCount": 1
+    }
+  ]
+}

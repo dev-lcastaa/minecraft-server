@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "far_end:ashfall_delta",
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "#serverfixes:spawn_balance/minecraft/deep_ocean",
+  "spawners": [
+    {
+      "type": "minecraft:cod",
+      "weight": 11,
+      "minCount": 3,
+      "maxCount": 6
+    },
+    {
+      "type": "alexsmobs:fly",
+      "weight": 7,
+      "minCount": 2,
+      "maxCount": 3
+    }
+  ]
+}

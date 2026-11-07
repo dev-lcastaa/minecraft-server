@@ -1,0 +1,36 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "#serverfixes:spawn_balance/biomeswevegone/jacaranda_jungle",
+  "spawners": [
+    {
+      "type": "minecraft:sheep",
+      "weight": 7,
+      "minCount": 4,
+      "maxCount": 4
+    },
+    {
+      "type": "minecraft:pig",
+      "weight": 6,
+      "minCount": 4,
+      "maxCount": 4
+    },
+    {
+      "type": "minecraft:chicken",
+      "weight": 6,
+      "minCount": 4,
+      "maxCount": 4
+    },
+    {
+      "type": "minecraft:cow",
+      "weight": 6,
+      "minCount": 4,
+      "maxCount": 4
+    },
+    {
+      "type": "minecraft:wolf",
+      "weight": 5,
+      "minCount": 4,
+      "maxCount": 4
+    }
+  ]
+}

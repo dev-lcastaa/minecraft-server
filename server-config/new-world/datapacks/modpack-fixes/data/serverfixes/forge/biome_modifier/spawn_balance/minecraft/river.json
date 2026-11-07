@@ -1,0 +1,42 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "#serverfixes:spawn_balance/minecraft/river",
+  "spawners": [
+    {
+      "type": "minecraft:sheep",
+      "weight": 7,
+      "minCount": 4,
+      "maxCount": 4
+    },
+    {
+      "type": "minecraft:pig",
+      "weight": 6,
+      "minCount": 4,
+      "maxCount": 4
+    },
+    {
+      "type": "minecraft:chicken",
+      "weight": 6,
+      "minCount": 4,
+      "maxCount": 4
+    },
+    {
+      "type": "minecraft:cow",
+      "weight": 5,
+      "minCount": 4,
+      "maxCount": 4
+    },
+    {
+      "type": "minecraft:horse",
+      "weight": 4,
+      "minCount": 2,
+      "maxCount": 6
+    },
+    {
+      "type": "minecraft:donkey",
+      "weight": 2,
+      "minCount": 1,
+      "maxCount": 3
+    }
+  ]
+}

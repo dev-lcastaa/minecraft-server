@@ -1,0 +1,24 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "#serverfixes:spawn_balance/biomeswevegone/allium_shrubland",
+  "spawners": [
+    {
+      "type": "alexsmobs:raccoon",
+      "weight": 6,
+      "minCount": 2,
+      "maxCount": 4
+    },
+    {
+      "type": "alexsmobs:crow",
+      "weight": 6,
+      "minCount": 3,
+      "maxCount": 5
+    },
+    {
+      "type": "alexsmobs:bison",
+      "weight": 5,
+      "minCount": 6,
+      "maxCount": 10
+    }
+  ]
+}

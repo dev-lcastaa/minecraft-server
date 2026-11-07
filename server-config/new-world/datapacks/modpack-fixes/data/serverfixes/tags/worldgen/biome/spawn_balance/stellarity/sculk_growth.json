@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "stellarity:sculk_growth",
+      "required": false
+    }
+  ]
+}

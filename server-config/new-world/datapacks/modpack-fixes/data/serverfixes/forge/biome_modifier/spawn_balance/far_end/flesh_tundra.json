@@ -1,0 +1,30 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "#serverfixes:spawn_balance/far_end/flesh_tundra",
+  "spawners": [
+    {
+      "type": "minecraft:cow",
+      "weight": 7,
+      "minCount": 4,
+      "maxCount": 4
+    },
+    {
+      "type": "minecraft:pig",
+      "weight": 8,
+      "minCount": 4,
+      "maxCount": 4
+    },
+    {
+      "type": "minecraft:chicken",
+      "weight": 8,
+      "minCount": 4,
+      "maxCount": 4
+    },
+    {
+      "type": "minecraft:bat",
+      "weight": 5,
+      "minCount": 8,
+      "maxCount": 8
+    }
+  ]
+}

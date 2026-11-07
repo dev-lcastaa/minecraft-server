@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "stellarity:prismarine_forest",
+      "required": false
+    }
+  ]
+}

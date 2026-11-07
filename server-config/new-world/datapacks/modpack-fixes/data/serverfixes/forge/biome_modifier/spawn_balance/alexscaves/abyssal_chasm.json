@@ -1,0 +1,24 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "#serverfixes:spawn_balance/alexscaves/abyssal_chasm",
+  "spawners": [
+    {
+      "type": "minecraft:squid",
+      "weight": 4,
+      "minCount": 1,
+      "maxCount": 4
+    },
+    {
+      "type": "minecraft:dolphin",
+      "weight": 4,
+      "minCount": 1,
+      "maxCount": 2
+    },
+    {
+      "type": "minecraft:cod",
+      "weight": 26,
+      "minCount": 3,
+      "maxCount": 6
+    }
+  ]
+}

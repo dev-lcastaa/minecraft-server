@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "dappledforest:dappled_forest",
+      "required": false
+    }
+  ]
+}

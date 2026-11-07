@@ -1,0 +1,18 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "#serverfixes:spawn_balance/minecraft/stony_shore",
+  "spawners": [
+    {
+      "type": "minecraft:goat",
+      "weight": 28,
+      "minCount": 1,
+      "maxCount": 1
+    },
+    {
+      "type": "minecraft:cod",
+      "weight": 7,
+      "minCount": 3,
+      "maxCount": 6
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "minecraft:small_end_islands",
+      "required": false
+    }
+  ]
+}
