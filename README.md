@@ -299,10 +299,11 @@ back. Old images are retained; manage disk usage on the production host.
 ## Client configuration
 
 [`client-config/config/`](./client-config/config/) mirrors the server's
-bundled common configs plus client-only Weather2 particle tuning. Each player
+bundled common configs. Each player
 should close Minecraft, back up their instance `config` folder, copy the
 contents of `client-config/config/` into it (overwrite), remove
-`alexsmobs-1.22.9.jar` from their `mods` folder, then restart.
+`alexsmobs-1.22.9.jar` and `weather2-1.20.1-2.8.3.jar` from their `mods` folder,
+then restart.
 
 See the [client import instructions](./client-config/README.md). Extract the
 client config ZIP into the instance directory, merging `config/` and `mods/`;
@@ -336,6 +337,22 @@ docker compose logs --tail 200 minecraft
 Back up the named volume while the server is stopped for a consistent backup.
 Do not prune volumes that contain server data.
 
+### Bundled loot compatibility datapack
+
+The server-only [`loot-compat` datapack](./server-config/new-world/datapacks/loot-compat/)
+fixes Dungeon's Delight 1.3.1 spawner drops with Farmer's Delight 1.3.4.
+Both normal and rotten spawner modifiers require `lootTable`, not the older
+`table` field. The pack preserves the original conditions and loot table:
+8-12 Stained Scrap, with the original Fortune bonus.
+
+The Dockerfile copies the pack to `/config/new-world/datapacks/`, which is synced
+to `/data/new-world/datapacks/` at startup. For a live deployment, copy the pack
+into that world directory and run `reload` from the server console to discover it.
+If it is not enabled automatically, run `datapack enable "file/loot-compat" last`.
+No restart is needed. Keep the pack enabled and edit the repository copy rather
+than the volume copy. Clients do not need the pack.
+Validate with `python3 -m unittest discover -s tests -p 'test_loot_compat.py'`.
+
 ### Bundled mod config overrides
 
 Files in [`server-config/config/`](./server-config/config/) are copied into the
@@ -353,12 +370,9 @@ redeploy. Other mod configs stay persistent in the volume.
 | `quark-common.toml` | `Automatic Tool Restock = false`, `Inventory Sorting = false` | Selected inventory profile |
 | `quark-common.toml` | `Quick Armor Swapping = true` | Sneak-right-click armor stands to exchange equipped armor |
 | `quark-common.toml` | `Villagers Use Simple Harvest = false` | Leave villager farming to Smarter Farmers; player harvesting stays enabled |
-| `thirst/item_settings.toml` | 48 explicit drink IDs | Extend hydration to installed Delight drinks; fix `strong_coffee`, remove duplicates, invalid IDs, and unloaded-mod defaults |
+| `thirst/item_settings.toml` | 92 explicit drink IDs and 126 food IDs | Add verified drinks, soups, cups, fruit, and moist foods from the installed pack |
 | `thirst/common.toml`, `thirst/keyword.toml` | Preserve current balance; keyword matching off | Match client gameplay settings without matching decorative food-display items |
 | `mbackrooms/Mbackrooms-Config-Common.toml` | `partialLootKeeping = false` | Backrooms otherwise saves about 30% of inventory even outside its dimensions |
-| `Weather2/Storm.toml` | Storm limit `4`, hail per tick `2` | Reduce simultaneous weather simulations and hail entities |
-| `Weather2/Tornado.toml` | Flying blocks `40`, grabbed blocks per tick `1` | Keep destructive tornadoes with capped workload |
-| `Weather2/Sand.toml`, `Weather2/Snow.toml` | Buildup tuning below | Fewer block updates during storms |
 | `chunky/config.json` | `updateInterval = 60` | Pregeneration progress logs once a minute instead of every second |
 
 Quark common settings must match on clients; use the client package below.
@@ -395,12 +409,40 @@ Oddities features remain disabled. The add-on itself contains no gameplay code;
 it unlocks the implementations already in Quark. Its mandatory Quark dependency
 is satisfied by the installed Quark 4.0-462.
 
-Thirst now includes drinks from Delightful, Abnormals Delight, Ender's Delight,
-Festive Delight, Dungeons Delight, Oceanic Delight, and Miner's Delight, plus
-missing Farmer's Delight/Respite drinks. All listed drink and food IDs were
-checked against the live item registry. Keyword matching stays off; displayed
-food props and hazardous Mekanism drinks are not automatically made hydrating.
-The existing food values and drink effects are preserved.
+Thirst now has **92 drinks and 126 foods**, with identical server and client
+item settings. The November 4 expansion adds 44 drinks and 101 foods without
+changing the previous entries. Every configured ID was checked against node004's
+live item registry using `clear @a <item> 0`, which does not remove items.
+
+Coverage includes suspicious stew, Bumblezone bee soup and royal jelly, hot
+cocoa, all 23 SCP Ultimate drinks, Miner's Delight soups and cups (including
+My Nether's Delight integration cups), My Nether's Delight soups and dried
+ghast with milk, Unusual End, Biomes We've Gone fruit/juice/soups, Delightful,
+Alex's Delight, Dungeons Delight, Backrooms food/drinks, Ender's Delight,
+Alex's Caves, and Abnormals Delight drinks.
+
+New soups use hydration/quenching `4/5`; cups use half their bowl's values,
+rounded up. Fruit uses `1/2` or `2/3`, melon slices `4/5`, juices/milkshakes
+`8/13`, teas `10/14`, and water/cocoa/potions `6/8`. Water and milk cups use
+`3/4`. Existing stronger teas and other previous values remain unchanged.
+SCP drink effects, including harmful ones, are not removed by hydration support.
+Dry baked goods, decorative food displays, and placeable fluid buckets are not
+automatically included; keyword matching stays off.
+
+Unusual End's brewed potions use `minecraft:potion`, already configured at
+`6/8`; its separate `unusualend:warped_potion` is now explicit. Splash/lingering
+potions are not drinks. Mekanism Delight's `dt_drink` and `fissile_fuel_drink`
+are absent from the live registry: their registration requires the uninstalled
+`mekanismgenerators` mod. Do not add these invalid IDs unless that dependency is
+installed and their registration is verified again. Its available antimatter
+and robit stews are included. Ender's Delight's unused `_wood` stew IDs are
+also absent and excluded.
+
+Restart the server after changing item settings: Thirst builds its hydration
+lookup tables during startup, so a datapack reload is not sufficient. Players
+should import the matching client config and restart for consistent tooltips
+and singleplayer behavior. These checks verify configuration and registry IDs,
+not an automated in-game consumption test.
 
 `keepInventory` must remain `false` in the active world; it is a world gamerule,
 not a property set by these files. Totem of Holding is now deliberately enabled
@@ -425,58 +467,27 @@ gameplay/particle limits with Python 3.11 or newer:
 python3 -m unittest discover -s tests -v
 ```
 
-### Weather2 storm performance
+### Weather2 removal and fresh worlds
 
-The bundled overrides above persist this server-side tuning.
+Weather2 `2.8.3` was removed on November 4 after a local Spark profile showed
+storm biome checks synchronously waiting for chunks, consuming roughly 48-70%
+of server-thread wall time during lag windows. The previous workload caps did
+not prevent these stalls. Its server and client config overlays were removed too.
+Players should remove the Weather2 JAR from their clients. CoroUtil remains
+required by What Are They Up To and Zombie Awareness. Storms of the Wild is a
+separate mod and remains installed.
 
-To reduce sand/snow block updates while keeping storms and their frequency:
+When regenerating a world, stop the server cleanly first and back up the entire
+directory named by `level-name` in the active `/data/server.properties`, including
+player data and all modded dimensions. Do not assume it is named `world`.
+Move the old save out of that path before restarting; an empty `level-seed`
+generates a random seed. This resets inventories, advancements, and world progress.
+Keep the old save outside the active world directory so it can be restored.
+Never delete the Docker data volume to reset a world.
 
-| File | Setting | Tuned value | Original value |
-| --- | --- | --- | --- |
-| `Sand.toml` | `Sandstorm_Sand_Buildup_TickRate` | `100` | `40` |
-| `Sand.toml` | `Sandstorm_Sand_Buildup_LoopAmountBase` | `200` | `800` |
-| `Snow.toml` | `Snowstorm_Snow_Buildup_TickRate` | `100` | `40` |
-| `Snow.toml` | `Snowstorm_Snow_Buildup_LoopAmountBase` | `200` | `800` |
-
-At 20 ticks/second, this reduces maximum buildup attempts from 400 to 40 per
-second per storm. Accumulation is slower; this is not a measured 90% FPS gain.
-Tornado block grabbing and storm frequency are unchanged.
-
-The additional November 4 profile changes the storm limit from `20` to `4` per
-player/layer, hail output from `10` to `2` per tick, flying-block budget from
-`200` to `40`, and grabbed blocks from `5` to `1` per tick. Tornado block grabbing,
-mob/player grabbing, storm probabilities, and cooldowns stay enabled/unchanged.
-The entity cap stops creating additional flying-block entities; it is not a
-promise that storms cause no further block damage. Existing storms may take
-time to expire; the config does not delete weather state or force new storms.
-
-These are workload limits, not a measured FPS/TPS improvement. Compare server
-tick times during comparable storms and client FPS after importing the overlay.
-Target 20 TPS with mean server tick time below 50 ms; an idle-server snapshot
-alone does not validate storm performance. Storms of the Wild is also installed;
-its lightning behavior is unchanged pending profiling rather than guessed tuning.
-
-For rendering-related FPS drops, each player should close Minecraft, back up
-their instance's `config/Weather2` folder, and try these **client-local** settings.
-Do not assume that editing the server's particle files updates clients:
-
-These values are now included in the client overlay, along with cloud and storm
-particle spawn delays of `6` ticks each. The server copy intentionally keeps
-its existing particle-only values; rendering changes must be imported locally.
-
-| File | Setting | Suggested starting value |
-| --- | --- | --- |
-| `Particle.toml` | `Particle_effect_rate` | `0.35` |
-| `Particle.toml` | `Precipitation_Particle_effect_rate` | `0.3` |
-| `Particle.toml` | `Particle_Tornado_extraParticleCubes` | `0` |
-| `Sand.toml` | `Sandstorm_Particle_Dust_effect_rate` | `0.2` |
-| `Sand.toml` | `Sandstorm_Particle_Debris_effect_rate` | `0.2` |
-
-Keep `Particle_engine_weather2 = true`; the mod warns that the vanilla particle
-renderer may perform worse. Restart the client and compare FPS/frame times
-during comparable storms, using the same location, view direction, render
-distance, and shader settings. These are starting values, not guaranteed FPS
-targets; server health alone cannot verify client rendering improvements.
+After startup, verify the new seed, container health, and tick times. Target
+20 TPS with mean tick time below 50 ms; an idle snapshot does not prove performance
+under exploration or multiplayer load.
 
 The game port **TCP 25565** and Simple Voice Chat port **UDP 24454** are published
 on all host interfaces. RCON **TCP 25575**

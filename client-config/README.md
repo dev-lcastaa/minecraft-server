@@ -11,6 +11,11 @@ For the Minecraft 1.20.1 Forge pack used by this server.
    matching files; do not delete other configs, and do not create `config/config/`.
 4. Restart Minecraft and connect to the server.
 
+Remove `weather2-1.20.1-2.8.3.jar` from the client `mods/` folder.
+Weather2 was removed from the server after profiling showed storm biome checks
+blocking the server thread on chunk loads. Its config overlay is no longer included.
+Keep CoroUtil: What Are They Up To and Zombie Awareness still require it.
+
 This is a config overlay with the Quark Oddities add-on, not a complete
 launcher-importable modpack or a world download. It contains no server passwords,
 player data, or server properties. Quark Oddities 1.20.1 is the official small
@@ -35,32 +40,25 @@ SHA-256: `230af45e645ebe36f621d0b4362afed6ad0faf940129f4363aaba8058f245576`
   Quark still suppresses Automatic Recipe Unlock when NERB is installed and Map
   Washing when Supplementaries is installed; their selected toggles remain True
   without overriding Quark's compatibility protection.
-- Thirst Was Taken: 48 verified drink IDs, including Delight add-ons; correct
-  `strong_coffee`, remove nonexistent/default entries for unloaded mods, and keep
-  keyword matching off. Existing hydration balance is retained; new juices and
-  milkshakes use 8/13, teas use 10/14, and Miner's Delight's smaller milk cup
-  uses 3/4. Drinking effects and crafting recipes are unchanged.
+- Thirst Was Taken: 92 drinks and 126 foods, verified against the live item
+  registry. Includes suspicious stew, bee soup, royal jelly, hot cocoa, all 23
+  SCP drinks, Miner's Delight soup cups, My Nether's Delight, Unusual End,
+  Biomes We've Gone, Delightful, Alex's Delight/Caves, Dungeons Delight,
+  Backrooms, Ender's Delight, and Abnormals Delight drinks. Existing values
+  are retained; new soups use 4/5, cups half the bowl values rounded up,
+  fruit 1/2 or 2/3, juices/milkshakes 8/13, teas 10/14, and water/cocoa/potions
+  6/8. Water/milk cups use 3/4. Keyword matching remains off.
+  Unusual End's brewed potions already use the vanilla potion entry; its
+  Warped Potion is now explicit. Mekanism Delight's two drinks require
+  Mekanism Generators, absent on this server, so only its available stews
+  are added. Harmful drink effects and crafting recipes are unchanged.
 - Backrooms: disable its 30% partial-loot retention. The server still determines
   multiplayer death drops. This also applies to a local singleplayer world.
 - Vanilla Backport: preserve disabled natural zombie horses to avoid duplicating
   Zombie Horse Spawn.
-- Weather2: retain dangerous, destructive tornadoes with lower entity/block
-  budgets and hail output, plus the existing slower sand/snow accumulation.
-  Client-only tuning reduces particles without switching off the Weather2
-  particle engine.
 
-| Client rendering setting | Value |
-| --- | --- |
-| Overall particle multiplier | `0.35` |
-| Precipitation particle multiplier | `0.3` |
-| Extra tornado block particles | `0` |
-| Sand dust/debris multipliers | `0.2` each |
-| Cloud particle spawn delay | `6` ticks |
-| Storm particle spawn delay | `6` ticks |
-
-Common gameplay settings match `server-config/config/`. Intentional rendering
-differences are in Weather2's `Misc.toml`, `Particle.toml`, `Sand.toml`, and
-`Storm.toml`; Chunky's server admin config is not included.
+Common gameplay settings match `server-config/config/`;
+Chunky's server admin config is not included.
 
 Back up existing saves before changing configs used in singleplayer. Keep the
 client mod list aligned with the server, including previously disabled mods.

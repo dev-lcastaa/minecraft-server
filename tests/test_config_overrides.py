@@ -61,7 +61,7 @@ class ConfigOverridesTest(unittest.TestCase):
                 with self.subTest(path=path):
                     load(root, path.relative_to(root))
 
-    def test_client_matches_server_except_rendering_and_admin_config(self):
+    def test_client_matches_server_except_admin_config(self):
         for path in SERVER.rglob("*"):
             if not path.is_file():
                 continue
@@ -72,16 +72,6 @@ class ConfigOverridesTest(unittest.TestCase):
                     continue
                 server = load(SERVER, name)
                 client = load(CLIENT, name)
-                if str(name) == "Weather2/Sand.toml":
-                    for key in (
-                        "Sandstorm_Particle_Dust_effect_rate",
-                        "Sandstorm_Particle_Debris_effect_rate",
-                    ):
-                        self.assertEqual(client["general"].pop(key), 0.2)
-                        server["general"].pop(key)
-                if str(name) == "Weather2/Storm.toml":
-                    self.assertEqual(client["general"].pop("Storm_ParticleSpawnDelay"), 6)
-                    server["general"].pop("Storm_ParticleSpawnDelay")
                 self.assertEqual(client, server)
 
     def test_quark_overlap_protections(self):
@@ -136,8 +126,11 @@ class ConfigOverridesTest(unittest.TestCase):
         config = load(SERVER, "thirst/item_settings.toml")
         drinks = config["Drinks"]["drinks"]
         foods = config["Foods"]["foods"]
-        self.assertEqual(len(drinks), 48)
-        self.assertEqual(len(foods), 25)
+        self.assertEqual(len(drinks), 92)
+        self.assertEqual(len(foods), 126)
+        self.assertEqual(
+            len({row[0] for row in drinks + foods}), len(drinks) + len(foods)
+        )
         for entries in (drinks, foods):
             ids = [row[0] for row in entries]
             self.assertEqual(len(ids), len(set(ids)))
@@ -169,31 +162,108 @@ class ConfigOverridesTest(unittest.TestCase):
             load(SERVER, "thirst/keyword.toml")["Keyword config"]["enableKeywordConfig"]
         )
 
-    def test_weather_keeps_danger_with_capped_workload(self):
-        storm = load(SERVER, "Weather2/Storm.toml")["general"]
-        tornado = load(SERVER, "Weather2/Tornado.toml")["general"]
-        self.assertEqual(storm["Storm_MaxPerPlayerPerLayer"], 4)
-        self.assertEqual(storm["Storm_HailPerTick"], 2)
-        self.assertFalse(tornado["Storm_NoTornadosOrCyclones"])
-        self.assertTrue(tornado["Storm_Tornado_grabBlocks"])
-        self.assertTrue(tornado["Storm_Tornado_grabPlayer"])
-        self.assertEqual(tornado["Storm_Tornado_maxFlyingEntityBlocks"], 40)
-        self.assertEqual(tornado["Storm_Tornado_maxBlocksGrabbedPerTick"], 1)
-        for kind in ("Sand", "Snow"):
-            config = load(SERVER, f"Weather2/{kind}.toml")["general"]
-            prefix = f"{kind}storm_{kind}_Buildup"
-            self.assertEqual(config[f"{prefix}_TickRate"], 100)
-            self.assertEqual(config[f"{prefix}_LoopAmountBase"], 200)
+    def test_thirst_requested_drinks_and_portion_sizes(self):
+        config = load(SERVER, "thirst/item_settings.toml")
+        drinks = {row[0]: row[1:] for row in config["Drinks"]["drinks"]}
+        foods = {row[0]: row[1:] for row in config["Foods"]["foods"]}
+        for item, values in {
+            "farmersdelight:hot_cocoa": [6, 8],
+            "the_bumblezone:royal_jelly_bottle": [6, 8],
+            "unusualend:warped_potion": [6, 8],
+            "minecraft:potion": [6, 8],
+            "biomeswevegone:aloe_vera_juice": [8, 13],
+            "abnormals_delight:cherry_cream_soda": [8, 13],
+            "abnormals_delight:passion_aloe_nectar": [8, 13],
+            "mbackrooms:almond_water": [6, 8],
+            "mbackrooms:water_can": [6, 8],
+            "mbackrooms:juice": [8, 13],
+            "alexscaves:purple_soda_bottle": [8, 13],
+            "alexscaves:hot_chocolate_bottle": [6, 8],
+        }.items():
+            with self.subTest(item=item):
+                self.assertEqual(drinks[item], values)
+        for number in range(1, 24):
+            expected = [6, 8] if number == 5 else [6, 11] if number == 6 else [8, 13]
+            self.assertEqual(drinks[f"scp_ultimate:drink_{number}"], expected)
+        for item in (
+            "minecraft:suspicious_stew",
+            "the_bumblezone:bee_soup",
+            "mynethersdelight:dried_ghast_with_milk",
+            "mekanismdelight:antimatter_stew",
+            "mekanismdelight:robit_stew",
+            "dungeonsdelight:ghoulash",
+            "dungeonsdelight:rubaboo",
+            "dungeonsdelight:sinigang",
+            "alexscaves:primordial_soup",
+            "alexsdelight:acacia_blossom_soup",
+        ):
+            self.assertEqual(foods[item], [4, 5])
+        self.assertEqual(foods["biomeswevegone:green_apple"], [2, 3])
+        self.assertEqual(foods["biomeswevegone:blueberries"], [1, 2])
+        self.assertEqual(foods["mbackrooms:food_can"], [2, 3])
+        for item, values in foods.items():
+            if item.endswith("_cup"):
+                bowl = item.removesuffix("_cup")
+                if bowl.startswith("miners_delight:"):
+                    name = bowl.split(":")[1]
+                    bowl = next(
+                        candidate for candidate in (
+                            f"minecraft:{name}", f"farmersdelight:{name}",
+                            f"mynethersdelight:{name}", bowl,
+                        ) if candidate in foods
+                    )
+                self.assertEqual(values, [(value + 1) // 2 for value in foods[bowl]])
 
-    def test_client_particle_limits(self):
-        config = load(CLIENT, "Weather2/Particle.toml")["general"]
-        self.assertEqual(config["Particle_effect_rate"], 0.35)
-        self.assertEqual(config["Precipitation_Particle_effect_rate"], 0.3)
-        self.assertEqual(config["Particle_Tornado_extraParticleCubes"], 0)
-        self.assertTrue(config["Particle_engine_weather2"])
-        misc = load(CLIENT, "Weather2/Misc.toml")["general"]
-        self.assertEqual(misc["Cloud_ParticleSpawnDelay"], 6)
-        self.assertFalse(misc["Aesthetic_Only_Mode"])
+    def test_thirst_mod_item_assets_and_soup_coverage(self):
+        config = load(SERVER, "thirst/item_settings.toml")
+        configured = {
+            row[0] for group, key in (("Drinks", "drinks"), ("Foods", "foods"))
+            for row in config[group][key]
+        }
+        models = set()
+        soup_namespaces = {
+            "miners_delight", "mynethersdelight", "nethersdelight", "delightful",
+            "alexsdelight", "alexscaves", "endersdelight", "unusualend",
+            "biomeswevegone", "mekanismdelight", "the_bumblezone", "dungeonsdelight",
+        }
+        for path in (ROOT / "mods").glob("*.jar"):
+            with ZipFile(path) as archive:
+                for name in archive.namelist():
+                    parts = name.split("/")
+                    if (
+                        len(parts) == 5 and parts[0] == "assets"
+                        and parts[2:4] == ["models", "item"] and name.endswith(".json")
+                    ):
+                        models.add(f"{parts[1]}:{parts[4][:-5]}")
+        downloaded_items = set()
+        if not list((ROOT / "mods").glob("the_bumblezone-*.jar")):
+            self.assertIn("the_bumblezone-7.15.2", (ROOT / "Dockerfile").read_text())
+            downloaded_items = {
+                "the_bumblezone:bee_soup", "the_bumblezone:royal_jelly_bottle",
+                "the_bumblezone:sugar_water_bottle",
+            }
+        for item in configured:
+            if not item.startswith("minecraft:"):
+                with self.subTest(item=item):
+                    self.assertIn(item, models | downloaded_items)
+        for item in models:
+            namespace, name = item.split(":")
+            if (
+                namespace in soup_namespaces and ("soup" in name or "stew" in name)
+                and not name.endswith("_wood")
+            ):
+                with self.subTest(soup=item):
+                    self.assertIn(item, configured)
+        for unavailable in (
+            "mekanismdelight:dt_drink", "mekanismdelight:fissile_fuel_drink",
+            "endersdelight:chorus_stew_wood", "endersdelight:endermite_stew_wood",
+        ):
+            self.assertNotIn(unavailable, configured)
+
+    def test_weather2_removed(self):
+        self.assertFalse(list((ROOT / "mods").glob("weather2-*.jar")))
+        for root in (SERVER, CLIENT):
+            self.assertFalse(list((root / "Weather2").glob("*.toml")))
 
     def test_death_retention_and_existing_overrides(self):
         backrooms = load(SERVER, "mbackrooms/Mbackrooms-Config-Common.toml")

@@ -21,3 +21,4 @@ ADD --chmod=644 --checksum=sha256:0aa95b7aab2dbea44b6cbace2f3556670fd8bd613937c7
     /mods/the_bumblezone-7.15.2+1.20.1-forge.jar
 COPY server.properties /config/server.properties
 COPY server-config/config/ /config/config/
+COPY server-config/new-world/datapacks/ /config/new-world/datapacks/
