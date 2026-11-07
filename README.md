@@ -151,6 +151,21 @@ and the incompatible NoFriendlyFire JAR, leaving **255 top-level JARs**.
 No duplicate top-level Forge mod IDs remain. A dedicated-server startup test
 is still required.
 
+### November 7, 2026 Enhanced Celestials compatibility fix
+
+Keep Enhanced Celestials 2 only; the original Enhanced Celestials cannot load
+alongside the rewrite. Default Lunar Events **1.0.0.7** references
+`dev/corgitaco/enhancedcelestials2core/platform/BuiltAgainstLog`, which is missing
+from Core **1.0.3.3**. Core was updated to **1.0.3.4**, whose JAR contains that
+class. The installed Corgilib **4.0.3.6** and Data Anchor **1.0.0.24** satisfy
+this pair's declared dependencies.
+
+Players must also remove original Enhanced Celestials and replace EC2 Core
+1.0.3.3 with 1.0.3.4 in their client installations, keeping Default Lunar Events
+1.0.0.7. Rebuild and redeploy the server image to replace the persistent server's
+old Core JAR. This fixes the reported missing class; a dedicated-server startup
+test is still required.
+
 The Docker build copies this directory into `/mods` in the image. On startup,
 the base image copies the bundled mods into `/data/mods`. Old mod JARs are removed
 before copying so deleted or upgraded mods do not linger in the persistent
