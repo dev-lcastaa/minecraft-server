@@ -172,6 +172,20 @@ before copying so deleted or upgraded mods do not linger in the persistent
 volume. Do not manually install additional JARs in `/data/mods`; manage them in
 the image instead. World data and mod configuration remain persistent.
 
+The Cravings food lists are maintained in
+[`server-config/new-world/serverconfig/Cravings/cravings-foods.toml`](./server-config/new-world/serverconfig/Cravings/cravings-foods.toml).
+They cover all eight craving categories with foods from Delightful, Abnormals
+Delight, Alex's Delight, Ender's Delight, Festive Delight, Dungeons Delight,
+Mekanism Delight, Miner's Delight, My Nether's Delight, Nether's Delight,
+Oceanic Delight, and Butcher's Delight Foods, in addition to vanilla and
+Farmer's Delight foods. Butcher's Delight itself registers no foods; its
+butchering drops come from the required companion mod Butcher's Delight Foods
+`1.0.3` (`butchersdelightfoods`), which clients must also install.
+Chef's Delight, Display Delight, Storage Delight, and compatibility-only mods
+do not add edible items to these lists.
+Rebuild and redeploy after changing these lists; the
+image syncs the world server config into the persistent data volume.
+
 Dreamshift `0.2.2-hotfix` and The Bumblezone `7.15.2` are exceptions to Git storage:
 their large JARs are downloaded into `/mods` during the Docker build from pinned
 Modrinth version URLs in [`Dockerfile`](./Dockerfile). Each download is verified

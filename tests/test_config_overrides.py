@@ -9,6 +9,7 @@ from zipfile import ZipFile
 ROOT = Path(__file__).resolve().parents[1]
 SERVER = ROOT / "server-config" / "config"
 CLIENT = ROOT / "client-config" / "config"
+NEW_WORLD = ROOT / "server-config" / "new-world"
 
 DISABLED_QUARK_FEATURES = {
     "automation": (
@@ -56,7 +57,7 @@ def load(root, name):
 
 class ConfigOverridesTest(unittest.TestCase):
     def test_all_toml_files_parse(self):
-        for root in (SERVER, CLIENT):
+        for root in (SERVER, CLIENT, NEW_WORLD):
             for path in root.rglob("*.toml"):
                 with self.subTest(path=path):
                     load(root, path.relative_to(root))
@@ -73,6 +74,33 @@ class ConfigOverridesTest(unittest.TestCase):
                 server = load(SERVER, name)
                 client = load(CLIENT, name)
                 self.assertEqual(client, server)
+
+    def test_cravings_addon_foods(self):
+        config = load(NEW_WORLD, "serverconfig/Cravings/cravings-foods.toml")
+        categories = config["Cravings Foods"]
+        self.assertEqual(set(categories), {
+            "Sweet Foods", "Healthy Foods", "Meaty Foods", "Fishy Foods",
+            "Gross Foods", "Fancy Foods", "Hearty Foods", "Raw Foods",
+        })
+        foods = set()
+        for category, items in categories.items():
+            with self.subTest(category=category):
+                self.assertEqual(len(items), len(set(items)))
+                for item in items:
+                    self.assertRegex(item, r"^[a-z0-9_]+:[a-z0-9_/-]+$")
+                foods.update(items)
+        self.assertEqual({item.split(":")[0] for item in foods} - {"minecraft"}, {
+            "delightful", "abnormals_delight", "alexsdelight", "endersdelight",
+            "festive_delight", "dungeonsdelight", "mekanismdelight", "miners_delight",
+            "mynethersdelight", "nethersdelight", "oceanic_delight", "butchersdelightfoods",
+        })
+        self.assertIn("festive_delight:festive_chiken", categories["Meaty Foods"])
+        self.assertIn("butchersdelightfoods:legcow", categories["Raw Foods"])
+        self.assertIn("butchersdelightfoods:cooked_leg_cow", categories["Meaty Foods"])
+        self.assertTrue(any((ROOT / "mods").glob("Butchersdelight Foods *.jar")))
+        self.assertNotIn("dungeonsdelight:blazing_blood_sausage", foods)
+        self.assertNotIn("nethersdelight:raw_stuffed_hoglin", foods)
+        self.assertTrue(config["Farmer's delight Compat"]["Farmer's Delight Compatibility"])
 
     def test_quark_overlap_protections(self):
         config = load(SERVER, "quark-common.toml")
