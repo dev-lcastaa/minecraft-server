@@ -290,6 +290,17 @@ class ConfigOverridesTest(unittest.TestCase):
         ):
             self.assertNotIn(unavailable, configured)
 
+    def test_better_days_sixty_minute_cycle(self):
+        self.assertEqual(len(list((ROOT / "mods").glob("betterdays-1.20.1-*-FORGE.jar"))), 1)
+        config = load(SERVER, "betterdays-common.toml")
+        time = config["time"]
+        self.assertEqual(time["speedMethod"], "RATIO")
+        for key in ("daySpeed", "nightSpeed"):
+            self.assertAlmostEqual(24000 / time[key] / 20 / 60, 60.0, places=3)
+        for effect in ("randomTickEffect", "potionEffect", "hungerEffect", "blockEntityEffect"):
+            self.assertEqual(time["effects"][effect], "NEVER")
+        self.assertTrue(config["sleep"]["enableSleepFeature"])
+
     def test_weather2_removed(self):
         self.assertFalse(list((ROOT / "mods").glob("weather2-*.jar")))
         for root in (SERVER, CLIENT):

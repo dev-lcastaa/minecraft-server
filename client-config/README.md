@@ -68,6 +68,10 @@ SHA-256: `230af45e645ebe36f621d0b4362afed6ad0faf940129f4363aaba8058f245576`
   resistance and light level, and stack size.
 - Alex's Mobs (`config/amc.json`): matches the server's lowered spawn weights
   for 36 dominant animals; only matters in singleplayer.
+- Better Days (`config/betterdays-common.toml`): 60-minute day/night cycle
+  (one third of vanilla speed). Clients must also install
+  `betterdays-1.20.1-3.3.4.5-FORGE.jar` from
+  https://modrinth.com/mod/betterdays so the sun moves smoothly.
 - Backrooms: disable its 30% partial-loot retention. The server still determines
   multiplayer death drops. This also applies to a local singleplayer world.
 - Vanilla Backport: preserve disabled natural zombie horses to avoid duplicating

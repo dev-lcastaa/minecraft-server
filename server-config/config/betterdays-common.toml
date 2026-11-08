@@ -1,0 +1,52 @@
+# Better Days: 60-minute day/night cycle (3x slower than vanilla's 20 minutes).
+# A uniform ratio keeps Ecliptic Seasons' seasonal daylight split intact: ~30/30 at the
+# equinoxes, longer days in summer, longer nights in winter.
+
+[time]
+	daySpeed = 0.3333333333
+	nightSpeed = 0.3333333333
+	daySpeedMinutes = 10.0
+	nightSpeedMinutes = 10.0
+	speedMethod = "RATIO"
+	dayStart = 23500.0
+	nightStart = 12500.0
+	enableInterpolatedTime = false
+	interpolatedTimeSmoothingFactor = 0.25
+	interpolatedTimeList = ["0,1.0", "24000,1.0"]
+
+	# Crops, furnaces, potions and hunger keep vanilla real-time speed.
+	[time.effects]
+		weatherEffect = "SLEEPING"
+		randomTickEffect = "NEVER"
+		baseRandomTickSpeed = 3
+		potionEffect = "NEVER"
+		hungerEffect = "NEVER"
+		blockEntityEffect = "NEVER"
+
+[sleep]
+	enableSleepFeature = true
+	sleepSpeedMax = 110.0
+	sleepSpeedMin = 1.0
+	sleepSpeedAll = -1.0
+	sleepSpeedCurve = 0.3
+	clearWeatherOnWake = true
+	allowDaySleep = false
+	displayBedClock = true
+	ratioPlayersForSleep = 0.0
+
+	[sleep.messages]
+
+		[sleep.messages.morning]
+			message = "§e§oTempus fugit!"
+			type = "GAME_INFO"
+			target = "DIMENSION"
+
+		[sleep.messages.enterBed]
+			message = "${player} is now sleeping. [${sleepingPlayers}/${totalPlayers}]"
+			type = "GAME_INFO"
+			target = "DIMENSION"
+
+		[sleep.messages.leaveBed]
+			message = "${player} has left their bed. [${sleepingPlayers}/${totalPlayers}]"
+			type = "GAME_INFO"
+			target = "DIMENSION"

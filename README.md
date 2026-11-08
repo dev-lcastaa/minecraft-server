@@ -151,6 +151,30 @@ and the incompatible NoFriendlyFire JAR, leaving **255 top-level JARs**.
 No duplicate top-level Forge mod IDs remain. A dedicated-server startup test
 is still required.
 
+### November 7, 2026 60-minute day/night cycle
+
+[Better Days](https://modrinth.com/mod/betterdays) **1.20.1-3.3.4.5-FORGE**
+slows overworld time to one third of vanilla speed, so a full day/night cycle
+takes **60 real minutes** instead of 20. Its config,
+[`betterdays-common.toml`](./server-config/config/betterdays-common.toml), uses a
+uniform `daySpeed = nightSpeed = 0.3333333333` rather than per-phase minutes, so
+Ecliptic Seasons' `DynamicDaylightDuration` still decides where sunset falls:
+about 30/30 minutes at the equinoxes, up to about 38-minute days in summer and
+about 37-minute nights in winter. Ecliptic Seasons has no cycle-length setting of
+its own; it only remaps the sun angle and does not advance time, so the two mods
+do not conflict. Each solar term stays at 7 in-game days, so seasons last 3x
+longer in real time (about 42 hours per season).
+
+Crop growth, furnaces, potions, and hunger keep their vanilla real-time speed
+(`randomTickEffect`, `blockEntityEffect`, `potionEffect`, and `hungerEffect` are
+`NEVER`), so roughly three times as much happens per in-game day. Better Days'
+sleep feature replaces the instant night skip: time accelerates while players
+sleep (about vanilla duration when everyone sleeps, partially when only some do),
+and morning still fires Forge's sleep-finished event for Bed Benefits and
+Ecliptic Seasons' clear-after-sleep. Better Days must be installed on clients
+together with the matching `config/betterdays-common.toml` from the client
+overlay. Restart the server after changing the config.
+
 ### November 7, 2026 Enhanced Celestials compatibility fix
 
 Keep Enhanced Celestials 2 only; the original Enhanced Celestials cannot load
@@ -191,8 +215,8 @@ their large JARs are downloaded into `/mods` during the Docker build from pinned
 Modrinth version URLs in [`Dockerfile`](./Dockerfile). Each download is verified
 against its pinned SHA-256; a failed download or checksum mismatch fails the build.
 Local copies may remain in `mods/`, but are ignored by Git and excluded from the
-Docker build context. A clean checkout therefore contains **253 bundled JARs**;
-the built image contains **255** including these downloads. Jenkins uses the same
+Docker build context. A clean checkout therefore contains **255 bundled JARs**;
+the built image contains **257** including these downloads. Jenkins uses the same
 Docker build and needs no separate download step.
 
 To update either externally hosted mod, change its URL and SHA-256 in
