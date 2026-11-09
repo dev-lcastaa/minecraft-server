@@ -359,11 +359,13 @@ contents of `client-config/config/` into it (overwrite), remove
 then restart.
 
 See the [client import instructions](./client-config/README.md). Extract the
-client config ZIP into the instance directory, merging `config/`, `kubejs/`, and
-`mods/`; it includes Quark Oddities, not a complete launcher-importable modpack.
+client config ZIP into the instance directory, merging `config/`, `kubejs/`,
+`mods/`, and `resourcepacks/`; it includes Quark Oddities and the Butcher texture
+refresh, not a complete launcher-importable modpack.
 Do not delete other configs or mods. `kubejs/assets/` contains missing English
 tooltip, enchantment-description, and block-name text; KubeJS loads it
-automatically, so no resource pack needs enabling.
+automatically, so these text fixes need no resource pack enabled. The separate
+Butcher texture refresh must be enabled in **Options > Resource Packs**.
 `kubejs/client_scripts/item_stat_tooltips.js` adds generated gray stat lines to
 every item, read from the item's own data:
 - breakable items (tools, weapons, armor, shields, bows, …): durability (hidden in
@@ -378,7 +380,7 @@ receives at least one line, with no errors.
 To reproduce the ZIP from the repository:
 
 ```sh
-(cd client-config && zip -r ../minecraft-client-config.zip README.md config kubejs mods -x '*/.DS_Store')
+(cd client-config && zip -r ../minecraft-client-config.zip README.md config kubejs mods resourcepacks -x '*/.DS_Store')
 ```
 
 ## Persistent data and operations
@@ -418,6 +420,70 @@ If it is not enabled automatically, run `datapack enable "file/loot-compat" last
 No restart is needed. Keep the pack enabled and edit the repository copy rather
 than the volume copy. Clients do not need the pack.
 Validate with `python3 -m unittest discover -s tests -p 'test_loot_compat.py'`.
+
+### Butcher's Delight texture refresh and recipe compatibility
+
+The client [resource pack](./client-config/resourcepacks/butchers-delight-refresh/)
+contains **258 original pixel-art textures** for Butcher's Delight 2.1.0 and
+Butcher's Delight Foods 1.0.3: meat cuts, cleaver, hooks, hides, carcasses,
+partial carcasses, roasting equipment and drying frames. Icons are 16x16;
+model-bound textures retain their original UV dimensions (for example 64x32)
+to preserve existing block models. No mod artwork or models are redistributed.
+It also corrects Foods' mislabeled llama loin and raw sheep loin/rack names.
+
+Copy the resource-pack folder to the client's `resourcepacks/` directory, or
+install the client config overlay above. Enable **Butcher's Delight Refresh**
+in **Options > Resource Packs**, above packs that override the same textures.
+Use F3+T after updating an enabled pack. This does not change item IDs, food
+stats, models, animations, or butchering mechanics. A server datapack cannot
+deliver textures; every player needs the resource pack. Automatic server
+resource-pack download is not configured: that needs a publicly hosted ZIP URL.
+
+The separate server-only
+[`butchers-delight-compat` datapack](./server-config/new-world/datapacks/butchers-delight-compat/)
+adds compatibility without replacing existing recipes:
+
+- Foods already supplies all six Forge raw/cooked beef, pork and mutton tags,
+  including goat/llama as mutton. Those existing memberships are preserved;
+  Delight recipes that accept these tags already accept the matching cuts.
+- Bridges `forge:meat_uncooked` into `forge:raw_meat` and adds the cooked species
+  and `forge:meat_cooked` to `forge:cooked_meat`. All additions use `replace: false`.
+- Adds the Butcher cleaver to the Forge and Farmer's Delight knife tags so it
+  can use the cutting board. Other features that consult these tags may also
+  recognize it as a knife; knives are **not** made into Butcher cleavers.
+- Adds **15 cooked cutting recipes**: cooked beef cuts become beef patties,
+  pork cuts become cooked bacon, and sheep/goat/llama cuts become cooked mutton
+  chops. Yields equal the original raw cut's meat yield times Farmer's Delight's
+  two slices per vanilla meat item, with the same bone count/chance.
+  For example, cooked pork loin gives 6 cooked bacon and a 50% chance of a bone.
+  Existing raw cutting, smelting, smoking and campfire recipes remain unchanged.
+  Raw cuts can already be cut into vanilla meat, then sliced into Delight items.
+
+This supports installed Delight recipes through shared tags and Farmer's
+Delight ingredients; recipes with hard-coded special meats (for example hoglin
+or End-specific dishes) are intentionally not broadened to unrelated animals.
+Requires the installed Butcher's Delight, Foods, and Farmer's Delight mods.
+The resource pack and datapack can be used independently.
+
+The existing Dockerfile automatically includes the datapack. For an existing
+world, also copy it to that world's `datapacks/butchers-delight-compat/` directory
+(the default deployment uses `/data/new-world/datapacks/`), run `reload` and check
+`datapack list enabled`. If necessary, run
+`datapack enable "file/butchers-delight-compat" last`. Check server reload logs
+for recipe/tag errors and JEI for the new cooked cutting recipes.
+Clients do not need the datapack; singleplayer users can copy it into
+`saves/<world>/datapacks/`.
+
+Rebuild the repository pack files with
+`python3 tools/build_butchers_packs.py` (requires Pillow). The builder reads
+asset names, dimensions, model UVs and original recipe metadata from the
+installed JARs, but draws all artwork from scratch. To write a contact sheet,
+add `--preview /path/to/preview.png`.
+Validate with `python3 -m unittest discover -s tests -p 'test_butchers_packs.py'`
+(also requires Pillow). Static tests cover every texture path, UV dimensions,
+raw/cooked and partial-stage differences, additive tag cycles, all 15 exact
+recipe yields and installed ingredient/output models. An in-game check is
+still needed to judge the rendered appearance and confirm server reload.
 
 ### Bundled modpack fixes datapack and KubeJS script
 
@@ -480,6 +546,42 @@ Totems, but cannot block Totem of Frost or the Void Totem. Startup scripts load
 only at boot, so restart the server after changing it. Clients do not need it.
 
 Validate with `python3 -m unittest discover -s tests -p 'test_modpack_fixes.py'`.
+
+### Supplementaries lunch basket food compatibility
+
+The bundled [`lunch-basket-compat` add-on](./tools/lunch-basket-compat/) and
+[`food registry script`](./server-config/kubejs/server_scripts/lunch_basket_foods.js)
+allow every registered edible item, including hidden items, in lunch baskets.
+Foods added by future mods are picked up automatically on tag reload. Whole
+cakes, pies, Farmer's Delight feasts and their subclasses, the pack's custom
+Oceanic/Ender's/My Nether's Delight cakes and pies, Supplementaries pancakes,
+and Display Delight plated foods are also accepted. Optional food/cake/feast/pie
+tags cover additional integrations. A new mod's non-edible placeable meal may
+need its block class or food tag added to this integration.
+
+This patches Supplementaries' shared insertion predicate, so inventory clicks,
+placed baskets and automation agree. Container nesting restrictions remain;
+non-food items retain Supplementaries' existing rules. Foods keep their nutrition,
+effects, serving sizes and bowl/bottle returns. Whole cakes and feasts are
+**storage-compatible**, not directly edible from the basket: take them out and
+place/serve them normally.
+
+Install `mods/lunch-basket-compat-1.20.1-1.0.0.jar` on **both server and clients**
+(included in the client overlay), then restart both. Tags synchronize from the
+server; the client's copy of the registry script also supports singleplayer.
+On server startup the script tests every food-tag item against the actual basket
+predicate, logs the validated count, and reports an error listing any rejected
+items (or an empty food tag). Check this validation message after deployment.
+The add-on targets the installed Supplementaries **1.20-3.1.44** and Forge 1.20.1;
+review the patch before upgrading Supplementaries. Rebuild both identical JARs
+and synchronize the singleplayer script with
+`python3 tools/lunch-basket-compat/build.py`. No Java compilation is needed.
+
+Validate with `python3 -m unittest discover -s tests -p 'test_lunch_basket_compat.py'`.
+The registry-script fixture requires Node.js. To also execute the installed
+Supplementaries predicate before and after the patch, set `JAVA` to a JDK's
+`java` executable and `LUNCH_BASKET_TEST_CLASSPATH` to a colon-separated list of
+Nashorn Core and ASM (`asm`, `asm-tree`, `asm-commons`, `asm-util`) JARs.
 
 ### Bundled mod config overrides
 

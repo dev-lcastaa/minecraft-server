@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {"id": "#forge:foods", "required": false},
+    {"id": "#forge:cakes", "required": false},
+    {"id": "#farmersdelight:feasts", "required": false},
+    {"id": "#farmersdelight:pies", "required": false}
+  ]
+}

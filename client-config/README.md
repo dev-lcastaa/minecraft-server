@@ -5,11 +5,14 @@ For the Minecraft 1.20.1 Forge pack used by this server.
 1. Close Minecraft completely.
 2. Back up your instance's `config/` directory.
 3. Extract the client ZIP into the **instance directory**, merging its `config/`,
-   `kubejs/`, and `mods/` folders with yours. Alternatively copy this directory's
+   `kubejs/`, `mods/`, and `resourcepacks/` folders with yours. Alternatively copy this directory's
    `config/` and `kubejs/` contents into the instance's matching folders and copy
-   `mods/QuarkOddities-1.20.1.jar` into the instance's `mods/` folder. Overwrite
+   both JARs in `mods/` into the instance's `mods/` folder and the
+   `resourcepacks/butchers-delight-refresh/` folder into its `resourcepacks/`.
+   Overwrite
    matching files; do not delete other configs, and do not create `config/config/`.
-4. Restart Minecraft and connect to the server.
+4. Restart Minecraft. In **Options > Resource Packs**, enable **Butcher's Delight
+   Refresh** above other packs that change Butcher textures, then connect to the server.
 
 Remove `weather2-1.20.1-2.8.3.jar` and the outdated duplicate
 `alexsmobs-1.22.9.jar` (keep Alex's Mobs 2.2.4) from the client `mods/` folder.
@@ -17,7 +20,7 @@ Weather2 was removed from the server after profiling showed storm biome checks
 blocking the server thread on chunk loads. Its config overlay is no longer included.
 Keep CoroUtil: What Are They Up To and Zombie Awareness still require it.
 
-This is a config overlay with the Quark Oddities add-on, not a complete
+This is a config overlay with Quark Oddities and the lunch basket add-on, not a complete
 launcher-importable modpack or a world download. It contains no server passwords,
 player data, or server properties. Quark Oddities 1.20.1 is the official small
 marker add-on that unlocks Oddities features already implemented in Quark.
@@ -28,6 +31,18 @@ Published download: https://modrinth.com/mod/quark-oddities/version/NrzERFzz
 SHA-256: `230af45e645ebe36f621d0b4362afed6ad0faf940129f4363aaba8058f245576`
 
 ## Included settings
+
+- Butcher's Delight Refresh (`resourcepacks/butchers-delight-refresh/`): original
+  16x16 pixel-art meat, tool, hide, equipment and carcass icons for Butcher's
+  Delight 2.1.0 and Foods 1.0.3. Carcass/block UV sheets retain their original
+  dimensions, UVs and model geometry, with new pixel art rather than resized photographs.
+  Hooked hoglins retain the original mod palette and hoof/cut details with
+  Krea-designed darker muscle and fat layers; the final processing stage adds
+  the Krea spine profile through a stage-specific texture reference.
+  Raw/cooked cuts and partial carcasses are visually distinct. Also corrects the
+  mislabeled llama loin and adds the missing "Raw" prefix to sheep loin/rack.
+  This is visual only; the server's separate `butchers-delight-compat` datapack
+  provides cooked cutting recipes and shared meat/tool tags.
 
 - Quark: all 164 feature toggles reflect the selected profile: 86 enabled and
   78 disabled. Armor-stand Quick Armor Swapping and Totem of Holding are enabled;
@@ -82,4 +97,16 @@ Chunky's server admin config is not included.
 
 Back up existing saves before changing configs used in singleplayer. Keep the
 client mod list aligned with the server, including previously disabled mods.
-This overlay adds only Quark Oddities; it does not re-enable disabled JARs.
+This overlay adds Quark Oddities and Lunch Basket Food Compatibility; it does not
+re-enable disabled JARs.
+
+## Lunch basket food compatibility
+
+`mods/lunch-basket-compat-1.20.1-1.0.0.jar` must be installed on clients as well
+as the server. It allows all registered edible items and the pack's placeable
+cakes, pies, feasts, pancakes and plated foods in Supplementaries lunch baskets.
+Whole meals must still be removed and placed/served normally; the add-on does
+not make them directly edible or change food effects and container returns.
+It requires Supplementaries 1.20-3.1.44, Forge 1.20.1 and the existing KubeJS.
+The included `kubejs/server_scripts/lunch_basket_foods.js` also generates the
+food tag for singleplayer. Restart Minecraft after installing the JAR.

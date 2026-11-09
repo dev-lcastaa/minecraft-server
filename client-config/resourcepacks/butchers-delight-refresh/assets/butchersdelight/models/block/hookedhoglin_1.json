@@ -1,0 +1,11 @@
+{
+  "parent": "butchersdelight:custom/hookedhoglinp1",
+  "textures": {
+    "all": "butchersdelight:block/ichookedhoglinp1",
+    "particle": "butchersdelight:block/hoglin",
+    "0": "butchersdelight:block/hook",
+    "2": "butchersdelight:block/carcass_hoglin_cut1",
+    "missing": "butchersdelight:block/hoglinskinned"
+  },
+  "render_type": "cutout_mipped"
+}

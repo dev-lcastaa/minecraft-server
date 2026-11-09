@@ -1,0 +1,23 @@
+modLoader="lowcodefml"
+loaderVersion="[47,48)"
+license="MIT"
+
+[[mods]]
+modId="lunch_basket_compat"
+version="1.0.0"
+displayName="Lunch Basket Food Compatibility"
+description="Allows registered foods and placeable meals in Supplementaries lunch baskets."
+
+[[dependencies.lunch_basket_compat]]
+modId="supplementaries"
+mandatory=true
+versionRange="[1.20-3.1.44,1.20-3.1.45)"
+ordering="AFTER"
+side="BOTH"
+
+[[dependencies.lunch_basket_compat]]
+modId="kubejs"
+mandatory=true
+versionRange="[2001.6.5,2002)"
+ordering="AFTER"
+side="BOTH"
