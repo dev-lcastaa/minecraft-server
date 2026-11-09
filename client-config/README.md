@@ -110,3 +110,7 @@ not make them directly edible or change food effects and container returns.
 It requires Supplementaries 1.20-3.1.44, Forge 1.20.1 and the existing KubeJS.
 The included `kubejs/server_scripts/lunch_basket_foods.js` also generates the
 food tag for singleplayer. Restart Minecraft after installing the JAR.
+
+If Minecraft reports that the add-on failed to load a valid `resourcePackInfo`,
+replace its older JAR with the current overlay copy, even though the filename is
+unchanged. The updated JAR includes the missing Minecraft 1.20.1 pack metadata.

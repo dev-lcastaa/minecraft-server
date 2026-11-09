@@ -14,6 +14,13 @@ SCRIPT = Path("kubejs/server_scripts/lunch_basket_foods.js")
 
 
 class LunchBasketCompatTest(unittest.TestCase):
+    def test_built_jars_have_1_20_1_pack_metadata(self):
+        for path in (ROOT / "mods" / JAR_NAME, ROOT / "client-config/mods" / JAR_NAME):
+            with self.subTest(jar=path), ZipFile(path) as jar:
+                metadata = json.loads(jar.read("pack.mcmeta"))
+                self.assertEqual(metadata["pack"]["pack_format"], 15)
+                self.assertEqual(metadata["pack"]["description"], "Lunch Basket Food Compatibility")
+
     def test_built_jars_match_sources_and_each_other(self):
         server = ROOT / "mods" / JAR_NAME
         self.assertEqual(server.read_bytes(), (ROOT / "client-config/mods" / JAR_NAME).read_bytes())
@@ -23,6 +30,7 @@ class LunchBasketCompatTest(unittest.TestCase):
                 for folder in ("META-INF", "coremods", "data")
                 for path in (SOURCE / folder).rglob("*") if path.is_file()
             }
+            expected["pack.mcmeta"] = (SOURCE / "pack.mcmeta").read_bytes()
             self.assertEqual(set(jar.namelist()), set(expected))
             for name, content in expected.items():
                 self.assertEqual(jar.read(name), content, name)

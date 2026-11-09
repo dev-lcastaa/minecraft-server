@@ -9,13 +9,14 @@ SCRIPT = Path("kubejs/server_scripts/lunch_basket_foods.js")
 
 
 def build():
-    entries = sorted(
+    entries = [SOURCE / "pack.mcmeta"]
+    entries.extend(
         path for folder in ("META-INF", "coremods", "data")
         for path in (SOURCE / folder).rglob("*") if path.is_file()
     )
     server_jar = ROOT / "mods" / JAR_NAME
     with ZipFile(server_jar, "w", compression=ZIP_DEFLATED) as jar:
-        for path in entries:
+        for path in sorted(entries):
             info = ZipInfo(path.relative_to(SOURCE).as_posix(), (1980, 1, 1, 0, 0, 0))
             info.compress_type = ZIP_DEFLATED
             info.external_attr = 0o100644 << 16
