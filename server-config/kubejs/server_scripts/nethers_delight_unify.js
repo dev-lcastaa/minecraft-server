@@ -11,7 +11,7 @@ const NETHERS_DELIGHT_DUPLICATES = {
   'nethersdelight:hoglin_loin': 'mynethersdelight:hoglin_loin',
   'nethersdelight:hoglin_trophy': 'mynethersdelight:hoglin_trophy',
   'nethersdelight:raw_stuffed_hoglin': 'mynethersdelight:raw_stuffed_hoglin',
-  'nethersdelight:stuffed_hoglin': 'mynethersdelight:stuffed_hoglin',
+  'nethersdelight:stuffed_hoglin': 'mynethersdelight:roast_stuffed_hoglin',
   'nethersdelight:plate_of_stuffed_hoglin_ham': 'mynethersdelight:plate_of_stuffed_hoglin_ham',
   'nethersdelight:plate_of_stuffed_hoglin_snout': 'mynethersdelight:plate_of_stuffed_hoglin_snout',
   'nethersdelight:plate_of_stuffed_hoglin_roast': 'mynethersdelight:plate_of_stuffed_hoglin',

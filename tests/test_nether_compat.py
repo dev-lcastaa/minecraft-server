@@ -66,15 +66,23 @@ class NethersDelightDuplicatesTest(unittest.TestCase):
         with mod_jar("nethersdelight") as nd, mod_jar("MyNethersDelight") as mnd:
             nd_ids = registered_ids(nd, "nethersdelight")
             mnd_ids = registered_ids(mnd, "mynethersdelight")
+            mnd_items = {
+                "mynethersdelight:" + n.split("/")[-1][:-5]
+                for n in mnd.namelist()
+                if n.startswith("assets/mynethersdelight/models/item/")
+            }
         shared = {i.split(":")[1] for i in nd_ids} & {i.split(":")[1] for i in mnd_ids}
         mapping = duplicate_map()
+        renamed = {"stuffed_hoglin": "roast_stuffed_hoglin"}
         for name in shared:
-            self.assertEqual(mapping.get(f"nethersdelight:{name}"), f"mynethersdelight:{name}", name)
+            expected = f"mynethersdelight:{renamed.get(name, name)}"
+            self.assertEqual(mapping.get(f"nethersdelight:{name}"), expected, name)
         self.assertEqual(mapping["nethersdelight:ground_strider"], "mynethersdelight:minced_strider")
         self.assertEqual(mapping["nethersdelight:plate_of_stuffed_hoglin_roast"], "mynethersdelight:plate_of_stuffed_hoglin")
         for source, target in mapping.items():
             self.assertIn(source, nd_ids)
-            self.assertIn(target, mnd_ids)
+            # Recipe results need a real item, not a block-only registration.
+            self.assertIn(target, mnd_items)
 
     def test_removed_and_patched_recipes_exist(self):
         script = UNIFY_SCRIPT.read_text()
