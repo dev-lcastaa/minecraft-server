@@ -1,6 +1,7 @@
 ["Cravings Foods"]
 	#Food items that satisfy your sweet craving.
 	"Sweet Foods" = [
+		"supplementaries:candy",
 		"minecraft:cookie", "minecraft:glow_berries", "minecraft:honey_bottle", "minecraft:sweet_berries",
 		"minecraft:melon_slice", "minecraft:chorus_fruit", "minecraft:apple", "minecraft:golden_apple",
 		"minecraft:enchanted_golden_apple", "minecraft:pumpkin_pie", "minecraft:cake",
@@ -170,6 +171,7 @@
 	]
 	#Food items that satisfy your hearty craving.
 	"Hearty Foods" = [
+		"supplementaries:pancake",
 		"minecraft:pumpkin_pie", "minecraft:rabbit_stew", "minecraft:mushroom_stew", "minecraft:beetroot_soup",
 		"delightful:cactus_soup", "delightful:cactus_soup_cup", "delightful:cactus_chili",
 		"delightful:venison_stew", "delightful:venison_stew_cup", "delightful:sinigang", "delightful:sinigang_cup",

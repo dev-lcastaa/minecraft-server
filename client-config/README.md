@@ -7,7 +7,7 @@ For the Minecraft 1.20.1 Forge pack used by this server.
 3. Extract the client ZIP into the **instance directory**, merging its `config/`,
    `kubejs/`, `mods/`, and `resourcepacks/` folders with yours. Alternatively copy this directory's
    `config/` and `kubejs/` contents into the instance's matching folders and copy
-   both JARs in `mods/` into the instance's `mods/` folder and the
+   all JARs in `mods/` into the instance's `mods/` folder and the
    `resourcepacks/butchers-delight-refresh/` folder into its `resourcepacks/`.
    Overwrite
    matching files; do not delete other configs, and do not create `config/config/`.
@@ -20,7 +20,7 @@ Weather2 was removed from the server after profiling showed storm biome checks
 blocking the server thread on chunk loads. Its config overlay is no longer included.
 Keep CoroUtil: What Are They Up To and Zombie Awareness still require it.
 
-This is a config overlay with Quark Oddities and the lunch basket add-on, not a complete
+This is a config overlay with Quark Oddities, lunch basket and Cravings add-ons, not a complete
 launcher-importable modpack or a world download. It contains no server passwords,
 player data, or server properties. Quark Oddities 1.20.1 is the official small
 marker add-on that unlocks Oddities features already implemented in Quark.
@@ -81,6 +81,13 @@ SHA-256: `230af45e645ebe36f621d0b4362afed6ad0faf940129f4363aaba8058f245576`
   durability, armor/toughness, mining level/speed, enchantability, and repair
   material; other items show food values, fuel value, block hardness, blast
   resistance and light level, and stack size.
+- Nether's Delight duplicates (`kubejs/client_scripts/nethers_delight_hide.js`
+  and `kubejs/assets/emi/index/stacks/nethersdelight_duplicates.json`): hides
+  the 12 Nether's Delight items replaced by My Nether's Delight in JEI and EMI.
+  The included server scripts `nethers_delight_unify.js` and
+  `festive_delight_fixes.js` apply the recipe unification and cinnamon-bush
+  harvest fix in singleplayer. The datapack changes to skinning tools and loot
+  are server-only.
 - Alex's Mobs (`config/amc.json`): matches the server's lowered spawn weights
   for 36 dominant animals; only matters in singleplayer.
 - Better Days (`config/betterdays-common.toml`): 60-minute day/night cycle
@@ -97,7 +104,7 @@ Chunky's server admin config is not included.
 
 Back up existing saves before changing configs used in singleplayer. Keep the
 client mod list aligned with the server, including previously disabled mods.
-This overlay adds Quark Oddities and Lunch Basket Food Compatibility; it does not
+This overlay adds Quark Oddities, Lunch Basket Food Compatibility and Cravings Food Compatibility; it does not
 re-enable disabled JARs.
 
 ## Lunch basket food compatibility
@@ -114,3 +121,24 @@ food tag for singleplayer. Restart Minecraft after installing the JAR.
 If Minecraft reports that the add-on failed to load a valid `resourcePackInfo`,
 replace its older JAR with the current overlay copy, even though the filename is
 unchanged. The updated JAR includes the missing Minecraft 1.20.1 pack metadata.
+
+## Cravings food compatibility and feedback
+
+Install `mods/cravings-compat-1.20.1-1.0.0.jar` alongside the lunch basket
+add-on, and merge all included `kubejs/` files. Restart Minecraft and the
+server. This targets the pack's Cravings 1.2.1 and placeable-food mod versions;
+the new startup hooks cannot be installed with a script reload.
+
+All registered edible items, supported placeable foods and non-potion drinks
+receive craving categories and meal tiers. Candy satisfies Sweet; pancakes
+are edible in hand and satisfy Hearty. One plain pancake keeps its placed
+food values; topping effects remain exclusive to placed pancakes.
+Simple foods grant 2.5-minute buffs, regular foods 5 minutes, and big meals
+10 minutes at the default settings. Raw's Nausea stays unchanged, as do XP,
+saturation, effect levels, streak bonuses and container returns.
+
+Hovering or holding a food matching your current craving plays the new-craving
+amethyst chime, with a shared two-second cooldown and no repeated ringing
+while stationary. Matching tooltips show the craving and reward multiplier.
+These checks use the server's synchronized tags and craving state; the
+included server scripts also generate coverage for singleplayer.

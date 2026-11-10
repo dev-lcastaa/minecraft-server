@@ -22,6 +22,8 @@ function lunchBasketPlaceableFood(item) {
   return false
 }
 
+global.lunchBasketPlaceableFood = lunchBasketPlaceableFood
+
 ServerEvents.tags('item', event => {
   var foods = []
   // Unlike Item.getList(), this includes items outside creative tabs and foods from newly added mods.

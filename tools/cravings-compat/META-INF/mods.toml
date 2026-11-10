@@ -1,0 +1,30 @@
+modLoader="lowcodefml"
+loaderVersion="[47,48)"
+license="MIT"
+
+[[mods]]
+modId="cravings_compat"
+version="1.0.0"
+displayName="Cravings Food Compatibility"
+description="Complete food coverage, meal reward durations and placed-food consumption hooks."
+
+[[dependencies.cravings_compat]]
+modId="cravings"
+mandatory=true
+versionRange="[1.2.1]"
+ordering="AFTER"
+side="BOTH"
+
+[[dependencies.cravings_compat]]
+modId="kubejs"
+mandatory=true
+versionRange="[2001.6.5,2002)"
+ordering="AFTER"
+side="BOTH"
+
+[[dependencies.cravings_compat]]
+modId="lunch_basket_compat"
+mandatory=true
+versionRange="[1.0.0,)"
+ordering="AFTER"
+side="BOTH"

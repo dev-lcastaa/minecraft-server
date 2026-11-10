@@ -94,11 +94,13 @@ class ConfigOverridesTest(unittest.TestCase):
         self.assertEqual({item.split(":")[0] for item in foods} - {"minecraft"}, {
             "delightful", "abnormals_delight", "alexsdelight", "endersdelight",
             "festive_delight", "dungeonsdelight", "mekanismdelight", "miners_delight",
-            "mynethersdelight", "nethersdelight", "oceanic_delight", "butchersdelightfoods",
+            "mynethersdelight", "nethersdelight", "oceanic_delight", "butchersdelightfoods", "supplementaries",
         })
         self.assertIn("festive_delight:festive_chiken", categories["Meaty Foods"])
         self.assertIn("butchersdelightfoods:legcow", categories["Raw Foods"])
         self.assertIn("butchersdelightfoods:cooked_leg_cow", categories["Meaty Foods"])
+        self.assertIn("supplementaries:candy", categories["Sweet Foods"])
+        self.assertIn("supplementaries:pancake", categories["Hearty Foods"])
         self.assertTrue(any((ROOT / "mods").glob("Butchersdelight Foods *.jar")))
         self.assertNotIn("dungeonsdelight:blazing_blood_sausage", foods)
         self.assertNotIn("nethersdelight:raw_stuffed_hoglin", foods)

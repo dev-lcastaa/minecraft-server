@@ -119,7 +119,9 @@ function statLines(stack, advanced) {
 
 ItemEvents.tooltip(function (event) {
   event.addAdvancedToAll(function (stack, advanced, text) {
-    var lines = statLines(stack, advanced.isAdvanced());
+    // KubeJS 6 passes a boolean here; newer builds pass a TooltipFlag.
+    var isAdvanced = advanced === true || (advanced && typeof advanced.isAdvanced === 'function' && advanced.isAdvanced());
+    var lines = statLines(stack, !!isAdvanced);
     for (var i = 0; i < lines.length; i++) text.add(Text.gray(lines[i]));
   });
 });

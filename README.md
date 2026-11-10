@@ -201,12 +201,14 @@ The Cravings food lists are maintained in
 They cover all eight craving categories with foods from Delightful, Abnormals
 Delight, Alex's Delight, Ender's Delight, Festive Delight, Dungeons Delight,
 Mekanism Delight, Miner's Delight, My Nether's Delight, Nether's Delight,
-Oceanic Delight, and Butcher's Delight Foods, in addition to vanilla and
+Oceanic Delight, Butcher's Delight Foods, and Supplementaries, in addition to vanilla and
 Farmer's Delight foods. Butcher's Delight itself registers no foods; its
 butchering drops come from the required companion mod Butcher's Delight Foods
 `1.0.3` (`butchersdelightfoods`), which clients must also install.
 Chef's Delight, Display Delight, Storage Delight, and compatibility-only mods
 do not add edible items to these lists.
+The Cravings registry script additionally covers all registered foods
+automatically; see the food coverage and meal rewards section below.
 Rebuild and redeploy after changing these lists; the
 image syncs the world server config into the persistent data volume.
 
@@ -215,8 +217,8 @@ their large JARs are downloaded into `/mods` during the Docker build from pinned
 Modrinth version URLs in [`Dockerfile`](./Dockerfile). Each download is verified
 against its pinned SHA-256; a failed download or checksum mismatch fails the build.
 Local copies may remain in `mods/`, but are ignored by Git and excluded from the
-Docker build context. A clean checkout therefore contains **255 bundled JARs**;
-the built image contains **257** including these downloads. Jenkins uses the same
+Docker build context. Including the compatibility add-ons, a clean checkout
+contains **257 bundled JARs**; the built image contains **259** including these downloads. Jenkins uses the same
 Docker build and needs no separate download step.
 
 To update either externally hosted mod, change its URL and SHA-256 in
@@ -536,6 +538,18 @@ is deployed and enabled the same way as `loot-compat`:
   - Mob caps are per category, so the total number of mobs is unchanged.
   - Biome modifiers load only at startup, so this part needs a **server
     restart** rather than `reload`; it then applies to existing chunks too.
+- **Skinning with cleavers and machetes:** Butcher's Delight skins hooked
+  carcasses only with items in `#forge:tools/knives`. The datapack adds Dungeons
+  Delight cleavers (including the fiery and Twilight Forest cleavers) and
+  Nether's Delight machetes to that tag as optional entries. As a side effect,
+  they also work as knives in Forge-knife cutting-board recipes.
+- **Nether's Delight duplicates:** My Nether's Delight is the canonical source.
+  Vanilla hoglin and strider loot tables replace Nether's Delight's overrides,
+  so My Nether's Delight drops loin, hide and strider slices instead of Nether's
+  Delight copies. Nether's Delight's hoglin-hide modifier is disabled with a
+  0% chance; striders drop string again. See
+  [`nethers_delight_unify.js`](./server-config/kubejs/server_scripts/nethers_delight_unify.js)
+  for the recipe changes.
 
 [`server-config/kubejs/startup_scripts/htn_extra_totems.js`](./server-config/kubejs/startup_scripts/htn_extra_totems.js)
 is copied to `/config/kubejs/` and synced into `/data/kubejs/`. It applies
@@ -545,7 +559,31 @@ Unusual End's (Linked) Void Totem. HTN's pre-use cooldown still blocks More
 Totems, but cannot block Totem of Frost or the Void Totem. Startup scripts load
 only at boot, so restart the server after changing it. Clients do not need it.
 
-Validate with `python3 -m unittest discover -s tests -p 'test_modpack_fixes.py'`.
+[`nethers_delight_unify.js`](./server-config/kubejs/server_scripts/nethers_delight_unify.js)
+maps 10 shared IDs and 2 near-twins (`ground_strider` → `minced_strider`,
+`plate_of_stuffed_hoglin_roast` → `plate_of_stuffed_hoglin`) from Nether's
+Delight to My Nether's Delight:
+
+- It removes 7 Nether's Delight recipes that only produce or process those
+  duplicates.
+- Soul compost accepts My Nether's Delight hide, and warped moldy meat accepts
+  its cooked loin.
+- Grilled strider, strider moss stew and nether skewers accept My Nether's
+  Delight strider.
+- Leftover Nether's Delight copies craft 1:1 into the My Nether's Delight item.
+
+The client overlay hides those copies in JEI and EMI. Nether's Delight-only
+items, such as machetes, stoves and hoglin sirloin, are kept.
+
+[`festive_delight_fixes.js`](./server-config/kubejs/server_scripts/festive_delight_fixes.js)
+fixes cinnamon harvesting. Right-clicking a ripe cinnamon bush with the main
+hand drops one cinnamon stick, resets the bush and plays the berry-pick sound.
+Festive Delight's own handler did not drop cinnamon on the server. The click is
+cancelled so that handler cannot drop a second stick. Both scripts apply after
+`/reload` or a restart.
+
+Validate with `python3 -m unittest discover -s tests -p 'test_modpack_fixes.py'`
+and `-p 'test_nether_compat.py'`.
 
 ### Supplementaries lunch basket food compatibility
 
@@ -582,6 +620,80 @@ The registry-script fixture requires Node.js. To also execute the installed
 Supplementaries predicate before and after the patch, set `JAVA` to a JDK's
 `java` executable and `LUNCH_BASKET_TEST_CLASSPATH` to a colon-separated list of
 Nashorn Core and ASM (`asm`, `asm-tree`, `asm-commons`, `asm-util`) JARs.
+
+### Cravings food coverage, meal rewards and matching-food chimes
+
+The bundled [`cravings-compat` add-on](./tools/cravings-compat/) and
+[`registry script`](./server-config/kubejs/server_scripts/craving_foods.js)
+extend the existing Cravings 1.2.1 rules instead of replacing its rewards.
+Every registered edible item, placeable food supported by the lunch basket
+script, and non-potion drink receives at least one craving category and
+exactly one duration tier. Existing configured memberships and enabled
+Farmer's Delight memberships are preserved and synchronized as item tags.
+New foods use ingredient/dish names and food properties; otherwise nutrition
+assigns Healthy for small foods or Hearty for filling foods, with a warning
+listing those fallback assignments for review. Startup independently checks
+the complete item registry and reports missing coverage or conflicting tiers.
+
+- Supplementaries candy satisfies **Sweet**.
+- Supplementaries pancakes satisfy **Hearty** and count as a big meal.
+  They are now edible in hand, with the same 1 hunger and 0.1 saturation modifier
+  as one plain placed pancake. Placement, stacking, toppings and jukebox use
+  remain unchanged; existing toppings still apply only when eating placed pancakes.
+- Simple foods (raw cuts/fish, small snacks, cookies, candy and berries) receive
+  **0.5x** the configured base buff duration: normally **2.5 minutes**.
+- Regular foods, such as cooked beef, bread and smaller soup/stew cups, retain
+  **1x / 5 minutes**.
+- Big dishes (soups, stews, pasta, curries, platters and other large prepared
+  meals) receive **2x / 10 minutes**. Raw fish therefore grants 2.5 minutes of
+  Water Breathing; Farmer's Delight fish stew grants 10 minutes.
+- These tiers apply to all seven beneficial craving effects. Raw's native
+  Nausea duration stays unchanged. XP, saturation, effect levels, streak bonuses,
+  craving frequency, consequences, achievements and container returns are
+  preserved. Streak duration bonuses remain additive, after scaling the base.
+  Fishy's advancement eligibility window scales with its base reward timer.
+
+Eating placed vanilla cake, pancakes, Ender's Delight pies, My Nether's Delight
+magma cake and Oceanic Delight sponge cake now emits the missing consumption
+event. It fires only on the server after food is actually eaten, not when
+placing food, adding toppings, cutting a slice or collecting a serving.
+Farmer's Delight pies already emit that event and are not patched again.
+Multi-serving dishes reward the portion actually consumed, not the entire
+displayed dish.
+
+The client's [`feedback script`](./client-config/kubejs/client_scripts/craving_feedback.js)
+plays the same amethyst resonance as a new craving when hovering a matching
+food or switching to one in either hand. A shared **2-second cooldown** prevents
+ringing while repeatedly hovering or holding the same item. Matching tooltips
+show a green craving confirmation and the duration multiplier; Raw omits the
+multiplier.
+
+Install `mods/cravings-compat-1.20.1-1.0.0.jar` and the updated lunch basket
+overlay on **both server and clients**, including the startup/server/client
+scripts. Restart both; a reload alone cannot install bytecode hooks or change
+pancake food properties. For an existing server, stop and back up the world,
+rebuild/redeploy the image, then import the updated client overlay. Check the
+`Cravings: validated categories` startup message and review fallback warnings.
+The existing world config stays in
+`new-world/serverconfig/Cravings/cravings-foods.toml`; future edits there are
+read by the registry script on tag reload.
+
+Rebuild the identical server/client JARs and synchronize singleplayer scripts:
+
+```sh
+python3 tools/lunch-basket-compat/build.py
+python3 tools/cravings-compat/build.py
+python3 -m unittest discover -s tests -p 'test_cravings_compat.py'
+```
+
+The script fixtures require Node.js. For installed-mod bytecode execution, set
+`CRAVINGS_TEST_CLASSPATH` to Nashorn Core and ASM (`asm`, `asm-tree`,
+`asm-analysis`, `asm-commons`, `asm-util`) JARs and use a JDK. Tests verify all
+patched installed-mod paths and exact 3000/6000/12000-tick durations; vanilla
+cake uses a method-shape fixture. After deployment, also check in-game
+consumption, rendered tooltips and audible feedback; automated fixtures do
+not launch Minecraft. Review the hooks before upgrading Cravings or these
+placeable-food mods.
 
 ### Bundled mod config overrides
 

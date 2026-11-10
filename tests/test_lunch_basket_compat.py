@@ -91,6 +91,7 @@ let tagged = [];
 let rejectFood = false;
 const messages = [];
 const context = {
+  global: {},
   Java: {loadClass: name => {
     if (name === 'net.mehvahdjukaar.supplementaries.common.items.LunchBoxItem') {
       return {canAcceptItem: stack => !rejectFood && tagged.includes(stack.id)};
