@@ -1,3 +1,4 @@
+import functools
 import hashlib
 import json
 from pathlib import Path
@@ -10,6 +11,21 @@ ROOT = Path(__file__).resolve().parents[1]
 SERVER = ROOT / "server-config" / "config"
 CLIENT = ROOT / "client-config" / "config"
 NEW_WORLD = ROOT / "server-config" / "new-world"
+
+
+@functools.cache
+def mod_item_models():
+    models = set()
+    for path in (ROOT / "mods").glob("*.jar"):
+        with ZipFile(path) as archive:
+            for name in archive.namelist():
+                parts = name.split("/")
+                if (
+                    len(parts) == 5 and parts[0] == "assets"
+                    and parts[2:4] == ["models", "item"] and name.endswith(".json")
+                ):
+                    models.add(f"{parts[1]}:{parts[4][:-5]}")
+    return frozenset(models)
 
 DISABLED_QUARK_FEATURES = {
     "automation": (
@@ -94,8 +110,11 @@ class ConfigOverridesTest(unittest.TestCase):
         self.assertEqual({item.split(":")[0] for item in foods} - {"minecraft"}, {
             "delightful", "abnormals_delight", "alexsdelight", "endersdelight",
             "festive_delight", "dungeonsdelight", "mekanismdelight", "miners_delight",
-            "mynethersdelight", "nethersdelight", "oceanic_delight", "butchersdelightfoods", "supplementaries",
+            "mynethersdelight", "oceanic_delight", "butchersdelightfoods", "supplementaries",
         })
+        for item in sorted(i for i in foods if not i.startswith("minecraft:")):
+            with self.subTest(food=item):
+                self.assertIn(item, mod_item_models())
         self.assertIn("festive_delight:festive_chiken", categories["Meaty Foods"])
         self.assertIn("butchersdelightfoods:legcow", categories["Raw Foods"])
         self.assertIn("butchersdelightfoods:cooked_leg_cow", categories["Meaty Foods"])
@@ -103,7 +122,6 @@ class ConfigOverridesTest(unittest.TestCase):
         self.assertIn("supplementaries:pancake", categories["Hearty Foods"])
         self.assertTrue(any((ROOT / "mods").glob("Butchersdelight Foods *.jar")))
         self.assertNotIn("dungeonsdelight:blazing_blood_sausage", foods)
-        self.assertNotIn("nethersdelight:raw_stuffed_hoglin", foods)
         self.assertTrue(config["Farmer's delight Compat"]["Farmer's Delight Compatibility"])
 
     def test_quark_overlap_protections(self):
@@ -159,7 +177,7 @@ class ConfigOverridesTest(unittest.TestCase):
         drinks = config["Drinks"]["drinks"]
         foods = config["Foods"]["foods"]
         self.assertEqual(len(drinks), 103)
-        self.assertEqual(len(foods), 165)
+        self.assertEqual(len(foods), 163)
         self.assertEqual(
             len({row[0] for row in drinks + foods}), len(drinks) + len(foods)
         )
@@ -252,21 +270,12 @@ class ConfigOverridesTest(unittest.TestCase):
             row[0] for group, key in (("Drinks", "drinks"), ("Foods", "foods"))
             for row in config[group][key]
         }
-        models = set()
+        models = mod_item_models()
         soup_namespaces = {
-            "miners_delight", "mynethersdelight", "nethersdelight", "delightful",
+            "miners_delight", "mynethersdelight", "delightful",
             "alexsdelight", "alexscaves", "endersdelight", "unusualend",
             "biomeswevegone", "mekanismdelight", "the_bumblezone", "dungeonsdelight",
         }
-        for path in (ROOT / "mods").glob("*.jar"):
-            with ZipFile(path) as archive:
-                for name in archive.namelist():
-                    parts = name.split("/")
-                    if (
-                        len(parts) == 5 and parts[0] == "assets"
-                        and parts[2:4] == ["models", "item"] and name.endswith(".json")
-                    ):
-                        models.add(f"{parts[1]}:{parts[4][:-5]}")
         downloaded_items = set()
         if not list((ROOT / "mods").glob("the_bumblezone-*.jar")):
             self.assertIn("the_bumblezone-7.15.2", (ROOT / "Dockerfile").read_text())

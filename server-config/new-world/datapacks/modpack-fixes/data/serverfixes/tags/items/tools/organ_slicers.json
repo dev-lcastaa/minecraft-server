@@ -12,10 +12,6 @@
       "required": false
     },
     {
-      "id": "#nethersdelight:tools/machetes",
-      "required": false
-    },
-    {
       "id": "graveyard:bone_dagger",
       "required": false
     },

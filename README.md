@@ -200,7 +200,7 @@ The Cravings food lists are maintained in
 [`server-config/new-world/serverconfig/Cravings/cravings-foods.toml`](./server-config/new-world/serverconfig/Cravings/cravings-foods.toml).
 They cover all eight craving categories with foods from Delightful, Abnormals
 Delight, Alex's Delight, Ender's Delight, Festive Delight, Dungeons Delight,
-Mekanism Delight, Miner's Delight, My Nether's Delight, Nether's Delight,
+Mekanism Delight, Miner's Delight, My Nether's Delight,
 Oceanic Delight, Butcher's Delight Foods, and Supplementaries, in addition to vanilla and
 Farmer's Delight foods. Butcher's Delight itself registers no foods; its
 butchering drops come from the required companion mod Butcher's Delight Foods
@@ -503,7 +503,7 @@ is deployed and enabled the same way as `loot-compat`:
   global loot modifier rolls Sons of Sins' per-mob slicing tables (or a random
   heart, muscle, or ribs) when a **player** kills a non-player mob with an item
   in `#serverfixes:tools/organ_slicers`: Forge/Farmer's Delight knives, Dungeons
-  Delight and Butcher's Delight cleavers, Nether's Delight machetes, and the
+  Delight and Butcher's Delight cleavers, and the
   Graveyard, Alex's Caves, Fangs & Claws, Unusual End, and SCP daggers/knives.
   Sons of Sins' own slicers, skeletons, flesh creatures, and ether ghosts are
   excluded to avoid double drops. Knives are deliberately not added to
@@ -538,18 +538,19 @@ is deployed and enabled the same way as `loot-compat`:
   - Mob caps are per category, so the total number of mobs is unchanged.
   - Biome modifiers load only at startup, so this part needs a **server
     restart** rather than `reload`; it then applies to existing chunks too.
-- **Skinning with cleavers and machetes:** Butcher's Delight skins hooked
-  carcasses only with items in `#forge:tools/knives`. The datapack adds Dungeons
-  Delight cleavers (including the fiery and Twilight Forest cleavers) and
-  Nether's Delight machetes to that tag as optional entries. As a side effect,
-  they also work as knives in Forge-knife cutting-board recipes.
-- **Nether's Delight duplicates:** My Nether's Delight is the canonical source.
-  Vanilla hoglin and strider loot tables replace Nether's Delight's overrides,
-  so My Nether's Delight drops loin, hide and strider slices instead of Nether's
-  Delight copies. Nether's Delight's hoglin-hide modifier is disabled with a
-  0% chance; striders drop string again. See
-  [`nethers_delight_unify.js`](./server-config/kubejs/server_scripts/nethers_delight_unify.js)
-  for the recipe changes.
+- **Skinning with cleavers:** Butcher's Delight skins hooked carcasses only
+  with items in `#forge:tools/knives`. The datapack adds Dungeons Delight
+  cleavers (including the fiery and Twilight Forest cleavers) to that tag as
+  optional entries. As a side effect, they also work as knives in Forge-knife
+  cutting-board recipes.
+- **My Nether's Delight only:** Nether's Delight is not installed; My Nether's
+  Delight provides the hoglin and strider foods. Butcher's Delight replaces the
+  strider loot table with an empty one, so the datapack restores the vanilla
+  table (string) and My Nether's Delight's loot modifiers add strider slices,
+  hoglin loin and hide. My Nether's Delight ships one cutting recipe for
+  Nether's Delight hoglin loin; the datapack overrides it with a
+  `forge:mod_loaded` condition so it is skipped instead of logging a parse
+  error.
 
 [`server-config/kubejs/startup_scripts/htn_extra_totems.js`](./server-config/kubejs/startup_scripts/htn_extra_totems.js)
 is copied to `/config/kubejs/` and synced into `/data/kubejs/`. It applies
@@ -558,22 +559,6 @@ hook: the seven More Totems totems, Fangs & Claws' Totem of Frost, and
 Unusual End's (Linked) Void Totem. HTN's pre-use cooldown still blocks More
 Totems, but cannot block Totem of Frost or the Void Totem. Startup scripts load
 only at boot, so restart the server after changing it. Clients do not need it.
-
-[`nethers_delight_unify.js`](./server-config/kubejs/server_scripts/nethers_delight_unify.js)
-maps 10 shared IDs and 2 near-twins (`ground_strider` → `minced_strider`,
-`plate_of_stuffed_hoglin_roast` → `plate_of_stuffed_hoglin`) from Nether's
-Delight to My Nether's Delight:
-
-- It removes 7 Nether's Delight recipes that only produce or process those
-  duplicates.
-- Soul compost accepts My Nether's Delight hide, and warped moldy meat accepts
-  its cooked loin.
-- Grilled strider, strider moss stew and nether skewers accept My Nether's
-  Delight strider.
-- Leftover Nether's Delight copies craft 1:1 into the My Nether's Delight item.
-
-The client overlay hides those copies in JEI and EMI. Nether's Delight-only
-items, such as machetes, stoves and hoglin sirloin, are kept.
 
 [`festive_delight_fixes.js`](./server-config/kubejs/server_scripts/festive_delight_fixes.js)
 fixes cinnamon harvesting. Right-clicking a ripe cinnamon bush with the main
@@ -709,7 +694,7 @@ redeploy. Other mod configs stay persistent in the volume.
 | `quark-common.toml` | `Automatic Tool Restock = false`, `Inventory Sorting = false` | Selected inventory profile |
 | `quark-common.toml` | `Quick Armor Swapping = true` | Sneak-right-click armor stands to exchange equipped armor |
 | `quark-common.toml` | `Villagers Use Simple Harvest = false` | Leave villager farming to Smarter Farmers; player harvesting stays enabled |
-| `thirst/item_settings.toml` | 103 explicit drink IDs and 165 food IDs | Add verified drinks, soups, cups, fruit, and moist foods from the installed pack |
+| `thirst/item_settings.toml` | 103 explicit drink IDs and 163 food IDs | Add verified drinks, soups, cups, fruit, and moist foods from the installed pack |
 | `thirst/common.toml`, `thirst/keyword.toml` | Preserve current balance; keyword matching off | Match client gameplay settings without matching decorative food-display items |
 | `mbackrooms/Mbackrooms-Config-Common.toml` | `partialLootKeeping = false` | Backrooms otherwise saves about 30% of inventory even outside its dimensions |
 | `chunky/config.json` | `updateInterval = 60` | Pregeneration progress logs once a minute instead of every second |
@@ -749,7 +734,7 @@ Oddities features remain disabled. The add-on itself contains no gameplay code;
 it unlocks the implementations already in Quark. Its mandatory Quark dependency
 is satisfied by the installed Quark 4.0-462.
 
-Thirst now has **103 drinks and 165 foods**, with identical server and client
+Thirst now has **103 drinks and 163 foods**, with identical server and client
 item settings. The November 4 expansion adds 44 drinks and 101 foods without
 changing the previous entries. The November 7 pass adds 52 more IDs: milk
 buckets, Cold Sweat's filled waterskin (`6/8`), Doggy Talents soy milk and sake,

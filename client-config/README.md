@@ -56,7 +56,7 @@ SHA-256: `230af45e645ebe36f621d0b4362afed6ad0faf940129f4363aaba8058f245576`
   Quark still suppresses Automatic Recipe Unlock when NERB is installed and Map
   Washing when Supplementaries is installed; their selected toggles remain True
   without overriding Quark's compatibility protection.
-- Thirst Was Taken: 103 drinks and 165 foods, verified against the live item
+- Thirst Was Taken: 103 drinks and 163 foods, verified against the live item
   registry. Includes milk buckets, Cold Sweat's filled waterskin, Doggy Talents
   drinks, Farmer's Respite strong hot cocoa, and the remaining Delight soups,
   salads, fruit, and jellies. Includes suspicious stew, bee soup, royal jelly, hot cocoa, all 23
@@ -81,13 +81,12 @@ SHA-256: `230af45e645ebe36f621d0b4362afed6ad0faf940129f4363aaba8058f245576`
   durability, armor/toughness, mining level/speed, enchantability, and repair
   material; other items show food values, fuel value, block hardness, blast
   resistance and light level, and stack size.
-- Nether's Delight duplicates (`kubejs/client_scripts/nethers_delight_hide.js`
-  and `kubejs/assets/emi/index/stacks/nethersdelight_duplicates.json`): hides
-  the 12 Nether's Delight items replaced by My Nether's Delight in JEI and EMI.
-  The included server scripts `nethers_delight_unify.js` and
-  `festive_delight_fixes.js` apply the recipe unification and cinnamon-bush
-  harvest fix in singleplayer. The datapack changes to skinning tools and loot
-  are server-only.
+- Cinnamon bushes (`kubejs/server_scripts/festive_delight_fixes.js`): applies
+  the cinnamon-bush harvest fix in singleplayer. The datapack changes to
+  skinning tools and loot are server-only.
+- Nether's Delight is no longer part of the pack; remove
+  `nethersdelight-1.20.1-4.0.jar` from the client `mods/` folder. My Nether's
+  Delight stays.
 - Alex's Mobs (`config/amc.json`): matches the server's lowered spawn weights
   for 36 dominant animals; only matters in singleplayer.
 - Better Days (`config/betterdays-common.toml`): 60-minute day/night cycle

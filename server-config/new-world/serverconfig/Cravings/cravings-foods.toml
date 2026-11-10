@@ -36,7 +36,6 @@
 		"miners_delight:bat_cookie", "miners_delight:crunchy_bar",
 		"mynethersdelight:magma_cake_slice", "mynethersdelight:hot_cream", "mynethersdelight:hot_cream_cone",
 		"mynethersdelight:sizzling_pudding", "mynethersdelight:spicy_cotton", "mynethersdelight:tear_popsicle",
-		"nethersdelight:magma_gelatin", "nethersdelight:propelpearl",
 		"oceanic_delight:sea_grape", "oceanic_delight:sea_grape_juice", "oceanic_delight:sponge_cake_slice",
 	]
 	#Food items that satisfy your healthy craving.
@@ -93,9 +92,7 @@
 		"mynethersdelight:roast_ear", "mynethersdelight:roasted_sausage", "mynethersdelight:sausage_and_potatoes",
 		"mynethersdelight:scotch_eggs", "mynethersdelight:spicy_hoglin_stew", "mynethersdelight:spicy_skewer",
 		"mynethersdelight:strider_with_grilled_fungus",
-		"nethersdelight:grilled_strider", "nethersdelight:hoglin_sirloin", "nethersdelight:nether_skewer",
-		"nethersdelight:plate_of_stuffed_hoglin_ham", "nethersdelight:plate_of_stuffed_hoglin_roast",
-		"nethersdelight:plate_of_stuffed_hoglin_snout", "oceanic_delight:steamed_beef",
+		"oceanic_delight:steamed_beef",
 		"butchersdelightfoods:coockedbeeftenderloin", "butchersdelightfoods:cookedbeefribs",
 		"butchersdelightfoods:cooked_leg_cow", "butchersdelightfoods:cooked_ham",
 		"butchersdelightfoods:cookedporkloin", "butchersdelightfoods:cookedporkribs",
@@ -150,7 +147,7 @@
 		"miners_delight:seasoned_arthropods", "miners_delight:silverfish_eggs", "miners_delight:spider_leg",
 		"miners_delight:baked_spider_leg", "miners_delight:plate_of_glazed_arachnid_limbs",
 		"miners_delight:weird_caviar", "miners_delight:moss",
-		"mynethersdelight:bleeding_tartar", "mynethersdelight:rock_soup", "nethersdelight:warped_moldy_meat",
+		"mynethersdelight:bleeding_tartar", "mynethersdelight:rock_soup",
 		"oceanic_delight:elder_guardian_eye", "oceanic_delight:pasta_with_eyeball",
 	]
 	#Food items that satisfy your fancy craving.
@@ -214,8 +211,6 @@
 		"mynethersdelight:sausage_and_potatoes", "mynethersdelight:spicy_curry",
 		"mynethersdelight:spicy_hoglin_stew", "mynethersdelight:spicy_noodle_soup", "mynethersdelight:strider_stew",
 		"mynethersdelight:strider_with_grilled_fungus", "mynethersdelight:stuffed_pepper",
-		"nethersdelight:strider_moss_stew", "nethersdelight:plate_of_stuffed_hoglin_ham",
-		"nethersdelight:plate_of_stuffed_hoglin_roast", "nethersdelight:plate_of_stuffed_hoglin_snout",
 		"oceanic_delight:fish_egg_noodle_soup", "oceanic_delight:glow_squid_stew",
 		"oceanic_delight:bowl_of_paella", "oceanic_delight:pasta_with_eyeball",
 		"oceanic_delight:shrimp_rice", "oceanic_delight:shrimp_stew",
@@ -238,8 +233,6 @@
 		"miners_delight:tentacles",
 		"mynethersdelight:bleeding_tartar", "mynethersdelight:hoglin_loin",
 		"mynethersdelight:hoglin_sausage", "mynethersdelight:minced_strider", "mynethersdelight:strider_slice",
-		"nethersdelight:ground_strider", "nethersdelight:hoglin_ear", "nethersdelight:hoglin_loin",
-		"nethersdelight:strider_slice",
 		"oceanic_delight:ancient_fish_eggs", "oceanic_delight:glow_squid_tentacles", "oceanic_delight:salmon_eggs",
 		"oceanic_delight:shrimp", "oceanic_delight:shrimp_slices", "oceanic_delight:squid_tentacles",
 		"butchersdelightfoods:beeftenderloin", "butchersdelightfoods:beefribs", "butchersdelightfoods:legcow",

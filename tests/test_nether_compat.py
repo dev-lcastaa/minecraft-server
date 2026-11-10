@@ -9,7 +9,6 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "server-config/new-world/datapacks/modpack-fixes/data"
 SERVER_SCRIPTS = ROOT / "server-config/kubejs/server_scripts"
 CLIENT_KUBEJS = ROOT / "client-config/kubejs"
-UNIFY_SCRIPT = SERVER_SCRIPTS / "nethers_delight_unify.js"
 CINNAMON_SCRIPT = SERVER_SCRIPTS / "festive_delight_fixes.js"
 
 
@@ -30,19 +29,17 @@ def registered_ids(jar, namespace):
     return ids
 
 
-def duplicate_map():
-    script = UNIFY_SCRIPT.read_text()
-    body = re.search(r"NETHERS_DELIGHT_DUPLICATES = \{(.*?)\n\}", script, re.S).group(1)
-    return dict(re.findall(r"'(nethersdelight:[a-z_]+)': '(mynethersdelight:[a-z_]+)'", body))
+ND_REFERENCE = re.compile(r"(?<![a-z_])nethersdelight:")
+ND_SAUSAGE_RECIPE = DATA / "nethersdelight/recipes/cutting/hoglin_sausage_alt.json"
 
 
 class SkinningToolsTest(unittest.TestCase):
-    def test_cleavers_and_machetes_are_forge_knives(self):
+    def test_cleavers_are_forge_knives(self):
         tag = json.loads((DATA / "forge/tags/items/tools/knives.json").read_text())
         self.assertFalse(tag["replace"])
         ids = {value["id"] for value in tag["values"]}
         self.assertTrue(all(not value["required"] for value in tag["values"]))
-        for expected in ("#dungeonsdelight:cleavers", "#nethersdelight:tools/machetes", "dungeonsdelight:fiery_cleaver"):
+        for expected in ("#dungeonsdelight:cleavers", "dungeonsdelight:fiery_cleaver"):
             self.assertIn(expected, ids)
         with mod_jar("forge-dungeonsdelight") as jar:
             cleavers = json.loads(jar.read("data/dungeonsdelight/tags/items/cleavers.json"))["values"]
@@ -51,9 +48,6 @@ class SkinningToolsTest(unittest.TestCase):
         for item in ids:
             if item.startswith("dungeonsdelight:"):
                 self.assertIn(item, known)
-        with mod_jar("nethersdelight") as jar:
-            machetes = json.loads(jar.read("data/nethersdelight/tags/items/tools/machetes.json"))["values"]
-        self.assertIn("nethersdelight:iron_machete", machetes)
 
     def test_butchers_delight_skins_with_forge_knives(self):
         with mod_jar("Butchersdelight beta") as jar:
@@ -61,66 +55,48 @@ class SkinningToolsTest(unittest.TestCase):
         self.assertIn(b"tools/knives", procedure)
 
 
-class NethersDelightDuplicatesTest(unittest.TestCase):
-    def test_every_shared_id_is_unified_to_my_nethers_delight(self):
-        with mod_jar("nethersdelight") as nd, mod_jar("MyNethersDelight") as mnd:
-            nd_ids = registered_ids(nd, "nethersdelight")
-            mnd_ids = registered_ids(mnd, "mynethersdelight")
-            mnd_items = {
-                "mynethersdelight:" + n.split("/")[-1][:-5]
-                for n in mnd.namelist()
-                if n.startswith("assets/mynethersdelight/models/item/")
-            }
-        shared = {i.split(":")[1] for i in nd_ids} & {i.split(":")[1] for i in mnd_ids}
-        mapping = duplicate_map()
-        renamed = {"stuffed_hoglin": "roast_stuffed_hoglin"}
-        for name in shared:
-            expected = f"mynethersdelight:{renamed.get(name, name)}"
-            self.assertEqual(mapping.get(f"nethersdelight:{name}"), expected, name)
-        self.assertEqual(mapping["nethersdelight:ground_strider"], "mynethersdelight:minced_strider")
-        self.assertEqual(mapping["nethersdelight:plate_of_stuffed_hoglin_roast"], "mynethersdelight:plate_of_stuffed_hoglin")
-        for source, target in mapping.items():
-            self.assertIn(source, nd_ids)
-            # Recipe results need a real item, not a block-only registration.
-            self.assertIn(target, mnd_items)
+class NethersDelightRemovedTest(unittest.TestCase):
+    def test_only_my_nethers_delight_is_installed(self):
+        self.assertEqual(list((ROOT / "mods").glob("nethersdelight-*.jar")), [])
+        mod_jar("MyNethersDelight").close()
 
-    def test_removed_and_patched_recipes_exist(self):
-        script = UNIFY_SCRIPT.read_text()
-        body = re.search(r"NETHERS_DELIGHT_REDUNDANT_RECIPES = \[(.*?)\]", script, re.S).group(1)
-        removed = re.findall(r"'([a-z_]+:[a-z_/]+)'", body)
-        patched = re.findall(r"\{ id: '([a-z_]+:[a-z_/]+)' \}", script)
-        self.assertEqual(len(removed), 7)
-        with mod_jar("nethersdelight") as jar:
-            names = set(jar.namelist())
-            for recipe in removed + patched:
-                namespace, path = recipe.split(":")
-                self.assertIn(f"data/{namespace}/recipes/{path}.json", names, recipe)
-            for recipe in removed:
-                namespace, path = recipe.split(":")
-                text = jar.read(f"data/{namespace}/recipes/{path}.json").decode()
-                self.assertTrue(any(f'"{source}"' in text for source in duplicate_map()), recipe)
+    def test_configs_do_not_reference_nethers_delight(self):
+        for base in (ROOT / "server-config", ROOT / "client-config"):
+            for path in base.rglob("*"):
+                if not path.is_file() or path.suffix not in (".js", ".json", ".toml", ".cfg", ".txt"):
+                    continue
+                if path == ND_SAUSAGE_RECIPE:
+                    continue
+                with self.subTest(path=str(path.relative_to(ROOT))):
+                    self.assertIsNone(ND_REFERENCE.search(path.read_text(errors="ignore")))
 
-    def test_nd_duplicate_loot_is_disabled(self):
-        modifier = json.loads((DATA / "nethersdelight/loot_modifiers/scavenging_hide_from_hoglin.json").read_text())
-        self.assertEqual(modifier["conditions"], [{"condition": "minecraft:random_chance", "chance": 0.0}])
-        with mod_jar("nethersdelight") as jar:
-            registration = json.loads(jar.read("data/forge/loot_modifiers/global_loot_modifiers.json"))
-        self.assertIn("nethersdelight:scavenging_hide_from_hoglin", registration["entries"])
-        for mob, drop in (("hoglin", "minecraft:porkchop"), ("strider", "minecraft:string")):
-            text = (DATA / f"minecraft/loot_tables/entities/{mob}.json").read_text()
-            self.assertNotIn("nethersdelight", text)
-            self.assertIn(drop, text)
+    def test_my_nethers_delight_nd_recipe_only_loads_with_nethers_delight(self):
+        override = json.loads(ND_SAUSAGE_RECIPE.read_text())
+        self.assertEqual(override.pop("conditions"), [{"type": "forge:mod_loaded", "modid": "nethersdelight"}])
+        with mod_jar("MyNethersDelight") as jar:
+            shipped = json.loads(jar.read("data/nethersdelight/recipes/cutting/hoglin_sausage_alt.json"))
+            nd_files = [n for n in jar.namelist() if n.startswith("data/nethersdelight/") and n.endswith(".json")]
+            tags = [
+                json.loads(jar.read(n)) for n in jar.namelist()
+                if n.startswith("data/mynethersdelight/tags/") and n.endswith(".json")
+            ]
+        self.assertEqual(override, shipped)
+        self.assertEqual(nd_files, ["data/nethersdelight/recipes/cutting/hoglin_sausage_alt.json"])
+        # Required references to missing items would make Forge drop the whole tag.
+        for tag in tags:
+            for value in tag["values"]:
+                if isinstance(value, str):
+                    self.assertIsNone(ND_REFERENCE.search(value), value)
+
+    def test_strider_keeps_vanilla_drops(self):
+        self.assertFalse((DATA / "minecraft/loot_tables/entities/hoglin.json").exists())
+        text = (DATA / "minecraft/loot_tables/entities/strider.json").read_text()
+        self.assertIn("minecraft:string", text)
+        with mod_jar("Butchersdelight beta") as jar:
+            self.assertIn("data/minecraft/loot_tables/entities/strider.json", jar.namelist())
         with mod_jar("MyNethersDelight") as jar:
             loin = json.loads(jar.read("data/mynethersdelight/loot_modifiers/remplace_hoglin_pork_loin.json"))
         self.assertEqual(loin["replaces"], "minecraft:porkchop")
-
-    def test_client_hides_the_same_duplicates(self):
-        mapping = duplicate_map()
-        hide = (CLIENT_KUBEJS / "client_scripts/nethers_delight_hide.js").read_text()
-        self.assertIn("JEIEvents.hideItems", hide)
-        self.assertEqual(set(re.findall(r"'(nethersdelight:[a-z_]+)'", hide)), set(mapping))
-        emi = json.loads((CLIENT_KUBEJS / "assets/emi/index/stacks/nethersdelight_duplicates.json").read_text())
-        self.assertEqual({entry.removeprefix("item:") for entry in emi["removed"]}, set(mapping))
 
 
 class CinnamonHarvestTest(unittest.TestCase):
@@ -139,12 +115,11 @@ class CinnamonHarvestTest(unittest.TestCase):
 
 class ClientOverlayCopiesTest(unittest.TestCase):
     def test_server_scripts_match_client_copies(self):
-        for name in ("nethers_delight_unify.js", "festive_delight_fixes.js"):
-            with self.subTest(name=name):
-                self.assertEqual(
-                    (SERVER_SCRIPTS / name).read_text(),
-                    (CLIENT_KUBEJS / "server_scripts" / name).read_text(),
-                )
+        name = "festive_delight_fixes.js"
+        self.assertEqual(
+            (SERVER_SCRIPTS / name).read_text(),
+            (CLIENT_KUBEJS / "server_scripts" / name).read_text(),
+        )
 
 
 if __name__ == "__main__":

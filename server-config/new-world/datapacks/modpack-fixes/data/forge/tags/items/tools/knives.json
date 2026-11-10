@@ -5,7 +5,6 @@
     {"id": "dungeonsdelight:fiery_cleaver", "required": false},
     {"id": "dungeonsdelight:ironwood_cleaver", "required": false},
     {"id": "dungeonsdelight:knightmetal_cleaver", "required": false},
-    {"id": "dungeonsdelight:steeleaf_cleaver", "required": false},
-    {"id": "#nethersdelight:tools/machetes", "required": false}
+    {"id": "dungeonsdelight:steeleaf_cleaver", "required": false}
   ]
 }

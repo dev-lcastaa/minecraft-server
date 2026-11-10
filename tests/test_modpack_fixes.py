@@ -65,7 +65,6 @@ class ModpackFixesTest(unittest.TestCase):
             "#farmersdelight:tools/knives",
             "#dungeonsdelight:cleavers",
             "butchersdelight:cleaver",
-            "#nethersdelight:tools/machetes",
             "graveyard:bone_dagger",
         ):
             self.assertIn(blade, ids)
