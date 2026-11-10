@@ -636,10 +636,8 @@ listing those fallback assignments for review. Startup independently checks
 the complete item registry and reports missing coverage or conflicting tiers.
 
 - Supplementaries candy satisfies **Sweet**.
-- Supplementaries pancakes satisfy **Hearty** and count as a big meal.
-  They are now edible in hand, with the same 1 hunger and 0.1 saturation modifier
-  as one plain placed pancake. Placement, stacking, toppings and jukebox use
-  remain unchanged; existing toppings still apply only when eating placed pancakes.
+- Supplementaries pancakes satisfy **Hearty** and count as a big meal when
+  eaten from a placed stack. They are not edible from the hand.
 - Simple foods (raw cuts/fish, small snacks, cookies, candy and berries) receive
   **0.5x** the configured base buff duration: normally **2.5 minutes**.
 - Regular foods, such as cooked beef, bread and smaller soup/stew cups, retain
@@ -669,9 +667,8 @@ show a green craving confirmation and the duration multiplier; Raw omits the
 multiplier.
 
 Install `mods/cravings-compat-1.20.1-1.0.0.jar` and the updated lunch basket
-overlay on **both server and clients**, including the startup/server/client
-scripts. Restart both; a reload alone cannot install bytecode hooks or change
-pancake food properties. For an existing server, stop and back up the world,
+overlay on **both server and clients**, including the server/client
+scripts. Restart both; a reload alone cannot install bytecode hooks. For an existing server, stop and back up the world,
 rebuild/redeploy the image, then import the updated client overlay. Check the
 `Cravings: validated categories` startup message and review fallback warnings.
 The existing world config stays in

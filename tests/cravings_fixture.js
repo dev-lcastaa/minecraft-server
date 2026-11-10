@@ -49,7 +49,6 @@ let tagHandler;
 let loaded;
 let tooltip;
 let tick;
-let modification;
 const tags = {};
 const logs = [];
 const stacks = {};
@@ -84,7 +83,6 @@ const context = {
     loaded: callback => { loaded = callback; }
   },
   ItemEvents: {
-    modification: callback => { modification = callback; },
     tooltip: callback => callback({addAdvancedToAll: handler => { tooltip = handler; }})
   },
   Item: {getTypeList: () => Object.keys(items), of: id => stacks[id]},
@@ -108,22 +106,6 @@ const context = {
 };
 vm.createContext(context);
 function run(path) { vm.runInContext(fs.readFileSync(root + '/' + path, 'utf8'), context); }
-run('server-config/kubejs/startup_scripts/craving_pancakes.js');
-const pancake = {
-  // KubeJS 6 Rhino: the bean is typed by getFoodProperties(), so assignment has no setter.
-  set foodProperties(_) {
-    throw new Error('Java class PancakeItem has no public instance field or method named "foodProperties"');
-  },
-  setFoodProperties(callback) {
-    let hunger;
-    let saturation;
-    callback({hunger: value => { hunger = value; }, saturation: value => { saturation = value; }});
-    assert.equal(hunger, 1);
-    assert.equal(saturation, 0.1);
-    items['supplementaries:pancake'] = food(hunger);
-  }
-};
-modification({modify: (id, callback) => { assert.equal(id, 'supplementaries:pancake'); callback(pancake); }});
 run('server-config/kubejs/server_scripts/craving_foods.js');
 function reload() {
   Object.keys(tags).forEach(tag => delete tags[tag]);
@@ -197,4 +179,4 @@ assert.equal(hover('minecraft:cod').length, 1, 'Raw should not advertise a buff-
 context.Client.player = null;
 tick();
 assert.equal(hover('minecraft:cod').length, 0, 'Disconnected and menu tooltips must not ring');
-console.log('Craving registry, pancake and client feedback fixtures passed');
+console.log('Craving registry and client feedback fixtures passed');

@@ -19,7 +19,7 @@ def build():
             info.external_attr = 0o100644 << 16
             jar.writestr(info, path.read_bytes())
     (ROOT / "client-config/mods" / JAR_NAME).write_bytes(server_jar.read_bytes())
-    for name in ("startup_scripts/craving_pancakes.js", "server_scripts/craving_foods.js"):
+    for name in ("server_scripts/craving_foods.js",):
         path = Path("kubejs") / name
         target = ROOT / "client-config" / path
         target.parent.mkdir(parents=True, exist_ok=True)

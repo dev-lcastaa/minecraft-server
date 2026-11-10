@@ -33,7 +33,7 @@ class CravingsCompatTest(unittest.TestCase):
             self.assertEqual({dependency["modId"] for dependency in dependencies},
                              {"cravings", "kubejs", "lunch_basket_compat"})
             self.assertTrue(all(dependency["mandatory"] for dependency in dependencies))
-        for name in ("startup_scripts/craving_pancakes.js", "server_scripts/craving_foods.js"):
+        for name in ("server_scripts/craving_foods.js",):
             path = Path("kubejs") / name
             self.assertEqual((ROOT / "server-config" / path).read_bytes(),
                              (ROOT / "client-config" / path).read_bytes())
@@ -46,7 +46,7 @@ class CravingsCompatTest(unittest.TestCase):
             [node, str(ROOT / "tests/cravings_fixture.js"), str(ROOT)],
             check=True, cwd=ROOT, capture_output=True, text=True,
         )
-        self.assertIn("Craving registry, pancake and client feedback fixtures passed", result.stdout)
+        self.assertIn("Craving registry and client feedback fixtures passed", result.stdout)
 
     def test_installed_mod_bytecode_transforms(self):
         classpath = os.environ.get("CRAVINGS_TEST_CLASSPATH")

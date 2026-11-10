@@ -130,9 +130,10 @@ server. This targets the pack's Cravings 1.2.1 and placeable-food mod versions;
 the new startup hooks cannot be installed with a script reload.
 
 All registered edible items, supported placeable foods and non-potion drinks
-receive craving categories and meal tiers. Candy satisfies Sweet; pancakes
-are edible in hand and satisfy Hearty. One plain pancake keeps its placed
-food values; topping effects remain exclusive to placed pancakes.
+receive craving categories and meal tiers. Candy satisfies Sweet; placed
+pancakes satisfy Hearty when eaten (they are not edible from the hand).
+If you installed an earlier overlay, delete
+`kubejs/startup_scripts/craving_pancakes.js` from your instance.
 Simple foods grant 2.5-minute buffs, regular foods 5 minutes, and big meals
 10 minutes at the default settings. Raw's Nausea stays unchanged, as do XP,
 saturation, effect levels, streak bonuses and container returns.
