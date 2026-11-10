@@ -109,14 +109,20 @@ const context = {
 vm.createContext(context);
 function run(path) { vm.runInContext(fs.readFileSync(root + '/' + path, 'utf8'), context); }
 run('server-config/kubejs/startup_scripts/craving_pancakes.js');
-const pancake = {set foodProperties(callback) {
-  let hunger;
-  let saturation;
-  callback({hunger: value => { hunger = value; }, saturation: value => { saturation = value; }});
-  assert.equal(hunger, 1);
-  assert.equal(saturation, 0.1);
-  items['supplementaries:pancake'] = food(hunger);
-}};
+const pancake = {
+  // KubeJS 6 Rhino: the bean is typed by getFoodProperties(), so assignment has no setter.
+  set foodProperties(_) {
+    throw new Error('Java class PancakeItem has no public instance field or method named "foodProperties"');
+  },
+  setFoodProperties(callback) {
+    let hunger;
+    let saturation;
+    callback({hunger: value => { hunger = value; }, saturation: value => { saturation = value; }});
+    assert.equal(hunger, 1);
+    assert.equal(saturation, 0.1);
+    items['supplementaries:pancake'] = food(hunger);
+  }
+};
 modification({modify: (id, callback) => { assert.equal(id, 'supplementaries:pancake'); callback(pancake); }});
 run('server-config/kubejs/server_scripts/craving_foods.js');
 function reload() {
