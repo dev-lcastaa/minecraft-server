@@ -624,16 +624,18 @@ the complete item registry and reports missing coverage or conflicting tiers.
 - Supplementaries pancakes satisfy **Hearty** and count as a big meal when
   eaten from a placed stack. They are not edible from the hand.
 - Simple foods (raw cuts/fish, small snacks, cookies, candy and berries) receive
-  **0.5x** the configured base buff duration: normally **2.5 minutes**.
+  **0.5x** the configured base buff duration and XP: normally **2.5 minutes**.
 - Regular foods, such as cooked beef, bread and smaller soup/stew cups, retain
   **1x / 5 minutes**.
 - Big dishes (soups, stews, pasta, curries, platters and other large prepared
-  meals) receive **2x / 10 minutes**. Raw fish therefore grants 2.5 minutes of
-  Water Breathing; Farmer's Delight fish stew grants 10 minutes.
-- These tiers apply to all seven beneficial craving effects. Raw's native
-  Nausea duration stays unchanged. XP, saturation, effect levels, streak bonuses,
+  meals) receive **2x / 10 minutes** and double XP. Raw fish therefore grants
+  2.5 minutes of Water Breathing; Farmer's Delight fish stew grants 10 minutes.
+- These tiers apply to the effect duration and XP orb of all seven beneficial
+  cravings (for example Fishy's 5 XP becomes 2 for raw cod and 10 for fish stew;
+  halves round down). Raw's native Nausea duration and XP stay unchanged.
+  Saturation, effect levels, streak bonuses (`Bonus XP` and bonus duration),
   craving frequency, consequences, achievements and container returns are
-  preserved. Streak duration bonuses remain additive, after scaling the base.
+  preserved. Streak bonuses remain additive, after scaling the base.
   Fishy's advancement eligibility window scales with its base reward timer.
 
 Eating placed vanilla cake, pancakes, Ender's Delight pies, My Nether's Delight

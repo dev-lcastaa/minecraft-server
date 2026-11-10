@@ -14,21 +14,50 @@ import org.objectweb.asm.tree.MethodInsnNode;
 import org.objectweb.asm.tree.MethodNode;
 import org.objectweb.asm.tree.analysis.Analyzer;
 import org.objectweb.asm.tree.analysis.BasicVerifier;
+import java.util.Set;
 import org.openjdk.nashorn.api.scripting.NashornScriptEngineFactory;
 import org.openjdk.nashorn.api.scripting.ScriptObjectMirror;
 
 class CravingsCoremodTest {
+    // Mirrors CoreModEngine's sandbox in Forge coremods 5.2.4.
+    private static final Set<String> ALLOWED_CLASSES = Set.of(
+        "net.minecraftforge.coremod.api.ASMAPI", "org.objectweb.asm.Attribute", "org.objectweb.asm.Handle",
+        "org.objectweb.asm.Label", "org.objectweb.asm.Opcodes", "org.objectweb.asm.Type",
+        "org.objectweb.asm.TypePath", "org.objectweb.asm.TypeReference",
+        "org.objectweb.asm.tree.AbstractInsnNode", "org.objectweb.asm.tree.FieldInsnNode",
+        "org.objectweb.asm.tree.FieldNode", "org.objectweb.asm.tree.FrameNode",
+        "org.objectweb.asm.tree.IincInsnNode", "org.objectweb.asm.tree.InsnList",
+        "org.objectweb.asm.tree.InsnNode", "org.objectweb.asm.tree.IntInsnNode",
+        "org.objectweb.asm.tree.InvokeDynamicInsnNode", "org.objectweb.asm.tree.JumpInsnNode",
+        "org.objectweb.asm.tree.LabelNode", "org.objectweb.asm.tree.LdcInsnNode",
+        "org.objectweb.asm.tree.LineNumberNode", "org.objectweb.asm.tree.LocalVariableAnnotationNode",
+        "org.objectweb.asm.tree.LocalVariableNode", "org.objectweb.asm.tree.LookupSwitchInsnNode",
+        "org.objectweb.asm.tree.MethodInsnNode", "org.objectweb.asm.tree.MethodNode",
+        "org.objectweb.asm.tree.MultiANewArrayInsnNode", "org.objectweb.asm.tree.ParameterNode",
+        "org.objectweb.asm.tree.TableSwitchInsnNode", "org.objectweb.asm.tree.TryCatchBlockNode",
+        "org.objectweb.asm.tree.TypeAnnotationNode", "org.objectweb.asm.tree.TypeInsnNode",
+        "org.objectweb.asm.tree.VarInsnNode");
+    private static final Set<String> ALLOWED_PACKAGES = Set.of(
+        "java.util", "java.util.function", "org.objectweb.asm.util");
+
+    private static boolean allowed(String name) {
+        int dot = name.lastIndexOf('.');
+        return ALLOWED_CLASSES.contains(name) || (dot > 0 && ALLOWED_PACKAGES.contains(name.substring(0, dot)));
+    }
+
     public static void main(String[] args) throws Exception {
         Path directory = Files.createTempDirectory("cravings-bytecode-test-");
         try {
             fixtures(directory);
             try (var loader = new URLClassLoader(new java.net.URL[]{directory.toUri().toURL()},
                     CravingsCoremodTest.class.getClassLoader())) {
-                var engine = new NashornScriptEngineFactory().getScriptEngine(new String[]{"--language=es6"}, loader);
+                var engine = new NashornScriptEngineFactory().getScriptEngine(
+                    new String[]{"--language=es6"}, loader, CravingsCoremodTest::allowed);
                 engine.eval(Files.readString(Path.of(args[0])));
                 var transforms = (ScriptObjectMirror)engine.eval("var transforms = initializeCoreMod(); transforms");
                 ClassNode helpers = null;
                 int durationCalls = 0;
+                int xpCalls = 0;
                 int placedCalls = 0;
                 for (String key : transforms.keySet()) {
                     var transform = (ScriptObjectMirror)transforms.get(key);
@@ -55,15 +84,17 @@ class CravingsCoremodTest {
                         for (var instruction : method.instructions) {
                             if (instruction instanceof MethodInsnNode call) {
                                 if (call.name.equals("serverfixes$scaleDuration")) {
-                                    durationCalls++;
                                     var load = call.getPrevious();
                                     if (!(load instanceof org.objectweb.asm.tree.VarInsnNode local) || local.var != 7) {
                                         throw new AssertionError("Reward must use the consuming player");
                                     }
                                     if (!(load.getPrevious() instanceof org.objectweb.asm.tree.FieldInsnNode field) ||
-                                            !field.name.endsWith("_duration") || field.name.equals("bonus_duration")) {
-                                        throw new AssertionError("Only the base reward duration may be scaled");
+                                            field.name.startsWith("bonus_") ||
+                                            !(field.name.endsWith("_duration") || field.name.endsWith("_xp_amount"))) {
+                                        throw new AssertionError("Only the base reward duration and XP may be scaled");
                                     }
+                                    if (field.name.endsWith("_xp_amount")) xpCalls++;
+                                    else durationCalls++;
                                 }
                                 if (call.name.equals("onItemUseFinish")) placedCalls++;
                             }
@@ -71,9 +102,9 @@ class CravingsCoremodTest {
                     }
                     if (name.endsWith(".EatingCheckProcedure")) helpers = node;
                 }
-                if (durationCalls != 15 || placedCalls != 5) {
-                    throw new AssertionError("Expected 15 duration paths and 5 placed-food paths, got " +
-                        durationCalls + "/" + placedCalls);
+                if (durationCalls != 15 || xpCalls != 14 || placedCalls != 5) {
+                    throw new AssertionError("Expected 15 duration, 14 XP and 5 placed-food paths, got " +
+                        durationCalls + "/" + xpCalls + "/" + placedCalls);
                 }
                 if (transforms.containsKey("RawDuration")) throw new AssertionError("Raw Nausea must be unchanged");
                 if (helpers == null) throw new AssertionError("Food helpers missing");
@@ -84,7 +115,7 @@ class CravingsCoremodTest {
                 var constructor = entity.getConstructor(String.class);
                 for (String id : new String[]{"simple", "regular", "big"}) {
                     double multiplier = id.equals("simple") ? 0.5 : id.equals("big") ? 2 : 1;
-                    for (double base : new double[]{0, 6000, 1200}) {
+                    for (double base : new double[]{0, 3, 8, 6000, 1200}) {
                         double actual = (double)scale.invoke(null, base, constructor.newInstance(id));
                         if (actual != base * multiplier) throw new AssertionError(id + ": " + actual);
                     }
@@ -101,7 +132,7 @@ class CravingsCoremodTest {
                     }
                 }
                 System.out.println("Cravings installed-bytecode and duration tests passed: 15 reward/advancement paths, " +
-                    "5 placed-food paths, 9 exact durations, 4 edible gates");
+                    "14 XP paths, 5 placed-food paths, 15 exact scalings, 4 edible gates");
             }
         } finally {
             try (var paths = Files.walk(directory)) {

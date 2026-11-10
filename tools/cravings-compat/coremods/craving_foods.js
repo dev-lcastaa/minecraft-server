@@ -94,16 +94,19 @@ function initializeCoreMod() {
     var regular = new LabelNode();
     tagTest(code, 3, 'big_meal');
     code.add(new JumpInsnNode(O.IFEQ, simple));
+    // Forge's coremod sandbox blocks java.lang.Double, so build 2.0 from an int.
     code.add(new VarInsnNode(O.DLOAD, 0));
-    code.add(new LdcInsnNode(Java.type('java.lang.Double').valueOf(2)));
+    code.add(new InsnNode(O.ICONST_2));
+    code.add(new InsnNode(O.I2D));
     code.add(new InsnNode(O.DMUL));
     code.add(new InsnNode(O.DRETURN));
     code.add(simple);
     tagTest(code, 3, 'simple_food');
     code.add(new JumpInsnNode(O.IFEQ, regular));
     code.add(new VarInsnNode(O.DLOAD, 0));
-    code.add(new LdcInsnNode(Java.type('java.lang.Double').valueOf(0.5)));
-    code.add(new InsnNode(O.DMUL));
+    code.add(new InsnNode(O.ICONST_2));
+    code.add(new InsnNode(O.I2D));
+    code.add(new InsnNode(O.DDIV));
     code.add(new InsnNode(O.DRETURN));
     code.add(regular);
     code.add(new VarInsnNode(O.DLOAD, 0));
@@ -129,12 +132,15 @@ function initializeCoreMod() {
     return node;
   }
 
+  // Scales the base effect duration and base XP; streak bonus_* values stay flat.
   function rewardDuration(method, category) {
     var count = 0;
+    var xp = 0;
     Java.from(method.instructions.toArray()).forEach(function(insn) {
       if (insn instanceof FieldInsnNode && insn.getOpcode() === O.GETFIELD &&
           insn.owner === variables + '$MapVariables' &&
-          /^(sweet|healthy|meaty|fishy|gross|fancy|hearty)_.*_duration$/.test(String(insn.name))) {
+          /^(sweet|healthy|meaty|fishy|gross|fancy|hearty)_(.*_duration|xp_amount)$/.test(String(insn.name))) {
+        if (/_xp_amount$/.test(String(insn.name))) xp++;
         var code = new InsnList();
         code.add(new VarInsnNode(O.ALOAD, 7));
         call(code, O.INVOKESTATIC, eating, 'serverfixes$scaleDuration', scaleDesc);
@@ -143,8 +149,8 @@ function initializeCoreMod() {
       }
     });
     // Fishy also times its advancement eligibility window with the base reward duration.
-    var expected = category === 'Fishy' ? 3 : 2;
-    if (count !== expected) throw new Error('Cravings reward duration layout changed: ' + count);
+    var expected = (category === 'Fishy' ? 3 : 2) + 2;
+    if (count !== expected || xp !== 2) throw new Error('Cravings reward layout changed: ' + count + '/' + xp);
     return method;
   }
 

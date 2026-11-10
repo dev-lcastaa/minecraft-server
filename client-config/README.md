@@ -134,8 +134,9 @@ pancakes satisfy Hearty when eaten (they are not edible from the hand).
 If you installed an earlier overlay, delete
 `kubejs/startup_scripts/craving_pancakes.js` from your instance.
 Simple foods grant 2.5-minute buffs, regular foods 5 minutes, and big meals
-10 minutes at the default settings. Raw's Nausea stays unchanged, as do XP,
-saturation, effect levels, streak bonuses and container returns.
+10 minutes at the default settings; the XP orb scales the same way (0.5x, 1x,
+2x). Raw's Nausea and XP stay unchanged, as do saturation, effect levels,
+streak bonuses and container returns.
 
 Hovering or holding a food matching your current craving plays the new-craving
 amethyst chime, with a shared two-second cooldown and no repeated ringing
