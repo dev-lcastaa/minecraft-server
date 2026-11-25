@@ -746,6 +746,9 @@ with Thirst's `Purity:3`, preserving other NBT, potion effects, output counts,
 and returned containers. Brewing changes only drink slots, not fuel or
 ingredients. Successful heated kettle processing purifies the tank without
 changing its amount.
+The add-on requires the installed Thirst version reported by Forge as
+`1.20.1-1.4.0`. After updating it, replace the hydration add-on on both server
+and clients before restarting.
 The installed vendor audit covers 153 declarative recipe outputs for 71 of
 the 103 configured drink IDs across 10 serializers, including conditional
 recipes that may not be active. No unsupported output shapes remain in that
@@ -830,6 +833,9 @@ set `CRAVINGS_TEST_CLASSPATH`, `LUNCH_BASKET_TEST_CLASSPATH`,
 `HYDRATION_TEST_CLASSPATH`, `INVENTORY_CARCASS_TEST_CLASSPATH`,
 `JADE_SEASONS_TEST_CLASSPATH`, and `MOB_LOOT_TEST_CLASSPATH` to that classpath.
 The cooking and bounty fixtures also exercise installed serializers.
+Set `FORGE_VERSION_TEST_CLASSPATH` to a classpath containing Maven Artifact
+3.8.5 and Commons Lang 3.12.0 to check add-on dependency ranges using the
+same libraries as Forge 47.4.28.
 
 These checks cover packaged resources, installed APIs/bytecode, recipe shapes,
 inventory persistence, and matching client/server overlays. They do not replace

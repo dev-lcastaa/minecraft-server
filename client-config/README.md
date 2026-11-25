@@ -127,7 +127,8 @@ hooks, custom juice fluids, or carcass stack sizes.
 - Hydration compatibility purifies prepared drinks and heated kettle contents
   without removing potion effects or other item data. Pot and kettle water
   purification recipes are included. Dog water bowls cannot refill bottles.
-  SCP water coolers are unchanged.
+  SCP water coolers are unchanged. Replace the hydration add-on with the current
+  overlay copy; it requires Thirst version `1.20.1-1.4.0` as reported by Forge.
 - Inventory/carcass compatibility stops duplicate harvest drops during Carry On
   pickup checks, stacks all carcass forms to 16, and saves Better Inventory
   mutations so removed items do not return as stale pages.
