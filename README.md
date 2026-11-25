@@ -811,6 +811,8 @@ Constructor-fixture coverage is not a live-world or live-registry census.
 27 additive pools, and 12,404 entries covering 6,090 items across 74 namespaces.
 Two verified goblin hunts include a Forge spawn-compatibility repair.
 Existing bounty pools and villager offers are preserved.
+The trade bridge avoids Rhino's string-key coercion against Forge's integer-keyed
+villager trade map; rebuilding the add-on requires a JDK compiler.
 
 The [item coverage audit](./tools/bounty-backport-compat/coverage.json) accounts
 for 14,285 candidates: 6,930 have recipe/loot evidence, of which 840 are

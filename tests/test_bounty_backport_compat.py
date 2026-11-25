@@ -4,6 +4,7 @@ import os
 from pathlib import Path
 import shutil
 import subprocess
+import struct
 import unittest
 from zipfile import ZipFile
 
@@ -32,6 +33,10 @@ class BountyBackportCompatTest(unittest.TestCase):
                              for p in (SOURCE / folder).rglob("*") if p.is_file()})
             expected.update({p.relative_to(SOURCE).as_posix(): p.read_bytes()
                              for p in (SOURCE / "data").rglob("*.json")})
+            bridge = "serverfixes/bounties/BountyTradeBridge.class"
+            self.assertIn(bridge, jar.namelist())
+            expected[bridge] = jar.read(bridge)
+            self.assertEqual(struct.unpack(">IHH", jar.read(bridge)[:8])[2], 61)
             self.assertEqual(set(jar.namelist()), set(expected))
             for name, content in expected.items():
                 self.assertEqual(jar.read(name), content, name)
@@ -44,6 +49,18 @@ class BountyBackportCompatTest(unittest.TestCase):
         config = Path("config/bountiful/bountiful.json")
         self.assertEqual((ROOT / "server-config" / config).read_bytes(),
                          (ROOT / "client-config" / config).read_bytes())
+
+    def test_villager_trades_use_typed_java_map_bridge(self):
+        script = (ROOT / "server-config/kubejs/startup_scripts/bounty_backport_compat.js").read_text()
+        self.assertIn("BountyTradeBridge.append(event", script)
+        self.assertNotIn("getTrades().get(2)", script)
+        result = subprocess.run(
+            ["java", "-cp", str(ROOT / "mods" / build.JAR_NAME),
+             str(ROOT / "tests/BountyTradeBridgeTest.java")],
+            cwd=ROOT, capture_output=True, text=True,
+        )
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        self.assertIn("Bounty villager trade bridge passed", result.stdout)
 
     def test_every_native_decree_has_additive_obtainable_balanced_pools(self):
         proofs = build.acquisition(self.data, self.models, self.mods, self.classes)
@@ -404,6 +421,7 @@ const context = {
   Java: {loadClass: n => {
     if(n.endsWith('ForgeRegistries')) return {VILLAGER_PROFESSIONS:{getKey:value=>value},ENTITY_TYPES:{containsKey:()=>true}};
     if(n.endsWith('BountifulContent')) return {INSTANCE:{getPools:()=>pools}};
+    if(n.endsWith('BountyTradeBridge')) return {append:(event,listing,level)=>event.getTrades().get(level).add(listing)};
     if(n.endsWith('ResourceLocation')) return function(value){this.value=value};
     if(n.endsWith('BlockItem')) return BlockItem;
     if(n.endsWith('EntityBlock')) return EntityBlock;

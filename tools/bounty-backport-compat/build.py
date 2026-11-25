@@ -2,7 +2,10 @@
 import json
 import gzip
 import re
+import shutil
 import struct
+import subprocess
+import tempfile
 import tomllib
 import zlib
 from collections import Counter, defaultdict
@@ -959,16 +962,37 @@ def build():
         "policy": "Every acquisition-proven item is mapped to all applicable profession pools or shared delivery pools available to all twelve decrees, unless explicitly excluded for creative/admin, disabled content, station/container/NBT or unique progression. No diversity cap or unclassified-item exclusion. Item models are acquisition-audit candidates, never obtainability proofs. Loot requires placement/living-class evidence; complete spawn/config/world reachability and procedural-only acquisition are not claimed. Native registry/block-entity checks still apply.",
         "runtime_safety": "Native PoolEntry.isValid vetoes bounty_backport_compat-marked BlockItem/EntityBlock entries on every roll/reload. KubeJS verifies registrations and reports any typed runtime exclusions. Unrelated native/addon bounty entries are unchanged.",
     })
-    entries = [SOURCE / "pack.mcmeta", *(SOURCE / "META-INF").glob("*")]
-    entries.extend((SOURCE / "coremods").glob("*.js"))
-    entries.extend(path for path in (SOURCE / "data").rglob("*") if path.is_file())
+    java = shutil.which("java")
+    if not java:
+        raise RuntimeError("A JDK with the Java compiler is required to build bounty compatibility")
+    with tempfile.TemporaryDirectory(prefix="bounty-trade-bridge-") as build_dir:
+        subprocess.run(
+            [java, str(SOURCE / "CompileHelper.java"),
+             str(SOURCE / "src/serverfixes/bounties/BountyTradeBridge.java"), build_dir],
+            check=True,
+        )
+        entries = [
+            (path.relative_to(SOURCE).as_posix(), path.read_bytes())
+            for path in [SOURCE / "pack.mcmeta", *(SOURCE / "META-INF").glob("*")]
+        ]
+        entries.extend(
+            (path.relative_to(SOURCE).as_posix(), path.read_bytes())
+            for path in (SOURCE / "coremods").glob("*.js")
+        )
+        entries.extend(
+            (path.relative_to(SOURCE).as_posix(), path.read_bytes())
+            for path in (SOURCE / "data").rglob("*") if path.is_file()
+        )
+        compiled = Path(build_dir) / "serverfixes/bounties/BountyTradeBridge.class"
+        entries.append(("serverfixes/bounties/BountyTradeBridge.class", compiled.read_bytes()))
+    entries.sort(key=lambda entry: entry[0])
     server_jar = ROOT / "mods" / JAR_NAME
     with ZipFile(server_jar, "w", ZIP_DEFLATED) as jar:
-        for path in sorted(entries):
-            info = ZipInfo(path.relative_to(SOURCE).as_posix(), (1980, 1, 1, 0, 0, 0))
+        for name, contents in entries:
+            info = ZipInfo(name, (1980, 1, 1, 0, 0, 0))
             info.compress_type = ZIP_DEFLATED
             info.external_attr = 0o100644 << 16
-            jar.writestr(info, path.read_bytes())
+            jar.writestr(info, contents)
     (ROOT / "client-config/mods" / JAR_NAME).write_bytes(server_jar.read_bytes())
     for folder in ("server_scripts", "startup_scripts"):
         script = Path(f"kubejs/{folder}/bounty_backport_compat.js")
