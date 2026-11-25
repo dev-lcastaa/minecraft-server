@@ -1,0 +1,10 @@
+{
+  "boardUpdateFrequency": 45,
+  "boardGenFrequency": 2,
+  "flatBonusTimePerBounty": 300,
+  "shouldBountiesHaveTimersAndExpire": true,
+  "dataPackExclusions": [],
+  "objectiveModifier": 0,
+  "maxNumRewards": 2,
+  "showCompletionToast": true
+}

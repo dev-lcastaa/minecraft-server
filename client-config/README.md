@@ -20,7 +20,7 @@ Weather2 was removed from the server after profiling showed storm biome checks
 blocking the server thread on chunk loads. Its config overlay is no longer included.
 Keep CoroUtil: What Are They Up To and Zombie Awareness still require it.
 
-This is a config overlay with Quark Oddities, lunch basket and Cravings add-ons, not a complete
+This is a config overlay with Quark Oddities and the pack's compatibility add-ons, not a complete
 launcher-importable modpack or a world download. It contains no server passwords,
 player data, or server properties. Quark Oddities 1.20.1 is the official small
 marker add-on that unlocks Oddities features already implemented in Quark.
@@ -68,7 +68,9 @@ SHA-256: `230af45e645ebe36f621d0b4362afed6ad0faf940129f4363aaba8058f245576`
   6/8. Water/milk cups use 3/4. Keyword matching remains off.
   Unusual End's brewed potions already use the vanilla potion entry; its
   Warped Potion is now explicit. Mekanism Delight drinks that require
-  uninstalled Mekanism add-ons are excluded. Harmful drink effects and crafting recipes are unchanged.
+  uninstalled Mekanism add-ons are excluded. Harmful drink effects are preserved.
+  The hydration and cooking compatibility additions below change drink purity
+  and juice preparation recipes.
 - Tooltips (`kubejs/assets/`, loaded automatically by KubeJS): restores 33
   Farmer's Respite, Dungeons Delight, and My Nether's Delight item tooltips
   that use Farmer's Delight's old key format, adds Enchantment Descriptions text
@@ -103,8 +105,41 @@ Chunky's server admin config is not included.
 
 Back up existing saves before changing configs used in singleplayer. Keep the
 client mod list aligned with the server, including previously disabled mods.
-This overlay adds Quark Oddities, Lunch Basket Food Compatibility and Cravings Food Compatibility; it does not
+This overlay adds Quark Oddities and the bundled compatibility add-ons; it does not
 re-enable disabled JARs.
+
+## Cross-mod gameplay compatibility
+
+Install **all** add-ons from [`mods/`](./mods/), merge the supplied
+[`kubejs/`](./kubejs/) and [`config/`](./config/) folders, and restart Minecraft.
+Keep these files aligned with the server; `/reload` cannot install the new
+hooks, custom juice fluids, or carcass stack sizes.
+
+- Cooking compatibility moves juice preparation to Farmer's Respite kettles
+  and Ender's Delight crafted foods to the Dungeons Delight Monster Pot.
+  Tooltips identify the required stations. New cutting recipes and shared
+  tentacle ingredients are supplied by the server.
+- Jade season compatibility shows server-authoritative crop preferences,
+  greenhouse/humidity information, and sapling growth requirements. Hold Shift
+  for details. Out-of-season crop bonemeal passes its season gate 25% of the
+  time; failed attempts consume it, and native environmental checks remain.
+  Dynamic Trees is still installed to protect existing saved trees.
+- Hydration compatibility purifies prepared drinks and heated kettle contents
+  without removing potion effects or other item data. Pot and kettle water
+  purification recipes are included. Dog water bowls cannot refill bottles.
+  SCP water coolers are unchanged.
+- Inventory/carcass compatibility stops duplicate harvest drops during Carry On
+  pickup checks, stacks all carcass forms to 16, and saves Better Inventory
+  mutations so removed items do not return as stale pages.
+- Mob loot compatibility keeps blood extraction exclusive to Sons of Sins
+  sickles, adds evil-bat wings and occasional zombie crops, and reduces skeleton
+  quivers to a Looting-independent 1% with ordinary arrows only.
+- Bounty/backport compatibility adds 12 decrees with cross-mod item pools and
+  goblin hunts, shared backported-animal tags, warm/cold egg cooking, and three
+  additional farmer trades. Existing trades and bounty pools are preserved.
+
+See the [server compatibility and rollout notes](../README.md#cross-mod-gameplay-compatibility)
+for coverage, build/test commands, and required in-game validation.
 
 ## Lunch basket food compatibility
 
