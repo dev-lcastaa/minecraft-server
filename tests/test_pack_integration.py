@@ -1,5 +1,6 @@
 import json
 from pathlib import Path
+import re
 import shutil
 import struct
 import subprocess
@@ -9,6 +10,36 @@ from zipfile import ZipFile
 
 
 ROOT = Path(__file__).resolve().parents[1]
+WORD = re.compile(r"[\w$.]")
+
+
+def rhino_loop_body_declarations(source):
+    """Find const/let declared directly inside loop bodies, which Rhino binds once."""
+    blank = lambda match: re.sub(r"[^\n]", " ", match.group())
+    code = re.sub(r"//[^\n]*|/\*.*?\*/", blank, source, flags=re.S)
+    code = re.sub(r"'(?:\\.|[^'\\\n])*'|\"(?:\\.|[^\"\\\n])*\"|`(?:\\.|[^`\\])*`", blank, code)
+    stack, pending, found, index = [], None, [], 0
+    while index < len(code):
+        boundary = index == 0 or not WORD.match(code[index - 1])
+        rest = code[index:]
+        match = boundary and re.match(r"(for|while|do)\b", rest)
+        if match:
+            pending, index = "loop", index + match.end()
+            continue
+        match = re.match(r"=>", rest) or (boundary and re.match(r"function\b", rest))
+        if match:
+            pending, index = "function", index + match.end()
+            continue
+        if code[index] == "{":
+            stack.append(pending or "block")
+            pending = None
+        elif code[index] == "}" and stack:
+            stack.pop()
+        elif boundary and re.match(r"(const|let)\s", rest):
+            if next((kind for kind in reversed(stack) if kind != "block"), None) == "loop":
+                found.append(code.count("\n", 0, index) + 1)
+        index += 1
+    return found
 
 
 class PackIntegrationTest(unittest.TestCase):
@@ -23,6 +54,16 @@ class PackIntegrationTest(unittest.TestCase):
                         [node, "--check", str(path)], capture_output=True, text=True
                     )
                     self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+
+    def test_kubejs_scripts_avoid_rhino_pitfalls(self):
+        # KubeJS bean properties (kjs$getLevel/kjs$getOverworld) can shadow these vanilla methods.
+        shadowed = re.compile(r"\.(level|overworld)\(\)")
+        for folder in ("server-config/kubejs", "client-config/kubejs"):
+            for path in (ROOT / folder).rglob("*.js"):
+                source = path.read_text()
+                with self.subTest(script=path.relative_to(ROOT)):
+                    self.assertEqual(rhino_loop_body_declarations(source), [])
+                    self.assertIsNone(shadowed.search(source))
 
     def test_server_recipe_scripts_are_in_client_overlay(self):
         scripts = ROOT / "server-config/kubejs/server_scripts"

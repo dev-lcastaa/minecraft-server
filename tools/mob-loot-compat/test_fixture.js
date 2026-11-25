@@ -133,7 +133,7 @@ classes['net.minecraftforge.registries.ForgeRegistries'].ENTITY_TYPES.getValues 
   {create: () => animal}, {create: () => construct}, {create: () => unknown},
   {create: () => null}, {id: 'example:broken_constructor', create: () => {throw Error('broken')}}
 ]
-context.loaded({server: {overworld: () => ({})}})
+context.loaded({server: {getOverworld: () => ({}), overworld: {}}})
 assert.ok(messages.some(message => message.endsWith(
   '{"eligible":1,"bloodless":1,"missing":1,"nonliving":1,"failed":1}')))
 assert.ok(warnings.some(message => message.includes('cannot audit example:broken_constructor')))

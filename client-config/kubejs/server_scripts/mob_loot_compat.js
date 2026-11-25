@@ -109,7 +109,7 @@ global.mobLootCompatDrops = event => {
 }
 
 ServerEvents.loaded(event => {
-  var level = event.server.overworld()
+  var level = event.server.getOverworld()
   var counted = {eligible: 0, bloodless: 0, missing: 0, nonliving: 0, failed: 0}
   var living = Java.loadClass('net.minecraft.world.entity.LivingEntity')
   $MobLootRegistries.ENTITY_TYPES.getValues().forEach(type => {

@@ -1,6 +1,7 @@
 import dev.latvian.mods.rhino.Context;
 import dev.latvian.mods.rhino.ScriptableObject;
 import dev.latvian.mods.rhino.util.RemapForJS;
+import dev.latvian.mods.rhino.util.RemapPrefixForJS;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
@@ -29,6 +30,18 @@ public class DamageSourceRhinoTest {
         public DamageSource create(Object actual, Object immediate) {
             return new DamageSource(actual, immediate);
         }
+        public Server server() { return new Server(); }
+    }
+
+    // Same shape as KubeJS's MinecraftServerKJS: if vanilla overworld() is left
+    // under its SRG name, the kjs$getOverworld bean property claims `overworld`.
+    @RemapPrefixForJS("kjs$")
+    public interface ServerKJS {
+        default Object kjs$getOverworld() { return "overworld-level"; }
+    }
+
+    public static final class Server implements ServerKJS {
+        public Object m_129783_() { return "overworld-level"; }
     }
 
     public static void main(String[] args) throws Exception {
@@ -52,7 +65,14 @@ public class DamageSourceRhinoTest {
             }
             var classes = {
               'net.minecraftforge.registries.ForgeRegistries': {
-                ENTITY_TYPES: {getKey: function(type) { return type.id; }}
+                ENTITY_TYPES: {getKey: function(type) { return type.id; }, getValues: function() {
+                  return [{id: 'example:bat', create: function(level) {
+                            if (level !== 'overworld-level') throw Error('wrong level');
+                            return mob(false);
+                          }},
+                          {id: 'minecraft:skeleton', create: function() { return mob(true); }},
+                          {id: 'example:boat', create: function() { return 'boat'; }}];
+                }}
               },
               'net.minecraft.tags.TagKey': {
                 create: function(registry, location) { return location.id; }
@@ -63,6 +83,7 @@ public class DamageSourceRhinoTest {
                 UNDEAD: 'undead', WATER: 'water', ARTHROPOD: 'arthropod', ILLAGER: 'illager'
               },
               'net.minecraft.world.entity.player.Player': Player,
+              'net.minecraft.world.entity.LivingEntity': Object,
               'net.minecraft.world.entity.item.ItemEntity': ItemEntity,
               'net.mehvahdjukaar.supplementaries.common.items.loot.RandomArrowFunction': {}
             };
@@ -72,8 +93,10 @@ public class DamageSourceRhinoTest {
             }};
             var Ingredient = {of: function(id) { return id; }};
             var Item = {of: function(id, nbt) { return {id: id, nbt: nbt}; }};
-            var ServerEvents = {loaded: function(callback) {}};
-            var console = {warn: function() {}, info: function() {}};
+            var loadedCallback = null;
+            var ServerEvents = {loaded: function(callback) { loadedCallback = callback; }};
+            var logged = {info: [], warn: []};
+            var console = {warn: function(m) { logged.warn.push(m); }, info: function(m) { logged.info.push(m); }};
             function mob(skeleton) {
               var type = {id: skeleton ? 'minecraft:skeleton' : 'example:bat',
                 is: function(tag) { return !skeleton && tag === 'mob_loot_compat:blood_winged'; }};
@@ -127,6 +150,13 @@ public class DamageSourceRhinoTest {
             if (death(mob(false), sources.create(player, player)).length !== 0 ||
                 player.inventory.bottles !== 1) {
               throw Error('Non-sickle kill extracted blood');
+            }
+            var server = sources.server();
+            if (typeof server.overworld === 'function') throw Error('Fixture did not reproduce overworld shadowing');
+            loadedCallback({server: server});
+            if (logged.warn.length !== 0 || logged.info.length !== 1 ||
+                !/"eligible":1(\\.0)?,"bloodless":1(\\.0)?,"missing":0(\\.0)?,"nonliving":1(\\.0)?,"failed":0(\\.0)?/.test(logged.info[0])) {
+              throw Error('Registry audit failed: ' + JSON.stringify(logged));
             }
             """, "rhino-fixture-assertions", 1, null);
         System.out.println("Rhino remapped damage-source gameplay passed");

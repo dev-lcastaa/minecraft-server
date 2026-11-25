@@ -89,9 +89,12 @@ assert.equal(food.hasTag(), false);
 for (const [block, item, expected] of [[new Bowl(), 'minecraft:glass_bottle', true],
   [{}, 'minecraft:glass_bottle', false], [new Bowl(), 'minecraft:water_bucket', false]]) {
   let canceled = false;
+  const level = {pos: {}, getBlockState: () => ({getBlock: () => block})};
   events['net.minecraftforge.event.entity.player.PlayerInteractEvent$RightClickItem']({
     getItemStack: () => new Stack(item),
-    getEntity: () => ({level: () => ({pos: {}, getBlockState: () => ({getBlock: () => block})})}),
+    getLevel: () => level,
+    // KubeJS's kjs$getLevel exposes `level` as a property, hiding vanilla level().
+    getEntity: () => ({level}),
     setCanceled: value => {canceled = value;}
   });
   assert.equal(canceled, expected);

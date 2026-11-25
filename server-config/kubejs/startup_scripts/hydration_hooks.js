@@ -26,11 +26,12 @@ HydrationForge.EVENT_BUS.addListener(HydrationPriority.LOWEST, false,
     const before = HydrationBrewingBefore;
     HydrationBrewingBefore = null;
     for (let slot = 0; slot < 3; slot++) {
-      const result = event.getItem(slot);
+      var result = event.getItem(slot);
       if (result.isEmpty() || !(hydrationPreparedDrink(result) || result.getItem() instanceof HydrationPotion)) continue;
+      // Rhino binds const/let inside loop bodies once, so per-slot values must use var.
       // Vanilla mixing can replace the entire stack: merge old custom data, but let new Potion/effects win.
       if (before !== null && before[slot].hasTag()) {
-        const tag = before[slot].getTag().copy();
+        var tag = before[slot].getTag().copy();
         if (result.hasTag()) tag.merge(result.getTag());
         result.setTag(tag);
       }
@@ -43,7 +44,7 @@ HydrationForge.EVENT_BUS.addListener(HydrationPriority.HIGHEST, false,
   Java.loadClass('net.minecraftforge.event.entity.player.PlayerInteractEvent$RightClickItem'), event => {
     if (event.getItemStack().id !== 'minecraft:glass_bottle') return;
     const player = event.getEntity();
-    const level = player.level();
+    const level = event.getLevel();
     const hit = HydrationMath.getPlayerPOVHitResult(level, player, HydrationClipFluid.ANY);
     if (level.getBlockState(hit.getBlockPos()).getBlock() instanceof HydrationBowl) event.setCanceled(true);
   });

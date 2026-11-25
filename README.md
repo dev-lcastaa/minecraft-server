@@ -850,7 +850,12 @@ set `CRAVINGS_TEST_CLASSPATH`, `LUNCH_BASKET_TEST_CLASSPATH`,
 To exercise the mob-loot handler with the installed Rhino engine, set
 `MOB_LOOT_RHINO_TEST_CLASSPATH` to a classpath containing Gson 2.10.1 and
 Commons Lang 3.12.0. Set `COOKING_RHINO_TEST_CLASSPATH` to the same classpath
-to exercise the generated recipe registry guard with Rhino.
+to exercise the generated recipe registry guard with Rhino, and
+`HYDRATION_RHINO_TEST_CLASSPATH` to run the bowl, crafting, and brewing hooks.
+Rhino fixtures model KubeJS bean properties that shadow vanilla methods, so
+scripts must use Forge or KubeJS accessors such as `event.getLevel()` and
+`server.getOverworld()` instead of `player.level()` or `server.overworld()`.
+Rhino also binds `const`/`let` inside loop bodies only once; use `var` there.
 The cooking and bounty fixtures also exercise installed serializers.
 Set `FORGE_UNIVERSAL_JAR` to the server's Forge universal JAR to verify the
 item-exists condition used by the cooking datapack.

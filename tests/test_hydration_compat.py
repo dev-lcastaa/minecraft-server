@@ -84,6 +84,21 @@ class HydrationCompatTest(unittest.TestCase):
                                 cwd=ROOT, text=True, capture_output=True)
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
 
+    def test_actual_rhino_hooks(self):
+        classpath = os.environ.get("HYDRATION_RHINO_TEST_CLASSPATH")
+        if not classpath:
+            self.skipTest("Set HYDRATION_RHINO_TEST_CLASSPATH to Gson and Commons Lang JARs")
+        java = shutil.which("java")
+        self.assertTrue(java, "Java is required for Rhino hydration verification")
+        result = subprocess.run(
+            [java, "-cp", str(ROOT / "mods/rhino-forge-2001.2.3-build.10.jar") + os.pathsep + classpath,
+             str(ROOT / "tests/HydrationHooksRhinoTest.java"),
+             str(ROOT / "server-config/kubejs/startup_scripts/hydration_hooks.js")],
+            cwd=ROOT, capture_output=True, text=True,
+        )
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        self.assertIn("Rhino hydration hooks passed", result.stdout)
+
 
 if __name__ == "__main__":
     unittest.main()
