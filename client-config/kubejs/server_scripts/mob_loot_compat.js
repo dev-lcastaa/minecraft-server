@@ -92,9 +92,11 @@ global.mobLootCompatDrops = event => {
       drops.add(new $MobLootItemEntity(entity.level, entity.x, entity.y, entity.z, quiver))
     }
   }
-  var killer = event.getSource().getEntity()
+  // This Forge runtime exposes DamageSource's SRG methods to Rhino.
+  var source = event.getSource()
+  var killer = source.m_7639_()
   if (!(killer instanceof $MobLootPlayer) ||
-      event.getSource().getDirectEntity() !== killer ||
+      source.m_7640_() !== killer ||
       String(killer.mainHandItem.id) !== 'sons_of_sins:sickle_of_struggle') return
   var blood = mobLootBloodType(entity)
   if (blood < 0) return

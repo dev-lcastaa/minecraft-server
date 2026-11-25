@@ -70,7 +70,7 @@ function death(mob, player, direct = player, looting = 0, oldDrops = []) {
   context.callback({
     getEntity: () => mob, getDrops: () => list, isRecentlyHit: () => !!player,
     getLootingLevel: () => looting,
-    getSource: () => ({getEntity: () => player, getDirectEntity: () => direct})
+    getSource: () => ({m_7639_: () => player, m_7640_: () => direct})
   })
   return drops.map(drop => drop.item)
 }
