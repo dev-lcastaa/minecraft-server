@@ -1,6 +1,8 @@
 package serverfixes.jadeseasons;
 
 import java.lang.reflect.Method;
+import java.lang.reflect.Modifier;
+import java.util.ArrayDeque;
 import java.util.List;
 import java.util.function.Consumer;
 import net.minecraft.nbt.CompoundTag;
@@ -29,12 +31,29 @@ public final class Compat implements IWailaPlugin {
             }
             if (!matches) continue;
             try {
-                return method.invoke(target instanceof Class<?> ? null : target, args);
+                return accessible(method).invoke(target instanceof Class<?> ? null : target, args);
             } catch (ReflectiveOperationException e) {
                 throw new IllegalStateException(type.getName() + "." + name, e);
             }
         }
         throw new IllegalStateException("Missing API: " + type.getName() + "." + name);
+    }
+
+    // Public methods on non-public implementations (e.g. Ecliptic's anonymous EclipticUtil$1)
+    // can only be invoked through the public supertype that declares them.
+    static Method accessible(Method method) {
+        if (Modifier.isPublic(method.getDeclaringClass().getModifiers())) return method;
+        ArrayDeque<Class<?>> pending = new ArrayDeque<>(List.of(method.getDeclaringClass()));
+        while (!pending.isEmpty()) {
+            Class<?> candidate = pending.poll();
+            if (Modifier.isPublic(candidate.getModifiers())) {
+                try { return candidate.getMethod(method.getName(), method.getParameterTypes()); }
+                catch (NoSuchMethodException ignored) { }
+            }
+            if (candidate.getSuperclass() != null) pending.add(candidate.getSuperclass());
+            pending.addAll(List.of(candidate.getInterfaces()));
+        }
+        return method;
     }
 
     static Class<?> type(String name) {
