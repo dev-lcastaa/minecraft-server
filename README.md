@@ -703,6 +703,9 @@ recipes rather than ordinary crafting or Supplementaries alternatives.
 Cider and soda are not classified as juice. Ingredient costs, serving counts,
 containers, and missing-mod conditions are preserved; staged kettle recipes
 require their specified fluid amounts and do not multiply water.
+If an explicit item is not registered, the runtime recipe guard warns and skips
+that replacement instead of removing its original. The calamari datapack
+override also checks that its optional output exists before Forge loads it.
 The juice census also distinguishes eight decorative display items, Farmer's
 Respite's already kettle-made juice, and a Backrooms item with no production
 recipe. The [recipe audit](./tools/cooking-compat/manifest.json) records the
@@ -808,7 +811,7 @@ Constructor-fixture coverage is not a live-world or live-registry census.
 #### Bounties and backported animals
 
 [`bounty-backport-compat`](./tools/bounty-backport-compat/) supplies 12 decrees,
-27 additive pools, and 12,404 entries covering 6,090 items across 74 namespaces.
+27 additive pools, and 12,398 entries covering 6,087 items across 74 namespaces.
 Two verified goblin hunts include a Forge spawn-compatibility repair.
 Existing bounty pools and villager offers are preserved.
 The trade bridge avoids Rhino's string-key coercion against Forge's integer-keyed
@@ -818,13 +821,18 @@ requires a JDK compiler. Deploy the resulting server JAR and install the matchin
 client JAR, since the startup script loads the bridge from that add-on.
 
 The [item coverage audit](./tools/bounty-backport-compat/coverage.json) accounts
-for 14,285 candidates: 6,930 have recipe/loot evidence, of which 840 are
-explicitly excluded and 6,090 are covered. Exclusions include block entities,
+for 14,285 candidates: 6,930 have recipe/loot evidence, of which 843 are
+explicitly excluded and 6,087 are covered. Exclusions include block entities,
 containers, processing stations, disabled content, vehicles, butchery stations,
 and intermediate items. No evidence-proven candidate is left unaccounted for.
 Recipe/loot evidence is not a guarantee of availability in every world:
 conditional content, fluid/procedural acquisition, and world-spawn limits remain
 documented, and runtime registry/station checks reject invalid candidates.
+Three candidates missing from the installed server's item registry are recorded
+in [`unregistered_items.json`](./tools/bounty-backport-compat/unregistered_items.json).
+Recheck those exclusions against the running registry whenever the corresponding
+mod JARs or registration-affecting configuration change; the generator refuses
+to use the evidence if a JAR is missing or its hash changes.
 
 Backported warm/cold eggs gain 15 recipe overrides and two pot recipes across
 crafting and cooking stations, including copper pots. Nineteen animal tags
@@ -841,8 +849,11 @@ set `CRAVINGS_TEST_CLASSPATH`, `LUNCH_BASKET_TEST_CLASSPATH`,
 `JADE_SEASONS_TEST_CLASSPATH`, and `MOB_LOOT_TEST_CLASSPATH` to that classpath.
 To exercise the mob-loot handler with the installed Rhino engine, set
 `MOB_LOOT_RHINO_TEST_CLASSPATH` to a classpath containing Gson 2.10.1 and
-Commons Lang 3.12.0.
+Commons Lang 3.12.0. Set `COOKING_RHINO_TEST_CLASSPATH` to the same classpath
+to exercise the generated recipe registry guard with Rhino.
 The cooking and bounty fixtures also exercise installed serializers.
+Set `FORGE_UNIVERSAL_JAR` to the server's Forge universal JAR to verify the
+item-exists condition used by the cooking datapack.
 Set `FORGE_VERSION_TEST_CLASSPATH` to a classpath containing Maven Artifact
 3.8.5 and Commons Lang 3.12.0 to check add-on dependency ranges using the
 same libraries as Forge 47.4.28.

@@ -22657,20 +22657,6 @@
       "shepherd",
       "toolsmith"
     ],
-    "cozy_home:andesite_brick": [
-      "armorer",
-      "butcher",
-      "cleric",
-      "farmer",
-      "fisherman",
-      "fletcher",
-      "inventor",
-      "leatherer",
-      "librarian",
-      "mapper",
-      "shepherd",
-      "toolsmith"
-    ],
     "cozy_home:bamboo_bench": [
       "armorer",
       "butcher",
@@ -47832,9 +47818,6 @@
       "shepherd",
       "toolsmith"
     ],
-    "mekanismdelight:osmium_knife": [
-      "toolsmith"
-    ],
     "mekanismdelight:salted_rice_ball": [
       "farmer"
     ],
@@ -47850,9 +47833,6 @@
       "librarian",
       "mapper",
       "shepherd",
-      "toolsmith"
-    ],
-    "mekanismdelight:steel_knife": [
       "toolsmith"
     ],
     "minecraft:acacia_boat": [
@@ -75199,7 +75179,7 @@
       "uncovered_graph_proven_mod_candidates": 2563
     },
     "candidate_items": 14285,
-    "covered_proven_candidates": 6090,
+    "covered_proven_candidates": 6087,
     "exclusion_categories": {
       "BLOCK_ENTITY": 388,
       "CARCASS_OR_BUTCHERY_STATION": 89,
@@ -75213,12 +75193,13 @@
       "PRIVATE_FLUID_VEHICLE": 4,
       "PRIVATE_PROCESS_INTERMEDIATE": 4,
       "REQUIRES_NBT_STATE": 7,
+      "RUNTIME_UNREGISTERED": 3,
       "STATION_OR_STATEFUL_RESOURCE": 283,
       "UNPROVEN_FLUID_OR_CHEMICAL_CHAIN": 172,
       "UNPROVEN_INPUT_OR_SERIALIZER": 822,
       "UNPROVEN_LOOT_REACHABILITY_OR_STATE": 450
     },
-    "explicitly_excluded_proven_candidates": 840,
+    "explicitly_excluded_proven_candidates": 843,
     "non_item_recipe_outputs": 438,
     "proven_candidates": 6930,
     "proven_exclusion_categories": {
@@ -75228,6 +75209,7 @@
       "CONTAINER_OR_CONFIGURED_BLOCK": 265,
       "PRIVATE_FLUID_VEHICLE": 4,
       "PRIVATE_PROCESS_INTERMEDIATE": 2,
+      "RUNTIME_UNREGISTERED": 3,
       "STATION_OR_STATEFUL_RESOURCE": 210
     },
     "unaccounted_proven_candidates": []
@@ -527155,7 +527137,7 @@
     "librarian": 87,
     "mapper": 63,
     "shepherd": 113,
-    "toolsmith": 65
+    "toolsmith": 63
   },
   "egg_recipes": [
     {
@@ -540947,6 +540929,12 @@
       "proven": true,
       "reason": "Inventory-bearing container or configured block state is not represented by a plain item ID",
       "source": "cozy_home-3.0.4-forge-1.20.1.jar!data/cozy_home/recipes/acacia_wall_clock_recipe.json"
+    },
+    "cozy_home:andesite_brick": {
+      "code": "RUNTIME_UNREGISTERED",
+      "proven": true,
+      "reason": "Absent from the installed Forge item registry despite a shipped recipe and item model.",
+      "source": "cozy_home-3.0.4-forge-1.20.1.jar!data/cozy_home/recipes/andesite_brick_recipe.json"
     },
     "cozy_home:bamboo_grandfather_clock": {
       "code": "CONTAINER_OR_CONFIGURED_BLOCK",
@@ -575457,6 +575445,12 @@
         "MekanismDelight-1.20.1-1.1.3.jar!assets/mekanismdelight/models/item/lapis_lazuli_knife.json"
       ]
     },
+    "mekanismdelight:osmium_knife": {
+      "code": "RUNTIME_UNREGISTERED",
+      "proven": true,
+      "reason": "Absent from the installed Forge item registry despite a shipped recipe and item model.",
+      "source": "MekanismDelight-1.20.1-1.1.3.jar!data/mekanismdelight/recipes/osmium_knife.json"
+    },
     "mekanismdelight:plaslitherite_knife": {
       "code": "UNPROVEN_INPUT_OR_SERIALIZER",
       "input_references": [
@@ -575707,6 +575701,12 @@
         "MekanismDelight-1.20.1-1.1.3.jar!data/mekanismdelight/recipes/sps_pie.json",
         "MekanismDelight-1.20.1-1.1.3.jar!assets/mekanismdelight/models/item/sps_pie.json"
       ]
+    },
+    "mekanismdelight:steel_knife": {
+      "code": "RUNTIME_UNREGISTERED",
+      "proven": true,
+      "reason": "Absent from the installed Forge item registry despite a shipped recipe and item model.",
+      "source": "MekanismDelight-1.20.1-1.1.3.jar!data/mekanismdelight/recipes/steel_knife.json"
     },
     "mekanismdelight:subatomic_jelly": {
       "code": "UNPROVEN_INPUT_OR_SERIALIZER",
@@ -647994,20 +647994,6 @@
       "type": "minecraft:crafting_shaped",
       "unitWorth": 570.0
     },
-    "cozy_home:andesite_brick": {
-      "block_item": false,
-      "depth": 1,
-      "ingredients": [
-        {
-          "item": "minecraft:andesite"
-        }
-      ],
-      "kind": "recipe",
-      "output_count": 1,
-      "source": "cozy_home-3.0.4-forge-1.20.1.jar!data/cozy_home/recipes/andesite_brick_recipe.json",
-      "type": "minecraft:stonecutting",
-      "unitWorth": 120.0
-    },
     "cozy_home:bamboo_bench": {
       "block_item": true,
       "depth": 2,
@@ -691171,23 +691157,6 @@
       "source": "mekanism-ad-astra-ores-forge-1.20.1-1.1.0.jar!data/mekanismaaa/loot_tables/blocks/venus_uranium_ore.json",
       "unitWorth": 120
     },
-    "mekanismdelight:osmium_knife": {
-      "block_item": false,
-      "depth": 3,
-      "ingredients": [
-        {
-          "tag": "forge:ingots/osmium"
-        },
-        {
-          "item": "minecraft:stick"
-        }
-      ],
-      "kind": "recipe",
-      "output_count": 1,
-      "source": "MekanismDelight-1.20.1-1.1.3.jar!data/mekanismdelight/recipes/osmium_knife.json",
-      "type": "minecraft:crafting_shaped",
-      "unitWorth": 240.0
-    },
     "mekanismdelight:salted_rice_ball": {
       "block_item": false,
       "depth": 2,
@@ -691227,23 +691196,6 @@
       "source": "MekanismDelight-1.20.1-1.1.3.jar!data/mekanismdelight/recipes/sawdust_hamburger.json",
       "type": "minecraft:crafting_shapeless",
       "unitWorth": 350.0
-    },
-    "mekanismdelight:steel_knife": {
-      "block_item": false,
-      "depth": 1,
-      "ingredients": [
-        {
-          "tag": "forge:ingots/steel"
-        },
-        {
-          "item": "minecraft:stick"
-        }
-      ],
-      "kind": "recipe",
-      "output_count": 1,
-      "source": "MekanismDelight-1.20.1-1.1.3.jar!data/mekanismdelight/recipes/steel_knife.json",
-      "type": "minecraft:crafting_shaped",
-      "unitWorth": 1320.0
     },
     "minecraft:acacia_boat": {
       "block_item": false,
@@ -736793,5 +736745,5 @@
       "unitWorth": 180.0
     }
   },
-  "shared_supply_items": 5163
+  "shared_supply_items": 5162
 }

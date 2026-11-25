@@ -52,7 +52,7 @@ function initializeCoreMod() {
         code.add(new InsnNode(O.POP));
         code.add(new JumpInsnNode(O.GOTO, nativePath));
         code.add(blockPath);
-        code.add(new FrameNode(O.F_SAME1, 0, null, 1, Java.to(['java/lang/Object'], 'java.lang.Object[]')));
+        code.add(new FrameNode(O.F_SAME1, 0, null, 1, ['java/lang/Object']));
         code.add(new TypeInsnNode(O.CHECKCAST, 'net/minecraft/world/item/BlockItem'));
         code.add(new MethodInsnNode(O.INVOKEVIRTUAL, 'net/minecraft/world/item/BlockItem',
           ASMAPI.mapMethod('m_40614_'), '()Lnet/minecraft/world/level/block/Block;', false));

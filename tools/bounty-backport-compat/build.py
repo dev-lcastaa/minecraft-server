@@ -1,6 +1,7 @@
 """Build additive pools from acquisition evidence, not the creative item inventory."""
 import json
 import gzip
+import hashlib
 import re
 import shutil
 import struct
@@ -91,6 +92,20 @@ EXACT_CATEGORY = {
 def write_json(path, data):
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(data, indent=2, sort_keys=True) + "\n")
+
+
+def confirmed_unregistered_items():
+    exclusions = json.loads((SOURCE / "unregistered_items.json").read_text())
+    hashes = {}
+    for identity, evidence in exclusions.items():
+        jar = ROOT / "mods" / evidence["jar"]
+        if not jar.is_file():
+            raise ValueError(f"Recheck runtime registry exclusion for {identity}: missing {jar.name}")
+        if jar not in hashes:
+            hashes[jar] = hashlib.sha256(jar.read_bytes()).hexdigest()
+        if hashes[jar] != evidence["sha256"]:
+            raise ValueError(f"Recheck runtime registry exclusion for {identity}: {jar.name} changed")
+    return exclusions
 
 
 def quark_flags(config):
@@ -796,14 +811,18 @@ def build():
     proofs = acquisition(data, models, mods, classes)
     value_proofs(proofs, data)
     headers, aliases = block_types(classes)
+    unregistered = confirmed_unregistered_items()
     generated, evidence, counts, exclusions, applicable = {}, {}, {}, {}, {}
     choices = defaultdict(list)
     for candidate, proof in sorted(proofs.items()):
         proof["block_item"] = candidate in blocks
         disabled = data["__disabled_bounty_items__"][1].get(candidate)
-        reason = ("CONFIG_DISABLED", disabled) if disabled else exclusion_reason(
-            candidate, blocks, headers, aliases, data["__namespace_jars__"][1]
-        )
+        if candidate in unregistered:
+            reason = ("RUNTIME_UNREGISTERED", unregistered[candidate]["reason"])
+        elif disabled:
+            reason = ("CONFIG_DISABLED", disabled)
+        else:
+            reason = exclusion_reason(candidate, blocks, headers, aliases, data["__namespace_jars__"][1])
         if reason:
             exclusions[candidate] = {"code": reason[0], "reason": reason[1],
                                      "proven": True, "source": proof["source"]}
@@ -911,7 +930,9 @@ def build():
         sources = source_index[identity]
         recipe_sources = [v for v in sources if v["kind"] == "recipe"]
         active = [v for v in recipe_sources if v["active"]]
-        if disabled:
+        if identity in unregistered:
+            reason = ("RUNTIME_UNREGISTERED", unregistered[identity]["reason"])
+        elif disabled:
             reason = ("CONFIG_DISABLED", disabled)
         elif identity not in models and not identity.startswith("minecraft:"):
             reason = ("NO_INSTALLED_REGISTRATION_WITNESS", "No installed item-model/registration witness; commonly an absent optional integration")

@@ -2,6 +2,7 @@ import importlib.util
 import json
 import os
 from pathlib import Path
+import re
 import shutil
 import subprocess
 import struct
@@ -111,6 +112,33 @@ class BountyBackportCompatTest(unittest.TestCase):
         self.assertGreaterEqual(premium["unitWorth"], 80000)
         self.assertGreaterEqual(premium["repRequired"], 20)
         self.assertGreaterEqual(build.base_worth("minecraft:netherite_block"), 9 * 64000)
+
+    def test_runtime_confirmed_unregistered_items_are_excluded(self):
+        exclusions = build.confirmed_unregistered_items()
+        self.assertEqual(set(exclusions), {
+            "cozy_home:andesite_brick", "mekanismdelight:osmium_knife",
+            "mekanismdelight:steel_knife",
+        })
+        for identity in exclusions:
+            self.assertNotIn(identity, self.coverage["selected_items"])
+            self.assertEqual(self.coverage["excluded_recipe_items"][identity]["code"],
+                             "RUNTIME_UNREGISTERED")
+        for path in (SOURCE / "data/bounty_backport_compat/bounty_pools/compat").glob("*.json"):
+            contents = json.loads(path.read_text())["content"].values()
+            self.assertFalse(set(exclusions) & {entry["content"] for entry in contents}, path)
+
+    def test_selected_bounties_exist_in_live_item_registry(self):
+        dump = os.environ.get("BOUNTY_ITEM_REGISTRY_DUMP")
+        if not dump:
+            self.skipTest("Set BOUNTY_ITEM_REGISTRY_DUMP to a KubeJS minecraft:item registry dump")
+        text = re.sub(r"\x1b\[[0-9;]*m", "", Path(dump).read_text())
+        items = [line[2:].strip() for line in text.splitlines() if line.startswith("- ")]
+        total = re.search(r"Total: (\d+) entries", text)
+        self.assertIsNotNone(total, "Registry dump is incomplete")
+        self.assertEqual(len(items), int(total.group(1)), "Registry dump is truncated")
+        self.assertTrue(all(re.fullmatch(r"[a-z0-9_.-]+:[a-z0-9_./-]+", item) for item in items))
+        missing = sorted(set(self.coverage["selected_items"]) - set(items))
+        self.assertEqual(missing, [], f"Unregistered bounty items: {missing}")
 
     def test_every_proven_candidate_is_covered_or_defensibly_excluded(self):
         proofs = build.acquisition(self.data, self.models, self.mods, self.classes)
@@ -259,7 +287,8 @@ public class SafetyTest implements Opcodes {
   }
   public static class Stateful extends Block implements EntityBlock {}
   public static void main(String[] args) throws Exception {
-    ScriptEngine engine=new NashornScriptEngineFactory().getScriptEngine();
+    ScriptEngine engine=new NashornScriptEngineFactory().getScriptEngine(
+      name -> !name.equals("java.lang.Object"));
     engine.eval(Files.readString(Path.of(args[0])));
     ClassNode actual=new ClassNode();
     try(var jar=new ZipFile(args[1])){new ClassReader(jar.getInputStream(jar.getEntry(OWNER+".class"))).accept(actual,0);}

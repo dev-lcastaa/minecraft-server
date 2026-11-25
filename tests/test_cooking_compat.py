@@ -2,6 +2,7 @@ import collections
 from copy import deepcopy
 import importlib.util
 import json
+import os
 from pathlib import Path
 import shutil
 import subprocess
@@ -180,6 +181,9 @@ class CookingCompatTest(unittest.TestCase):
         for ident in self.recipes:
             self.assertNotIn("tentacles_smelting", ident)
             self.assertNotIn("baked_tentacles_smoking", ident)
+        calamari = self.recipes["miners_delight:calamari_roll"]
+        self.assertIn({"type": "forge:item_exists", "item": "culturaldelights:calamari_roll"},
+                      calamari["conditions"])
 
     def test_cutting_is_lossy_and_not_duplicate(self):
         cutting = {i: r for i, r in self.recipes.items() if r["type"] == "farmersdelight:cutting"}
@@ -284,18 +288,34 @@ class CookingCompatTest(unittest.TestCase):
     def test_kubejs_callbacks_execute_with_exact_ids_and_are_idempotent(self):
         fixture = r"""
 const fs = require('fs'), vm = require('vm')
-let recipes = new Map(), removed = [], registrations = {}, callback
+let recipes = new Map(), removed = [], registrations = {}, callback, missing = new Set(), warnings = []
 let builder = {displayName(){return this},thinTexture(){return this},noBucket(){return this},noBlock(){return this},texture(){return this}}
 vm.runInNewContext(fs.readFileSync(process.argv[1], 'utf8'), {
   StartupEvents:{registry(type, cb){ cb({create(id){ registrations[id] = type; return builder }}) }}
 })
 vm.runInNewContext(fs.readFileSync(process.argv[2], 'utf8'), {
-  ServerEvents:{recipes(cb){callback = cb}}
+  ServerEvents:{recipes(cb){callback = cb}},
+  Item:{of(id){return {isEmpty(){return missing.has(id)}}}},
+  console:{warn(message){warnings.push(message)}}
 })
 let event = {remove(filter){if(!filter.id)throw Error('not ID based');removed.push(filter.id);recipes.delete(filter.id)},
   custom(value){return {id(id){recipes.set(id,value)}}}}
 callback(event);let first = JSON.stringify([...recipes]);callback(event)
 if (first !== JSON.stringify([...recipes])) throw Error('reload changed recipes')
+const missingRecipes = {
+  'miners_delight:calamari_roll':'culturaldelights:calamari_roll',
+  'abnormals_delight:pickerelweed_juice':'upgrade_aquatic:pickerelweed',
+  'delightful:food/prickly_pear_juice_from_cooked_prickly_pear':'ecologics:cooked_prickly_pear'
+}
+missing = new Set(Object.values(missingRecipes))
+let preserved = new Map(Object.keys(missingRecipes).map(id => [id, 'original']))
+let missingRemoved = []
+callback({remove(filter){missingRemoved.push(filter.id);preserved.delete(filter.id)},
+  custom(value){return {id(id){preserved.set(id,value)}}}})
+for (const [id, item] of Object.entries(missingRecipes)) {
+  if (preserved.get(id) !== 'original' || missingRemoved.includes(id)) throw Error('Missing recipe was replaced: ' + id)
+  if (!warnings.some(w => w.includes(id) && w.includes(item))) throw Error('Missing warning: ' + id)
+}
 console.log(JSON.stringify({recipes:Object.fromEntries(recipes), registrations, removed}))
 """
         output = subprocess.check_output([
@@ -312,6 +332,42 @@ console.log(JSON.stringify({recipes:Object.fromEntries(recipes), registrations, 
             self.assertIn(ident, result["removed"])
         for ident in self.manifest["removals"]:
             self.assertIn(ident, result["removed"])
+        self.assertFalse(set(self.manifest["removals"]) & set(self.recipes))
+
+    def test_actual_rhino_recipe_registry_guard(self):
+        classpath = os.environ.get("COOKING_RHINO_TEST_CLASSPATH")
+        if not classpath:
+            self.skipTest("Set COOKING_RHINO_TEST_CLASSPATH to Gson and Commons Lang JARs")
+        java = shutil.which("java")
+        self.assertTrue(java, "Java is required for Rhino recipe verification")
+        result = subprocess.run(
+            [java, "-cp", str(ROOT / "mods/rhino-forge-2001.2.3-build.10.jar") + os.pathsep + classpath,
+             str(ROOT / "tests/CookingCompatRhinoTest.java"),
+             str(ROOT / "server-config/kubejs/server_scripts/cooking_compat.js")],
+            cwd=ROOT, capture_output=True, text=True,
+        )
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        self.assertIn("Rhino cooking registry guard passed", result.stdout)
+
+    def test_installed_forge_item_exists_condition(self):
+        jar = os.environ.get("FORGE_UNIVERSAL_JAR")
+        if not jar:
+            self.skipTest("Set FORGE_UNIVERSAL_JAR to the server's Forge universal JAR")
+        java = shutil.which("java")
+        self.assertTrue(java, "Java is required for Forge condition verification")
+        def disassemble(name):
+            return subprocess.check_output([
+                java, "-m", "jdk.jdeps/com.sun.tools.javap.Main", "-c", "-p",
+                "-classpath", jar, name,
+            ], text=True)
+        condition = disassemble("net.minecraftforge.common.crafting.conditions.ItemExistsCondition")
+        self.assertIn("String item_exists", condition)
+        self.assertIn("ForgeRegistries.ITEMS", condition)
+        self.assertIn("IForgeRegistry.containsKey", condition)
+        serializer = disassemble("net.minecraftforge.common.crafting.conditions.ItemExistsCondition$Serializer")
+        self.assertIn("String item", serializer)
+        helper = disassemble("net.minecraftforge.common.crafting.CraftingHelper")
+        self.assertIn("ICondition.test", helper)
 
     @unittest.skipUnless(shutil.which("java"), "Java is required for serializer bytecode verification")
     def test_installed_serializer_contracts_not_guessed(self):

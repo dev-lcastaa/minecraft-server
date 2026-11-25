@@ -1,4 +1,10 @@
 {
+  "conditions": [
+    {
+      "item": "culturaldelights:calamari_roll",
+      "type": "forge:item_exists"
+    }
+  ],
   "ingredients": [
     {
       "item": "minecraft:dried_kelp"

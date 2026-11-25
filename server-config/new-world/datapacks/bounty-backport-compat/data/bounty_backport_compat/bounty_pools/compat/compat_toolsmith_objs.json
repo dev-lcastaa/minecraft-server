@@ -281,31 +281,6 @@
       "unitWorth": 138120.0,
       "weightMult": 0.1
     },
-    "bounty_backport_compat_compat_toolsmith_objs_mekanismdelight_osmium_knife": {
-      "amount": {
-        "max": 1,
-        "min": 1
-      },
-      "content": "mekanismdelight:osmium_knife",
-      "rarity": "UNCOMMON",
-      "timeMult": 3.0,
-      "type": "item",
-      "unitWorth": 240.0,
-      "weightMult": 0.1
-    },
-    "bounty_backport_compat_compat_toolsmith_objs_mekanismdelight_steel_knife": {
-      "amount": {
-        "max": 1,
-        "min": 1
-      },
-      "content": "mekanismdelight:steel_knife",
-      "rarity": "RARE",
-      "repRequired": 10,
-      "timeMult": 3.0,
-      "type": "item",
-      "unitWorth": 1320.0,
-      "weightMult": 0.1
-    },
     "bounty_backport_compat_compat_toolsmith_objs_minecraft_diamond_axe": {
       "amount": {
         "max": 1,

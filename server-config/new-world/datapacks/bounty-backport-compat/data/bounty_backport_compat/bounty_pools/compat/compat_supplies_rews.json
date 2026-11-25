@@ -19130,18 +19130,6 @@
       "unitWorth": 570.0,
       "weightMult": 0.1
     },
-    "bounty_backport_compat_compat_supplies_rews_cozy_home_andesite_brick": {
-      "amount": {
-        "max": 1,
-        "min": 1
-      },
-      "content": "cozy_home:andesite_brick",
-      "rarity": "UNCOMMON",
-      "timeMult": 3.0,
-      "type": "item",
-      "unitWorth": 120.0,
-      "weightMult": 0.1
-    },
     "bounty_backport_compat_compat_supplies_rews_cozy_home_bamboo_bench": {
       "amount": {
         "max": 8,
@@ -62539,5 +62527,5 @@
     }
   },
   "replace": false,
-  "weightMult": 0.00484214603912454
+  "weightMult": 0.0048430840759395586
 }
