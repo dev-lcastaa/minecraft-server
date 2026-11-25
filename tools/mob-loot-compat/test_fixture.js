@@ -70,11 +70,15 @@ function death(mob, player, direct = player, looting = 0, oldDrops = []) {
   context.callback({
     getEntity: () => mob, getDrops: () => list, isRecentlyHit: () => !!player,
     getLootingLevel: () => looting,
-    getSource: () => ({m_7639_: () => player, m_7640_: () => direct})
+    getSource: () => ({getActual: () => player, getImmediate: () => direct})
   })
   return drops.map(drop => drop.item)
 }
 const bat = entity('fangs_n_claws:evil_bat', ['example.Bat'], ['mob_loot_compat:blood_winged'])
+const burningSkeleton = entity('minecraft:skeleton', ['net.minecraft.world.entity.monster.AbstractSkeleton'])
+assert.deepEqual(death(burningSkeleton, null, null, 0,
+  [{id: 'minecraft:bone'}, {id: 'supplementaries:quiver'}]), [{id: 'minecraft:bone'}])
+assert.deepEqual(death(bat, null), [])
 for (const tool of ['farmersdelight:iron_knife', 'sons_of_sins:butcher_cleaver', 'minecraft:diamond_sword']) {
   const player = killer(tool)
   assert.deepEqual(death(bat, player), [])

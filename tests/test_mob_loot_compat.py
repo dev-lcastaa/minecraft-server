@@ -2,6 +2,7 @@ import importlib.util
 import json
 import os
 from pathlib import Path
+import re
 import shutil
 import subprocess
 import unittest
@@ -85,6 +86,38 @@ class MobLootCompatTests(unittest.TestCase):
         result = subprocess.run([node, str(SOURCE / "test_fixture.js"), str(ROOT)],
                                 cwd=ROOT, capture_output=True, text=True)
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+
+    def test_installed_kubejs_damage_mappings(self):
+        java = shutil.which("java")
+        self.assertTrue(java, "Java is required for Rhino damage-source verification")
+        kubejs = ROOT / "mods/kubejs-forge-2001.6.5-build.26.jar"
+        mixin = subprocess.run(
+            [java, "-m", "jdk.jdeps/com.sun.tools.javap.Main", "-p", "-v",
+             "-classpath", str(kubejs), "dev.latvian.mods.kubejs.core.mixin.common.DamageSourceMixin"],
+            cwd=ROOT, capture_output=True, text=True,
+        )
+        self.assertEqual(mixin.returncode, 0, mixin.stdout + mixin.stderr)
+        for method, alias in (("m_7639_", "getActual"), ("m_7640_", "getImmediate")):
+            match = re.search(rf"public abstract [^\n]+ {method}\(\);(.*?)(?=\n  public|\n}})",
+                              mixin.stdout, re.DOTALL)
+            self.assertIsNotNone(match, method)
+            self.assertIn("dev.latvian.mods.rhino.util.RemapForJS", match.group(1), method)
+            self.assertIn(f'value="{alias}"', match.group(1), method)
+
+    def test_actual_rhino_damage_source_gameplay(self):
+        classpath = os.environ.get("MOB_LOOT_RHINO_TEST_CLASSPATH")
+        if not classpath:
+            self.skipTest("Set MOB_LOOT_RHINO_TEST_CLASSPATH to Gson and Commons Lang JARs")
+        java = shutil.which("java")
+        self.assertTrue(java, "Java is required for Rhino damage-source verification")
+        result = subprocess.run(
+            [java, "-cp", str(ROOT / "mods/rhino-forge-2001.2.3-build.10.jar") + os.pathsep + classpath,
+             str(ROOT / "tests/DamageSourceRhinoTest.java"),
+             str(ROOT / "server-config/kubejs/server_scripts/mob_loot_compat.js")],
+            cwd=ROOT, capture_output=True, text=True,
+        )
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        self.assertIn("Rhino remapped damage-source gameplay passed", result.stdout)
 
     def test_actual_installed_bytecode(self):
         classpath = os.environ.get("MOB_LOOT_TEST_CLASSPATH")

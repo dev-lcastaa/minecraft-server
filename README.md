@@ -839,6 +839,9 @@ Bytecode fixtures additionally require local Nashorn Core and ASM JARs:
 set `CRAVINGS_TEST_CLASSPATH`, `LUNCH_BASKET_TEST_CLASSPATH`,
 `HYDRATION_TEST_CLASSPATH`, `INVENTORY_CARCASS_TEST_CLASSPATH`,
 `JADE_SEASONS_TEST_CLASSPATH`, and `MOB_LOOT_TEST_CLASSPATH` to that classpath.
+To exercise the mob-loot handler with the installed Rhino engine, set
+`MOB_LOOT_RHINO_TEST_CLASSPATH` to a classpath containing Gson 2.10.1 and
+Commons Lang 3.12.0.
 The cooking and bounty fixtures also exercise installed serializers.
 Set `FORGE_VERSION_TEST_CLASSPATH` to a classpath containing Maven Artifact
 3.8.5 and Commons Lang 3.12.0 to check add-on dependency ranges using the

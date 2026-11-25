@@ -92,11 +92,11 @@ global.mobLootCompatDrops = event => {
       drops.add(new $MobLootItemEntity(entity.level, entity.x, entity.y, entity.z, quiver))
     }
   }
-  // This Forge runtime exposes DamageSource's SRG methods to Rhino.
+  // KubeJS remaps DamageSource's attacker methods to these names.
   var source = event.getSource()
-  var killer = source.m_7639_()
+  var killer = source.getActual()
   if (!(killer instanceof $MobLootPlayer) ||
-      source.m_7640_() !== killer ||
+      source.getImmediate() !== killer ||
       String(killer.mainHandItem.id) !== 'sons_of_sins:sickle_of_struggle') return
   var blood = mobLootBloodType(entity)
   if (blood < 0) return
