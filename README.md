@@ -748,7 +748,9 @@ ingredients. Successful heated kettle processing purifies the tank without
 changing its amount.
 The add-on requires the installed Thirst version reported by Forge as
 `1.20.1-1.4.0`. After updating it, replace the hydration add-on on both server
-and clients before restarting.
+and clients before restarting. The KubeJS startup hook keeps temporary brewing
+state in its synchronous event callbacks; it does not load Java utility classes
+outside KubeJS's class allowlist.
 The installed vendor audit covers 153 declarative recipe outputs for 71 of
 the 103 configured drink IDs across 10 serializers, including conditional
 recipes that may not be active. No unsupported output shapes remain in that

@@ -12,11 +12,6 @@ class Tag {
 }
 class Potion {}
 class Bowl {}
-class ThreadLocal {
-  set(value) { this.value = value; }
-  get() { return this.value ?? null; }
-  remove() { delete this.value; }
-}
 class Stack {
   constructor(id, animation = 'NONE', tag = null, registered = false, item = {}) {
     Object.assign(this, {id, animation, tag, registered, item, count: 1});
@@ -34,7 +29,6 @@ const events = {};
 const classes = {
   'dev.ghen.thirst.api.ThirstHelper': {isDrink: stack => stack.registered},
   'net.minecraft.world.item.UseAnim': {DRINK: 'DRINK'},
-  'java.lang.ThreadLocal': ThreadLocal,
   'net.minecraft.world.item.PotionItem': Potion,
   'doggytalents.common.block.FoodBowlBlock': Bowl,
   'net.minecraftforge.eventbus.api.EventPriority': {HIGHEST: 'HIGHEST', LOWEST: 'LOWEST'},
@@ -44,6 +38,7 @@ const classes = {
   },
   'net.minecraft.nbt.TagParser': {parseTag: value => new Tag(JSON.parse(value))}
 };
+const loadedClasses = [];
 classes['net.minecraftforge.common.MinecraftForge'] = {
   EVENT_BUS: {addListener: (priority, receiveCanceled, name, callback) => {
     events[name] = callback;
@@ -52,7 +47,10 @@ classes['net.minecraftforge.common.MinecraftForge'] = {
   }}
 };
 const sandbox = {
-  Java: {loadClass: name => classes[name] || name},
+  Java: {loadClass: name => {
+    loadedClasses.push(name);
+    return classes[name] || name;
+  }},
   ForgeEvents: {onEvent: (name, callback) => {events[name] = callback;}},
   console,
   Item: {of: id => new Stack(id, id.includes('juice') || id === 'minecraft:potion' ? 'DRINK' : 'NONE')},
@@ -61,6 +59,7 @@ const sandbox = {
 vm.createContext(sandbox);
 vm.runInContext(fs.readFileSync(root + '/server-config/kubejs/startup_scripts/hydration_hooks.js', 'utf8'), sandbox);
 vm.runInContext(fs.readFileSync(root + '/server-config/kubejs/server_scripts/hydration_recipes.js', 'utf8'), sandbox);
+assert.equal(loadedClasses.includes('java.lang.ThreadLocal'), false);
 
 const before = new Stack('minecraft:potion', 'DRINK', new Tag({
   Potion: 'minecraft:water', CustomPotionEffects: [{Id: 1, Duration: 40}], display: {Name: 'Named drink'}, Purity: 0

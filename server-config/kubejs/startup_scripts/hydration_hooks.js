@@ -1,7 +1,6 @@
 const HydrationThirst = Java.loadClass('dev.ghen.thirst.api.ThirstHelper');
 const HydrationUseAnim = Java.loadClass('net.minecraft.world.item.UseAnim');
-const HydrationThreadLocal = Java.loadClass('java.lang.ThreadLocal');
-const HydrationBrewingBefore = new HydrationThreadLocal();
+let HydrationBrewingBefore = null;
 const HydrationForge = Java.loadClass('net.minecraftforge.common.MinecraftForge');
 const HydrationPriority = Java.loadClass('net.minecraftforge.eventbus.api.EventPriority');
 const HydrationMath = Java.loadClass('dev.ghen.thirst.foundation.util.MathHelper');
@@ -20,12 +19,12 @@ ForgeEvents.onEvent('net.minecraftforge.event.entity.player.PlayerEvent$ItemCraf
 
 HydrationForge.EVENT_BUS.addListener(HydrationPriority.HIGHEST, false,
   Java.loadClass('net.minecraftforge.event.brewing.PotionBrewEvent$Pre'), event => {
-    HydrationBrewingBefore.set([event.getItem(0).copy(), event.getItem(1).copy(), event.getItem(2).copy()]);
+    HydrationBrewingBefore = [event.getItem(0).copy(), event.getItem(1).copy(), event.getItem(2).copy()];
   });
 HydrationForge.EVENT_BUS.addListener(HydrationPriority.LOWEST, false,
   Java.loadClass('net.minecraftforge.event.brewing.PotionBrewEvent$Post'), event => {
-    const before = HydrationBrewingBefore.get();
-    HydrationBrewingBefore.remove();
+    const before = HydrationBrewingBefore;
+    HydrationBrewingBefore = null;
     for (let slot = 0; slot < 3; slot++) {
       const result = event.getItem(slot);
       if (result.isEmpty() || !(hydrationPreparedDrink(result) || result.getItem() instanceof HydrationPotion)) continue;
