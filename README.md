@@ -814,7 +814,8 @@ Existing bounty pools and villager offers are preserved.
 The trade bridge avoids Rhino's string-key coercion against Forge's integer-keyed
 villager trade map. Rebuild the generated add-on and mirrored scripts with
 `PYTHONDONTWRITEBYTECODE=1 python3 tools/bounty-backport-compat/build.py`; this
-requires a JDK compiler.
+requires a JDK compiler. Deploy the resulting server JAR and install the matching
+client JAR, since the startup script loads the bridge from that add-on.
 
 The [item coverage audit](./tools/bounty-backport-compat/coverage.json) accounts
 for 14,285 candidates: 6,930 have recipe/loot evidence, of which 840 are
