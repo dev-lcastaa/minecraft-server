@@ -1,0 +1,12 @@
+{
+  "objectives": [
+    "compat_fisherman_objs",
+    "compat_hunts_objs",
+    "compat_supplies_objs"
+  ],
+  "replace": false,
+  "rewards": [
+    "compat_fisherman_rews",
+    "compat_supplies_rews"
+  ]
+}

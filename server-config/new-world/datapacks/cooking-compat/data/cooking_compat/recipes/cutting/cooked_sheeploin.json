@@ -1,0 +1,17 @@
+{
+  "ingredients": [
+    {
+      "item": "butchersdelightfoods:cooked_sheeploin"
+    }
+  ],
+  "result": [
+    {
+      "count": 4,
+      "item": "minecraft:cooked_mutton"
+    }
+  ],
+  "tool": {
+    "tag": "forge:tools/knives"
+  },
+  "type": "farmersdelight:cutting"
+}

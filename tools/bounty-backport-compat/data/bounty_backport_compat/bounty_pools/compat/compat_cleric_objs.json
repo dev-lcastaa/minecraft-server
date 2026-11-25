@@ -1,0 +1,743 @@
+{
+  "content": {
+    "bounty_backport_compat_compat_cleric_objs_alexscaves_moth_dust": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "alexscaves:moth_dust",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_cleric_objs_alexscaves_pearl": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "alexscaves:pearl",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_cleric_objs_alexsmobs_bear_dust": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "alexsmobs:bear_dust",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_cleric_objs_alexsmobs_guster_eye": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "alexsmobs:guster_eye",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_cleric_objs_alexsmobs_void_worm_eye": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "alexsmobs:void_worm_eye",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_cleric_objs_bosses_of_mass_destruction_charged_ender_pearl": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "bosses_of_mass_destruction:charged_ender_pearl",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 1240.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_cleric_objs_bosses_of_mass_destruction_crystal_fruit": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "bosses_of_mass_destruction:crystal_fruit",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_cleric_objs_create_rose_quartz": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "create:rose_quartz",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 150,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_cleric_objs_delightful_amethyst_knife": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "delightful:amethyst_knife",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 270.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_cleric_objs_delightful_nether_quartz_knife": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "delightful:nether_quartz_knife",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 270.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_cleric_objs_dungeonsdelight_amethyst_rock_candy": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "dungeonsdelight:amethyst_rock_candy",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 390.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_cleric_objs_endersdelight_pearl_pasta": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "endersdelight:pearl_pasta",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 980.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_cleric_objs_fangs_n_claws_evil_eye": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "fangs_n_claws:evil_eye",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_cleric_objs_illagerinvasion_unusual_dust": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "illagerinvasion:unusual_dust",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_cleric_objs_mekanism_dust_charcoal": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "mekanism:dust_charcoal",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_cleric_objs_mekanism_dust_coal": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "mekanism:dust_coal",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_cleric_objs_mekanism_dust_copper": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "mekanism:dust_copper",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 150.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_cleric_objs_mekanism_dust_diamond": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "mekanism:dust_diamond",
+      "rarity": "RARE",
+      "repRequired": 20,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 10000.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_cleric_objs_mekanism_dust_emerald": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "mekanism:dust_emerald",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 1000.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_cleric_objs_mekanism_dust_fluorite": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "mekanism:dust_fluorite",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 20.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_cleric_objs_mekanism_dust_gold": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "mekanism:dust_gold",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 1000.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_cleric_objs_mekanism_dust_iron": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "mekanism:dust_iron",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 1000.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_cleric_objs_mekanism_dust_lead": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "mekanism:dust_lead",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_cleric_objs_mekanism_dust_osmium": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "mekanism:dust_osmium",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_cleric_objs_mekanism_dust_quartz": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "mekanism:dust_quartz",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 150.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_cleric_objs_mekanism_dust_steel": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "mekanism:dust_steel",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 1200.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_cleric_objs_mekanism_dust_tin": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "mekanism:dust_tin",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_cleric_objs_mekanism_dust_uranium": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "mekanism:dust_uranium",
+      "rarity": "EPIC",
+      "repRequired": 20,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_cleric_objs_minecraft_amethyst_block": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:amethyst_block",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 1350,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_cleric_objs_minecraft_amethyst_cluster": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:amethyst_cluster",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 150,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_cleric_objs_minecraft_amethyst_shard": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:amethyst_shard",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 150,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_cleric_objs_minecraft_chiseled_quartz_block": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:chiseled_quartz_block",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 1350,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_cleric_objs_minecraft_end_crystal": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:end_crystal",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_cleric_objs_minecraft_ender_eye": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:ender_eye",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_cleric_objs_minecraft_ender_pearl": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:ender_pearl",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 1000,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_cleric_objs_minecraft_eye_armor_trim_smithing_template": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:eye_armor_trim_smithing_template",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_cleric_objs_minecraft_fermented_spider_eye": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:fermented_spider_eye",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_cleric_objs_minecraft_glowstone": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:glowstone",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 300,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_cleric_objs_minecraft_glowstone_dust": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:glowstone_dust",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 300,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_cleric_objs_minecraft_heart_of_the_sea": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:heart_of_the_sea",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 15000,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_cleric_objs_minecraft_heart_pottery_sherd": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:heart_pottery_sherd",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_cleric_objs_minecraft_nether_quartz_ore": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:nether_quartz_ore",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 150,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_cleric_objs_minecraft_quartz": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:quartz",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 150,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_cleric_objs_minecraft_quartz_block": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:quartz_block",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 1350,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_cleric_objs_minecraft_quartz_bricks": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:quartz_bricks",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 150.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_cleric_objs_minecraft_quartz_pillar": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:quartz_pillar",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 1350.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_cleric_objs_minecraft_quartz_slab": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:quartz_slab",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 150.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_cleric_objs_minecraft_quartz_stairs": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:quartz_stairs",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 150.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_cleric_objs_minecraft_smooth_quartz": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:smooth_quartz",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 150,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_cleric_objs_minecraft_smooth_quartz_slab": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:smooth_quartz_slab",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 150.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_cleric_objs_minecraft_smooth_quartz_stairs": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:smooth_quartz_stairs",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 150.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_cleric_objs_minecraft_spider_eye": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:spider_eye",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_cleric_objs_sons_of_sins_heart": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "sons_of_sins:heart",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_cleric_objs_the_bumblezone_crystal_cannon": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "the_bumblezone:crystal_cannon",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_cleric_objs_the_bumblezone_honey_crystal_shards": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "the_bumblezone:honey_crystal_shards",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_cleric_objs_the_bumblezone_honey_crystal_shield": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "the_bumblezone:honey_crystal_shield",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_cleric_objs_unusualend_crystal_catalyst": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "unusualend:crystal_catalyst",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 480.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_cleric_objs_unusualend_shiny_crystal": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "unusualend:shiny_crystal",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_cleric_objs_unusualend_wandering_pearl": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "unusualend:wandering_pearl",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    }
+  },
+  "replace": false,
+  "weightMult": 1.0
+}

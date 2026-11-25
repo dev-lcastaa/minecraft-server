@@ -1,0 +1,18 @@
+{
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": {
+        "modid": "incubation",
+        "type": "forge:mod_loaded"
+      }
+    }
+  ],
+  "cookingtime": 100,
+  "experience": 0.35,
+  "ingredient": {
+    "tag": "forge:eggs"
+  },
+  "result": "farmersdelight:fried_egg",
+  "type": "minecraft:smoking"
+}

@@ -1,0 +1,12 @@
+{
+  "objectives": [
+    "compat_armorer_objs",
+    "compat_hunts_objs",
+    "compat_supplies_objs"
+  ],
+  "replace": false,
+  "rewards": [
+    "compat_armorer_rews",
+    "compat_supplies_rews"
+  ]
+}

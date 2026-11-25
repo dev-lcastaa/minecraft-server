@@ -1,0 +1,1100 @@
+{
+  "content": {
+    "bounty_backport_compat_compat_librarian_rews_betterfishtanks_guide_book": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "betterfishtanks:guide_book",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 240.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_create_red_sand_paper": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "create:red_sand_paper",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_create_sand_paper": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "create:sand_paper",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_farmersdelight_squid_ink_pasta": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "farmersdelight:squid_ink_pasta",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 420.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_graveyard_candle_holder": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "graveyard:candle_holder",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_graveyard_incarnated_evil_music_disc": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "graveyard:incarnated_evil_music_disc",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_idas_disc_fragment_slither": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "idas:disc_fragment_slither",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_idas_music_disc_calidum": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "idas:music_disc_calidum",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_idas_music_disc_slither": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "idas:music_disc_slither",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 1080.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_illagerinvasion_lost_candle": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "illagerinvasion:lost_candle",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_minecraft_black_candle": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:black_candle",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_minecraft_blue_candle": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:blue_candle",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_minecraft_book": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:book",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_minecraft_brown_candle": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:brown_candle",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_minecraft_candle": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:candle",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_minecraft_cyan_candle": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:cyan_candle",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_minecraft_disc_fragment_5": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:disc_fragment_5",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_minecraft_glow_ink_sac": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:glow_ink_sac",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_minecraft_gray_candle": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:gray_candle",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_minecraft_green_candle": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:green_candle",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_minecraft_ink_sac": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:ink_sac",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_minecraft_light_blue_candle": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:light_blue_candle",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_minecraft_light_gray_candle": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:light_gray_candle",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_minecraft_lime_candle": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:lime_candle",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_minecraft_magenta_candle": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:magenta_candle",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_minecraft_music_disc_11": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:music_disc_11",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_minecraft_music_disc_13": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:music_disc_13",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_minecraft_music_disc_5": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:music_disc_5",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_minecraft_music_disc_blocks": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:music_disc_blocks",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_minecraft_music_disc_cat": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:music_disc_cat",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_minecraft_music_disc_chirp": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:music_disc_chirp",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_minecraft_music_disc_far": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:music_disc_far",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_minecraft_music_disc_mall": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:music_disc_mall",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_minecraft_music_disc_mellohi": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:music_disc_mellohi",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_minecraft_music_disc_otherside": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:music_disc_otherside",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_minecraft_music_disc_pigstep": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:music_disc_pigstep",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_minecraft_music_disc_stal": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:music_disc_stal",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_minecraft_music_disc_strad": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:music_disc_strad",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_minecraft_music_disc_wait": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:music_disc_wait",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_minecraft_music_disc_ward": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:music_disc_ward",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_minecraft_orange_candle": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:orange_candle",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_minecraft_paper": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:paper",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_minecraft_pink_candle": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:pink_candle",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_minecraft_purple_candle": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:purple_candle",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_minecraft_red_candle": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:red_candle",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_minecraft_white_candle": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:white_candle",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_minecraft_writable_book": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:writable_book",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_minecraft_yellow_candle": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:yellow_candle",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_miners_delight_glow_ink_pasta": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "miners_delight:glow_ink_pasta",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 420.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_mutantmore_disc_fragment_adrenaline_rush": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "mutantmore:disc_fragment_adrenaline_rush",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_mutantmore_disc_fragment_aegis": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "mutantmore:disc_fragment_aegis",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_mutantmore_disc_fragment_forces_unknown": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "mutantmore:disc_fragment_forces_unknown",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_mutantmore_music_disc_adrenaline_rush": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "mutantmore:music_disc_adrenaline_rush",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 1080.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_mutantmore_music_disc_aegis": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "mutantmore:music_disc_aegis",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 1080.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_mutantmore_music_disc_forces_unknown": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "mutantmore:music_disc_forces_unknown",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 1080.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_quark_music_disc_clock": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "quark:music_disc_clock",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_quark_music_disc_crickets": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "quark:music_disc_crickets",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_quark_music_disc_fire": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "quark:music_disc_fire",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_quark_music_disc_ocean": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "quark:music_disc_ocean",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_quark_music_disc_wind": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "quark:music_disc_wind",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_supplementaries_antique_ink": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "supplementaries:antique_ink",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_supplementaries_candle_holder": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "supplementaries:candle_holder",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_supplementaries_candle_holder_cyan": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "supplementaries:candle_holder_cyan",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_supplementaries_candle_holder_orange": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "supplementaries:candle_holder_orange",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_takesapillage_bastille_blues_music_disc": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "takesapillage:bastille_blues_music_disc",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_the_bumblezone_carvable_wax_music": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "the_bumblezone:carvable_wax_music",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_the_bumblezone_super_candle": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "the_bumblezone:super_candle",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_the_bumblezone_super_candle_black": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "the_bumblezone:super_candle_black",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_the_bumblezone_super_candle_blue": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "the_bumblezone:super_candle_blue",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_the_bumblezone_super_candle_brown": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "the_bumblezone:super_candle_brown",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_the_bumblezone_super_candle_cyan": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "the_bumblezone:super_candle_cyan",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_the_bumblezone_super_candle_gray": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "the_bumblezone:super_candle_gray",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_the_bumblezone_super_candle_green": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "the_bumblezone:super_candle_green",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_the_bumblezone_super_candle_light_blue": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "the_bumblezone:super_candle_light_blue",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 360.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_the_bumblezone_super_candle_light_gray": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "the_bumblezone:super_candle_light_gray",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_the_bumblezone_super_candle_lime": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "the_bumblezone:super_candle_lime",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_the_bumblezone_super_candle_magenta": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "the_bumblezone:super_candle_magenta",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_the_bumblezone_super_candle_orange": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "the_bumblezone:super_candle_orange",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_the_bumblezone_super_candle_pink": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "the_bumblezone:super_candle_pink",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_the_bumblezone_super_candle_purple": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "the_bumblezone:super_candle_purple",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_the_bumblezone_super_candle_red": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "the_bumblezone:super_candle_red",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_the_bumblezone_super_candle_white": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "the_bumblezone:super_candle_white",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_the_bumblezone_super_candle_yellow": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "the_bumblezone:super_candle_yellow",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_unusualend_citrine_candle": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "unusualend:citrine_candle",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_unusualend_disc_fragment_flying_ships": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "unusualend:disc_fragment_flying_ships",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_unusualend_music_disc_flying_ships": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "unusualend:music_disc_flying_ships",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 1080.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_librarian_rews_unusualend_music_disc_queen": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "unusualend:music_disc_queen",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    }
+  },
+  "replace": false,
+  "weightMult": 1.0
+}

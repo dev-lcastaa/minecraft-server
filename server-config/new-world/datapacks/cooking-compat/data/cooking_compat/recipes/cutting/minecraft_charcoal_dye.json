@@ -1,0 +1,23 @@
+{
+  "conditions": [
+    {
+      "flag": "charcoal_to_dye",
+      "type": "quark:flag"
+    }
+  ],
+  "ingredients": [
+    {
+      "item": "minecraft:charcoal"
+    }
+  ],
+  "result": [
+    {
+      "count": 1,
+      "item": "minecraft:black_dye"
+    }
+  ],
+  "tool": {
+    "tag": "forge:tools/knives"
+  },
+  "type": "farmersdelight:cutting"
+}

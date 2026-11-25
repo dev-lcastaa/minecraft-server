@@ -1,0 +1,320 @@
+{
+  "cutting_audit": {
+    "ambiguous_dyes_not_added": {
+      "minecraft:chorus_fruit": [
+        [
+          "minecraft:magenta_dye",
+          1
+        ],
+        [
+          "minecraft:purple_dye",
+          1
+        ]
+      ]
+    },
+    "cooked_meat_gaps": [
+      "butchersdelightfoods:coockedbeeftenderloin",
+      "butchersdelightfoods:cooked_goat_loin",
+      "butchersdelightfoods:cooked_goat_rack",
+      "butchersdelightfoods:cooked_goat_shank",
+      "butchersdelightfoods:cooked_ham",
+      "butchersdelightfoods:cooked_leg_cow",
+      "butchersdelightfoods:cooked_llama_leg",
+      "butchersdelightfoods:cooked_llama_loin",
+      "butchersdelightfoods:cooked_llama_ribs",
+      "butchersdelightfoods:cooked_sheeploin",
+      "butchersdelightfoods:cookedbeefribs",
+      "butchersdelightfoods:cookedporkloin",
+      "butchersdelightfoods:cookedporkribs",
+      "butchersdelightfoods:cookedsheeprack",
+      "butchersdelightfoods:cookedsheepshank"
+    ],
+    "dye_processing_added": {
+      "alexscaves:curly_fern": {
+        "count": 2,
+        "item": "minecraft:lime_dye"
+      },
+      "alexscaves:flytrap": {
+        "count": 1,
+        "item": "minecraft:red_dye"
+      },
+      "biomeswevegone:blue_rose_bush": {
+        "count": 2,
+        "item": "minecraft:blue_dye"
+      },
+      "biomeswevegone:delphinium": {
+        "count": 2,
+        "item": "minecraft:blue_dye"
+      },
+      "biomeswevegone:foxglove": {
+        "count": 2,
+        "item": "minecraft:cyan_dye"
+      },
+      "biomeswevegone:japanese_orchid": {
+        "count": 2,
+        "item": "minecraft:pink_dye"
+      },
+      "biomeswevegone:tall_allium": {
+        "count": 2,
+        "item": "minecraft:purple_dye"
+      },
+      "biomeswevegone:tall_pink_allium": {
+        "count": 2,
+        "item": "minecraft:pink_dye"
+      },
+      "biomeswevegone:tall_white_allium": {
+        "count": 2,
+        "item": "minecraft:white_dye"
+      },
+      "friendsandfoes:buttercup": {
+        "count": 1,
+        "item": "minecraft:yellow_dye"
+      },
+      "minecraft:charcoal": {
+        "count": 1,
+        "item": "minecraft:black_dye"
+      },
+      "unusualend:chorus_roots": {
+        "count": 1,
+        "item": "minecraft:magenta_dye"
+      },
+      "unusualend:enderling_scrap": {
+        "count": 1,
+        "item": "minecraft:black_dye"
+      },
+      "unusualend:endstone_sprouts": {
+        "count": 1,
+        "item": "minecraft:pink_dye"
+      },
+      "unusualend:gloopy_bush": {
+        "count": 1,
+        "item": "minecraft:purple_dye"
+      },
+      "unusualend:gloopy_tendrils": {
+        "count": 1,
+        "item": "minecraft:magenta_dye"
+      },
+      "unusualend:purpur_grass": {
+        "count": 1,
+        "item": "minecraft:pink_dye"
+      }
+    },
+    "native_definition_count": 684,
+    "native_distinct_source_count": 673,
+    "native_expanded_ingredient_count": 805,
+    "saplings_added": [
+      "alexscaves:ancient_sapling",
+      "alexscaves:pewen_sapling",
+      "alexscaves:thornwood_sapling",
+      "biomeswevegone:araucaria_sapling",
+      "biomeswevegone:aspen_sapling",
+      "biomeswevegone:baobab_sapling",
+      "biomeswevegone:blue_enchanted_sapling",
+      "biomeswevegone:blue_spruce_sapling",
+      "biomeswevegone:brown_birch_sapling",
+      "biomeswevegone:brown_oak_sapling",
+      "biomeswevegone:brown_zelkova_sapling",
+      "biomeswevegone:cika_sapling",
+      "biomeswevegone:cypress_sapling",
+      "biomeswevegone:ebony_sapling",
+      "biomeswevegone:fir_sapling",
+      "biomeswevegone:green_enchanted_sapling",
+      "biomeswevegone:holly_sapling",
+      "biomeswevegone:indigo_jacaranda_sapling",
+      "biomeswevegone:ironwood_sapling",
+      "biomeswevegone:jacaranda_sapling",
+      "biomeswevegone:mahogany_sapling",
+      "biomeswevegone:maple_sapling",
+      "biomeswevegone:orange_birch_sapling",
+      "biomeswevegone:orange_oak_sapling",
+      "biomeswevegone:orange_spruce_sapling",
+      "biomeswevegone:orchard_sapling",
+      "biomeswevegone:palm_sapling",
+      "biomeswevegone:palo_verde_sapling",
+      "biomeswevegone:pine_sapling",
+      "biomeswevegone:rainbow_eucalyptus_sapling",
+      "biomeswevegone:red_birch_sapling",
+      "biomeswevegone:red_maple_sapling",
+      "biomeswevegone:red_oak_sapling",
+      "biomeswevegone:red_spruce_sapling",
+      "biomeswevegone:redwood_sapling",
+      "biomeswevegone:silver_maple_sapling",
+      "biomeswevegone:skyris_sapling",
+      "biomeswevegone:white_mangrove_sapling",
+      "biomeswevegone:white_sakura_sapling",
+      "biomeswevegone:willow_sapling",
+      "biomeswevegone:witch_hazel_sapling",
+      "biomeswevegone:yellow_birch_sapling",
+      "biomeswevegone:yellow_sakura_sapling",
+      "biomeswevegone:yellow_spruce_sapling",
+      "biomeswevegone:yucca_sapling",
+      "biomeswevegone:zelkova_sapling",
+      "minecraft:acacia_sapling",
+      "minecraft:birch_sapling",
+      "minecraft:cherry_sapling",
+      "minecraft:jungle_sapling",
+      "minecraft:mangrove_propagule",
+      "minecraft:spruce_sapling",
+      "quark:ancient_sapling",
+      "quark:blue_blossom_sapling",
+      "quark:lavender_blossom_sapling",
+      "quark:orange_blossom_sapling",
+      "quark:red_blossom_sapling",
+      "quark:yellow_blossom_sapling"
+    ],
+    "saplings_already_covered": [
+      "minecraft:dark_oak_sapling",
+      "minecraft:oak_sapling"
+    ],
+    "tree_seeds_not_woody_saplings": [
+      "dynamictrees:acacia_seed",
+      "dynamictrees:apple_oak_seed",
+      "dynamictrees:azalea_seed",
+      "dynamictrees:birch_seed",
+      "dynamictrees:cherry_seed",
+      "dynamictrees:cocoa_seed",
+      "dynamictrees:crimson_seed",
+      "dynamictrees:dark_oak_seed",
+      "dynamictrees:jungle_seed",
+      "dynamictrees:mangrove_seed",
+      "dynamictrees:mega_crimson_seed",
+      "dynamictrees:mega_jungle_seed",
+      "dynamictrees:mega_spruce_seed",
+      "dynamictrees:mega_warped_seed",
+      "dynamictrees:oak_seed",
+      "dynamictrees:spruce_seed",
+      "dynamictrees:warped_seed"
+    ]
+  },
+  "fluids": {
+    "kubejs:juice_abnormals_delight_pickerelweed_juice_ready": "Pickerelweed Juice",
+    "kubejs:juice_abnormals_delight_pickerelweed_juice_stage_1": "Pickerelweed Juice (Brewing)",
+    "kubejs:juice_biomeswevegone_aloe_vera_juice_ready": "Aloe Vera Juice",
+    "kubejs:juice_delightful_food_melon_juice_from_mini_melon_ready": "Melon Juice",
+    "kubejs:juice_delightful_food_prickly_pear_juice_from_cooked_prickly_pear_ready": "Prickly Pear Juice",
+    "kubejs:juice_delightful_food_prickly_pear_juice_from_prickly_pear_ready": "Prickly Pear Juice",
+    "kubejs:juice_delightful_food_prickly_pear_juice_from_prickly_pear_stage_1": "Prickly Pear Juice (Brewing)",
+    "kubejs:juice_endersdelight_chorus_juice_ready": "Chorus Juice",
+    "kubejs:juice_farmersdelight_melon_juice_ready": "Melon Juice",
+    "kubejs:juice_farmersdelight_melon_juice_stage_1": "Melon Juice (Brewing)",
+    "kubejs:juice_farmersdelight_melon_juice_stage_2": "Melon Juice (Brewing)",
+    "kubejs:juice_oceanic_delight_nautilus_juice_ready": "Nautilus Juice",
+    "kubejs:juice_oceanic_delight_nautilus_juice_stage_1": "Nautilus Juice (Brewing)",
+    "kubejs:juice_oceanic_delight_sea_grape_juice_ready": "Sea Grape Juice",
+    "kubejs:juice_oceanic_delight_sea_grape_juice_stage_1": "Sea Grape Juice (Brewing)",
+    "kubejs:juice_unusualend_chorus_juice_farming_delight_ready": "Chorus Juice",
+    "kubejs:juice_unusualend_chorus_juice_farming_delight_stage_1": "Chorus Juice (Brewing)",
+    "kubejs:juice_unusualend_chorus_juice_ready": "Chorus Juice",
+    "kubejs:juice_unusualend_chorus_juice_stage_1": "Chorus Juice (Brewing)"
+  },
+  "items": {
+    "kubejs:chorus_pie_filling": "Chorus Pie Filling"
+  },
+  "juice_items": [
+    "abnormals_delight:pickerelweed_juice",
+    "biomeswevegone:aloe_vera_juice",
+    "delightful:long_prickly_pear_juice",
+    "delightful:prickly_pear_juice",
+    "endersdelight:chorus_juice",
+    "farmersdelight:melon_juice",
+    "oceanic_delight:nautilus_juice",
+    "oceanic_delight:sea_grape_juice",
+    "unusualend:chorus_juice"
+  ],
+  "monster_items": [
+    "endersdelight:amberveil_stew",
+    "endersdelight:amberveiled_curry",
+    "endersdelight:chicken_curry",
+    "endersdelight:chorus_pie",
+    "endersdelight:chorus_stew",
+    "endersdelight:crawling_sandwich",
+    "endersdelight:crispy_skewer",
+    "endersdelight:ender_paella",
+    "endersdelight:endermite_stew",
+    "endersdelight:pearl_pasta",
+    "endersdelight:steak_fries",
+    "endersdelight:strange_eclair",
+    "endersdelight:stuffed_shulker",
+    "endersdelight:twisted_cereal",
+    "endersdelight:uncanny_cookies",
+    "endersdelight:veil_of_flames_risotto"
+  ],
+  "recipe_count": 91,
+  "removals": [
+    "delightful:integration/create/filling/long_prickly_pear_juice",
+    "delightful:integration/create/filling/prickly_pear_juice",
+    "farmersrespite:filling/melon_juice"
+  ],
+  "sources": {
+    "abnormals_delight:pickerelweed_juice": "abnormals_delight:pickerelweed_juice",
+    "biomeswevegone:aloe_vera_juice": "biomeswevegone:aloe_vera_juice",
+    "cooking_compat:brewing/abnormals_delight_pickerelweed_juice_2": "abnormals_delight:pickerelweed_juice",
+    "cooking_compat:brewing/delightful_food_prickly_pear_juice_from_prickly_pear_2": "delightful:food/prickly_pear_juice_from_prickly_pear",
+    "cooking_compat:brewing/farmersdelight_melon_juice_2": "farmersdelight:melon_juice",
+    "cooking_compat:brewing/farmersdelight_melon_juice_3": "farmersdelight:melon_juice",
+    "cooking_compat:brewing/oceanic_delight_nautilus_juice_2": "oceanic_delight:nautilus_juice",
+    "cooking_compat:brewing/oceanic_delight_sea_grape_juice_2": "oceanic_delight:sea_grape_juice",
+    "cooking_compat:brewing/unusualend_chorus_juice_2": "unusualend:chorus_juice",
+    "cooking_compat:brewing/unusualend_chorus_juice_farming_delight_2": "unusualend:chorus_juice_farming_delight",
+    "cooking_compat:cutting/alexscaves_curly_fern_dye": "alexscaves:lime_dye_from_curly_fern",
+    "cooking_compat:cutting/alexscaves_flytrap_dye": "alexscaves:red_dye_from_flytrap",
+    "cooking_compat:cutting/biomeswevegone_blue_rose_bush_dye": "minecraft:blue_dye_from_bwg_2_dye_tag",
+    "cooking_compat:cutting/biomeswevegone_delphinium_dye": "minecraft:blue_dye_from_bwg_2_dye_tag",
+    "cooking_compat:cutting/biomeswevegone_foxglove_dye": "minecraft:cyan_dye_from_bwg_2_dye_tag",
+    "cooking_compat:cutting/biomeswevegone_japanese_orchid_dye": "minecraft:pink_dye_from_bwg_2_dye_tag",
+    "cooking_compat:cutting/biomeswevegone_tall_allium_dye": "minecraft:purple_dye_from_bwg_2_dye_tag",
+    "cooking_compat:cutting/biomeswevegone_tall_pink_allium_dye": "minecraft:pink_dye_from_bwg_2_dye_tag",
+    "cooking_compat:cutting/biomeswevegone_tall_white_allium_dye": "minecraft:white_dye_from_bwg_2_dye_tag",
+    "cooking_compat:cutting/friendsandfoes_buttercup_dye": "friendsandfoes:yellow_dye_from_buttercup",
+    "cooking_compat:cutting/minecraft_charcoal_dye": "quark:tweaks/crafting/utility/misc/charcoal_to_black_dye",
+    "cooking_compat:cutting/unusualend_chorus_roots_dye": "unusualend:chorus_roots_dye",
+    "cooking_compat:cutting/unusualend_enderling_scrap_dye": "unusualend:ender_scrape_dye",
+    "cooking_compat:cutting/unusualend_endstone_sprouts_dye": "unusualend:endstone_sprouts_dye",
+    "cooking_compat:cutting/unusualend_gloopy_bush_dye": "unusualend:bush_dye",
+    "cooking_compat:cutting/unusualend_gloopy_tendrils_dye": "unusualend:tendrils_dye",
+    "cooking_compat:cutting/unusualend_purpur_grass_dye": "unusualend:chorus_grass_dye",
+    "cooking_compat:monster_cooking/chorus_pie_filling": "endersdelight:chorus_pie",
+    "cooking_compat:pouring/abnormals_delight_pickerelweed_juice": "abnormals_delight:pickerelweed_juice",
+    "cooking_compat:pouring/biomeswevegone_aloe_vera_juice": "biomeswevegone:aloe_vera_juice",
+    "cooking_compat:pouring/delightful_food_melon_juice_from_mini_melon": "delightful:food/melon_juice_from_mini_melon",
+    "cooking_compat:pouring/delightful_food_prickly_pear_juice_from_cooked_prickly_pear": "delightful:food/prickly_pear_juice_from_cooked_prickly_pear",
+    "cooking_compat:pouring/delightful_food_prickly_pear_juice_from_prickly_pear": "delightful:food/prickly_pear_juice_from_prickly_pear",
+    "cooking_compat:pouring/endersdelight_chorus_juice": "endersdelight:chorus_juice",
+    "cooking_compat:pouring/farmersdelight_melon_juice": "farmersdelight:melon_juice",
+    "cooking_compat:pouring/oceanic_delight_nautilus_juice": "oceanic_delight:nautilus_juice",
+    "cooking_compat:pouring/oceanic_delight_sea_grape_juice": "oceanic_delight:sea_grape_juice",
+    "cooking_compat:pouring/unusualend_chorus_juice": "unusualend:chorus_juice",
+    "cooking_compat:pouring/unusualend_chorus_juice_farming_delight": "unusualend:chorus_juice_farming_delight",
+    "delightful:food/melon_juice_from_mini_melon": "delightful:food/melon_juice_from_mini_melon",
+    "delightful:food/prickly_pear_juice_from_cooked_prickly_pear": "delightful:food/prickly_pear_juice_from_cooked_prickly_pear",
+    "delightful:food/prickly_pear_juice_from_prickly_pear": "delightful:food/prickly_pear_juice_from_prickly_pear",
+    "endersdelight:chorus_juice": "endersdelight:chorus_juice",
+    "endersdelight:chorus_pie": "endersdelight:chorus_pie",
+    "endersdelight:cooking/amberveil_stew": "endersdelight:cooking/amberveil_stew",
+    "endersdelight:cooking/amberveiled_curry": "endersdelight:cooking/amberveiled_curry",
+    "endersdelight:cooking/chicken_curry": "endersdelight:cooking/chicken_curry",
+    "endersdelight:cooking/chorus_stew": "endersdelight:cooking/chorus_stew",
+    "endersdelight:cooking/ender_paella": "endersdelight:cooking/ender_paella",
+    "endersdelight:cooking/endermite_stew": "endersdelight:cooking/endermite_stew",
+    "endersdelight:cooking/pearl_pasta": "endersdelight:cooking/pearl_pasta",
+    "endersdelight:cooking/steak_fries": "endersdelight:cooking/steak_fries",
+    "endersdelight:cooking/stuffed_shulker": "endersdelight:cooking/stuffed_shulker",
+    "endersdelight:cooking/veil_of_flames_risotto": "endersdelight:cooking/veil_of_flames_risotto",
+    "endersdelight:crawling_sandwich": "endersdelight:crawling_sandwich",
+    "endersdelight:crispy_skewer": "endersdelight:crispy_skewer",
+    "endersdelight:strange_eclair": "endersdelight:strange_eclair",
+    "endersdelight:twisted_cereal": "endersdelight:twisted_cereal",
+    "endersdelight:uncanny_cookies": "endersdelight:uncanny_cookies",
+    "farmersdelight:melon_juice": "farmersdelight:melon_juice",
+    "miners_delight:calamari_roll": "miners_delight:calamari_roll",
+    "miners_delight:cave_hamburger": "miners_delight:cave_hamburger",
+    "miners_delight:tentacles_on_a_stick": "miners_delight:tentacles_on_a_stick",
+    "oceanic_delight:glow_squid_stew": "oceanic_delight:glow_squid_stew",
+    "oceanic_delight:nautilus_juice": "oceanic_delight:nautilus_juice",
+    "oceanic_delight:sea_grape_juice": "oceanic_delight:sea_grape_juice",
+    "oceanic_delight:seafood_skewer": "oceanic_delight:seafood_skewer",
+    "oceanic_delight:squid_and_pickles": "oceanic_delight:squid_and_pickles",
+    "unusualend:chorus_juice": "unusualend:chorus_juice",
+    "unusualend:chorus_juice_farming_delight": "unusualend:chorus_juice_farming_delight"
+  }
+}

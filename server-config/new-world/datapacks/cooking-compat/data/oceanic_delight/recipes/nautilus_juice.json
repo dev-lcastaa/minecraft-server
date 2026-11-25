@@ -1,0 +1,21 @@
+{
+  "base": {
+    "count": 1000,
+    "fluid": "minecraft:water"
+  },
+  "brewingtime": 200,
+  "experience": 0,
+  "ingredients": [
+    {
+      "item": "minecraft:kelp"
+    },
+    {
+      "item": "minecraft:apple"
+    }
+  ],
+  "result": {
+    "count": 1000,
+    "fluid": "kubejs:juice_oceanic_delight_nautilus_juice_stage_1"
+  },
+  "type": "farmersrespite:brewing"
+}

@@ -1,0 +1,18 @@
+{
+  "amount": 1000,
+  "conditions": [
+    {
+      "type": "delightful:enabled",
+      "value": "mini_melon"
+    }
+  ],
+  "container": {
+    "item": "minecraft:glass_bottle"
+  },
+  "fluid": "kubejs:juice_delightful_food_melon_juice_from_mini_melon_ready",
+  "output": {
+    "count": 1,
+    "item": "farmersdelight:melon_juice"
+  },
+  "type": "farmersrespite:kettle_pouring"
+}

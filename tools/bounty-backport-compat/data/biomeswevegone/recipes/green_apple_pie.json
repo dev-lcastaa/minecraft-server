@@ -1,0 +1,23 @@
+{
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "biomeswevegone:green_apple"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    [
+      {
+        "tag": "forge:eggs"
+      },
+      {
+        "tag": "forge:eggs"
+      }
+    ]
+  ],
+  "result": {
+    "item": "biomeswevegone:green_apple_pie"
+  },
+  "type": "minecraft:crafting_shapeless"
+}

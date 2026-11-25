@@ -1,0 +1,767 @@
+{
+  "content": {
+    "bounty_backport_compat_compat_mapper_rews_fish_n_ships_acacia_canoe": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "fish_n_ships:acacia_canoe",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 720.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_mapper_rews_fish_n_ships_acacia_canoe_with_chest": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "fish_n_ships:acacia_canoe_with_chest",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 840.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_mapper_rews_fish_n_ships_acacia_canoe_with_double_chest": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "fish_n_ships:acacia_canoe_with_double_chest",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 960.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_mapper_rews_fish_n_ships_acacia_raft": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "fish_n_ships:acacia_raft",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 360.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_mapper_rews_fish_n_ships_acacia_supply_raft": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "fish_n_ships:acacia_supply_raft",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 480.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_mapper_rews_fish_n_ships_birch_canoe": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "fish_n_ships:birch_canoe",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 720.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_mapper_rews_fish_n_ships_birch_canoe_with_chest": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "fish_n_ships:birch_canoe_with_chest",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 840.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_mapper_rews_fish_n_ships_birch_canoe_with_double_chest": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "fish_n_ships:birch_canoe_with_double_chest",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 960.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_mapper_rews_fish_n_ships_birch_raft": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "fish_n_ships:birch_raft",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 360.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_mapper_rews_fish_n_ships_birch_supply_raft": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "fish_n_ships:birch_supply_raft",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 480.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_mapper_rews_fish_n_ships_cherry_canoe": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "fish_n_ships:cherry_canoe",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 720.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_mapper_rews_fish_n_ships_cherry_canoe_with_chest": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "fish_n_ships:cherry_canoe_with_chest",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 840.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_mapper_rews_fish_n_ships_cherry_canoe_with_double_chest": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "fish_n_ships:cherry_canoe_with_double_chest",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 960.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_mapper_rews_fish_n_ships_cherry_raft": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "fish_n_ships:cherry_raft",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 360.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_mapper_rews_fish_n_ships_cherry_supply_raft": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "fish_n_ships:cherry_supply_raft",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 480.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_mapper_rews_fish_n_ships_crimson_canoe": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "fish_n_ships:crimson_canoe",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 720.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_mapper_rews_fish_n_ships_crimson_canoe_with_chest": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "fish_n_ships:crimson_canoe_with_chest",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 840.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_mapper_rews_fish_n_ships_crimson_canoe_with_double_chest": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "fish_n_ships:crimson_canoe_with_double_chest",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 960.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_mapper_rews_fish_n_ships_crimson_raft": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "fish_n_ships:crimson_raft",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 360.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_mapper_rews_fish_n_ships_crimson_supply_raft": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "fish_n_ships:crimson_supply_raft",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 480.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_mapper_rews_fish_n_ships_dark_oak_canoe": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "fish_n_ships:dark_oak_canoe",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 720.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_mapper_rews_fish_n_ships_dark_oak_canoe_with_chest": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "fish_n_ships:dark_oak_canoe_with_chest",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 840.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_mapper_rews_fish_n_ships_dark_oak_canoe_with_double_chest": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "fish_n_ships:dark_oak_canoe_with_double_chest",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 960.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_mapper_rews_fish_n_ships_dark_oak_raft": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "fish_n_ships:dark_oak_raft",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 360.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_mapper_rews_fish_n_ships_dark_oak_supply_raft": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "fish_n_ships:dark_oak_supply_raft",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 480.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_mapper_rews_fish_n_ships_jungle_canoe": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "fish_n_ships:jungle_canoe",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 720.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_mapper_rews_fish_n_ships_jungle_canoe_with_chest": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "fish_n_ships:jungle_canoe_with_chest",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 840.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_mapper_rews_fish_n_ships_jungle_canoe_with_double_chest": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "fish_n_ships:jungle_canoe_with_double_chest",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 960.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_mapper_rews_fish_n_ships_jungle_raft": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "fish_n_ships:jungle_raft",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 360.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_mapper_rews_fish_n_ships_jungle_supply_raft": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "fish_n_ships:jungle_supply_raft",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 480.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_mapper_rews_fish_n_ships_mangrove_canoe": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "fish_n_ships:mangrove_canoe",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 720.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_mapper_rews_fish_n_ships_mangrove_canoe_with_chest": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "fish_n_ships:mangrove_canoe_with_chest",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 840.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_mapper_rews_fish_n_ships_mangrove_canoe_with_double_chest": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "fish_n_ships:mangrove_canoe_with_double_chest",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 960.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_mapper_rews_fish_n_ships_mangrove_raft": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "fish_n_ships:mangrove_raft",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 360.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_mapper_rews_fish_n_ships_mangrove_supply_raft": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "fish_n_ships:mangrove_supply_raft",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 480.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_mapper_rews_fish_n_ships_oak_canoe": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "fish_n_ships:oak_canoe",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 720.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_mapper_rews_fish_n_ships_oak_canoe_with_chest": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "fish_n_ships:oak_canoe_with_chest",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 840.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_mapper_rews_fish_n_ships_oak_canoe_with_double_chest": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "fish_n_ships:oak_canoe_with_double_chest",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 960.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_mapper_rews_fish_n_ships_oak_raft": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "fish_n_ships:oak_raft",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 360.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_mapper_rews_fish_n_ships_oak_supply_raft": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "fish_n_ships:oak_supply_raft",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 480.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_mapper_rews_fish_n_ships_spruce_canoe": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "fish_n_ships:spruce_canoe",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 720.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_mapper_rews_fish_n_ships_spruce_canoe_with_chest": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "fish_n_ships:spruce_canoe_with_chest",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 840.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_mapper_rews_fish_n_ships_spruce_canoe_with_double_chest": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "fish_n_ships:spruce_canoe_with_double_chest",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 960.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_mapper_rews_fish_n_ships_spruce_raft": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "fish_n_ships:spruce_raft",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 360.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_mapper_rews_fish_n_ships_spruce_supply_raft": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "fish_n_ships:spruce_supply_raft",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 480.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_mapper_rews_fish_n_ships_warped_canoe": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "fish_n_ships:warped_canoe",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 720.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_mapper_rews_fish_n_ships_warped_canoe_with_chest": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "fish_n_ships:warped_canoe_with_chest",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 840.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_mapper_rews_fish_n_ships_warped_canoe_with_double_chest": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "fish_n_ships:warped_canoe_with_double_chest",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 960.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_mapper_rews_fish_n_ships_warped_raft": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "fish_n_ships:warped_raft",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 360.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_mapper_rews_fish_n_ships_warped_supply_raft": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "fish_n_ships:warped_supply_raft",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 480.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_mapper_rews_minecraft_bamboo_raft": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:bamboo_raft",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_mapper_rews_minecraft_compass": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:compass",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_mapper_rews_minecraft_jack_o_lantern": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:jack_o_lantern",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_mapper_rews_minecraft_lantern": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:lantern",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_mapper_rews_minecraft_map": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:map",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_mapper_rews_minecraft_recovery_compass": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:recovery_compass",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_mapper_rews_minecraft_sea_lantern": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:sea_lantern",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_mapper_rews_minecraft_soul_lantern": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:soul_lantern",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_mapper_rews_minecraft_spyglass": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:spyglass",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_mapper_rews_naturescompass_naturescompass": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "naturescompass:naturescompass",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 840.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_mapper_rews_supplementaries_rope_arrow": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "supplementaries:rope_arrow",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_mapper_rews_supplementaries_slice_map": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "supplementaries:slice_map",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_mapper_rews_the_bumblezone_honey_compass": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "the_bumblezone:honey_compass",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    }
+  },
+  "replace": false,
+  "weightMult": 1.0
+}

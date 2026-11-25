@@ -1,0 +1,23 @@
+modLoader="lowcodefml"
+loaderVersion="[47,48)"
+license="MIT"
+
+[[mods]]
+modId="bounty_backport_compat"
+version="1.0.0"
+displayName="Bounty and Backported Animal Compatibility"
+description="Additive, acquisition-checked bounty pools and animal ingredient compatibility."
+
+[[dependencies.bounty_backport_compat]]
+modId="bountiful"
+mandatory=true
+versionRange="[6.0.4,6.0.5)"
+ordering="AFTER"
+side="BOTH"
+
+[[dependencies.bounty_backport_compat]]
+modId="backported_animal_variants"
+mandatory=true
+versionRange="[0.3,0.4)"
+ordering="AFTER"
+side="BOTH"

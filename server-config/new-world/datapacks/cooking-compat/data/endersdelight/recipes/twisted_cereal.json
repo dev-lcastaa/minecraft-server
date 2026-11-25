@@ -1,0 +1,27 @@
+{
+  "container": {
+    "item": "endersdelight:shulker_bowl"
+  },
+  "cookingtime": 200,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "tag": "endersdelight:enderman_sight"
+    },
+    {
+      "tag": "endersdelight:enderman_loot"
+    },
+    {
+      "item": "minecraft:popped_chorus_fruit"
+    },
+    {
+      "item": "farmersdelight:milk_bottle"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "count": 1,
+    "item": "endersdelight:twisted_cereal"
+  },
+  "type": "dungeonsdelight:monster_cooking"
+}

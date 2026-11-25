@@ -1,0 +1,24 @@
+{
+  "category": "misc",
+  "key": {
+    "a": {
+      "item": "minecraft:milk_bucket"
+    },
+    "b": {
+      "tag": "forge:eggs"
+    },
+    "c": {
+      "item": "scp_ultimate:scp_148_ingot"
+    }
+  },
+  "pattern": [
+    "aba",
+    "bcb",
+    "aba"
+  ],
+  "result": {
+    "count": 1,
+    "item": "scp_ultimate:scp_1728fragment"
+  },
+  "type": "minecraft:crafting_shaped"
+}

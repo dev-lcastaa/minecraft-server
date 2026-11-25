@@ -1,0 +1,1164 @@
+{
+  "content": {
+    "bounty_backport_compat_compat_fisherman_rews_alexscaves_cooked_lanternfish": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "alexscaves:cooked_lanternfish",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_alexscaves_cooked_trilocaris_tail": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "alexscaves:cooked_trilocaris_tail",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_alexscaves_cooked_tripodfish": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "alexscaves:cooked_tripodfish",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_alexscaves_lanternfish": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "alexscaves:lanternfish",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_alexscaves_trilocaris_tail": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "alexscaves:trilocaris_tail",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_alexscaves_tripodfish": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "alexscaves:tripodfish",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_alexsdelight_cooked_catfish_slice": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "alexsdelight:cooked_catfish_slice",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 60.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_alexsdelight_lobster_pasta": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "alexsdelight:lobster_pasta",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 480.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_alexsdelight_raw_catfish_slice": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "alexsdelight:raw_catfish_slice",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 60.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_alexsmobs_cooked_catfish": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "alexsmobs:cooked_catfish",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_alexsmobs_cooked_lobster_tail": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "alexsmobs:cooked_lobster_tail",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_alexsmobs_cosmic_cod": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "alexsmobs:cosmic_cod",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_alexsmobs_fish_bones": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "alexsmobs:fish_bones",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_alexsmobs_fish_oil": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "alexsmobs:fish_oil",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 600.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_alexsmobs_flying_fish": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "alexsmobs:flying_fish",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_alexsmobs_flying_fish_boots": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "alexsmobs:flying_fish_boots",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 400.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_alexsmobs_lobster_tail": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "alexsmobs:lobster_tail",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_alexsmobs_raw_catfish": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "alexsmobs:raw_catfish",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_farmersdelight_baked_cod_stew": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "farmersdelight:baked_cod_stew",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 410.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_farmersdelight_cod_roll": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "farmersdelight:cod_roll",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_farmersdelight_cod_slice": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "farmersdelight:cod_slice",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 60.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_farmersdelight_cooked_cod_slice": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "farmersdelight:cooked_cod_slice",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 60.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_farmersdelight_cooked_salmon_slice": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "farmersdelight:cooked_salmon_slice",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 60.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_farmersdelight_fish_stew": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "farmersdelight:fish_stew",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 400.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_farmersdelight_grilled_salmon": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "farmersdelight:grilled_salmon",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 540.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_farmersdelight_salmon_roll": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "farmersdelight:salmon_roll",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_farmersdelight_salmon_slice": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "farmersdelight:salmon_slice",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 60.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_farmersdelight_squid_ink_pasta": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "farmersdelight:squid_ink_pasta",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 420.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_festive_delight_salmon_verrines": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "festive_delight:salmon_verrines",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 300.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_fish_n_ships_acacia_canoe": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "fish_n_ships:acacia_canoe",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 720.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_fish_n_ships_acacia_canoe_with_chest": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "fish_n_ships:acacia_canoe_with_chest",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 840.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_fish_n_ships_acacia_canoe_with_double_chest": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "fish_n_ships:acacia_canoe_with_double_chest",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 960.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_fish_n_ships_acacia_raft": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "fish_n_ships:acacia_raft",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 360.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_fish_n_ships_acacia_supply_raft": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "fish_n_ships:acacia_supply_raft",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 480.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_fish_n_ships_birch_canoe": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "fish_n_ships:birch_canoe",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 720.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_fish_n_ships_birch_canoe_with_chest": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "fish_n_ships:birch_canoe_with_chest",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 840.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_fish_n_ships_birch_canoe_with_double_chest": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "fish_n_ships:birch_canoe_with_double_chest",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 960.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_fish_n_ships_birch_raft": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "fish_n_ships:birch_raft",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 360.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_fish_n_ships_birch_supply_raft": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "fish_n_ships:birch_supply_raft",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 480.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_fish_n_ships_cherry_canoe": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "fish_n_ships:cherry_canoe",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 720.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_fish_n_ships_cherry_canoe_with_chest": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "fish_n_ships:cherry_canoe_with_chest",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 840.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_fish_n_ships_cherry_canoe_with_double_chest": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "fish_n_ships:cherry_canoe_with_double_chest",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 960.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_fish_n_ships_cherry_raft": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "fish_n_ships:cherry_raft",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 360.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_fish_n_ships_cherry_supply_raft": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "fish_n_ships:cherry_supply_raft",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 480.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_fish_n_ships_crimson_canoe": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "fish_n_ships:crimson_canoe",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 720.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_fish_n_ships_crimson_canoe_with_chest": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "fish_n_ships:crimson_canoe_with_chest",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 840.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_fish_n_ships_crimson_canoe_with_double_chest": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "fish_n_ships:crimson_canoe_with_double_chest",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 960.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_fish_n_ships_crimson_raft": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "fish_n_ships:crimson_raft",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 360.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_fish_n_ships_crimson_supply_raft": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "fish_n_ships:crimson_supply_raft",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 480.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_fish_n_ships_dark_oak_canoe": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "fish_n_ships:dark_oak_canoe",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 720.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_fish_n_ships_dark_oak_canoe_with_chest": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "fish_n_ships:dark_oak_canoe_with_chest",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 840.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_fish_n_ships_dark_oak_canoe_with_double_chest": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "fish_n_ships:dark_oak_canoe_with_double_chest",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 960.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_fish_n_ships_dark_oak_raft": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "fish_n_ships:dark_oak_raft",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 360.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_fish_n_ships_dark_oak_supply_raft": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "fish_n_ships:dark_oak_supply_raft",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 480.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_fish_n_ships_jungle_canoe": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "fish_n_ships:jungle_canoe",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 720.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_fish_n_ships_jungle_canoe_with_chest": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "fish_n_ships:jungle_canoe_with_chest",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 840.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_fish_n_ships_jungle_canoe_with_double_chest": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "fish_n_ships:jungle_canoe_with_double_chest",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 960.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_fish_n_ships_jungle_raft": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "fish_n_ships:jungle_raft",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 360.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_fish_n_ships_jungle_supply_raft": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "fish_n_ships:jungle_supply_raft",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 480.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_fish_n_ships_mangrove_canoe": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "fish_n_ships:mangrove_canoe",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 720.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_fish_n_ships_mangrove_canoe_with_chest": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "fish_n_ships:mangrove_canoe_with_chest",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 840.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_fish_n_ships_mangrove_canoe_with_double_chest": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "fish_n_ships:mangrove_canoe_with_double_chest",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 960.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_fish_n_ships_mangrove_raft": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "fish_n_ships:mangrove_raft",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 360.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_fish_n_ships_mangrove_supply_raft": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "fish_n_ships:mangrove_supply_raft",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 480.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_fish_n_ships_oak_canoe": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "fish_n_ships:oak_canoe",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 720.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_fish_n_ships_oak_canoe_with_chest": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "fish_n_ships:oak_canoe_with_chest",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 840.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_fish_n_ships_oak_canoe_with_double_chest": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "fish_n_ships:oak_canoe_with_double_chest",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 960.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_fish_n_ships_oak_raft": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "fish_n_ships:oak_raft",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 360.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_fish_n_ships_oak_supply_raft": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "fish_n_ships:oak_supply_raft",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 480.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_fish_n_ships_spruce_canoe": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "fish_n_ships:spruce_canoe",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 720.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_fish_n_ships_spruce_canoe_with_chest": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "fish_n_ships:spruce_canoe_with_chest",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 840.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_fish_n_ships_spruce_canoe_with_double_chest": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "fish_n_ships:spruce_canoe_with_double_chest",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 960.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_fish_n_ships_spruce_raft": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "fish_n_ships:spruce_raft",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 360.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_fish_n_ships_spruce_supply_raft": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "fish_n_ships:spruce_supply_raft",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 480.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_fish_n_ships_warped_canoe": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "fish_n_ships:warped_canoe",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 720.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_fish_n_ships_warped_canoe_with_chest": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "fish_n_ships:warped_canoe_with_chest",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 840.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_fish_n_ships_warped_canoe_with_double_chest": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "fish_n_ships:warped_canoe_with_double_chest",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 960.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_fish_n_ships_warped_raft": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "fish_n_ships:warped_raft",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 360.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_fish_n_ships_warped_supply_raft": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "fish_n_ships:warped_supply_raft",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 480.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_friendsandfoes_crab_claw": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "friendsandfoes:crab_claw",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_minecraft_bamboo_raft": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "minecraft:bamboo_raft",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_minecraft_cod": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "minecraft:cod",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_minecraft_cod_bucket": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "minecraft:cod_bucket",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_minecraft_cooked_cod": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "minecraft:cooked_cod",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_minecraft_cooked_salmon": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "minecraft:cooked_salmon",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_minecraft_fishing_rod": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "minecraft:fishing_rod",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_minecraft_salmon": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "minecraft:salmon",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_minecraft_salmon_bucket": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "minecraft:salmon_bucket",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_minecraft_tropical_fish": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "minecraft:tropical_fish",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_minecraft_tropical_fish_bucket": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "minecraft:tropical_fish_bucket",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_miners_delight_baked_squid": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "miners_delight:baked_squid",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_miners_delight_glow_squid": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "miners_delight:glow_squid",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_miners_delight_squid": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "miners_delight:squid",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_miners_delight_squid_sandwich": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "miners_delight:squid_sandwich",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 240.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_oceanic_delight_fishing_net": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "oceanic_delight:fishing_net",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 480.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fisherman_rews_villagersplus_fish_food": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "villagersplus:fish_food",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 240.0,
+      "weightMult": 0.1
+    }
+  },
+  "replace": false,
+  "weightMult": 1.0
+}

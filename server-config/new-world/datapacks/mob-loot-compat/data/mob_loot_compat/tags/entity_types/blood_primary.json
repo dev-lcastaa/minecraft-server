@@ -1,0 +1,221 @@
+{
+  "replace": true,
+  "values": [
+    {
+      "id": "ad_astra:star_crawler",
+      "required": false
+    },
+    {
+      "id": "alexscaves:corrodent",
+      "required": false
+    },
+    {
+      "id": "alexscaves:gammaroach",
+      "required": false
+    },
+    {
+      "id": "alexscaves:nucleeper",
+      "required": false
+    },
+    {
+      "id": "alexscaves:trilocaris",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:centipede_head",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:cockroach",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:dropbear",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:endergrade",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:enderiophage",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:leafcutter_ant",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:mimicube",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:rocky_roller",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:skreecher",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:straddler",
+      "required": false
+    },
+    {
+      "id": "endergetic:booflo_adolescent",
+      "required": false
+    },
+    {
+      "id": "endergetic:booflo_baby",
+      "required": false
+    },
+    {
+      "id": "fangs_n_claws:baby_scorpion",
+      "required": false
+    },
+    {
+      "id": "fangs_n_claws:desert_scorpion",
+      "required": false
+    },
+    {
+      "id": "fangs_n_claws:frost_scorpion",
+      "required": false
+    },
+    {
+      "id": "fangs_n_claws:nether_scorpion",
+      "required": false
+    },
+    {
+      "id": "fangs_n_claws:scorpion",
+      "required": false
+    },
+    {
+      "id": "fangs_n_claws:werewolf",
+      "required": false
+    },
+    {
+      "id": "fangs_n_claws:wild_wolf",
+      "required": false
+    },
+    {
+      "id": "mbackrooms:death_rat",
+      "required": false
+    },
+    {
+      "id": "minecraft:sulfur_cube",
+      "required": false
+    },
+    {
+      "id": "mutantmore:mutant_shulker",
+      "required": false
+    },
+    {
+      "id": "rottencreatures:scarab",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:rat",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:ratwild",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_023",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_058",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_098",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_111",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_111skin_0",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_111skin_1",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_111skin_2",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_131",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_35414",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_372",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_524",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_538",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_548",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_594",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_5941",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_718",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_772grub",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_8602",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_939",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_939wild",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_999",
+      "required": false
+    },
+    {
+      "id": "unusualend:bolok",
+      "required": false
+    },
+    {
+      "id": "unusualend:ender_blob",
+      "required": false
+    },
+    {
+      "id": "unusualend:spunkler",
+      "required": false
+    }
+  ]
+}

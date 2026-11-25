@@ -1,0 +1,21 @@
+{
+  "base": {
+    "count": 1000,
+    "fluid": "minecraft:water"
+  },
+  "brewingtime": 200,
+  "experience": 0,
+  "ingredients": [
+    {
+      "item": "oceanic_delight:sea_grape"
+    },
+    {
+      "item": "oceanic_delight:sea_grape"
+    }
+  ],
+  "result": {
+    "count": 1000,
+    "fluid": "kubejs:juice_oceanic_delight_sea_grape_juice_stage_1"
+  },
+  "type": "farmersrespite:brewing"
+}

@@ -1,0 +1,26 @@
+{
+  "category": "misc",
+  "key": {
+    "a": {
+      "item": "oceanic_delight:fried_shrimp"
+    },
+    "b": {
+      "tag": "cooking_compat:cooked_tentacles"
+    },
+    "c": {
+      "tag": "forge:sea_pickles"
+    },
+    "d": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "abc",
+    "d  "
+  ],
+  "result": {
+    "count": 1,
+    "item": "oceanic_delight:seafood_skewer"
+  },
+  "type": "minecraft:crafting_shaped"
+}

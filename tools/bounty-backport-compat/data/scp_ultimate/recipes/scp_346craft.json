@@ -1,0 +1,24 @@
+{
+  "category": "misc",
+  "key": {
+    "a": {
+      "tag": "forge:eggs"
+    },
+    "b": {
+      "item": "minecraft:feather"
+    },
+    "c": {
+      "item": "scp_ultimate:scp_148_ingot"
+    }
+  },
+  "pattern": [
+    "aba",
+    "bcb",
+    "aba"
+  ],
+  "result": {
+    "count": 1,
+    "item": "scp_ultimate:scp_346fragment"
+  },
+  "type": "minecraft:crafting_shaped"
+}

@@ -1,0 +1,67 @@
+{
+  "primary": [
+    "alexsmobs:centipede_head", "alexsmobs:cockroach", "alexsmobs:leafcutter_ant",
+    "alexsmobs:endergrade", "alexsmobs:enderiophage", "alexsmobs:skreecher",
+    "alexscaves:trilocaris", "alexscaves:gammaroach", "alexscaves:corrodent",
+    "fangs_n_claws:werewolf",
+    "unusualend:ender_blob", "unusualend:bolok", "unusualend:spunkler"
+  ],
+  "winged": [
+    "alexsmobs:roadrunner", "alexsmobs:fly", "alexsmobs:hummingbird", "alexsmobs:sunbird",
+    "alexsmobs:crimson_mosquito", "alexsmobs:shoebill", "alexsmobs:emu",
+    "alexsmobs:seagull", "alexsmobs:toucan", "alexsmobs:potoo", "alexsmobs:blue_jay",
+    "alexsmobs:warped_mosco",
+    "alexscaves:gloomoth", "alexscaves:vesper",
+    "fangs_n_claws:shrike", "fangs_n_claws:evil_bat", "fangs_n_claws:imp",
+    "paxos_pink_fairy:pink_fairy", "unusualend:dragling"
+  ],
+  "wide": [
+    "alexsmobs:moose", "alexsmobs:tusklin",
+    "alexsmobs:bison", "alexsmobs:rhinoceros", "alexsmobs:laviathan",
+    "alexsmobs:void_worm", "alexsmobs:bunfungus",
+    "alexscaves:forsaken", "alexscaves:gum_worm",
+    "fangs_n_claws:purple_worm", "fangs_n_claws:owlbear",
+    "mutantmore:mutant_hoglin", "unusualend:enderblob_queen"
+  ],
+  "humanoid": [
+    "alexscaves:underzealot", "alexscaves:watcher", "alexscaves:licowitch",
+    "fangs_n_claws:ogre", "fangs_n_claws:cave_ogre", "fangs_n_claws:hell_ogre",
+    "fangs_n_claws:goblin", "fangs_n_claws:dart_goblin",
+    "mutantmore:mutant_husk", "mutantmore:mutant_frozen_zombie", "mutantmore:mutant_jungle_zombie",
+    "scp_ultimate:class_d", "scp_ultimate:scp_scientist", "scp_ultimate:scp_guard"
+  ],
+  "aquatic": [
+    "alexsmobs:cachalot_whale", "alexsmobs:hammerhead_shark", "alexsmobs:lobster", "alexsmobs:blobfish",
+    "alexsmobs:frilled_shark", "alexsmobs:comb_jelly", "alexsmobs:cosmic_cod",
+    "alexsmobs:giant_squid", "alexsmobs:devils_hole_pupfish", "alexsmobs:catfish",
+    "alexsmobs:flying_fish", "alexsmobs:triops", "alexsmobs:sea_bear",
+    "alexscaves:radgill", "alexscaves:lanternfish", "alexscaves:sea_pig",
+    "alexscaves:hullbreaker", "alexscaves:gossamer_worm", "alexscaves:tripodfish",
+    "alexscaves:deep_one", "alexscaves:deep_one_knight", "alexscaves:deep_one_mage",
+    "alexscaves:sweetish_fish", "mbackrooms:volt_fish", "unusualend:glub", "unusualend:bluk"
+  ],
+  "bloodless": [
+    "alexsmobs:bone_serpent", "alexsmobs:bone_serpent_part",
+    "alexsmobs:centipede_body", "alexsmobs:centipede_tail", "alexsmobs:soul_vulture",
+    "alexsmobs:spectre", "alexsmobs:guster", "alexsmobs:void_worm_part",
+    "alexsmobs:anaconda_part", "alexsmobs:skelewag", "alexsmobs:farseer",
+    "alexsmobs:underminer", "alexsmobs:murmur", "alexsmobs:murmur_head",
+    "alexscaves:teletor", "alexscaves:magnetron", "alexscaves:boundroid",
+    "alexscaves:boundroid_winch", "alexscaves:ferrouslime", "alexscaves:notor",
+    "alexscaves:mine_guardian", "alexscaves:caramel_cube", "alexscaves:gingerbread_man",
+    "fangs_n_claws:golem", "fangs_n_claws:ice_golem", "fangs_n_claws:silver_skeleton",
+    "fangs_n_claws:ghost", "fangs_n_claws:fire_ghost", "fangs_n_claws:mimic",
+    "fangs_n_claws:skeleton_horse", "fangs_n_claws:zombie_horse", "fangs_n_claws:purple_worm_arm",
+    "mutantmore:concoction_w", "mutantmore:mutant_wither_skeleton",
+    "mutantmore:mutant_shulker_turret", "mutantmore:mutant_shulker_trap",
+    "cozy_home:seat", "cozy_home:seat_low", "cozy_home:clock_entity",
+    "dreamshift:still_life", "dreamshift:silk_circus_statue",
+    "mbackrooms:bed", "mbackrooms:guardian_bed",
+    "takesapillage:clay_golem", "unusualend:endstone_trapper", "unusualend:endstone_golem",
+    "unusualend:block_updater", "unusualend:void_crack", "unusualend:warped_balloon",
+    "unusualend:void_bomb", "unusualend:enderbulb", "unusualend:small_enderbulb",
+    "sons_of_sins:gulber_organs", "sons_of_sins:grub_organs", "sons_of_sins:devourer_organs",
+    "sons_of_sins:guzzler_organs", "sons_of_sins:nibbler_organs", "sons_of_sins:wistiver_jaw",
+    "sons_of_sins:blud_trade", "sons_of_sins:ether_ghost"
+  ]
+}

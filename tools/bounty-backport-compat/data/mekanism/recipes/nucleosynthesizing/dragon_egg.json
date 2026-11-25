@@ -1,0 +1,16 @@
+{
+  "duration": 1000,
+  "gasInput": {
+    "amount": 4,
+    "gas": "mekanism:antimatter"
+  },
+  "itemInput": {
+    "ingredient": {
+      "tag": "forge:eggs"
+    }
+  },
+  "output": {
+    "item": "minecraft:dragon_egg"
+  },
+  "type": "mekanism:nucleosynthesizing"
+}

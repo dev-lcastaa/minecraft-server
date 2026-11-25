@@ -1,0 +1,341 @@
+{
+  "content": {
+    "bounty_backport_compat_compat_leatherer_objs_alexscaves_tough_hide": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "alexscaves:tough_hide",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_leatherer_objs_alexsmobs_kangaroo_hide": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "alexsmobs:kangaroo_hide",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_leatherer_objs_alexsmobs_straddle_saddle": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "alexsmobs:straddle_saddle",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 480.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_leatherer_objs_create_belt_connector": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "create:belt_connector",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_leatherer_objs_doggytalents_leather_jacket": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "doggytalents:leather_jacket",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 1440.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_leatherer_objs_endergetic_booflo_hide": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "endergetic:booflo_hide",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_leatherer_objs_fangs_n_claws_horse_blanket": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "fangs_n_claws:horse_blanket",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 840.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_leatherer_objs_fangs_n_claws_sturdy_saddle": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "fangs_n_claws:sturdy_saddle",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 880.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_leatherer_objs_farmersdelight_horse_feed": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "farmersdelight:horse_feed",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 480.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_leatherer_objs_icys-better-horses_horse_cart_gear": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "icys-better-horses:horse_cart_gear",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 1335.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_leatherer_objs_icys-better-horses_horse_hooves_gear": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "icys-better-horses:horse_hooves_gear",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 1250.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_leatherer_objs_icys-better-horses_horse_stabilizer_gear": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "icys-better-horses:horse_stabilizer_gear",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 6900.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_leatherer_objs_icys-better-horses_upgraded_saddle": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "icys-better-horses:upgraded_saddle",
+      "rarity": "EPIC",
+      "repRequired": 20,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 50570.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_leatherer_objs_minecraft_diamond_horse_armor": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:diamond_horse_armor",
+      "rarity": "RARE",
+      "repRequired": 20,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 10000,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_leatherer_objs_minecraft_golden_horse_armor": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:golden_horse_armor",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_leatherer_objs_minecraft_iron_horse_armor": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:iron_horse_armor",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 1000,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_leatherer_objs_minecraft_leather": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:leather",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 200,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_leatherer_objs_minecraft_leather_boots": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:leather_boots",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_leatherer_objs_minecraft_leather_chestplate": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:leather_chestplate",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_leatherer_objs_minecraft_leather_helmet": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:leather_helmet",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_leatherer_objs_minecraft_leather_horse_armor": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:leather_horse_armor",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_leatherer_objs_minecraft_leather_leggings": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:leather_leggings",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_leatherer_objs_minecraft_netherite_horse_armor": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:netherite_horse_armor",
+      "rarity": "EPIC",
+      "repRequired": 20,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 138000.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_leatherer_objs_minecraft_rabbit_hide": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:rabbit_hide",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_leatherer_objs_minecraft_saddle": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:saddle",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_leatherer_objs_mynethersdelight_hoglin_hide": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "mynethersdelight:hoglin_hide",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_leatherer_objs_unusualend_scale_horse_armor": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "unusualend:scale_horse_armor",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 720.0,
+      "weightMult": 0.1
+    }
+  },
+  "replace": false,
+  "weightMult": 1.0
+}

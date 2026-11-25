@@ -1,0 +1,17 @@
+{
+  "ingredients": [
+    {
+      "tag": "minecraft:wool_carpets"
+    }
+  ],
+  "result": [
+    {
+      "count": 1,
+      "item": "minecraft:string"
+    }
+  ],
+  "tool": {
+    "tag": "forge:tools/knives"
+  },
+  "type": "farmersdelight:cutting"
+}

@@ -1,0 +1,17 @@
+{
+  "ingredients": [
+    {
+      "item": "friendsandfoes:buttercup"
+    }
+  ],
+  "result": [
+    {
+      "count": 1,
+      "item": "minecraft:yellow_dye"
+    }
+  ],
+  "tool": {
+    "tag": "forge:tools/knives"
+  },
+  "type": "farmersdelight:cutting"
+}

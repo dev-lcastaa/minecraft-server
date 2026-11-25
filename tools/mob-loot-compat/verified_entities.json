@@ -1,0 +1,2237 @@
+{
+  "ad_astra:corrupted_lunarian": {
+    "class": "earth.terrarium.adastra.common.entities.mob.CorruptedLunarian",
+    "jar": "ad_astra-forge-1.20.1-1.15.21.jar",
+    "registry": "earth.terrarium.adastra.common.registry.ModEntityTypes"
+  },
+  "ad_astra:glacian_ram": {
+    "class": "earth.terrarium.adastra.common.entities.mob.GlacianRam",
+    "jar": "ad_astra-forge-1.20.1-1.15.21.jar",
+    "registry": "earth.terrarium.adastra.common.registry.ModEntityTypes"
+  },
+  "ad_astra:martian_raptor": {
+    "class": "earth.terrarium.adastra.common.entities.mob.MartianRaptor",
+    "jar": "ad_astra-forge-1.20.1-1.15.21.jar",
+    "registry": "earth.terrarium.adastra.common.registry.ModEntityTypes"
+  },
+  "ad_astra:mogler": {
+    "class": "earth.terrarium.adastra.common.entities.mob.Mogler",
+    "jar": "ad_astra-forge-1.20.1-1.15.21.jar",
+    "registry": "earth.terrarium.adastra.common.registry.ModEntityTypes"
+  },
+  "ad_astra:pygro": {
+    "class": "earth.terrarium.adastra.common.entities.mob.Pygro",
+    "jar": "ad_astra-forge-1.20.1-1.15.21.jar",
+    "registry": "earth.terrarium.adastra.common.registry.ModEntityTypes"
+  },
+  "ad_astra:pygro_brute": {
+    "class": "earth.terrarium.adastra.common.entities.mob.PygroBrute",
+    "jar": "ad_astra-forge-1.20.1-1.15.21.jar",
+    "registry": "earth.terrarium.adastra.common.registry.ModEntityTypes"
+  },
+  "ad_astra:star_crawler": {
+    "class": "earth.terrarium.adastra.common.entities.mob.StarCrawler",
+    "jar": "ad_astra-forge-1.20.1-1.15.21.jar",
+    "registry": "earth.terrarium.adastra.common.registry.ModEntityTypes"
+  },
+  "ad_astra:sulfur_creeper": {
+    "class": "earth.terrarium.adastra.common.entities.mob.SulfurCreeper",
+    "jar": "ad_astra-forge-1.20.1-1.15.21.jar",
+    "registry": "earth.terrarium.adastra.common.registry.ModEntityTypes"
+  },
+  "ad_astra:zombified_mogler": {
+    "class": "earth.terrarium.adastra.common.entities.mob.ZombifiedMogler",
+    "jar": "ad_astra-forge-1.20.1-1.15.21.jar",
+    "registry": "earth.terrarium.adastra.common.registry.ModEntityTypes"
+  },
+  "ad_astra:zombified_pygro": {
+    "class": "earth.terrarium.adastra.common.entities.mob.ZombifiedPygro",
+    "jar": "ad_astra-forge-1.20.1-1.15.21.jar",
+    "registry": "earth.terrarium.adastra.common.registry.ModEntityTypes"
+  },
+  "alexscaves:atlatitan": {
+    "class": "com.github.alexmodguy.alexscaves.server.entity.living.AtlatitanEntity",
+    "jar": "alexscaves-2.0.2.jar",
+    "registry": "com.github.alexmodguy.alexscaves.server.entity.ACEntityRegistry"
+  },
+  "alexscaves:boundroid": {
+    "class": "com.github.alexmodguy.alexscaves.server.entity.living.BoundroidEntity",
+    "jar": "alexscaves-2.0.2.jar",
+    "registry": "com.github.alexmodguy.alexscaves.server.entity.ACEntityRegistry"
+  },
+  "alexscaves:boundroid_winch": {
+    "class": "com.github.alexmodguy.alexscaves.server.entity.living.BoundroidWinchEntity",
+    "jar": "alexscaves-2.0.2.jar",
+    "registry": "com.github.alexmodguy.alexscaves.server.entity.ACEntityRegistry"
+  },
+  "alexscaves:brainiac": {
+    "class": "com.github.alexmodguy.alexscaves.server.entity.living.BrainiacEntity",
+    "jar": "alexscaves-2.0.2.jar",
+    "registry": "com.github.alexmodguy.alexscaves.server.entity.ACEntityRegistry"
+  },
+  "alexscaves:candicorn": {
+    "class": "com.github.alexmodguy.alexscaves.server.entity.living.CandicornEntity",
+    "jar": "alexscaves-2.0.2.jar",
+    "registry": "com.github.alexmodguy.alexscaves.server.entity.ACEntityRegistry"
+  },
+  "alexscaves:caniac": {
+    "class": "com.github.alexmodguy.alexscaves.server.entity.living.CaniacEntity",
+    "jar": "alexscaves-2.0.2.jar",
+    "registry": "com.github.alexmodguy.alexscaves.server.entity.ACEntityRegistry"
+  },
+  "alexscaves:caramel_cube": {
+    "class": "com.github.alexmodguy.alexscaves.server.entity.living.CaramelCubeEntity",
+    "jar": "alexscaves-2.0.2.jar",
+    "registry": "com.github.alexmodguy.alexscaves.server.entity.ACEntityRegistry"
+  },
+  "alexscaves:corrodent": {
+    "class": "com.github.alexmodguy.alexscaves.server.entity.living.CorrodentEntity",
+    "jar": "alexscaves-2.0.2.jar",
+    "registry": "com.github.alexmodguy.alexscaves.server.entity.ACEntityRegistry"
+  },
+  "alexscaves:deep_one": {
+    "class": "com.github.alexmodguy.alexscaves.server.entity.living.DeepOneEntity",
+    "jar": "alexscaves-2.0.2.jar",
+    "registry": "com.github.alexmodguy.alexscaves.server.entity.ACEntityRegistry"
+  },
+  "alexscaves:deep_one_knight": {
+    "class": "com.github.alexmodguy.alexscaves.server.entity.living.DeepOneKnightEntity",
+    "jar": "alexscaves-2.0.2.jar",
+    "registry": "com.github.alexmodguy.alexscaves.server.entity.ACEntityRegistry"
+  },
+  "alexscaves:deep_one_mage": {
+    "class": "com.github.alexmodguy.alexscaves.server.entity.living.DeepOneMageEntity",
+    "jar": "alexscaves-2.0.2.jar",
+    "registry": "com.github.alexmodguy.alexscaves.server.entity.ACEntityRegistry"
+  },
+  "alexscaves:ferrouslime": {
+    "class": "com.github.alexmodguy.alexscaves.server.entity.living.FerrouslimeEntity",
+    "jar": "alexscaves-2.0.2.jar",
+    "registry": "com.github.alexmodguy.alexscaves.server.entity.ACEntityRegistry"
+  },
+  "alexscaves:forsaken": {
+    "class": "com.github.alexmodguy.alexscaves.server.entity.living.ForsakenEntity",
+    "jar": "alexscaves-2.0.2.jar",
+    "registry": "com.github.alexmodguy.alexscaves.server.entity.ACEntityRegistry"
+  },
+  "alexscaves:gammaroach": {
+    "class": "com.github.alexmodguy.alexscaves.server.entity.living.GammaroachEntity",
+    "jar": "alexscaves-2.0.2.jar",
+    "registry": "com.github.alexmodguy.alexscaves.server.entity.ACEntityRegistry"
+  },
+  "alexscaves:gingerbread_man": {
+    "class": "com.github.alexmodguy.alexscaves.server.entity.living.GingerbreadManEntity",
+    "jar": "alexscaves-2.0.2.jar",
+    "registry": "com.github.alexmodguy.alexscaves.server.entity.ACEntityRegistry"
+  },
+  "alexscaves:gloomoth": {
+    "class": "com.github.alexmodguy.alexscaves.server.entity.living.GloomothEntity",
+    "jar": "alexscaves-2.0.2.jar",
+    "registry": "com.github.alexmodguy.alexscaves.server.entity.ACEntityRegistry"
+  },
+  "alexscaves:gossamer_worm": {
+    "class": "com.github.alexmodguy.alexscaves.server.entity.living.GossamerWormEntity",
+    "jar": "alexscaves-2.0.2.jar",
+    "registry": "com.github.alexmodguy.alexscaves.server.entity.ACEntityRegistry"
+  },
+  "alexscaves:grottoceratops": {
+    "class": "com.github.alexmodguy.alexscaves.server.entity.living.GrottoceratopsEntity",
+    "jar": "alexscaves-2.0.2.jar",
+    "registry": "com.github.alexmodguy.alexscaves.server.entity.ACEntityRegistry"
+  },
+  "alexscaves:gum_worm": {
+    "class": "com.github.alexmodguy.alexscaves.server.entity.living.GumWormEntity",
+    "jar": "alexscaves-2.0.2.jar",
+    "registry": "com.github.alexmodguy.alexscaves.server.entity.ACEntityRegistry"
+  },
+  "alexscaves:gumbeeper": {
+    "class": "com.github.alexmodguy.alexscaves.server.entity.living.GumbeeperEntity",
+    "jar": "alexscaves-2.0.2.jar",
+    "registry": "com.github.alexmodguy.alexscaves.server.entity.ACEntityRegistry"
+  },
+  "alexscaves:gummy_bear": {
+    "class": "com.github.alexmodguy.alexscaves.server.entity.living.GummyBearEntity",
+    "jar": "alexscaves-2.0.2.jar",
+    "registry": "com.github.alexmodguy.alexscaves.server.entity.ACEntityRegistry"
+  },
+  "alexscaves:hullbreaker": {
+    "class": "com.github.alexmodguy.alexscaves.server.entity.living.HullbreakerEntity",
+    "jar": "alexscaves-2.0.2.jar",
+    "registry": "com.github.alexmodguy.alexscaves.server.entity.ACEntityRegistry"
+  },
+  "alexscaves:lanternfish": {
+    "class": "com.github.alexmodguy.alexscaves.server.entity.living.LanternfishEntity",
+    "jar": "alexscaves-2.0.2.jar",
+    "registry": "com.github.alexmodguy.alexscaves.server.entity.ACEntityRegistry"
+  },
+  "alexscaves:licowitch": {
+    "class": "com.github.alexmodguy.alexscaves.server.entity.living.LicowitchEntity",
+    "jar": "alexscaves-2.0.2.jar",
+    "registry": "com.github.alexmodguy.alexscaves.server.entity.ACEntityRegistry"
+  },
+  "alexscaves:luxtructosaurus": {
+    "class": "com.github.alexmodguy.alexscaves.server.entity.living.LuxtructosaurusEntity",
+    "jar": "alexscaves-2.0.2.jar",
+    "registry": "com.github.alexmodguy.alexscaves.server.entity.ACEntityRegistry"
+  },
+  "alexscaves:magnetron": {
+    "class": "com.github.alexmodguy.alexscaves.server.entity.living.MagnetronEntity",
+    "jar": "alexscaves-2.0.2.jar",
+    "registry": "com.github.alexmodguy.alexscaves.server.entity.ACEntityRegistry"
+  },
+  "alexscaves:mine_guardian": {
+    "class": "com.github.alexmodguy.alexscaves.server.entity.living.MineGuardianEntity",
+    "jar": "alexscaves-2.0.2.jar",
+    "registry": "com.github.alexmodguy.alexscaves.server.entity.ACEntityRegistry"
+  },
+  "alexscaves:notor": {
+    "class": "com.github.alexmodguy.alexscaves.server.entity.living.NotorEntity",
+    "jar": "alexscaves-2.0.2.jar",
+    "registry": "com.github.alexmodguy.alexscaves.server.entity.ACEntityRegistry"
+  },
+  "alexscaves:nucleeper": {
+    "class": "com.github.alexmodguy.alexscaves.server.entity.living.NucleeperEntity",
+    "jar": "alexscaves-2.0.2.jar",
+    "registry": "com.github.alexmodguy.alexscaves.server.entity.ACEntityRegistry"
+  },
+  "alexscaves:radgill": {
+    "class": "com.github.alexmodguy.alexscaves.server.entity.living.RadgillEntity",
+    "jar": "alexscaves-2.0.2.jar",
+    "registry": "com.github.alexmodguy.alexscaves.server.entity.ACEntityRegistry"
+  },
+  "alexscaves:raycat": {
+    "class": "com.github.alexmodguy.alexscaves.server.entity.living.RaycatEntity",
+    "jar": "alexscaves-2.0.2.jar",
+    "registry": "com.github.alexmodguy.alexscaves.server.entity.ACEntityRegistry"
+  },
+  "alexscaves:relicheirus": {
+    "class": "com.github.alexmodguy.alexscaves.server.entity.living.RelicheirusEntity",
+    "jar": "alexscaves-2.0.2.jar",
+    "registry": "com.github.alexmodguy.alexscaves.server.entity.ACEntityRegistry"
+  },
+  "alexscaves:sea_pig": {
+    "class": "com.github.alexmodguy.alexscaves.server.entity.living.SeaPigEntity",
+    "jar": "alexscaves-2.0.2.jar",
+    "registry": "com.github.alexmodguy.alexscaves.server.entity.ACEntityRegistry"
+  },
+  "alexscaves:subterranodon": {
+    "class": "com.github.alexmodguy.alexscaves.server.entity.living.SubterranodonEntity",
+    "jar": "alexscaves-2.0.2.jar",
+    "registry": "com.github.alexmodguy.alexscaves.server.entity.ACEntityRegistry"
+  },
+  "alexscaves:sweetish_fish": {
+    "class": "com.github.alexmodguy.alexscaves.server.entity.living.SweetishFishEntity",
+    "jar": "alexscaves-2.0.2.jar",
+    "registry": "com.github.alexmodguy.alexscaves.server.entity.ACEntityRegistry"
+  },
+  "alexscaves:teletor": {
+    "class": "com.github.alexmodguy.alexscaves.server.entity.living.TeletorEntity",
+    "jar": "alexscaves-2.0.2.jar",
+    "registry": "com.github.alexmodguy.alexscaves.server.entity.ACEntityRegistry"
+  },
+  "alexscaves:tremorsaurus": {
+    "class": "com.github.alexmodguy.alexscaves.server.entity.living.TremorsaurusEntity",
+    "jar": "alexscaves-2.0.2.jar",
+    "registry": "com.github.alexmodguy.alexscaves.server.entity.ACEntityRegistry"
+  },
+  "alexscaves:tremorzilla": {
+    "class": "com.github.alexmodguy.alexscaves.server.entity.living.TremorzillaEntity",
+    "jar": "alexscaves-2.0.2.jar",
+    "registry": "com.github.alexmodguy.alexscaves.server.entity.ACEntityRegistry"
+  },
+  "alexscaves:trilocaris": {
+    "class": "com.github.alexmodguy.alexscaves.server.entity.living.TrilocarisEntity",
+    "jar": "alexscaves-2.0.2.jar",
+    "registry": "com.github.alexmodguy.alexscaves.server.entity.ACEntityRegistry"
+  },
+  "alexscaves:tripodfish": {
+    "class": "com.github.alexmodguy.alexscaves.server.entity.living.TripodfishEntity",
+    "jar": "alexscaves-2.0.2.jar",
+    "registry": "com.github.alexmodguy.alexscaves.server.entity.ACEntityRegistry"
+  },
+  "alexscaves:underzealot": {
+    "class": "com.github.alexmodguy.alexscaves.server.entity.living.UnderzealotEntity",
+    "jar": "alexscaves-2.0.2.jar",
+    "registry": "com.github.alexmodguy.alexscaves.server.entity.ACEntityRegistry"
+  },
+  "alexscaves:vallumraptor": {
+    "class": "com.github.alexmodguy.alexscaves.server.entity.living.VallumraptorEntity",
+    "jar": "alexscaves-2.0.2.jar",
+    "registry": "com.github.alexmodguy.alexscaves.server.entity.ACEntityRegistry"
+  },
+  "alexscaves:vesper": {
+    "class": "com.github.alexmodguy.alexscaves.server.entity.living.VesperEntity",
+    "jar": "alexscaves-2.0.2.jar",
+    "registry": "com.github.alexmodguy.alexscaves.server.entity.ACEntityRegistry"
+  },
+  "alexscaves:watcher": {
+    "class": "com.github.alexmodguy.alexscaves.server.entity.living.WatcherEntity",
+    "jar": "alexscaves-2.0.2.jar",
+    "registry": "com.github.alexmodguy.alexscaves.server.entity.ACEntityRegistry"
+  },
+  "alexsmobs:alligator_snapping_turtle": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityAlligatorSnappingTurtle",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:anaconda": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityAnaconda",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:anaconda_part": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityAnacondaPart",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:anteater": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityAnteater",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:bald_eagle": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityBaldEagle",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:banana_slug": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityBananaSlug",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:bison": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityBison",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:blobfish": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityBlobfish",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:blue_jay": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityBlueJay",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:bone_serpent": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityBoneSerpent",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:bone_serpent_part": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityBoneSerpentPart",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:bunfungus": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityBunfungus",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:cachalot_whale": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityCachalotWhale",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:caiman": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityCaiman",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:capuchin_monkey": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityCapuchinMonkey",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:catfish": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityCatfish",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:centipede_body": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityCentipedeBody",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:centipede_head": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityCentipedeHead",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:centipede_tail": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityCentipedeTail",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:cockroach": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityCockroach",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:comb_jelly": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityCombJelly",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:cosmaw": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityCosmaw",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:cosmic_cod": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityCosmicCod",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:crimson_mosquito": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityCrimsonMosquito",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:crocodile": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityCrocodile",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:crow": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityCrow",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:devils_hole_pupfish": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityDevilsHolePupfish",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:dropbear": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityDropBear",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:elephant": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityElephant",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:emu": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityEmu",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:endergrade": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityEndergrade",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:enderiophage": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityEnderiophage",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:farseer": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityFarseer",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:flutter": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityFlutter",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:fly": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityFly",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:flying_fish": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityFlyingFish",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:frilled_shark": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityFrilledShark",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:froststalker": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityFroststalker",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:gazelle": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityGazelle",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:gelada_monkey": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityGeladaMonkey",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:giant_squid": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityGiantSquid",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:gorilla": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityGorilla",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:grizzly_bear": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityGrizzlyBear",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:guster": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityGuster",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:hammerhead_shark": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityHammerheadShark",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:hummingbird": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityHummingbird",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:jerboa": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityJerboa",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:kangaroo": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityKangaroo",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:komodo_dragon": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityKomodoDragon",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:laviathan": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityLaviathan",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:leafcutter_ant": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityLeafcutterAnt",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:lobster": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityLobster",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:maned_wolf": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityManedWolf",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:mantis_shrimp": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityMantisShrimp",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:mimic_octopus": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityMimicOctopus",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:mimicube": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityMimicube",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:moose": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityMoose",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:mudskipper": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityMudskipper",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:mungus": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityMungus",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:murmur": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityMurmur",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:murmur_head": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityMurmurHead",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:orca": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityOrca",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:platypus": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityPlatypus",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:potoo": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityPotoo",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:raccoon": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityRaccoon",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:rain_frog": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityRainFrog",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:rattlesnake": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityRattlesnake",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:rhinoceros": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityRhinoceros",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:roadrunner": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityRoadrunner",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:rocky_roller": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityRockyRoller",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:sea_bear": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntitySeaBear",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:seagull": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntitySeagull",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:seal": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntitySeal",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:shoebill": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityShoebill",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:skelewag": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntitySkelewag",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:skreecher": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntitySkreecher",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:skunk": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntitySkunk",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:snow_leopard": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntitySnowLeopard",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:soul_vulture": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntitySoulVulture",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:spectre": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntitySpectre",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:straddler": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityStraddler",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:stradpole": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityStradpole",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:sugar_glider": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntitySugarGlider",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:sunbird": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntitySunbird",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:tarantula_hawk": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityTarantulaHawk",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:tasmanian_devil": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityTasmanianDevil",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:terrapin": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityTerrapin",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:tiger": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityTiger",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:toucan": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityToucan",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:triops": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityTriops",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:tusklin": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityTusklin",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:underminer": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityUnderminer",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:void_worm": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityVoidWorm",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:void_worm_part": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityVoidWormPart",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:warped_mosco": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityWarpedMosco",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "alexsmobs:warped_toad": {
+    "class": "com.github.alexthe666.alexsmobs.entity.EntityWarpedToad",
+    "jar": "alexsmobs-2.2.4-forge+1.20.1.jar",
+    "registry": "com.github.alexthe666.alexsmobs.entity.AMEntityRegistry"
+  },
+  "backported_animal_variants:cold_chicken": {
+    "class": "net.akaciobahno.backported_animal_variants.entity.custom.ColdChicken",
+    "jar": "backported_animal_variants-0.3-1.20.1.jar",
+    "registry": "net.akaciobahno.backported_animal_variants.entity.ModEntities"
+  },
+  "backported_animal_variants:cold_cow": {
+    "class": "net.akaciobahno.backported_animal_variants.entity.custom.ColdCow",
+    "jar": "backported_animal_variants-0.3-1.20.1.jar",
+    "registry": "net.akaciobahno.backported_animal_variants.entity.ModEntities"
+  },
+  "backported_animal_variants:cold_pig": {
+    "class": "net.akaciobahno.backported_animal_variants.entity.custom.ColdPig",
+    "jar": "backported_animal_variants-0.3-1.20.1.jar",
+    "registry": "net.akaciobahno.backported_animal_variants.entity.ModEntities"
+  },
+  "backported_animal_variants:warm_chicken": {
+    "class": "net.akaciobahno.backported_animal_variants.entity.custom.WarmChicken",
+    "jar": "backported_animal_variants-0.3-1.20.1.jar",
+    "registry": "net.akaciobahno.backported_animal_variants.entity.ModEntities"
+  },
+  "backported_animal_variants:warm_cow": {
+    "class": "net.akaciobahno.backported_animal_variants.entity.custom.WarmCow",
+    "jar": "backported_animal_variants-0.3-1.20.1.jar",
+    "registry": "net.akaciobahno.backported_animal_variants.entity.ModEntities"
+  },
+  "backported_animal_variants:warm_pig": {
+    "class": "net.akaciobahno.backported_animal_variants.entity.custom.WarmPig",
+    "jar": "backported_animal_variants-0.3-1.20.1.jar",
+    "registry": "net.akaciobahno.backported_animal_variants.entity.ModEntities"
+  },
+  "bosses_of_mass_destruction:gauntlet": {
+    "class": "com.cerbon.bosses_of_mass_destruction.entity.custom.gauntlet.GauntletEntity",
+    "jar": "BOMD-Forge-1.20.1-1.1.2.jar",
+    "registry": "com.cerbon.bosses_of_mass_destruction.entity.BMDEntities"
+  },
+  "bosses_of_mass_destruction:lich": {
+    "class": "com.cerbon.bosses_of_mass_destruction.entity.custom.lich.LichEntity",
+    "jar": "BOMD-Forge-1.20.1-1.1.2.jar",
+    "registry": "com.cerbon.bosses_of_mass_destruction.entity.BMDEntities"
+  },
+  "bosses_of_mass_destruction:obsidilith": {
+    "class": "com.cerbon.bosses_of_mass_destruction.entity.custom.obsidilith.ObsidilithEntity",
+    "jar": "BOMD-Forge-1.20.1-1.1.2.jar",
+    "registry": "com.cerbon.bosses_of_mass_destruction.entity.BMDEntities"
+  },
+  "bosses_of_mass_destruction:void_blossom": {
+    "class": "com.cerbon.bosses_of_mass_destruction.entity.custom.void_blossom.VoidBlossomEntity",
+    "jar": "BOMD-Forge-1.20.1-1.1.2.jar",
+    "registry": "com.cerbon.bosses_of_mass_destruction.entity.BMDEntities"
+  },
+  "cold_sweat:chameleon": {
+    "class": "com.momosoftworks.coldsweat.common.entity.Chameleon",
+    "jar": "ColdSweat-2.4.5.jar",
+    "registry": "com.momosoftworks.coldsweat.core.init.EntityInit"
+  },
+  "cozy_home:clock_entity": {
+    "class": "net.mcreator.cozyhome.entity.ClockEntityEntity",
+    "jar": "cozy_home-3.0.4-forge-1.20.1.jar",
+    "registry": "net.mcreator.cozyhome.init.CozyHomeModEntities"
+  },
+  "cozy_home:seat": {
+    "class": "net.mcreator.cozyhome.entity.SeatEntity",
+    "jar": "cozy_home-3.0.4-forge-1.20.1.jar",
+    "registry": "net.mcreator.cozyhome.init.CozyHomeModEntities"
+  },
+  "cozy_home:seat_low": {
+    "class": "net.mcreator.cozyhome.entity.SeatLowEntity",
+    "jar": "cozy_home-3.0.4-forge-1.20.1.jar",
+    "registry": "net.mcreator.cozyhome.init.CozyHomeModEntities"
+  },
+  "doggytalents:dog": {
+    "class": "doggytalents.common.entity.Dog",
+    "jar": "DoggyTalentsNext-1.20.1-1.19.1.jar",
+    "registry": "doggytalents.DoggyEntityTypes"
+  },
+  "dreamshift:dreamspace_observer": {
+    "class": "dev.multision.dreamshift.entity.DreamspaceObserverEntity",
+    "jar": "dreamshift-0.2.2-hotfix-forge.jar",
+    "registry": "dev.multision.dreamshift.registry.ModEntityTypes"
+  },
+  "dreamshift:nosi": {
+    "class": "dev.multision.dreamshift.entity.NosiEntity",
+    "jar": "dreamshift-0.2.2-hotfix-forge.jar",
+    "registry": "dev.multision.dreamshift.registry.ModEntityTypes"
+  },
+  "dreamshift:pocket_zombie_pigman": {
+    "class": "dev.multision.dreamshift.entity.PocketZombiePigmanEntity",
+    "jar": "dreamshift-0.2.2-hotfix-forge.jar",
+    "registry": "dev.multision.dreamshift.registry.ModEntityTypes"
+  },
+  "dreamshift:silk_circus_statue": {
+    "class": "dev.multision.dreamshift.entity.SilkCircusStatueEntity",
+    "jar": "dreamshift-0.2.2-hotfix-forge.jar",
+    "registry": "dev.multision.dreamshift.registry.ModEntityTypes"
+  },
+  "dreamshift:still_life": {
+    "class": "dev.multision.dreamshift.entity.StillLifeEntity",
+    "jar": "dreamshift-0.2.2-hotfix-forge.jar",
+    "registry": "dev.multision.dreamshift.registry.ModEntityTypes"
+  },
+  "dungeonsdelight:monster_yam": {
+    "class": "net.yirmiri.dungeonsdelight.common.entity.monster_yam.MonsterYamEntity",
+    "jar": "forge-dungeonsdelight-1.20.1-1.3.1.jar",
+    "registry": "net.yirmiri.dungeonsdelight.core.registry.DDEntities"
+  },
+  "dungeonsdelight:rotten_zombie": {
+    "class": "net.yirmiri.dungeonsdelight.common.entity.rotten_zombie.RottenZombieEntity",
+    "jar": "forge-dungeonsdelight-1.20.1-1.3.1.jar",
+    "registry": "net.yirmiri.dungeonsdelight.core.registry.DDEntities"
+  },
+  "endergetic:booflo": {
+    "class": "com.teamabnormals.endergetic.common.entity.booflo.Booflo",
+    "jar": "endergetic-1.20.1-5.0.1.jar",
+    "registry": "com.teamabnormals.endergetic.core.registry.EEEntityTypes"
+  },
+  "endergetic:booflo_adolescent": {
+    "class": "com.teamabnormals.endergetic.common.entity.booflo.BoofloAdolescent",
+    "jar": "endergetic-1.20.1-5.0.1.jar",
+    "registry": "com.teamabnormals.endergetic.core.registry.EEEntityTypes"
+  },
+  "endergetic:booflo_baby": {
+    "class": "com.teamabnormals.endergetic.common.entity.booflo.BoofloBaby",
+    "jar": "endergetic-1.20.1-5.0.1.jar",
+    "registry": "com.teamabnormals.endergetic.core.registry.EEEntityTypes"
+  },
+  "endergetic:brood_eetle": {
+    "class": "com.teamabnormals.endergetic.common.entity.eetle.BroodEetle",
+    "jar": "endergetic-1.20.1-5.0.1.jar",
+    "registry": "com.teamabnormals.endergetic.core.registry.EEEntityTypes"
+  },
+  "endergetic:charger_eetle": {
+    "class": "com.teamabnormals.endergetic.common.entity.eetle.ChargerEetle",
+    "jar": "endergetic-1.20.1-5.0.1.jar",
+    "registry": "com.teamabnormals.endergetic.core.registry.EEEntityTypes"
+  },
+  "endergetic:glider_eetle": {
+    "class": "com.teamabnormals.endergetic.common.entity.eetle.GliderEetle",
+    "jar": "endergetic-1.20.1-5.0.1.jar",
+    "registry": "com.teamabnormals.endergetic.core.registry.EEEntityTypes"
+  },
+  "endergetic:poise_cluster": {
+    "class": "com.teamabnormals.endergetic.common.entity.PoiseClusterEntity",
+    "jar": "endergetic-1.20.1-5.0.1.jar",
+    "registry": "com.teamabnormals.endergetic.core.registry.EEEntityTypes"
+  },
+  "endergetic:puff_bug": {
+    "class": "com.teamabnormals.endergetic.common.entity.puffbug.PuffBug",
+    "jar": "endergetic-1.20.1-5.0.1.jar",
+    "registry": "com.teamabnormals.endergetic.core.registry.EEEntityTypes"
+  },
+  "endergetic:purpoid": {
+    "class": "com.teamabnormals.endergetic.common.entity.purpoid.Purpoid",
+    "jar": "endergetic-1.20.1-5.0.1.jar",
+    "registry": "com.teamabnormals.endergetic.core.registry.EEEntityTypes"
+  },
+  "endofherobrine:armor_stand": {
+    "class": "com.lgow.endofherobrine.entity.possessed.PosArmorStand",
+    "jar": "endofherobrine-1.20.1-1.0.8.2.jar",
+    "registry": "com.lgow.endofherobrine.entity.EntityInit"
+  },
+  "endofherobrine:builder": {
+    "class": "com.lgow.endofherobrine.entity.herobrine.Builder",
+    "jar": "endofherobrine-1.20.1-1.0.8.2.jar",
+    "registry": "com.lgow.endofherobrine.entity.EntityInit"
+  },
+  "endofherobrine:chicken": {
+    "class": "com.lgow.endofherobrine.entity.possessed.animal.PosChicken",
+    "jar": "endofherobrine-1.20.1-1.0.8.2.jar",
+    "registry": "com.lgow.endofherobrine.entity.EntityInit"
+  },
+  "endofherobrine:cow": {
+    "class": "com.lgow.endofherobrine.entity.possessed.animal.PosCow",
+    "jar": "endofherobrine-1.20.1-1.0.8.2.jar",
+    "registry": "com.lgow.endofherobrine.entity.EntityInit"
+  },
+  "endofherobrine:herobrine": {
+    "class": "com.lgow.endofherobrine.entity.herobrine.boss.HerobrineBoss",
+    "jar": "endofherobrine-1.20.1-1.0.8.2.jar",
+    "registry": "com.lgow.endofherobrine.entity.EntityInit"
+  },
+  "endofherobrine:husk": {
+    "class": "com.lgow.endofherobrine.entity.possessed.PosHusk",
+    "jar": "endofherobrine-1.20.1-1.0.8.2.jar",
+    "registry": "com.lgow.endofherobrine.entity.EntityInit"
+  },
+  "endofherobrine:lurker": {
+    "class": "com.lgow.endofherobrine.entity.herobrine.Lurker",
+    "jar": "endofherobrine-1.20.1-1.0.8.2.jar",
+    "registry": "com.lgow.endofherobrine.entity.EntityInit"
+  },
+  "endofherobrine:pig": {
+    "class": "com.lgow.endofherobrine.entity.possessed.animal.PosPig",
+    "jar": "endofherobrine-1.20.1-1.0.8.2.jar",
+    "registry": "com.lgow.endofherobrine.entity.EntityInit"
+  },
+  "endofherobrine:pigman": {
+    "class": "com.lgow.endofherobrine.entity.possessed.PosPigman",
+    "jar": "endofherobrine-1.20.1-1.0.8.2.jar",
+    "registry": "com.lgow.endofherobrine.entity.EntityInit"
+  },
+  "endofherobrine:rabbit": {
+    "class": "com.lgow.endofherobrine.entity.possessed.animal.PosRabbit",
+    "jar": "endofherobrine-1.20.1-1.0.8.2.jar",
+    "registry": "com.lgow.endofherobrine.entity.EntityInit"
+  },
+  "endofherobrine:sheep": {
+    "class": "com.lgow.endofherobrine.entity.possessed.animal.PosSheep",
+    "jar": "endofherobrine-1.20.1-1.0.8.2.jar",
+    "registry": "com.lgow.endofherobrine.entity.EntityInit"
+  },
+  "endofherobrine:silverfish": {
+    "class": "com.lgow.endofherobrine.entity.possessed.PosSilverfish",
+    "jar": "endofherobrine-1.20.1-1.0.8.2.jar",
+    "registry": "com.lgow.endofherobrine.entity.EntityInit"
+  },
+  "endofherobrine:skeleton": {
+    "class": "com.lgow.endofherobrine.entity.possessed.PosSkeleton",
+    "jar": "endofherobrine-1.20.1-1.0.8.2.jar",
+    "registry": "com.lgow.endofherobrine.entity.EntityInit"
+  },
+  "endofherobrine:stray": {
+    "class": "com.lgow.endofherobrine.entity.possessed.PosStray",
+    "jar": "endofherobrine-1.20.1-1.0.8.2.jar",
+    "registry": "com.lgow.endofherobrine.entity.EntityInit"
+  },
+  "endofherobrine:zombie": {
+    "class": "com.lgow.endofherobrine.entity.possessed.PosZombie",
+    "jar": "endofherobrine-1.20.1-1.0.8.2.jar",
+    "registry": "com.lgow.endofherobrine.entity.EntityInit"
+  },
+  "endofherobrine:zombie_villager": {
+    "class": "com.lgow.endofherobrine.entity.possessed.PosZombieVillager",
+    "jar": "endofherobrine-1.20.1-1.0.8.2.jar",
+    "registry": "com.lgow.endofherobrine.entity.EntityInit"
+  },
+  "fangs_n_claws:baby_owlbear": {
+    "class": "net.raptorzizi.fangs_n_claws.entity.owlbear.BabyOwlbearEntity",
+    "jar": "fangs_n_claws-1.20.1-1.2.4.jar",
+    "registry": "net.raptorzizi.fangs_n_claws.registries.EntityRegistry"
+  },
+  "fangs_n_claws:baby_scorpion": {
+    "class": "net.raptorzizi.fangs_n_claws.entity.scorpion.BabyScorpionEntity",
+    "jar": "fangs_n_claws-1.20.1-1.2.4.jar",
+    "registry": "net.raptorzizi.fangs_n_claws.registries.EntityRegistry"
+  },
+  "fangs_n_claws:baby_shrike": {
+    "class": "net.raptorzizi.fangs_n_claws.entity.shrike.BabyShrikeEntity",
+    "jar": "fangs_n_claws-1.20.1-1.2.4.jar",
+    "registry": "net.raptorzizi.fangs_n_claws.registries.EntityRegistry"
+  },
+  "fangs_n_claws:cave_ogre": {
+    "class": "net.raptorzizi.fangs_n_claws.entity.cave_ogre.CaveOgreEntity",
+    "jar": "fangs_n_claws-1.20.1-1.2.4.jar",
+    "registry": "net.raptorzizi.fangs_n_claws.registries.EntityRegistry"
+  },
+  "fangs_n_claws:dart_goblin": {
+    "class": "net.raptorzizi.fangs_n_claws.entity.dart_goblin.DartGoblinEntity",
+    "jar": "fangs_n_claws-1.20.1-1.2.4.jar",
+    "registry": "net.raptorzizi.fangs_n_claws.registries.EntityRegistry"
+  },
+  "fangs_n_claws:desert_scorpion": {
+    "class": "net.raptorzizi.fangs_n_claws.entity.scorpion.DesertScorpionEntity",
+    "jar": "fangs_n_claws-1.20.1-1.2.4.jar",
+    "registry": "net.raptorzizi.fangs_n_claws.registries.EntityRegistry"
+  },
+  "fangs_n_claws:evil_bat": {
+    "class": "net.raptorzizi.fangs_n_claws.entity.evil_bat.EvilBatEntity",
+    "jar": "fangs_n_claws-1.20.1-1.2.4.jar",
+    "registry": "net.raptorzizi.fangs_n_claws.registries.EntityRegistry"
+  },
+  "fangs_n_claws:fire_ghost": {
+    "class": "net.raptorzizi.fangs_n_claws.entity.fire_ghost.FireGhostEntity",
+    "jar": "fangs_n_claws-1.20.1-1.2.4.jar",
+    "registry": "net.raptorzizi.fangs_n_claws.registries.EntityRegistry"
+  },
+  "fangs_n_claws:frost_scorpion": {
+    "class": "net.raptorzizi.fangs_n_claws.entity.scorpion.FrostScorpionEntity",
+    "jar": "fangs_n_claws-1.20.1-1.2.4.jar",
+    "registry": "net.raptorzizi.fangs_n_claws.registries.EntityRegistry"
+  },
+  "fangs_n_claws:ghost": {
+    "class": "net.raptorzizi.fangs_n_claws.entity.ghost.GhostEntity",
+    "jar": "fangs_n_claws-1.20.1-1.2.4.jar",
+    "registry": "net.raptorzizi.fangs_n_claws.registries.EntityRegistry"
+  },
+  "fangs_n_claws:goblin": {
+    "class": "net.raptorzizi.fangs_n_claws.entity.goblin.GoblinEntity",
+    "jar": "fangs_n_claws-1.20.1-1.2.4.jar",
+    "registry": "net.raptorzizi.fangs_n_claws.registries.EntityRegistry"
+  },
+  "fangs_n_claws:golem": {
+    "class": "net.raptorzizi.fangs_n_claws.entity.golem.GolemEntity",
+    "jar": "fangs_n_claws-1.20.1-1.2.4.jar",
+    "registry": "net.raptorzizi.fangs_n_claws.registries.EntityRegistry"
+  },
+  "fangs_n_claws:hell_ogre": {
+    "class": "net.raptorzizi.fangs_n_claws.entity.hell_ogre.HellOgreEntity",
+    "jar": "fangs_n_claws-1.20.1-1.2.4.jar",
+    "registry": "net.raptorzizi.fangs_n_claws.registries.EntityRegistry"
+  },
+  "fangs_n_claws:horse_bat": {
+    "class": "net.raptorzizi.fangs_n_claws.entity.horse_bat.HorseBatEntity",
+    "jar": "fangs_n_claws-1.20.1-1.2.4.jar",
+    "registry": "net.raptorzizi.fangs_n_claws.registries.EntityRegistry"
+  },
+  "fangs_n_claws:ice_golem": {
+    "class": "net.raptorzizi.fangs_n_claws.entity.ice_golem.IceGolemEntity",
+    "jar": "fangs_n_claws-1.20.1-1.2.4.jar",
+    "registry": "net.raptorzizi.fangs_n_claws.registries.EntityRegistry"
+  },
+  "fangs_n_claws:imp": {
+    "class": "net.raptorzizi.fangs_n_claws.entity.imp.ImpEntity",
+    "jar": "fangs_n_claws-1.20.1-1.2.4.jar",
+    "registry": "net.raptorzizi.fangs_n_claws.registries.EntityRegistry"
+  },
+  "fangs_n_claws:mimic": {
+    "class": "net.raptorzizi.fangs_n_claws.entity.mimic.MimicEntity",
+    "jar": "fangs_n_claws-1.20.1-1.2.4.jar",
+    "registry": "net.raptorzizi.fangs_n_claws.registries.EntityRegistry"
+  },
+  "fangs_n_claws:nether_scorpion": {
+    "class": "net.raptorzizi.fangs_n_claws.entity.scorpion.NetherScorpionEntity",
+    "jar": "fangs_n_claws-1.20.1-1.2.4.jar",
+    "registry": "net.raptorzizi.fangs_n_claws.registries.EntityRegistry"
+  },
+  "fangs_n_claws:nightmare_horse": {
+    "class": "net.raptorzizi.fangs_n_claws.entity.nightmare_horse.NightmareHorseEntity",
+    "jar": "fangs_n_claws-1.20.1-1.2.4.jar",
+    "registry": "net.raptorzizi.fangs_n_claws.registries.EntityRegistry"
+  },
+  "fangs_n_claws:ogre": {
+    "class": "net.raptorzizi.fangs_n_claws.entity.ogre.OgreEntity",
+    "jar": "fangs_n_claws-1.20.1-1.2.4.jar",
+    "registry": "net.raptorzizi.fangs_n_claws.registries.EntityRegistry"
+  },
+  "fangs_n_claws:owlbear": {
+    "class": "net.raptorzizi.fangs_n_claws.entity.owlbear.OwlbearEntity",
+    "jar": "fangs_n_claws-1.20.1-1.2.4.jar",
+    "registry": "net.raptorzizi.fangs_n_claws.registries.EntityRegistry"
+  },
+  "fangs_n_claws:purple_worm": {
+    "class": "net.raptorzizi.fangs_n_claws.entity.purple_worm.PurpleWormEntity",
+    "jar": "fangs_n_claws-1.20.1-1.2.4.jar",
+    "registry": "net.raptorzizi.fangs_n_claws.registries.EntityRegistry"
+  },
+  "fangs_n_claws:purple_worm_arm": {
+    "class": "net.raptorzizi.fangs_n_claws.entity.purple_worm.PurpleWormArmEntity",
+    "jar": "fangs_n_claws-1.20.1-1.2.4.jar",
+    "registry": "net.raptorzizi.fangs_n_claws.registries.EntityRegistry"
+  },
+  "fangs_n_claws:scorpion": {
+    "class": "net.raptorzizi.fangs_n_claws.entity.scorpion.ScorpionEntity",
+    "jar": "fangs_n_claws-1.20.1-1.2.4.jar",
+    "registry": "net.raptorzizi.fangs_n_claws.registries.EntityRegistry"
+  },
+  "fangs_n_claws:shrike": {
+    "class": "net.raptorzizi.fangs_n_claws.entity.shrike.ShrikeEntity",
+    "jar": "fangs_n_claws-1.20.1-1.2.4.jar",
+    "registry": "net.raptorzizi.fangs_n_claws.registries.EntityRegistry"
+  },
+  "fangs_n_claws:silver_skeleton": {
+    "class": "net.raptorzizi.fangs_n_claws.entity.silver_skeleton.SilverSkeletonEntity",
+    "jar": "fangs_n_claws-1.20.1-1.2.4.jar",
+    "registry": "net.raptorzizi.fangs_n_claws.registries.EntityRegistry"
+  },
+  "fangs_n_claws:skeleton_horse": {
+    "class": "net.raptorzizi.fangs_n_claws.entity.undead_horse.SkeletonHorseMob",
+    "jar": "fangs_n_claws-1.20.1-1.2.4.jar",
+    "registry": "net.raptorzizi.fangs_n_claws.registries.EntityRegistry"
+  },
+  "fangs_n_claws:werewolf": {
+    "class": "net.raptorzizi.fangs_n_claws.entity.werewolf.WerewolfEntity",
+    "jar": "fangs_n_claws-1.20.1-1.2.4.jar",
+    "registry": "net.raptorzizi.fangs_n_claws.registries.EntityRegistry"
+  },
+  "fangs_n_claws:wild_wolf": {
+    "class": "net.raptorzizi.fangs_n_claws.entity.wild_wolf.WildWolfEntity",
+    "jar": "fangs_n_claws-1.20.1-1.2.4.jar",
+    "registry": "net.raptorzizi.fangs_n_claws.registries.EntityRegistry"
+  },
+  "fangs_n_claws:zombie_horse": {
+    "class": "net.raptorzizi.fangs_n_claws.entity.undead_horse.ZombieHorseMob",
+    "jar": "fangs_n_claws-1.20.1-1.2.4.jar",
+    "registry": "net.raptorzizi.fangs_n_claws.registries.EntityRegistry"
+  },
+  "friendsandfoes:barnacle": {
+    "class": "com.faboslav.friendsandfoes.common.entity.BarnacleEntity",
+    "jar": "friendsandfoes-forge-5.0.4+mc1.20.1.jar",
+    "registry": "com.faboslav.friendsandfoes.common.init.FriendsAndFoesEntityTypes"
+  },
+  "friendsandfoes:copper_golem": {
+    "class": "com.faboslav.friendsandfoes.common.entity.CopperGolemEntity",
+    "jar": "friendsandfoes-forge-5.0.4+mc1.20.1.jar",
+    "registry": "com.faboslav.friendsandfoes.common.init.FriendsAndFoesEntityTypes"
+  },
+  "friendsandfoes:crab": {
+    "class": "com.faboslav.friendsandfoes.common.entity.CrabEntity",
+    "jar": "friendsandfoes-forge-5.0.4+mc1.20.1.jar",
+    "registry": "com.faboslav.friendsandfoes.common.init.FriendsAndFoesEntityTypes"
+  },
+  "friendsandfoes:glare": {
+    "class": "com.faboslav.friendsandfoes.common.entity.GlareEntity",
+    "jar": "friendsandfoes-forge-5.0.4+mc1.20.1.jar",
+    "registry": "com.faboslav.friendsandfoes.common.init.FriendsAndFoesEntityTypes"
+  },
+  "friendsandfoes:iceologer": {
+    "class": "com.faboslav.friendsandfoes.common.entity.IceologerEntity",
+    "jar": "friendsandfoes-forge-5.0.4+mc1.20.1.jar",
+    "registry": "com.faboslav.friendsandfoes.common.init.FriendsAndFoesEntityTypes"
+  },
+  "friendsandfoes:illusioner": {
+    "class": "com.faboslav.friendsandfoes.common.entity.IllusionerEntity",
+    "jar": "friendsandfoes-forge-5.0.4+mc1.20.1.jar",
+    "registry": "com.faboslav.friendsandfoes.common.init.FriendsAndFoesEntityTypes"
+  },
+  "friendsandfoes:mauler": {
+    "class": "com.faboslav.friendsandfoes.common.entity.MaulerEntity",
+    "jar": "friendsandfoes-forge-5.0.4+mc1.20.1.jar",
+    "registry": "com.faboslav.friendsandfoes.common.init.FriendsAndFoesEntityTypes"
+  },
+  "friendsandfoes:moobloom": {
+    "class": "com.faboslav.friendsandfoes.common.entity.MoobloomEntity",
+    "jar": "friendsandfoes-forge-5.0.4+mc1.20.1.jar",
+    "registry": "com.faboslav.friendsandfoes.common.init.FriendsAndFoesEntityTypes"
+  },
+  "friendsandfoes:penguin": {
+    "class": "com.faboslav.friendsandfoes.common.entity.PenguinEntity",
+    "jar": "friendsandfoes-forge-5.0.4+mc1.20.1.jar",
+    "registry": "com.faboslav.friendsandfoes.common.init.FriendsAndFoesEntityTypes"
+  },
+  "friendsandfoes:player_illusion": {
+    "class": "com.faboslav.friendsandfoes.common.entity.PlayerIllusionEntity",
+    "jar": "friendsandfoes-forge-5.0.4+mc1.20.1.jar",
+    "registry": "com.faboslav.friendsandfoes.common.init.FriendsAndFoesEntityTypes"
+  },
+  "friendsandfoes:rascal": {
+    "class": "com.faboslav.friendsandfoes.common.entity.RascalEntity",
+    "jar": "friendsandfoes-forge-5.0.4+mc1.20.1.jar",
+    "registry": "com.faboslav.friendsandfoes.common.init.FriendsAndFoesEntityTypes"
+  },
+  "friendsandfoes:tuff_golem": {
+    "class": "com.faboslav.friendsandfoes.common.entity.TuffGolemEntity",
+    "jar": "friendsandfoes-forge-5.0.4+mc1.20.1.jar",
+    "registry": "com.faboslav.friendsandfoes.common.init.FriendsAndFoesEntityTypes"
+  },
+  "friendsandfoes:wildfire": {
+    "class": "com.faboslav.friendsandfoes.common.entity.WildfireEntity",
+    "jar": "friendsandfoes-forge-5.0.4+mc1.20.1.jar",
+    "registry": "com.faboslav.friendsandfoes.common.init.FriendsAndFoesEntityTypes"
+  },
+  "graveyard:acolyte": {
+    "class": "com.lion.graveyard.entities.AcolyteEntity",
+    "jar": "graveyard-FORGE-4.0.1+mc1.20.1.jar",
+    "registry": "com.lion.graveyard.init.TGEntities"
+  },
+  "graveyard:corrupted_evoker": {
+    "class": "com.lion.graveyard.entities.CorruptedEvoker",
+    "jar": "graveyard-FORGE-4.0.1+mc1.20.1.jar",
+    "registry": "com.lion.graveyard.init.TGEntities"
+  },
+  "graveyard:corrupted_pillager": {
+    "class": "com.lion.graveyard.entities.CorruptedPillager",
+    "jar": "graveyard-FORGE-4.0.1+mc1.20.1.jar",
+    "registry": "com.lion.graveyard.init.TGEntities"
+  },
+  "graveyard:corrupted_vindicator": {
+    "class": "com.lion.graveyard.entities.CorruptedVindicator",
+    "jar": "graveyard-FORGE-4.0.1+mc1.20.1.jar",
+    "registry": "com.lion.graveyard.init.TGEntities"
+  },
+  "graveyard:crow": {
+    "class": "com.lion.graveyard.entities.CrowEntity",
+    "jar": "graveyard-FORGE-4.0.1+mc1.20.1.jar",
+    "registry": "com.lion.graveyard.init.TGEntities"
+  },
+  "graveyard:falling_corpse": {
+    "class": "com.lion.graveyard.entities.FallingCorpse",
+    "jar": "graveyard-FORGE-4.0.1+mc1.20.1.jar",
+    "registry": "com.lion.graveyard.init.TGEntities"
+  },
+  "graveyard:ghoul": {
+    "class": "com.lion.graveyard.entities.GhoulEntity",
+    "jar": "graveyard-FORGE-4.0.1+mc1.20.1.jar",
+    "registry": "com.lion.graveyard.init.TGEntities"
+  },
+  "graveyard:ghouling": {
+    "class": "com.lion.graveyard.entities.GhoulingEntity",
+    "jar": "graveyard-FORGE-4.0.1+mc1.20.1.jar",
+    "registry": "com.lion.graveyard.init.TGEntities"
+  },
+  "graveyard:lich": {
+    "class": "com.lion.graveyard.entities.LichEntity",
+    "jar": "graveyard-FORGE-4.0.1+mc1.20.1.jar",
+    "registry": "com.lion.graveyard.init.TGEntities"
+  },
+  "graveyard:magpie": {
+    "class": "com.lion.graveyard.entities.MagpieEntity",
+    "jar": "graveyard-FORGE-4.0.1+mc1.20.1.jar",
+    "registry": "com.lion.graveyard.init.TGEntities"
+  },
+  "graveyard:nightmare": {
+    "class": "com.lion.graveyard.entities.NightmareEntity",
+    "jar": "graveyard-FORGE-4.0.1+mc1.20.1.jar",
+    "registry": "com.lion.graveyard.init.TGEntities"
+  },
+  "graveyard:raven": {
+    "class": "com.lion.graveyard.entities.CorvidEntity",
+    "jar": "graveyard-FORGE-4.0.1+mc1.20.1.jar",
+    "registry": "com.lion.graveyard.init.TGEntities"
+  },
+  "graveyard:reaper": {
+    "class": "com.lion.graveyard.entities.ReaperEntity",
+    "jar": "graveyard-FORGE-4.0.1+mc1.20.1.jar",
+    "registry": "com.lion.graveyard.init.TGEntities"
+  },
+  "graveyard:revenant": {
+    "class": "com.lion.graveyard.entities.RevenantEntity",
+    "jar": "graveyard-FORGE-4.0.1+mc1.20.1.jar",
+    "registry": "com.lion.graveyard.init.TGEntities"
+  },
+  "graveyard:skeleton_creeper": {
+    "class": "com.lion.graveyard.entities.SkeletonCreeper",
+    "jar": "graveyard-FORGE-4.0.1+mc1.20.1.jar",
+    "registry": "com.lion.graveyard.init.TGEntities"
+  },
+  "graveyard:tormented_villager": {
+    "class": "com.lion.graveyard.entities.TormentedVillagerEntity",
+    "jar": "graveyard-FORGE-4.0.1+mc1.20.1.jar",
+    "registry": "com.lion.graveyard.init.TGEntities"
+  },
+  "graveyard:wraith": {
+    "class": "com.lion.graveyard.entities.WraithEntity",
+    "jar": "graveyard-FORGE-4.0.1+mc1.20.1.jar",
+    "registry": "com.lion.graveyard.init.TGEntities"
+  },
+  "legionary:unbreakable": {
+    "class": "com.purity.legionary.entity.Unbreakable",
+    "jar": "legionary-1.20.1-1.2.2.jar",
+    "registry": "com.purity.legionary.registry.ModEntities"
+  },
+  "mbackrooms:bed": {
+    "class": "fr.meulti.mbackrooms.entity.custom.BEDEntity",
+    "jar": "mbackrooms-1.4.0.jar",
+    "registry": "fr.meulti.mbackrooms.entity.ModEntities"
+  },
+  "mbackrooms:death_rat": {
+    "class": "fr.meulti.mbackrooms.entity.custom.DeathRatEntity",
+    "jar": "mbackrooms-1.4.0.jar",
+    "registry": "fr.meulti.mbackrooms.entity.ModEntities"
+  },
+  "mbackrooms:guardian_bed": {
+    "class": "fr.meulti.mbackrooms.entity.custom.GuardianBEDEntity",
+    "jar": "mbackrooms-1.4.0.jar",
+    "registry": "fr.meulti.mbackrooms.entity.ModEntities"
+  },
+  "mbackrooms:hollow_maw": {
+    "class": "fr.meulti.mbackrooms.entity.custom.HollowMawEntity",
+    "jar": "mbackrooms-1.4.0.jar",
+    "registry": "fr.meulti.mbackrooms.entity.ModEntities"
+  },
+  "mbackrooms:howler": {
+    "class": "fr.meulti.mbackrooms.entity.custom.HowlerEntity",
+    "jar": "mbackrooms-1.4.0.jar",
+    "registry": "fr.meulti.mbackrooms.entity.ModEntities"
+  },
+  "mbackrooms:level_two_entity": {
+    "class": "fr.meulti.mbackrooms.entity.custom.LevelTwoEntity",
+    "jar": "mbackrooms-1.4.0.jar",
+    "registry": "fr.meulti.mbackrooms.entity.ModEntities"
+  },
+  "mbackrooms:skin_stealer": {
+    "class": "fr.meulti.mbackrooms.entity.custom.SkinStealerEntity",
+    "jar": "mbackrooms-1.4.0.jar",
+    "registry": "fr.meulti.mbackrooms.entity.ModEntities"
+  },
+  "mbackrooms:smiler": {
+    "class": "fr.meulti.mbackrooms.entity.custom.SmilerEntity",
+    "jar": "mbackrooms-1.4.0.jar",
+    "registry": "fr.meulti.mbackrooms.entity.ModEntities"
+  },
+  "mbackrooms:sstealer": {
+    "class": "fr.meulti.mbackrooms.entity.custom.SStealerEntity",
+    "jar": "mbackrooms-1.4.0.jar",
+    "registry": "fr.meulti.mbackrooms.entity.ModEntities"
+  },
+  "mbackrooms:volt_fish": {
+    "class": "fr.meulti.mbackrooms.entity.custom.VoltFishEntity",
+    "jar": "mbackrooms-1.4.0.jar",
+    "registry": "fr.meulti.mbackrooms.entity.ModEntities"
+  },
+  "minecraft:armadillo": {
+    "class": "com.blackgear.vanillabackport.common.level.entities.mob.animal.armadillo.Armadillo",
+    "jar": "VanillaBackport-forge-1.20.1-1.2.2.jar",
+    "registry": "com.blackgear.vanillabackport.common.registries.entities.ModEntityTypes"
+  },
+  "minecraft:camel_husk": {
+    "class": "com.blackgear.vanillabackport.common.level.entities.mob.animal.camel.CamelHusk",
+    "jar": "VanillaBackport-forge-1.20.1-1.2.2.jar",
+    "registry": "com.blackgear.vanillabackport.common.registries.entities.ModEntityTypes"
+  },
+  "minecraft:copper_golem": {
+    "class": "com.blackgear.vanillabackport.common.level.entities.mob.animal.golem.copper_golem.CopperGolem",
+    "jar": "VanillaBackport-forge-1.20.1-1.2.2.jar",
+    "registry": "com.blackgear.vanillabackport.common.registries.entities.ModEntityTypes"
+  },
+  "minecraft:creaking": {
+    "class": "com.blackgear.vanillabackport.common.level.entities.mob.monster.creaking.Creaking",
+    "jar": "VanillaBackport-forge-1.20.1-1.2.2.jar",
+    "registry": "com.blackgear.vanillabackport.common.registries.entities.ModEntityTypes"
+  },
+  "minecraft:happy_ghast": {
+    "class": "com.blackgear.vanillabackport.common.level.entities.mob.animal.happy_ghast.HappyGhast",
+    "jar": "VanillaBackport-forge-1.20.1-1.2.2.jar",
+    "registry": "com.blackgear.vanillabackport.common.registries.entities.ModEntityTypes"
+  },
+  "minecraft:nautilus": {
+    "class": "com.blackgear.vanillabackport.common.level.entities.mob.animal.nautilus.Nautilus",
+    "jar": "VanillaBackport-forge-1.20.1-1.2.2.jar",
+    "registry": "com.blackgear.vanillabackport.common.registries.entities.ModEntityTypes"
+  },
+  "minecraft:parched": {
+    "class": "com.blackgear.vanillabackport.common.level.entities.mob.monster.skeleton.Parched",
+    "jar": "VanillaBackport-forge-1.20.1-1.2.2.jar",
+    "registry": "com.blackgear.vanillabackport.common.registries.entities.ModEntityTypes"
+  },
+  "minecraft:sulfur_cube": {
+    "class": "com.blackgear.vanillabackport.common.level.entities.mob.monster.sulfur_cube.SulfurCube",
+    "jar": "VanillaBackport-forge-1.20.1-1.2.2.jar",
+    "registry": "com.blackgear.vanillabackport.common.registries.entities.ModEntityTypes"
+  },
+  "minecraft:zombie_nautilus": {
+    "class": "com.blackgear.vanillabackport.common.level.entities.mob.animal.nautilus.ZombieNautilus",
+    "jar": "VanillaBackport-forge-1.20.1-1.2.2.jar",
+    "registry": "com.blackgear.vanillabackport.common.registries.entities.ModEntityTypes"
+  },
+  "mutantmore:concoction_w": {
+    "class": "com.alexander.mutantmore.entities.ConcoctionW",
+    "jar": "mutantmore-1.20.1-early_access-2.0.0.jar",
+    "registry": "com.alexander.mutantmore.init.EntityTypeInit"
+  },
+  "mutantmore:mutant_blaze": {
+    "class": "com.alexander.mutantmore.entities.MutantBlaze",
+    "jar": "mutantmore-1.20.1-early_access-2.0.0.jar",
+    "registry": "com.alexander.mutantmore.init.EntityTypeInit"
+  },
+  "mutantmore:mutant_frozen_zombie": {
+    "class": "com.alexander.mutantmore.entities.MutantFrozenZombie",
+    "jar": "mutantmore-1.20.1-early_access-2.0.0.jar",
+    "registry": "com.alexander.mutantmore.init.EntityTypeInit"
+  },
+  "mutantmore:mutant_hoglin": {
+    "class": "com.alexander.mutantmore.entities.MutantHoglin",
+    "jar": "mutantmore-1.20.1-early_access-2.0.0.jar",
+    "registry": "com.alexander.mutantmore.init.EntityTypeInit"
+  },
+  "mutantmore:mutant_husk": {
+    "class": "com.alexander.mutantmore.entities.MutantHusk",
+    "jar": "mutantmore-1.20.1-early_access-2.0.0.jar",
+    "registry": "com.alexander.mutantmore.init.EntityTypeInit"
+  },
+  "mutantmore:mutant_jungle_zombie": {
+    "class": "com.alexander.mutantmore.entities.MutantJungleZombie",
+    "jar": "mutantmore-1.20.1-early_access-2.0.0.jar",
+    "registry": "com.alexander.mutantmore.init.EntityTypeInit"
+  },
+  "mutantmore:mutant_phantom": {
+    "class": "com.alexander.mutantmore.entities.MutantPhantom",
+    "jar": "mutantmore-1.20.1-early_access-2.0.0.jar",
+    "registry": "com.alexander.mutantmore.init.EntityTypeInit"
+  },
+  "mutantmore:mutant_shulker": {
+    "class": "com.alexander.mutantmore.entities.MutantShulker",
+    "jar": "mutantmore-1.20.1-early_access-2.0.0.jar",
+    "registry": "com.alexander.mutantmore.init.EntityTypeInit"
+  },
+  "mutantmore:mutant_shulker_trap": {
+    "class": "com.alexander.mutantmore.entities.MutantShulkerTrap",
+    "jar": "mutantmore-1.20.1-early_access-2.0.0.jar",
+    "registry": "com.alexander.mutantmore.init.EntityTypeInit"
+  },
+  "mutantmore:mutant_shulker_turret": {
+    "class": "com.alexander.mutantmore.entities.MutantShulkerTurret",
+    "jar": "mutantmore-1.20.1-early_access-2.0.0.jar",
+    "registry": "com.alexander.mutantmore.init.EntityTypeInit"
+  },
+  "mutantmore:mutant_wither_skeleton": {
+    "class": "com.alexander.mutantmore.entities.MutantWitherSkeleton",
+    "jar": "mutantmore-1.20.1-early_access-2.0.0.jar",
+    "registry": "com.alexander.mutantmore.init.EntityTypeInit"
+  },
+  "mutantmore:rodling": {
+    "class": "com.alexander.mutantmore.entities.Rodling",
+    "jar": "mutantmore-1.20.1-early_access-2.0.0.jar",
+    "registry": "com.alexander.mutantmore.init.EntityTypeInit"
+  },
+  "mutantmore:sentry_vine": {
+    "class": "com.alexander.mutantmore.entities.SentryVine",
+    "jar": "mutantmore-1.20.1-early_access-2.0.0.jar",
+    "registry": "com.alexander.mutantmore.init.EntityTypeInit"
+  },
+  "paxos_pink_fairy:pink_fairy": {
+    "class": "net.mcreator.paxosfairies.entity.PinkFairyEntity",
+    "jar": "paxos_pink_fairy-1.0.0-forge-1.20.1.jar",
+    "registry": "net.mcreator.paxosfairies.init.PaxosPinkFairyModEntities"
+  },
+  "rottencreatures:burned": {
+    "class": "com.github.teamfusion.rottencreatures.common.level.entities.living.burned.Burned",
+    "jar": "rottencreatures-forge-1.20.1-1.1.0.jar",
+    "registry": "com.github.teamfusion.rottencreatures.common.registries.RCEntityTypes"
+  },
+  "rottencreatures:dead_beard": {
+    "class": "com.github.teamfusion.rottencreatures.common.level.entities.living.deadbeard.DeadBeard",
+    "jar": "rottencreatures-forge-1.20.1-1.1.0.jar",
+    "registry": "com.github.teamfusion.rottencreatures.common.registries.RCEntityTypes"
+  },
+  "rottencreatures:frostbitten": {
+    "class": "com.github.teamfusion.rottencreatures.common.level.entities.living.frostbitten.Frostbitten",
+    "jar": "rottencreatures-forge-1.20.1-1.1.0.jar",
+    "registry": "com.github.teamfusion.rottencreatures.common.registries.RCEntityTypes"
+  },
+  "rottencreatures:glacial_hunter": {
+    "class": "com.github.teamfusion.rottencreatures.common.level.entities.living.glacialhunter.GlacialHunter",
+    "jar": "rottencreatures-forge-1.20.1-1.1.0.jar",
+    "registry": "com.github.teamfusion.rottencreatures.common.registries.RCEntityTypes"
+  },
+  "rottencreatures:hunter_wolf": {
+    "class": "com.github.teamfusion.rottencreatures.common.level.entities.living.glacialhunter.HunterWolf",
+    "jar": "rottencreatures-forge-1.20.1-1.1.0.jar",
+    "registry": "com.github.teamfusion.rottencreatures.common.registries.RCEntityTypes"
+  },
+  "rottencreatures:immortal": {
+    "class": "com.github.teamfusion.rottencreatures.common.level.entities.living.immortal.Immortal",
+    "jar": "rottencreatures-forge-1.20.1-1.1.0.jar",
+    "registry": "com.github.teamfusion.rottencreatures.common.registries.RCEntityTypes"
+  },
+  "rottencreatures:mummy": {
+    "class": "com.github.teamfusion.rottencreatures.common.level.entities.living.mummy.Mummy",
+    "jar": "rottencreatures-forge-1.20.1-1.1.0.jar",
+    "registry": "com.github.teamfusion.rottencreatures.common.registries.RCEntityTypes"
+  },
+  "rottencreatures:scarab": {
+    "class": "com.github.teamfusion.rottencreatures.common.level.entities.living.scarab.Scarab",
+    "jar": "rottencreatures-forge-1.20.1-1.1.0.jar",
+    "registry": "com.github.teamfusion.rottencreatures.common.registries.RCEntityTypes"
+  },
+  "rottencreatures:skeleton_lackey": {
+    "class": "com.github.teamfusion.rottencreatures.common.level.entities.living.lackey.SkeletonLackey",
+    "jar": "rottencreatures-forge-1.20.1-1.1.0.jar",
+    "registry": "com.github.teamfusion.rottencreatures.common.registries.RCEntityTypes"
+  },
+  "rottencreatures:swampy": {
+    "class": "com.github.teamfusion.rottencreatures.common.level.entities.living.swampy.Swampy",
+    "jar": "rottencreatures-forge-1.20.1-1.1.0.jar",
+    "registry": "com.github.teamfusion.rottencreatures.common.registries.RCEntityTypes"
+  },
+  "rottencreatures:undead_miner": {
+    "class": "com.github.teamfusion.rottencreatures.common.level.entities.living.undeadminer.UndeadMiner",
+    "jar": "rottencreatures-forge-1.20.1-1.1.0.jar",
+    "registry": "com.github.teamfusion.rottencreatures.common.registries.RCEntityTypes"
+  },
+  "rottencreatures:zap": {
+    "class": "com.github.teamfusion.rottencreatures.common.level.entities.living.zap.Zap",
+    "jar": "rottencreatures-forge-1.20.1-1.1.0.jar",
+    "registry": "com.github.teamfusion.rottencreatures.common.registries.RCEntityTypes"
+  },
+  "rottencreatures:zombie_lackey": {
+    "class": "com.github.teamfusion.rottencreatures.common.level.entities.living.lackey.ZombieLackey",
+    "jar": "rottencreatures-forge-1.20.1-1.1.0.jar",
+    "registry": "com.github.teamfusion.rottencreatures.common.registries.RCEntityTypes"
+  },
+  "scp_ultimate:chara": {
+    "class": "net.mcreator.scpultimate.entity.CharaEntity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:chara_2": {
+    "class": "net.mcreator.scpultimate.entity.Chara2Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:class_d": {
+    "class": "net.mcreator.scpultimate.entity.ClassDEntity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:rat": {
+    "class": "net.mcreator.scpultimate.entity.RatEntity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:ratwild": {
+    "class": "net.mcreator.scpultimate.entity.RatwildEntity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_015_crawler": {
+    "class": "net.mcreator.scpultimate.entity.SCP015CrawlerEntity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_0191": {
+    "class": "net.mcreator.scpultimate.entity.SCP0191Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_023": {
+    "class": "net.mcreator.scpultimate.entity.SCP023Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_027": {
+    "class": "net.mcreator.scpultimate.entity.SCP027Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_035_mob": {
+    "class": "net.mcreator.scpultimate.entity.SCP035MobEntity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_049": {
+    "class": "net.mcreator.scpultimate.entity.SCP049Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_0491": {
+    "class": "net.mcreator.scpultimate.entity.SCP0491Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_053": {
+    "class": "net.mcreator.scpultimate.entity.SCP053Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_058": {
+    "class": "net.mcreator.scpultimate.entity.SCP058Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_066": {
+    "class": "net.mcreator.scpultimate.entity.SCP066Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_073": {
+    "class": "net.mcreator.scpultimate.entity.SCP073Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_076": {
+    "class": "net.mcreator.scpultimate.entity.SCP076Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_080": {
+    "class": "net.mcreator.scpultimate.entity.SCP080Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_0871": {
+    "class": "net.mcreator.scpultimate.entity.SCP0871Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_093mob": {
+    "class": "net.mcreator.scpultimate.entity.SCP093mobEntity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_096": {
+    "class": "net.mcreator.scpultimate.entity.SCP096Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_0961": {
+    "class": "net.mcreator.scpultimate.entity.SCP0961Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_0962": {
+    "class": "net.mcreator.scpultimate.entity.SCP0962Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_098": {
+    "class": "net.mcreator.scpultimate.entity.SCP098Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_100": {
+    "class": "net.mcreator.scpultimate.entity.SCP100Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_1000": {
+    "class": "net.mcreator.scpultimate.entity.SCP1000Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_1001": {
+    "class": "net.mcreator.scpultimate.entity.SCP1001Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_1002": {
+    "class": "net.mcreator.scpultimate.entity.SCP1002Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_1048": {
+    "class": "net.mcreator.scpultimate.entity.SCP1048Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_1048a": {
+    "class": "net.mcreator.scpultimate.entity.SCP1048aEntity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_1048b": {
+    "class": "net.mcreator.scpultimate.entity.SCP1048bEntity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_1048c": {
+    "class": "net.mcreator.scpultimate.entity.SCP1048cEntity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_106": {
+    "class": "net.mcreator.scpultimate.entity.SCP106Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_111": {
+    "class": "net.mcreator.scpultimate.entity.SCP111Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_111skin_0": {
+    "class": "net.mcreator.scpultimate.entity.SCP111skin0Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_111skin_1": {
+    "class": "net.mcreator.scpultimate.entity.SCP111skin1Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_111skin_2": {
+    "class": "net.mcreator.scpultimate.entity.SCP111skin2Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_131": {
+    "class": "net.mcreator.scpultimate.entity.SCP131Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_131skin_1": {
+    "class": "net.mcreator.scpultimate.entity.SCP131skin1Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_131skin_2": {
+    "class": "net.mcreator.scpultimate.entity.SCP131skin2Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_131skin_3": {
+    "class": "net.mcreator.scpultimate.entity.SCP131skin3Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_1440": {
+    "class": "net.mcreator.scpultimate.entity.SCP1440Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_14991": {
+    "class": "net.mcreator.scpultimate.entity.SCP14991Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_1507": {
+    "class": "net.mcreator.scpultimate.entity.SCP1507Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_1728": {
+    "class": "net.mcreator.scpultimate.entity.SCP1728Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_17281": {
+    "class": "net.mcreator.scpultimate.entity.SCP17281Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_173": {
+    "class": "net.mcreator.scpultimate.entity.SCP173Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_178": {
+    "class": "net.mcreator.scpultimate.entity.SCP178Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_179": {
+    "class": "net.mcreator.scpultimate.entity.SCP179Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_217_infected_class_d": {
+    "class": "net.mcreator.scpultimate.entity.SCP217InfectedClassDEntity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_2317": {
+    "class": "net.mcreator.scpultimate.entity.SCP2317Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_250": {
+    "class": "net.mcreator.scpultimate.entity.SCP250Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_2521": {
+    "class": "net.mcreator.scpultimate.entity.SCP2521Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_273": {
+    "class": "net.mcreator.scpultimate.entity.SCP273Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_280": {
+    "class": "net.mcreator.scpultimate.entity.SCP280Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_346": {
+    "class": "net.mcreator.scpultimate.entity.SCP346Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_3541": {
+    "class": "net.mcreator.scpultimate.entity.SCP3541Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_35414": {
+    "class": "net.mcreator.scpultimate.entity.SCP35414Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_35415": {
+    "class": "net.mcreator.scpultimate.entity.SCP35415Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_35416": {
+    "class": "net.mcreator.scpultimate.entity.SCP35416Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_35418": {
+    "class": "net.mcreator.scpultimate.entity.SCP35418Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_3542": {
+    "class": "net.mcreator.scpultimate.entity.SCP3542Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_3543": {
+    "class": "net.mcreator.scpultimate.entity.SCP3543Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_3544": {
+    "class": "net.mcreator.scpultimate.entity.SCP3544Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_36681": {
+    "class": "net.mcreator.scpultimate.entity.SCP36681Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_372": {
+    "class": "net.mcreator.scpultimate.entity.SCP372Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_457": {
+    "class": "net.mcreator.scpultimate.entity.SCP457Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_472": {
+    "class": "net.mcreator.scpultimate.entity.SCP472Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_5131": {
+    "class": "net.mcreator.scpultimate.entity.SCP5131Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_524": {
+    "class": "net.mcreator.scpultimate.entity.SCP524Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_529": {
+    "class": "net.mcreator.scpultimate.entity.SCP529Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_538": {
+    "class": "net.mcreator.scpultimate.entity.SCP538Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_548": {
+    "class": "net.mcreator.scpultimate.entity.SCP548Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_594": {
+    "class": "net.mcreator.scpultimate.entity.SCP594Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_5941": {
+    "class": "net.mcreator.scpultimate.entity.SCP5941Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_682": {
+    "class": "net.mcreator.scpultimate.entity.SCP682Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_718": {
+    "class": "net.mcreator.scpultimate.entity.SCP718Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_772": {
+    "class": "net.mcreator.scpultimate.entity.SCP772Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_772grub": {
+    "class": "net.mcreator.scpultimate.entity.SCP772grubEntity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_811": {
+    "class": "net.mcreator.scpultimate.entity.SCP811Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_843": {
+    "class": "net.mcreator.scpultimate.entity.SCP843Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_8602": {
+    "class": "net.mcreator.scpultimate.entity.SCP8602Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_872": {
+    "class": "net.mcreator.scpultimate.entity.SCP872Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_939": {
+    "class": "net.mcreator.scpultimate.entity.SCP939Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_939wild": {
+    "class": "net.mcreator.scpultimate.entity.SCP939wildEntity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_966": {
+    "class": "net.mcreator.scpultimate.entity.SCP966Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_999": {
+    "class": "net.mcreator.scpultimate.entity.SCP999Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_guard": {
+    "class": "net.mcreator.scpultimate.entity.SCPGuardEntity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_scientist": {
+    "class": "net.mcreator.scpultimate.entity.SCPScientistEntity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_scientist_skin_1": {
+    "class": "net.mcreator.scpultimate.entity.SCPScientistSkin1Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_scientist_skin_2": {
+    "class": "net.mcreator.scpultimate.entity.SCPScientistSkin2Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "scp_ultimate:scp_scientist_skin_3": {
+    "class": "net.mcreator.scpultimate.entity.SCPScientistSkin3Entity",
+    "jar": "scp_ultimate-1.2.2-forge-1.20.1.jar",
+    "registry": "net.mcreator.scpultimate.init.ScpUltimateModEntities"
+  },
+  "sons_of_sins:betrayed_guzzler": {
+    "class": "net.mcreator.sonsofsins.entity.BetrayedGuzzlerEntity",
+    "jar": "sons_of_sins-2.2.1-forge-1.20.1.jar",
+    "registry": "net.mcreator.sonsofsins.init.SonsOfSinsModEntities"
+  },
+  "sons_of_sins:blud": {
+    "class": "net.mcreator.sonsofsins.entity.BludEntity",
+    "jar": "sons_of_sins-2.2.1-forge-1.20.1.jar",
+    "registry": "net.mcreator.sonsofsins.init.SonsOfSinsModEntities"
+  },
+  "sons_of_sins:blud_aggressive": {
+    "class": "net.mcreator.sonsofsins.entity.BludAggressiveEntity",
+    "jar": "sons_of_sins-2.2.1-forge-1.20.1.jar",
+    "registry": "net.mcreator.sonsofsins.init.SonsOfSinsModEntities"
+  },
+  "sons_of_sins:blud_trade": {
+    "class": "net.mcreator.sonsofsins.entity.BludTradeEntity",
+    "jar": "sons_of_sins-2.2.1-forge-1.20.1.jar",
+    "registry": "net.mcreator.sonsofsins.init.SonsOfSinsModEntities"
+  },
+  "sons_of_sins:butcher": {
+    "class": "net.mcreator.sonsofsins.entity.ButcherEntity",
+    "jar": "sons_of_sins-2.2.1-forge-1.20.1.jar",
+    "registry": "net.mcreator.sonsofsins.init.SonsOfSinsModEntities"
+  },
+  "sons_of_sins:curse": {
+    "class": "net.mcreator.sonsofsins.entity.CurseEntity",
+    "jar": "sons_of_sins-2.2.1-forge-1.20.1.jar",
+    "registry": "net.mcreator.sonsofsins.init.SonsOfSinsModEntities"
+  },
+  "sons_of_sins:devourer": {
+    "class": "net.mcreator.sonsofsins.entity.DevourerEntity",
+    "jar": "sons_of_sins-2.2.1-forge-1.20.1.jar",
+    "registry": "net.mcreator.sonsofsins.init.SonsOfSinsModEntities"
+  },
+  "sons_of_sins:devourer_organs": {
+    "class": "net.mcreator.sonsofsins.entity.DevourerOrgansEntity",
+    "jar": "sons_of_sins-2.2.1-forge-1.20.1.jar",
+    "registry": "net.mcreator.sonsofsins.init.SonsOfSinsModEntities"
+  },
+  "sons_of_sins:ditched": {
+    "class": "net.mcreator.sonsofsins.entity.DitchedEntity",
+    "jar": "sons_of_sins-2.2.1-forge-1.20.1.jar",
+    "registry": "net.mcreator.sonsofsins.init.SonsOfSinsModEntities"
+  },
+  "sons_of_sins:ether_ghost": {
+    "class": "net.mcreator.sonsofsins.entity.EtherGhostEntity",
+    "jar": "sons_of_sins-2.2.1-forge-1.20.1.jar",
+    "registry": "net.mcreator.sonsofsins.init.SonsOfSinsModEntities"
+  },
+  "sons_of_sins:grub": {
+    "class": "net.mcreator.sonsofsins.entity.GrubEntity",
+    "jar": "sons_of_sins-2.2.1-forge-1.20.1.jar",
+    "registry": "net.mcreator.sonsofsins.init.SonsOfSinsModEntities"
+  },
+  "sons_of_sins:grub_organs": {
+    "class": "net.mcreator.sonsofsins.entity.GrubOrgansEntity",
+    "jar": "sons_of_sins-2.2.1-forge-1.20.1.jar",
+    "registry": "net.mcreator.sonsofsins.init.SonsOfSinsModEntities"
+  },
+  "sons_of_sins:gulber": {
+    "class": "net.mcreator.sonsofsins.entity.GulberEntity",
+    "jar": "sons_of_sins-2.2.1-forge-1.20.1.jar",
+    "registry": "net.mcreator.sonsofsins.init.SonsOfSinsModEntities"
+  },
+  "sons_of_sins:gulber_organs": {
+    "class": "net.mcreator.sonsofsins.entity.GulberOrgansEntity",
+    "jar": "sons_of_sins-2.2.1-forge-1.20.1.jar",
+    "registry": "net.mcreator.sonsofsins.init.SonsOfSinsModEntities"
+  },
+  "sons_of_sins:guzzler": {
+    "class": "net.mcreator.sonsofsins.entity.GuzzlerEntity",
+    "jar": "sons_of_sins-2.2.1-forge-1.20.1.jar",
+    "registry": "net.mcreator.sonsofsins.init.SonsOfSinsModEntities"
+  },
+  "sons_of_sins:guzzler_organs": {
+    "class": "net.mcreator.sonsofsins.entity.GuzzlerOrgansEntity",
+    "jar": "sons_of_sins-2.2.1-forge-1.20.1.jar",
+    "registry": "net.mcreator.sonsofsins.init.SonsOfSinsModEntities"
+  },
+  "sons_of_sins:kelvin": {
+    "class": "net.mcreator.sonsofsins.entity.KelvinEntity",
+    "jar": "sons_of_sins-2.2.1-forge-1.20.1.jar",
+    "registry": "net.mcreator.sonsofsins.init.SonsOfSinsModEntities"
+  },
+  "sons_of_sins:nibbler": {
+    "class": "net.mcreator.sonsofsins.entity.NibblerEntity",
+    "jar": "sons_of_sins-2.2.1-forge-1.20.1.jar",
+    "registry": "net.mcreator.sonsofsins.init.SonsOfSinsModEntities"
+  },
+  "sons_of_sins:nibbler_organs": {
+    "class": "net.mcreator.sonsofsins.entity.NibblerOrgansEntity",
+    "jar": "sons_of_sins-2.2.1-forge-1.20.1.jar",
+    "registry": "net.mcreator.sonsofsins.init.SonsOfSinsModEntities"
+  },
+  "sons_of_sins:prowler": {
+    "class": "net.mcreator.sonsofsins.entity.ProwlerEntity",
+    "jar": "sons_of_sins-2.2.1-forge-1.20.1.jar",
+    "registry": "net.mcreator.sonsofsins.init.SonsOfSinsModEntities"
+  },
+  "sons_of_sins:walking_bed": {
+    "class": "net.mcreator.sonsofsins.entity.WalkingBedEntity",
+    "jar": "sons_of_sins-2.2.1-forge-1.20.1.jar",
+    "registry": "net.mcreator.sonsofsins.init.SonsOfSinsModEntities"
+  },
+  "sons_of_sins:wistiver": {
+    "class": "net.mcreator.sonsofsins.entity.WistiverEntity",
+    "jar": "sons_of_sins-2.2.1-forge-1.20.1.jar",
+    "registry": "net.mcreator.sonsofsins.init.SonsOfSinsModEntities"
+  },
+  "sons_of_sins:wistiver_jaw": {
+    "class": "net.mcreator.sonsofsins.entity.WistiverJawEntity",
+    "jar": "sons_of_sins-2.2.1-forge-1.20.1.jar",
+    "registry": "net.mcreator.sonsofsins.init.SonsOfSinsModEntities"
+  },
+  "takesapillage:archer": {
+    "class": "com.izofar.takesapillage.entity.Archer",
+    "jar": "takesapillage-1.0.3-1.20.1.jar",
+    "registry": "com.izofar.takesapillage.init.ModEntityTypes"
+  },
+  "takesapillage:clay_golem": {
+    "class": "com.izofar.takesapillage.entity.ClayGolem",
+    "jar": "takesapillage-1.0.3-1.20.1.jar",
+    "registry": "com.izofar.takesapillage.init.ModEntityTypes"
+  },
+  "takesapillage:legioner": {
+    "class": "com.izofar.takesapillage.entity.Legioner",
+    "jar": "takesapillage-1.0.3-1.20.1.jar",
+    "registry": "com.izofar.takesapillage.init.ModEntityTypes"
+  },
+  "takesapillage:skirmisher": {
+    "class": "com.izofar.takesapillage.entity.Skirmisher",
+    "jar": "takesapillage-1.0.3-1.20.1.jar",
+    "registry": "com.izofar.takesapillage.init.ModEntityTypes"
+  },
+  "the_bumblezone:bee_queen": {
+    "class": "com.telepathicgrunt.the_bumblezone.entities.mobs.BeeQueenEntity",
+    "jar": "the_bumblezone-7.15.2+1.20.1-forge.jar",
+    "registry": "com.telepathicgrunt.the_bumblezone.modinit.BzEntities"
+  },
+  "the_bumblezone:beehemoth": {
+    "class": "com.telepathicgrunt.the_bumblezone.entities.mobs.BeehemothEntity",
+    "jar": "the_bumblezone-7.15.2+1.20.1-forge.jar",
+    "registry": "com.telepathicgrunt.the_bumblezone.modinit.BzEntities"
+  },
+  "the_bumblezone:cosmic_crystal_entity": {
+    "class": "com.telepathicgrunt.the_bumblezone.entities.living.CosmicCrystalEntity",
+    "jar": "the_bumblezone-7.15.2+1.20.1-forge.jar",
+    "registry": "com.telepathicgrunt.the_bumblezone.modinit.BzEntities"
+  },
+  "the_bumblezone:honey_slime": {
+    "class": "com.telepathicgrunt.the_bumblezone.entities.mobs.HoneySlimeEntity",
+    "jar": "the_bumblezone-7.15.2+1.20.1-forge.jar",
+    "registry": "com.telepathicgrunt.the_bumblezone.modinit.BzEntities"
+  },
+  "the_bumblezone:rootmin": {
+    "class": "com.telepathicgrunt.the_bumblezone.entities.mobs.RootminEntity",
+    "jar": "the_bumblezone-7.15.2+1.20.1-forge.jar",
+    "registry": "com.telepathicgrunt.the_bumblezone.modinit.BzEntities"
+  },
+  "the_bumblezone:variant_bee": {
+    "class": "com.telepathicgrunt.the_bumblezone.entities.mobs.VariantBeeEntity",
+    "jar": "the_bumblezone-7.15.2+1.20.1-forge.jar",
+    "registry": "com.telepathicgrunt.the_bumblezone.modinit.BzEntities"
+  },
+  "unusualend:block_updater": {
+    "class": "net.mcreator.unusualend.entity.BlockUpdaterEntity",
+    "jar": "unusualend-2.3.1.2.jar",
+    "registry": "net.mcreator.unusualend.init.UnusualendModEntities"
+  },
+  "unusualend:bluk": {
+    "class": "net.mcreator.unusualend.entity.BlukEntity",
+    "jar": "unusualend-2.3.1.2.jar",
+    "registry": "net.mcreator.unusualend.init.UnusualendModEntities"
+  },
+  "unusualend:bolok": {
+    "class": "net.mcreator.unusualend.entity.BolokEntity",
+    "jar": "unusualend-2.3.1.2.jar",
+    "registry": "net.mcreator.unusualend.init.UnusualendModEntities"
+  },
+  "unusualend:dragling": {
+    "class": "net.mcreator.unusualend.entity.DraglingEntity",
+    "jar": "unusualend-2.3.1.2.jar",
+    "registry": "net.mcreator.unusualend.init.UnusualendModEntities"
+  },
+  "unusualend:ender_blob": {
+    "class": "net.mcreator.unusualend.entity.EnderblobEntity",
+    "jar": "unusualend-2.3.1.2.jar",
+    "registry": "net.mcreator.unusualend.init.UnusualendModEntities"
+  },
+  "unusualend:ender_firefly": {
+    "class": "net.mcreator.unusualend.entity.FlampyrEntity",
+    "jar": "unusualend-2.3.1.2.jar",
+    "registry": "net.mcreator.unusualend.init.UnusualendModEntities"
+  },
+  "unusualend:enderblob_queen": {
+    "class": "net.mcreator.unusualend.entity.EnderblobQueenEntity",
+    "jar": "unusualend-2.3.1.2.jar",
+    "registry": "net.mcreator.unusualend.init.UnusualendModEntities"
+  },
+  "unusualend:enderbulb": {
+    "class": "net.mcreator.unusualend.entity.EnderbulbEntity",
+    "jar": "unusualend-2.3.1.2.jar",
+    "registry": "net.mcreator.unusualend.init.UnusualendModEntities"
+  },
+  "unusualend:endstone_golem": {
+    "class": "net.mcreator.unusualend.entity.EndstoneGolemEntity",
+    "jar": "unusualend-2.3.1.2.jar",
+    "registry": "net.mcreator.unusualend.init.UnusualendModEntities"
+  },
+  "unusualend:endstone_trapper": {
+    "class": "net.mcreator.unusualend.entity.EnderTrapperEntity",
+    "jar": "unusualend-2.3.1.2.jar",
+    "registry": "net.mcreator.unusualend.init.UnusualendModEntities"
+  },
+  "unusualend:glub": {
+    "class": "net.mcreator.unusualend.entity.GlubEntity",
+    "jar": "unusualend-2.3.1.2.jar",
+    "registry": "net.mcreator.unusualend.init.UnusualendModEntities"
+  },
+  "unusualend:small_enderbulb": {
+    "class": "net.mcreator.unusualend.entity.SmallEnderbulbEntity",
+    "jar": "unusualend-2.3.1.2.jar",
+    "registry": "net.mcreator.unusualend.init.UnusualendModEntities"
+  },
+  "unusualend:spunkler": {
+    "class": "net.mcreator.unusualend.entity.SpunklerEntity",
+    "jar": "unusualend-2.3.1.2.jar",
+    "registry": "net.mcreator.unusualend.init.UnusualendModEntities"
+  },
+  "unusualend:summoned_dragling": {
+    "class": "net.mcreator.unusualend.entity.SummonedDraglingEntity",
+    "jar": "unusualend-2.3.1.2.jar",
+    "registry": "net.mcreator.unusualend.init.UnusualendModEntities"
+  },
+  "unusualend:undead_enderling": {
+    "class": "net.mcreator.unusualend.entity.EnderlingEntity",
+    "jar": "unusualend-2.3.1.2.jar",
+    "registry": "net.mcreator.unusualend.init.UnusualendModEntities"
+  },
+  "unusualend:void_bomb": {
+    "class": "net.mcreator.unusualend.entity.VoidBombEntity",
+    "jar": "unusualend-2.3.1.2.jar",
+    "registry": "net.mcreator.unusualend.init.UnusualendModEntities"
+  },
+  "unusualend:void_crack": {
+    "class": "net.mcreator.unusualend.entity.VoidCrackEntity",
+    "jar": "unusualend-2.3.1.2.jar",
+    "registry": "net.mcreator.unusualend.init.UnusualendModEntities"
+  },
+  "unusualend:warped_balloon": {
+    "class": "net.mcreator.unusualend.entity.LargeBubbleEntity",
+    "jar": "unusualend-2.3.1.2.jar",
+    "registry": "net.mcreator.unusualend.init.UnusualendModEntities"
+  }
+}

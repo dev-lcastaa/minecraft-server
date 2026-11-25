@@ -1,0 +1,12 @@
+{
+  "objectives": [
+    "compat_inventor_objs",
+    "compat_hunts_objs",
+    "compat_supplies_objs"
+  ],
+  "replace": false,
+  "rewards": [
+    "compat_inventor_rews",
+    "compat_supplies_rews"
+  ]
+}

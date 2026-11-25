@@ -1,0 +1,89 @@
+{
+  "replace": true,
+  "values": [
+    {
+      "id": "ad_astra:mogler",
+      "required": false
+    },
+    {
+      "id": "ad_astra:zombified_mogler",
+      "required": false
+    },
+    {
+      "id": "alexscaves:candicorn",
+      "required": false
+    },
+    {
+      "id": "alexscaves:forsaken",
+      "required": false
+    },
+    {
+      "id": "alexscaves:gum_worm",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:bison",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:bunfungus",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:laviathan",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:moose",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:rhinoceros",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:tusklin",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:void_worm",
+      "required": false
+    },
+    {
+      "id": "endergetic:booflo",
+      "required": false
+    },
+    {
+      "id": "fangs_n_claws:nightmare_horse",
+      "required": false
+    },
+    {
+      "id": "fangs_n_claws:owlbear",
+      "required": false
+    },
+    {
+      "id": "fangs_n_claws:purple_worm",
+      "required": false
+    },
+    {
+      "id": "mutantmore:mutant_hoglin",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_3542",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_3544",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_682",
+      "required": false
+    },
+    {
+      "id": "unusualend:enderblob_queen",
+      "required": false
+    }
+  ]
+}

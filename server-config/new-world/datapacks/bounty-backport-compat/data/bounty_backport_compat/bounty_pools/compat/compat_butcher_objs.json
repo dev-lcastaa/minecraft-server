@@ -1,0 +1,981 @@
+{
+  "content": {
+    "bounty_backport_compat_compat_butcher_objs_alexsdelight_cooked_kangaroo_shank": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "alexsdelight:cooked_kangaroo_shank",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 60.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_alexsdelight_cooked_loose_moose_rib": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "alexsdelight:cooked_loose_moose_rib",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 60.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_alexsdelight_kangaroo_pasta": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "alexsdelight:kangaroo_pasta",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 420.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_alexsdelight_kangaroo_shank": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "alexsdelight:kangaroo_shank",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 60.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_alexsdelight_kangaroo_stew": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "alexsdelight:kangaroo_stew",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 300.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_alexsdelight_loose_moose_rib": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "alexsdelight:loose_moose_rib",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 60.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_alexsmobs_bison_fur": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "alexsmobs:bison_fur",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_alexsmobs_cooked_kangaroo_meat": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "alexsmobs:cooked_kangaroo_meat",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_alexsmobs_cooked_moose_ribs": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "alexsmobs:cooked_moose_ribs",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_alexsmobs_kangaroo_burger": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "alexsmobs:kangaroo_burger",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 360.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_alexsmobs_kangaroo_hide": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "alexsmobs:kangaroo_hide",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_alexsmobs_kangaroo_meat": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "alexsmobs:kangaroo_meat",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_alexsmobs_moose_ribs": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "alexsmobs:moose_ribs",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_backported_animal_variants_blue_egg": {
+      "amount": {
+        "max": 32,
+        "min": 8
+      },
+      "content": "backported_animal_variants:blue_egg",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 50,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_backported_animal_variants_brown_egg": {
+      "amount": {
+        "max": 32,
+        "min": 8
+      },
+      "content": "backported_animal_variants:brown_egg",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 50,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_butchersdelightfoods_beefribs": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "butchersdelightfoods:beefribs",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_butchersdelightfoods_beeftenderloin": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "butchersdelightfoods:beeftenderloin",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_butchersdelightfoods_coockedbeeftenderloin": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "butchersdelightfoods:coockedbeeftenderloin",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_butchersdelightfoods_cooked_ham": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "butchersdelightfoods:cooked_ham",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_butchersdelightfoods_cooked_llama_loin": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "butchersdelightfoods:cooked_llama_loin",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_butchersdelightfoods_cooked_llama_ribs": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "butchersdelightfoods:cooked_llama_ribs",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_butchersdelightfoods_cookedbeefribs": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "butchersdelightfoods:cookedbeefribs",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_butchersdelightfoods_ham": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "butchersdelightfoods:ham",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_butchersdelightfoods_llama_loin": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "butchersdelightfoods:llama_loin",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_butchersdelightfoods_llamma_ribs": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "butchersdelightfoods:llamma_ribs",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_doggytalents_egg_sandwich": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "doggytalents:egg_sandwich",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 130.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_doggytalents_sausage": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "doggytalents:sausage",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_dungeonsdelight_smoked_spider_meat": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "dungeonsdelight:smoked_spider_meat",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_dungeonsdelight_soft_serve_sniffer_egg": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "dungeonsdelight:soft_serve_sniffer_egg",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_dungeonsdelight_spider_meat": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "dungeonsdelight:spider_meat",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_fangs_n_claws_cooked_owlbear_meat": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "fangs_n_claws:cooked_owlbear_meat",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_fangs_n_claws_owlbear_meat": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "fangs_n_claws:owlbear_meat",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_farmersdelight_bacon": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:bacon",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 72.5,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_farmersdelight_bacon_and_eggs": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:bacon_and_eggs",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 365.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_farmersdelight_bacon_sandwich": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:bacon_sandwich",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 372.5,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_farmersdelight_beef_patty": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:beef_patty",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 50.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_farmersdelight_beef_stew": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:beef_stew",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 340.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_farmersdelight_chicken_cuts": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:chicken_cuts",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 35.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_farmersdelight_chicken_sandwich": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:chicken_sandwich",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 420.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_farmersdelight_chicken_soup": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:chicken_soup",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 335.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_farmersdelight_cooked_bacon": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:cooked_bacon",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 72.5,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_farmersdelight_cooked_chicken_cuts": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:cooked_chicken_cuts",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 60.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_farmersdelight_cooked_mutton_chops": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:cooked_mutton_chops",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 60.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_farmersdelight_egg_sandwich": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:egg_sandwich",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 220.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_farmersdelight_fried_egg": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:fried_egg",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 50.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_farmersdelight_ham": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:ham",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_farmersdelight_milk_bottle": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:milk_bottle",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 160.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_farmersdelight_minced_beef": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:minced_beef",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 50.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_farmersdelight_mutton_chops": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:mutton_chops",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 60.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_farmersdelight_mutton_wrap": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:mutton_wrap",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 360.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_farmersdelight_pasta_with_mutton_chop": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:pasta_with_mutton_chop",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 420.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_farmersdelight_roasted_mutton_chops": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:roasted_mutton_chops",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 540.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_farmersdelight_smoked_ham": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:smoked_ham",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_festive_delight_festive_chicken_block": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "festive_delight:festive_chicken_block",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 1080.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_minecraft_beef": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:beef",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 100,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_minecraft_chicken": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:chicken",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 70,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_minecraft_cooked_beef": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:cooked_beef",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_minecraft_cooked_chicken": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:cooked_chicken",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_minecraft_cooked_mutton": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:cooked_mutton",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_minecraft_cooked_porkchop": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:cooked_porkchop",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_minecraft_cooked_rabbit": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:cooked_rabbit",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_minecraft_egg": {
+      "amount": {
+        "max": 32,
+        "min": 8
+      },
+      "content": "minecraft:egg",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 50,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_minecraft_milk_bucket": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:milk_bucket",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_minecraft_mutton": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:mutton",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_minecraft_porkchop": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:porkchop",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 145,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_minecraft_rabbit": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:rabbit",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_minecraft_rabbit_foot": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:rabbit_foot",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_minecraft_rabbit_hide": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:rabbit_hide",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_minecraft_rabbit_stew": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:rabbit_stew",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_minecraft_sniffer_egg": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:sniffer_egg",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_minecraft_turtle_egg": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:turtle_egg",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_mynethersdelight_boiled_egg": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "mynethersdelight:boiled_egg",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_mynethersdelight_deviled_egg": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "mynethersdelight:deviled_egg",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 346.25,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_mynethersdelight_dried_ghast_with_milk": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "mynethersdelight:dried_ghast_with_milk",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 360.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_mynethersdelight_egg_soup": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "mynethersdelight:egg_soup",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 340.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_mynethersdelight_golden_egg": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "mynethersdelight:golden_egg",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 8120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_mynethersdelight_strider_egg": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "mynethersdelight:strider_egg",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_oceanic_delight_egg_roll": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "oceanic_delight:egg_roll",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 170.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_oceanic_delight_steamed_beef": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "oceanic_delight:steamed_beef",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 205.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_sons_of_sins_ribs": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "sons_of_sins:ribs",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_butcher_objs_unusualend_ender_firefly_egg": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "unusualend:ender_firefly_egg",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    }
+  },
+  "replace": false,
+  "weightMult": 1.0
+}

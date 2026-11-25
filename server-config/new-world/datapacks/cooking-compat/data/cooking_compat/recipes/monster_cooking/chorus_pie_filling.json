@@ -1,0 +1,29 @@
+{
+  "cookingtime": 200,
+  "experience": 0,
+  "ingredients": [
+    {
+      "item": "minecraft:wheat"
+    },
+    {
+      "item": "minecraft:wheat"
+    },
+    {
+      "item": "minecraft:wheat"
+    },
+    {
+      "item": "minecraft:chorus_fruit"
+    },
+    {
+      "item": "minecraft:chorus_fruit"
+    },
+    {
+      "item": "minecraft:chorus_fruit"
+    }
+  ],
+  "recipe_book_tab": "misc",
+  "result": {
+    "item": "kubejs:chorus_pie_filling"
+  },
+  "type": "dungeonsdelight:monster_cooking"
+}

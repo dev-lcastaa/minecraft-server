@@ -1,0 +1,20 @@
+{
+  "container": {
+    "item": "endersdelight:shulker_bowl"
+  },
+  "cookingtime": 200,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "tag": "endersdelight:enderman_loot"
+    },
+    {
+      "item": "endersdelight:mite_crust"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "item": "endersdelight:endermite_stew"
+  },
+  "type": "dungeonsdelight:monster_cooking"
+}

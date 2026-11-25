@@ -1,0 +1,413 @@
+{
+  "replace": true,
+  "values": [
+    {
+      "id": "alexscaves:boundroid",
+      "required": false
+    },
+    {
+      "id": "alexscaves:boundroid_winch",
+      "required": false
+    },
+    {
+      "id": "alexscaves:caramel_cube",
+      "required": false
+    },
+    {
+      "id": "alexscaves:ferrouslime",
+      "required": false
+    },
+    {
+      "id": "alexscaves:gingerbread_man",
+      "required": false
+    },
+    {
+      "id": "alexscaves:gumbeeper",
+      "required": false
+    },
+    {
+      "id": "alexscaves:magnetron",
+      "required": false
+    },
+    {
+      "id": "alexscaves:mine_guardian",
+      "required": false
+    },
+    {
+      "id": "alexscaves:notor",
+      "required": false
+    },
+    {
+      "id": "alexscaves:teletor",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:anaconda_part",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:bone_serpent",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:bone_serpent_part",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:centipede_body",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:centipede_tail",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:farseer",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:flutter",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:guster",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:murmur",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:murmur_head",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:skelewag",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:soul_vulture",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:spectre",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:underminer",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:void_worm_part",
+      "required": false
+    },
+    {
+      "id": "bosses_of_mass_destruction:gauntlet",
+      "required": false
+    },
+    {
+      "id": "bosses_of_mass_destruction:obsidilith",
+      "required": false
+    },
+    {
+      "id": "bosses_of_mass_destruction:void_blossom",
+      "required": false
+    },
+    {
+      "id": "cozy_home:clock_entity",
+      "required": false
+    },
+    {
+      "id": "cozy_home:seat",
+      "required": false
+    },
+    {
+      "id": "cozy_home:seat_low",
+      "required": false
+    },
+    {
+      "id": "dreamshift:silk_circus_statue",
+      "required": false
+    },
+    {
+      "id": "dreamshift:still_life",
+      "required": false
+    },
+    {
+      "id": "dungeonsdelight:monster_yam",
+      "required": false
+    },
+    {
+      "id": "endergetic:poise_cluster",
+      "required": false
+    },
+    {
+      "id": "endofherobrine:armor_stand",
+      "required": false
+    },
+    {
+      "id": "fangs_n_claws:fire_ghost",
+      "required": false
+    },
+    {
+      "id": "fangs_n_claws:ghost",
+      "required": false
+    },
+    {
+      "id": "fangs_n_claws:golem",
+      "required": false
+    },
+    {
+      "id": "fangs_n_claws:ice_golem",
+      "required": false
+    },
+    {
+      "id": "fangs_n_claws:mimic",
+      "required": false
+    },
+    {
+      "id": "fangs_n_claws:purple_worm_arm",
+      "required": false
+    },
+    {
+      "id": "fangs_n_claws:silver_skeleton",
+      "required": false
+    },
+    {
+      "id": "fangs_n_claws:skeleton_horse",
+      "required": false
+    },
+    {
+      "id": "fangs_n_claws:zombie_horse",
+      "required": false
+    },
+    {
+      "id": "friendsandfoes:player_illusion",
+      "required": false
+    },
+    {
+      "id": "friendsandfoes:wildfire",
+      "required": false
+    },
+    {
+      "id": "graveyard:falling_corpse",
+      "required": false
+    },
+    {
+      "id": "graveyard:ghouling",
+      "required": false
+    },
+    {
+      "id": "graveyard:nightmare",
+      "required": false
+    },
+    {
+      "id": "mbackrooms:bed",
+      "required": false
+    },
+    {
+      "id": "mbackrooms:guardian_bed",
+      "required": false
+    },
+    {
+      "id": "mbackrooms:level_two_entity",
+      "required": false
+    },
+    {
+      "id": "mbackrooms:smiler",
+      "required": false
+    },
+    {
+      "id": "minecraft:creaking",
+      "required": false
+    },
+    {
+      "id": "minecraft:happy_ghast",
+      "required": false
+    },
+    {
+      "id": "mutantmore:concoction_w",
+      "required": false
+    },
+    {
+      "id": "mutantmore:mutant_blaze",
+      "required": false
+    },
+    {
+      "id": "mutantmore:mutant_shulker_trap",
+      "required": false
+    },
+    {
+      "id": "mutantmore:mutant_shulker_turret",
+      "required": false
+    },
+    {
+      "id": "mutantmore:mutant_wither_skeleton",
+      "required": false
+    },
+    {
+      "id": "mutantmore:rodling",
+      "required": false
+    },
+    {
+      "id": "mutantmore:sentry_vine",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_015_crawler",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_066",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_080",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_100",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_1001",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_1002",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_1048",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_1048a",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_1048b",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_1048c",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_173",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_250",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_280",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_3543",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_457",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_472",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_5131",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_843",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_872",
+      "required": false
+    },
+    {
+      "id": "sons_of_sins:blud_trade",
+      "required": false
+    },
+    {
+      "id": "sons_of_sins:devourer_organs",
+      "required": false
+    },
+    {
+      "id": "sons_of_sins:ether_ghost",
+      "required": false
+    },
+    {
+      "id": "sons_of_sins:grub_organs",
+      "required": false
+    },
+    {
+      "id": "sons_of_sins:gulber_organs",
+      "required": false
+    },
+    {
+      "id": "sons_of_sins:guzzler_organs",
+      "required": false
+    },
+    {
+      "id": "sons_of_sins:nibbler_organs",
+      "required": false
+    },
+    {
+      "id": "sons_of_sins:wistiver_jaw",
+      "required": false
+    },
+    {
+      "id": "takesapillage:clay_golem",
+      "required": false
+    },
+    {
+      "id": "the_bumblezone:cosmic_crystal_entity",
+      "required": false
+    },
+    {
+      "id": "the_bumblezone:rootmin",
+      "required": false
+    },
+    {
+      "id": "unusualend:block_updater",
+      "required": false
+    },
+    {
+      "id": "unusualend:enderbulb",
+      "required": false
+    },
+    {
+      "id": "unusualend:endstone_golem",
+      "required": false
+    },
+    {
+      "id": "unusualend:endstone_trapper",
+      "required": false
+    },
+    {
+      "id": "unusualend:small_enderbulb",
+      "required": false
+    },
+    {
+      "id": "unusualend:undead_enderling",
+      "required": false
+    },
+    {
+      "id": "unusualend:void_bomb",
+      "required": false
+    },
+    {
+      "id": "unusualend:void_crack",
+      "required": false
+    },
+    {
+      "id": "unusualend:warped_balloon",
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "cookingtime": 100,
+  "experience": 0.1,
+  "ingredients": [
+    {
+      "tag": "forge:eggs"
+    }
+  ],
+  "recipe_book_tab": "misc",
+  "result": {
+    "item": "farmersdelight:fried_egg"
+  },
+  "type": "farmersdelight:cooking"
+}

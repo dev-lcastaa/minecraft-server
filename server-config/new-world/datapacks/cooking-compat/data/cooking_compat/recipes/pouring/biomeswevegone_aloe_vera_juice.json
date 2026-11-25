@@ -1,0 +1,12 @@
+{
+  "amount": 250,
+  "container": {
+    "item": "minecraft:glass_bottle"
+  },
+  "fluid": "kubejs:juice_biomeswevegone_aloe_vera_juice_ready",
+  "output": {
+    "count": 1,
+    "item": "biomeswevegone:aloe_vera_juice"
+  },
+  "type": "farmersrespite:kettle_pouring"
+}

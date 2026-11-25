@@ -1,0 +1,26 @@
+{
+  "container": {
+    "item": "minecraft:bowl"
+  },
+  "cookingtime": 200,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "tag": "cooking_compat:raw_tentacles"
+    },
+    {
+      "item": "farmersdelight:tomato_sauce"
+    },
+    {
+      "tag": "forge:crops/onion"
+    },
+    {
+      "item": "minecraft:brown_mushroom"
+    }
+  ],
+  "recipe_book_tab": "misc",
+  "result": {
+    "item": "oceanic_delight:glow_squid_stew"
+  },
+  "type": "farmersdelight:cooking"
+}

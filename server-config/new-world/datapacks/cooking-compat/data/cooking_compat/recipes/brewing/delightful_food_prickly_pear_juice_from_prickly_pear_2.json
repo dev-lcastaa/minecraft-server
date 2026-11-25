@@ -1,0 +1,38 @@
+{
+  "base": {
+    "count": 1000,
+    "fluid": "kubejs:juice_delightful_food_prickly_pear_juice_from_prickly_pear_stage_1"
+  },
+  "brewingtime": 200,
+  "conditions": [
+    {
+      "type": "delightful:enabled",
+      "value": "prickly_pear_juice"
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "tag": "forge:fruits/prickly_pear",
+        "type": "forge:tag_empty"
+      }
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "item": "ecologics:cooked_prickly_pear",
+        "type": "forge:item_exists"
+      }
+    }
+  ],
+  "experience": 0.35,
+  "ingredients": [
+    {
+      "item": "minecraft:sugar"
+    }
+  ],
+  "result": {
+    "count": 1000,
+    "fluid": "kubejs:juice_delightful_food_prickly_pear_juice_from_prickly_pear_ready"
+  },
+  "type": "farmersrespite:brewing"
+}

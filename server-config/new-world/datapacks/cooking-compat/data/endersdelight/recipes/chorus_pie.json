@@ -1,0 +1,23 @@
+{
+  "cookingtime": 200,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "item": "kubejs:chorus_pie_filling"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "farmersdelight:pie_crust"
+    },
+    {
+      "item": "minecraft:sugar"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "item": "endersdelight:chorus_pie"
+  },
+  "type": "dungeonsdelight:monster_cooking"
+}

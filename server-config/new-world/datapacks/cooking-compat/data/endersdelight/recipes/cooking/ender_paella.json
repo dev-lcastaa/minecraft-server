@@ -1,0 +1,26 @@
+{
+  "container": {
+    "item": "endersdelight:shulker_bowl"
+  },
+  "cookingtime": 200,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "tag": "endersdelight:enderman_sight"
+    },
+    {
+      "tag": "endersdelight:shulker_loot"
+    },
+    {
+      "item": "minecraft:chorus_flower"
+    },
+    {
+      "item": "farmersdelight:rice"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "item": "endersdelight:ender_paella"
+  },
+  "type": "dungeonsdelight:monster_cooking"
+}

@@ -1,0 +1,17 @@
+{
+  "ingredients": [
+    {
+      "item": "biomeswevegone:tall_white_allium"
+    }
+  ],
+  "result": [
+    {
+      "count": 2,
+      "item": "minecraft:white_dye"
+    }
+  ],
+  "tool": {
+    "tag": "forge:tools/knives"
+  },
+  "type": "farmersdelight:cutting"
+}

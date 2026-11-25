@@ -1,0 +1,17 @@
+{
+  "ingredients": [
+    {
+      "item": "alexscaves:flytrap"
+    }
+  ],
+  "result": [
+    {
+      "count": 1,
+      "item": "minecraft:red_dye"
+    }
+  ],
+  "tool": {
+    "tag": "forge:tools/knives"
+  },
+  "type": "farmersdelight:cutting"
+}

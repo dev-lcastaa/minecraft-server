@@ -1,0 +1,23 @@
+{
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "biomeswevegone:blueberries"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    [
+      {
+        "tag": "forge:eggs"
+      },
+      {
+        "tag": "forge:eggs"
+      }
+    ]
+  ],
+  "result": {
+    "item": "biomeswevegone:blueberry_pie"
+  },
+  "type": "minecraft:crafting_shapeless"
+}

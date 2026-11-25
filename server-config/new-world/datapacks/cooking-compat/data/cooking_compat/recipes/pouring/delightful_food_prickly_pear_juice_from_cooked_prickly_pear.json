@@ -1,0 +1,22 @@
+{
+  "amount": 1000,
+  "conditions": [
+    {
+      "type": "delightful:enabled",
+      "value": "prickly_pear_juice"
+    },
+    {
+      "item": "ecologics:cooked_prickly_pear",
+      "type": "forge:item_exists"
+    }
+  ],
+  "container": {
+    "item": "minecraft:glass_bottle"
+  },
+  "fluid": "kubejs:juice_delightful_food_prickly_pear_juice_from_cooked_prickly_pear_ready",
+  "output": {
+    "count": 1,
+    "item": "delightful:prickly_pear_juice"
+  },
+  "type": "farmersrespite:kettle_pouring"
+}

@@ -1,0 +1,17 @@
+{
+  "ingredients": [
+    {
+      "item": "unusualend:gloopy_tendrils"
+    }
+  ],
+  "result": [
+    {
+      "count": 1,
+      "item": "minecraft:magenta_dye"
+    }
+  ],
+  "tool": {
+    "tag": "forge:tools/knives"
+  },
+  "type": "farmersdelight:cutting"
+}

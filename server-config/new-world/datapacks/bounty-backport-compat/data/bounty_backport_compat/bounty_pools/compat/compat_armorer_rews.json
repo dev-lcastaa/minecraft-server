@@ -1,0 +1,2095 @@
+{
+  "content": {
+    "bounty_backport_compat_compat_armorer_rews_ad_astra_jet_suit_boots": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "ad_astra:jet_suit_boots",
+      "rarity": "EPIC",
+      "repRequired": 20,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 944000.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_ad_astra_jet_suit_helmet": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "ad_astra:jet_suit_helmet",
+      "rarity": "EPIC",
+      "repRequired": 20,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 512240.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_ad_astra_netherite_space_boots": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "ad_astra:netherite_space_boots",
+      "rarity": "EPIC",
+      "repRequired": 20,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 304000.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_ad_astra_netherite_space_helmet": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "ad_astra:netherite_space_helmet",
+      "rarity": "EPIC",
+      "repRequired": 20,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 384120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_ad_astra_space_boots": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "ad_astra:space_boots",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_ad_astra_space_helmet": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "ad_astra:space_helmet",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_alexscaves_diving_boots": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "alexscaves:diving_boots",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_alexscaves_diving_chestplate": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "alexscaves:diving_chestplate",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_alexscaves_diving_helmet": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "alexscaves:diving_helmet",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_alexscaves_diving_leggings": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "alexscaves:diving_leggings",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_alexscaves_hazmat_boots": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "alexscaves:hazmat_boots",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_alexscaves_hazmat_chestplate": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "alexscaves:hazmat_chestplate",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_alexscaves_hazmat_leggings": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "alexscaves:hazmat_leggings",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_alexscaves_polarity_armor_trim_smithing_template": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "alexscaves:polarity_armor_trim_smithing_template",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_alexscaves_primordial_helmet": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "alexscaves:primordial_helmet",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_alexsmobs_centipede_leggings": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "alexsmobs:centipede_leggings",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 840.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_alexsmobs_crocodile_chestplate": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "alexsmobs:crocodile_chestplate",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 960.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_alexsmobs_emu_leggings": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "alexsmobs:emu_leggings",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 840.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_alexsmobs_flying_fish_boots": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "alexsmobs:flying_fish_boots",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 400.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_alexsmobs_froststalker_helmet": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "alexsmobs:froststalker_helmet",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 720.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_alexsmobs_roadrunner_boots": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "alexsmobs:roadrunner_boots",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 840.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_alexsmobs_rocky_chestplate": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "alexsmobs:rocky_chestplate",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 960.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_alexsmobs_straddle_helmet": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "alexsmobs:straddle_helmet",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 520.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_armoroftheages_anubis_armor_chest": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "armoroftheages:anubis_armor_chest",
+      "rarity": "EPIC",
+      "repRequired": 20,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 557240.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_armoroftheages_anubis_armor_feet": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "armoroftheages:anubis_armor_feet",
+      "rarity": "EPIC",
+      "repRequired": 20,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 274240.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_armoroftheages_anubis_armor_head": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "armoroftheages:anubis_armor_head",
+      "rarity": "EPIC",
+      "repRequired": 20,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 356360.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_armoroftheages_anubis_armor_legs": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "armoroftheages:anubis_armor_legs",
+      "rarity": "EPIC",
+      "repRequired": 20,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 484240.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_armoroftheages_centurion_armor_chest": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "armoroftheages:centurion_armor_chest",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 13240.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_armoroftheages_centurion_armor_feet": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "armoroftheages:centurion_armor_feet",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 6400.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_armoroftheages_centurion_armor_head": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "armoroftheages:centurion_armor_head",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 9360.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_armoroftheages_centurion_armor_legs": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "armoroftheages:centurion_armor_legs",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 11240.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_armoroftheages_exalted_aurum_armor_chest": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "armoroftheages:exalted_aurum_armor_chest",
+      "rarity": "EPIC",
+      "repRequired": 20,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 557120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_armoroftheages_exalted_aurum_armor_feet": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "armoroftheages:exalted_aurum_armor_feet",
+      "rarity": "EPIC",
+      "repRequired": 20,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 276000.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_armoroftheages_exalted_aurum_armor_head": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "armoroftheages:exalted_aurum_armor_head",
+      "rarity": "EPIC",
+      "repRequired": 20,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 347000.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_armoroftheages_exalted_aurum_armor_legs": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "armoroftheages:exalted_aurum_armor_legs",
+      "rarity": "EPIC",
+      "repRequired": 20,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 484240.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_armoroftheages_holy_armor_chest": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "armoroftheages:holy_armor_chest",
+      "rarity": "EPIC",
+      "repRequired": 20,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 575000.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_armoroftheages_holy_armor_feet": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "armoroftheages:holy_armor_feet",
+      "rarity": "EPIC",
+      "repRequired": 20,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 276000.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_armoroftheages_holy_armor_head": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "armoroftheages:holy_armor_head",
+      "rarity": "EPIC",
+      "repRequired": 20,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 338240.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_armoroftheages_holy_armor_legs": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "armoroftheages:holy_armor_legs",
+      "rarity": "EPIC",
+      "repRequired": 20,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 502000.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_armoroftheages_iron_plate_armor_chest": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "armoroftheages:iron_plate_armor_chest",
+      "rarity": "EPIC",
+      "repRequired": 20,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 71000.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_armoroftheages_iron_plate_armor_feet": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "armoroftheages:iron_plate_armor_feet",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 24000.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_armoroftheages_iron_plate_armor_head": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "armoroftheages:iron_plate_armor_head",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 41240.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_armoroftheages_iron_plate_armor_legs": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "armoroftheages:iron_plate_armor_legs",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 43240.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_armoroftheages_japanese_light_armor_chest": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "armoroftheages:japanese_light_armor_chest",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 1040.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_armoroftheages_japanese_light_armor_feet": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "armoroftheages:japanese_light_armor_feet",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 680.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_armoroftheages_japanese_light_armor_head": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "armoroftheages:japanese_light_armor_head",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 360.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_armoroftheages_japanese_light_armor_legs": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "armoroftheages:japanese_light_armor_legs",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 680.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_armoroftheages_o_yoroi_armor_chest": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "armoroftheages:o_yoroi_armor_chest",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 11960.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_armoroftheages_o_yoroi_armor_feet": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "armoroftheages:o_yoroi_armor_feet",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 6240.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_armoroftheages_o_yoroi_armor_head": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "armoroftheages:o_yoroi_armor_head",
+      "rarity": "EPIC",
+      "repRequired": 20,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 50000.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_armoroftheages_o_yoroi_armor_legs": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "armoroftheages:o_yoroi_armor_legs",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 10840.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_armoroftheages_pharaoh_armor_chest": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "armoroftheages:pharaoh_armor_chest",
+      "rarity": "EPIC",
+      "repRequired": 20,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 98400.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_armoroftheages_pharaoh_armor_feet": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "armoroftheages:pharaoh_armor_feet",
+      "rarity": "EPIC",
+      "repRequired": 20,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 60000.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_armoroftheages_pharaoh_armor_head": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "armoroftheages:pharaoh_armor_head",
+      "rarity": "EPIC",
+      "repRequired": 20,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 68240.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_armoroftheages_pharaoh_armor_legs": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "armoroftheages:pharaoh_armor_legs",
+      "rarity": "EPIC",
+      "repRequired": 20,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 79320.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_armoroftheages_quetzalcoatl_armor_chest": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "armoroftheages:quetzalcoatl_armor_chest",
+      "rarity": "EPIC",
+      "repRequired": 20,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 514650.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_armoroftheages_quetzalcoatl_armor_feet": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "armoroftheages:quetzalcoatl_armor_feet",
+      "rarity": "EPIC",
+      "repRequired": 20,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 256480.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_armoroftheages_quetzalcoatl_armor_head": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "armoroftheages:quetzalcoatl_armor_head",
+      "rarity": "EPIC",
+      "repRequired": 20,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 322720.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_armoroftheages_quetzalcoatl_armor_legs": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "armoroftheages:quetzalcoatl_armor_legs",
+      "rarity": "EPIC",
+      "repRequired": 20,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 449360.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_armoroftheages_raijin_armor_chest": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "armoroftheages:raijin_armor_chest",
+      "rarity": "EPIC",
+      "repRequired": 20,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 523120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_armoroftheages_raijin_armor_feet": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "armoroftheages:raijin_armor_feet",
+      "rarity": "EPIC",
+      "repRequired": 20,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 260000.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_armoroftheages_raijin_armor_head": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "armoroftheages:raijin_armor_head",
+      "rarity": "EPIC",
+      "repRequired": 20,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 340000.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_armoroftheages_raijin_armor_legs": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "armoroftheages:raijin_armor_legs",
+      "rarity": "EPIC",
+      "repRequired": 20,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 448640.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_cold_sweat_chameleon_boots": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "cold_sweat:chameleon_boots",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 480.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_cold_sweat_chameleon_chestplate": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "cold_sweat:chameleon_chestplate",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 960.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_cold_sweat_chameleon_helmet": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "cold_sweat:chameleon_helmet",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 600.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_cold_sweat_chameleon_leggings": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "cold_sweat:chameleon_leggings",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 840.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_create_cardboard_boots": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "create:cardboard_boots",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 480.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_create_cardboard_chestplate": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "create:cardboard_chestplate",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 960.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_create_cardboard_helmet": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "create:cardboard_helmet",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 600.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_create_cardboard_leggings": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "create:cardboard_leggings",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 840.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_create_copper_diving_boots": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "create:copper_diving_boots",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 840.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_create_copper_diving_helmet": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "create:copper_diving_helmet",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 870.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_create_netherite_diving_boots": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "create:netherite_diving_boots",
+      "rarity": "EPIC",
+      "repRequired": 20,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 320840.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_create_netherite_diving_helmet": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "create:netherite_diving_helmet",
+      "rarity": "EPIC",
+      "repRequired": 20,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 384870.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_fangs_n_claws_fur_boots": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "fangs_n_claws:fur_boots",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 480.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_fangs_n_claws_fur_chestplate": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "fangs_n_claws:fur_chestplate",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 960.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_fangs_n_claws_fur_helmet": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "fangs_n_claws:fur_helmet",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 600.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_fangs_n_claws_fur_leggings": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "fangs_n_claws:fur_leggings",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 840.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_fangs_n_claws_owl_boots": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "fangs_n_claws:owl_boots",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 480.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_fangs_n_claws_owl_chestplate": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "fangs_n_claws:owl_chestplate",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 960.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_fangs_n_claws_owl_helmet": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "fangs_n_claws:owl_helmet",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 600.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_fangs_n_claws_owl_leggings": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "fangs_n_claws:owl_leggings",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 840.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_fangs_n_claws_scorpion_boots": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "fangs_n_claws:scorpion_boots",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 480.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_fangs_n_claws_scorpion_chestplate": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "fangs_n_claws:scorpion_chestplate",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 960.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_fangs_n_claws_scorpion_helmet": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "fangs_n_claws:scorpion_helmet",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 600.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_fangs_n_claws_scorpion_leggings": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "fangs_n_claws:scorpion_leggings",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 840.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_fangs_n_claws_shrike_boots": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "fangs_n_claws:shrike_boots",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 21440.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_fangs_n_claws_shrike_helmet": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "fangs_n_claws:shrike_helmet",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 21560.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_fangs_n_claws_shrike_leggings": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "fangs_n_claws:shrike_leggings",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 21800.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_mbackrooms_hazmat_boots": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "mbackrooms:hazmat_boots",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 480.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_mbackrooms_hazmat_chestplate": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "mbackrooms:hazmat_chestplate",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 960.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_mbackrooms_hazmat_helmet": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "mbackrooms:hazmat_helmet",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 600.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_mbackrooms_hazmat_leggings": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "mbackrooms:hazmat_leggings",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 840.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_mbackrooms_scuba_hazmat_boots": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "mbackrooms:scuba_hazmat_boots",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 1600.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_mbackrooms_scuba_hazmat_chestplate": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "mbackrooms:scuba_hazmat_chestplate",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 2080.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_mbackrooms_scuba_hazmat_helmet": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "mbackrooms:scuba_hazmat_helmet",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 1720.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_mbackrooms_scuba_hazmat_leggings": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "mbackrooms:scuba_hazmat_leggings",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 1960.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_minecraft_armor_stand": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:armor_stand",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_minecraft_chainmail_boots": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:chainmail_boots",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_minecraft_chainmail_chestplate": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:chainmail_chestplate",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_minecraft_chainmail_helmet": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:chainmail_helmet",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_minecraft_chainmail_leggings": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:chainmail_leggings",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_minecraft_coast_armor_trim_smithing_template": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:coast_armor_trim_smithing_template",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_minecraft_diamond_boots": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:diamond_boots",
+      "rarity": "RARE",
+      "repRequired": 20,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 40000,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_minecraft_diamond_chestplate": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:diamond_chestplate",
+      "rarity": "RARE",
+      "repRequired": 20,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 80000,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_minecraft_diamond_helmet": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:diamond_helmet",
+      "rarity": "RARE",
+      "repRequired": 20,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 50000,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_minecraft_diamond_horse_armor": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:diamond_horse_armor",
+      "rarity": "RARE",
+      "repRequired": 20,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 10000,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_minecraft_diamond_leggings": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:diamond_leggings",
+      "rarity": "RARE",
+      "repRequired": 20,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 70000,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_minecraft_dune_armor_trim_smithing_template": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:dune_armor_trim_smithing_template",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_minecraft_eye_armor_trim_smithing_template": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:eye_armor_trim_smithing_template",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_minecraft_golden_boots": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:golden_boots",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_minecraft_golden_chestplate": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:golden_chestplate",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_minecraft_golden_helmet": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:golden_helmet",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_minecraft_golden_horse_armor": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:golden_horse_armor",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_minecraft_golden_leggings": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:golden_leggings",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_minecraft_host_armor_trim_smithing_template": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:host_armor_trim_smithing_template",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_minecraft_iron_boots": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:iron_boots",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 4000,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_minecraft_iron_chestplate": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:iron_chestplate",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 8000,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_minecraft_iron_helmet": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:iron_helmet",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 5000,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_minecraft_iron_horse_armor": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:iron_horse_armor",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 1000,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_minecraft_iron_leggings": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:iron_leggings",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 7000,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_minecraft_leather_boots": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:leather_boots",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_minecraft_leather_chestplate": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:leather_chestplate",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_minecraft_leather_helmet": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:leather_helmet",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_minecraft_leather_horse_armor": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:leather_horse_armor",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_minecraft_leather_leggings": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:leather_leggings",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_minecraft_netherite_horse_armor": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:netherite_horse_armor",
+      "rarity": "EPIC",
+      "repRequired": 20,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 138000.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_minecraft_netherite_nautilus_armor": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:netherite_nautilus_armor",
+      "rarity": "EPIC",
+      "repRequired": 20,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 138000.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_minecraft_raiser_armor_trim_smithing_template": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:raiser_armor_trim_smithing_template",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_minecraft_rib_armor_trim_smithing_template": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:rib_armor_trim_smithing_template",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_minecraft_sentry_armor_trim_smithing_template": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:sentry_armor_trim_smithing_template",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_minecraft_shaper_armor_trim_smithing_template": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:shaper_armor_trim_smithing_template",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_minecraft_shield": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:shield",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_minecraft_silence_armor_trim_smithing_template": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:silence_armor_trim_smithing_template",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_minecraft_snout_armor_trim_smithing_template": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:snout_armor_trim_smithing_template",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_minecraft_spire_armor_trim_smithing_template": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:spire_armor_trim_smithing_template",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_minecraft_tide_armor_trim_smithing_template": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:tide_armor_trim_smithing_template",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_minecraft_vex_armor_trim_smithing_template": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:vex_armor_trim_smithing_template",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_minecraft_ward_armor_trim_smithing_template": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:ward_armor_trim_smithing_template",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_minecraft_wayfinder_armor_trim_smithing_template": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:wayfinder_armor_trim_smithing_template",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_minecraft_wild_armor_trim_smithing_template": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:wild_armor_trim_smithing_template",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_minecraft_wolf_armor": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:wolf_armor",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 720.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_mutantmore_mutant_shulker_shield": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "mutantmore:mutant_shulker_shield",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 6360.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_mutantmore_rodling_helmet": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "mutantmore:rodling_helmet",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 960.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_scp_ultimate_class_d_uniform_armor_boots": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "scp_ultimate:class_d_uniform_armor_boots",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 480.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_scp_ultimate_class_d_uniform_armor_chestplate": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "scp_ultimate:class_d_uniform_armor_chestplate",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 960.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_scp_ultimate_class_d_uniform_armor_leggings": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "scp_ultimate:class_d_uniform_armor_leggings",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 840.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_scp_ultimate_gasmask_helmet": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "scp_ultimate:gasmask_helmet",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 7240.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_scp_ultimate_nightvisiongoggles_helmet": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "scp_ultimate:nightvisiongoggles_helmet",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 8800.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_scp_ultimate_scp_148_gear_armor_boots": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "scp_ultimate:scp_148_gear_armor_boots",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 480.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_scp_ultimate_scp_148_gear_armor_chestplate": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "scp_ultimate:scp_148_gear_armor_chestplate",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 960.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_scp_ultimate_scp_148_gear_armor_helmet": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "scp_ultimate:scp_148_gear_armor_helmet",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 600.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_scp_ultimate_scp_148_gear_armor_leggings": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "scp_ultimate:scp_148_gear_armor_leggings",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 840.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_sons_of_sins_remnant_boots": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "sons_of_sins:remnant_boots",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 4000.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_sons_of_sins_remnant_helmet": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "sons_of_sins:remnant_helmet",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 5000.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_sons_of_sins_remnant_leggings": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "sons_of_sins:remnant_leggings",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 7000.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_the_bumblezone_bumble_bee_chestplate_1": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "the_bumblezone:bumble_bee_chestplate_1",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_the_bumblezone_bumble_bee_chestplate_2": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "the_bumblezone:bumble_bee_chestplate_2",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_the_bumblezone_honey_crystal_shield": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "the_bumblezone:honey_crystal_shield",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_unusualend_ancient_armor_trim_smithing_template": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "unusualend:ancient_armor_trim_smithing_template",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_unusualend_chorus_helmet": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "unusualend:chorus_helmet",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 720.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_unusualend_enderblob_shield": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "unusualend:enderblob_shield",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 1080.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_unusualend_scale_horse_armor": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "unusualend:scale_horse_armor",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 720.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_unusualend_spectral_leggings": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "unusualend:spectral_leggings",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 840.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_unusualend_warped_boots": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "unusualend:warped_boots",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 480.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_armorer_rews_unusualend_warped_chestplate": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "unusualend:warped_chestplate",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 960.0,
+      "weightMult": 0.1
+    }
+  },
+  "replace": false,
+  "weightMult": 1.0
+}

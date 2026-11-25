@@ -1,0 +1,24 @@
+{
+  "cookingtime": 200,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "item": "endersdelight:mite_crust"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "minecraft:wheat"
+    },
+    {
+      "item": "minecraft:wheat"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "count": 1,
+    "item": "endersdelight:uncanny_cookies"
+  },
+  "type": "dungeonsdelight:monster_cooking"
+}

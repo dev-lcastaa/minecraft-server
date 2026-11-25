@@ -1,0 +1,12 @@
+{
+  "amount": 1000,
+  "container": {
+    "item": "minecraft:glass_bottle"
+  },
+  "fluid": "kubejs:juice_endersdelight_chorus_juice_ready",
+  "output": {
+    "count": 1,
+    "item": "endersdelight:chorus_juice"
+  },
+  "type": "farmersrespite:kettle_pouring"
+}

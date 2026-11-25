@@ -1,0 +1,12 @@
+{
+  "objectives": [
+    "compat_leatherer_objs",
+    "compat_hunts_objs",
+    "compat_supplies_objs"
+  ],
+  "replace": false,
+  "rewards": [
+    "compat_leatherer_rews",
+    "compat_supplies_rews"
+  ]
+}

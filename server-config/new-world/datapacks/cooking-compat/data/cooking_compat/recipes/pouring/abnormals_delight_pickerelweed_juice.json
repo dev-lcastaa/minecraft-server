@@ -1,0 +1,18 @@
+{
+  "amount": 1000,
+  "conditions": [
+    {
+      "modid": "upgrade_aquatic",
+      "type": "forge:mod_loaded"
+    }
+  ],
+  "container": {
+    "item": "minecraft:glass_bottle"
+  },
+  "fluid": "kubejs:juice_abnormals_delight_pickerelweed_juice_ready",
+  "output": {
+    "count": 1,
+    "item": "abnormals_delight:pickerelweed_juice"
+  },
+  "type": "farmersrespite:kettle_pouring"
+}

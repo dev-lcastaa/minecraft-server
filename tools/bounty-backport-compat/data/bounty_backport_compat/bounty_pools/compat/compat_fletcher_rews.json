@@ -1,0 +1,219 @@
+{
+  "content": {
+    "bounty_backport_compat_compat_fletcher_rews_alexscaves_burrowing_arrow": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "alexscaves:burrowing_arrow",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fletcher_rews_alexscaves_seeking_arrow": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "alexscaves:seeking_arrow",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fletcher_rews_alexsmobs_emu_feather": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "alexsmobs:emu_feather",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fletcher_rews_alexsmobs_roadrunner_feather": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "alexsmobs:roadrunner_feather",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fletcher_rews_dungeonsdelight_gunk_arrow": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "dungeonsdelight:gunk_arrow",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 300.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fletcher_rews_fangs_n_claws_giant_feather": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "fangs_n_claws:giant_feather",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fletcher_rews_fangs_n_claws_velocity_arrow": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "fangs_n_claws:velocity_arrow",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 87.78,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fletcher_rews_friendsandfoes_penguin_feather": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "friendsandfoes:penguin_feather",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fletcher_rews_minecraft_arrow": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "minecraft:arrow",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fletcher_rews_minecraft_bow": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "minecraft:bow",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fletcher_rews_minecraft_crossbow": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "minecraft:crossbow",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fletcher_rews_minecraft_feather": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "minecraft:feather",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fletcher_rews_minecraft_spectral_arrow": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "minecraft:spectral_arrow",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fletcher_rews_mutantmore_adaptive_crossbow": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "mutantmore:adaptive_crossbow",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 2600.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fletcher_rews_quark_torch_arrow": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "quark:torch_arrow",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fletcher_rews_supplementaries_rope_arrow": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "supplementaries:rope_arrow",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_fletcher_rews_unusualend_phantom_arrow": {
+      "amount": {
+        "max": 4,
+        "min": 2
+      },
+      "content": "unusualend:phantom_arrow",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    }
+  },
+  "replace": false,
+  "weightMult": 1.0
+}

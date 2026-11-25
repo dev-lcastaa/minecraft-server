@@ -1,0 +1,29 @@
+{
+  "container": {
+    "item": "minecraft:shulker_shell"
+  },
+  "cookingtime": 200,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "item": "endersdelight:shulker_mollusk"
+    },
+    {
+      "item": "minecraft:chorus_fruit"
+    },
+    {
+      "item": "farmersdelight:rice"
+    },
+    {
+      "item": "farmersdelight:tomato"
+    },
+    {
+      "item": "minecraft:brown_mushroom"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "item": "endersdelight:stuffed_shulker"
+  },
+  "type": "dungeonsdelight:monster_cooking"
+}

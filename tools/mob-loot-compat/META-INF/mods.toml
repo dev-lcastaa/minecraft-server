@@ -1,0 +1,37 @@
+modLoader="lowcodefml"
+loaderVersion="[47,48)"
+license="MIT"
+
+[[mods]]
+modId="mob_loot_compat"
+version="1.0.0"
+displayName="Mob Loot Compatibility"
+description="Sickle-only kill blood extraction and obtainable Supplementaries quiver arrows."
+
+[[dependencies.mob_loot_compat]]
+modId="sons_of_sins"
+mandatory=true
+versionRange="[2.2.1,2.2.2)"
+ordering="AFTER"
+side="BOTH"
+
+[[dependencies.mob_loot_compat]]
+modId="supplementaries"
+mandatory=true
+versionRange="[1.20-3.1.44,1.20-3.1.45)"
+ordering="AFTER"
+side="BOTH"
+
+[[dependencies.mob_loot_compat]]
+modId="farmersdelight"
+mandatory=true
+versionRange="[1.20.1-1.3.4,1.20.1-1.3.5)"
+ordering="AFTER"
+side="BOTH"
+
+[[dependencies.mob_loot_compat]]
+modId="kubejs"
+mandatory=true
+versionRange="[2001.6.5,2002)"
+ordering="AFTER"
+side="BOTH"

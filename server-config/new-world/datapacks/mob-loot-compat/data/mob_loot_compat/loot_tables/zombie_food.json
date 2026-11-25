@@ -1,0 +1,46 @@
+{
+  "type": "minecraft:entity",
+  "pools": [
+    {
+      "rolls": 1,
+      "conditions": [
+        {
+          "condition": "minecraft:random_chance",
+          "chance": 0.05
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "farmersdelight:cabbage",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "farmersdelight:tomato",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "farmersdelight:onion",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "farmersdelight:rice",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "farmersdelight:cabbage_seeds",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "farmersdelight:tomato_seeds",
+          "weight": 1
+        }
+      ]
+    }
+  ]
+}

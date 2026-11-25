@@ -1,0 +1,24 @@
+{
+  "base": {
+    "count": 1000,
+    "fluid": "kubejs:juice_unusualend_chorus_juice_farming_delight_stage_1"
+  },
+  "brewingtime": 200,
+  "conditions": [
+    {
+      "modid": "farmersdelight",
+      "type": "forge:mod_loaded"
+    }
+  ],
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "item": "minecraft:chorus_fruit"
+    }
+  ],
+  "result": {
+    "count": 1000,
+    "fluid": "kubejs:juice_unusualend_chorus_juice_farming_delight_ready"
+  },
+  "type": "farmersrespite:brewing"
+}

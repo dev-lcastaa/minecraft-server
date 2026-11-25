@@ -1,0 +1,17 @@
+{
+  "ingredients": [
+    {
+      "item": "butchersdelightfoods:cooked_goat_shank"
+    }
+  ],
+  "result": [
+    {
+      "count": 1,
+      "item": "minecraft:cooked_mutton"
+    }
+  ],
+  "tool": {
+    "tag": "forge:tools/knives"
+  },
+  "type": "farmersdelight:cutting"
+}

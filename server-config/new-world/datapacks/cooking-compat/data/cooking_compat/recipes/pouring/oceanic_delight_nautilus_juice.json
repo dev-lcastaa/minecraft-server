@@ -1,0 +1,12 @@
+{
+  "amount": 1000,
+  "container": {
+    "item": "minecraft:nautilus_shell"
+  },
+  "fluid": "kubejs:juice_oceanic_delight_nautilus_juice_ready",
+  "output": {
+    "count": 1,
+    "item": "oceanic_delight:nautilus_juice"
+  },
+  "type": "farmersrespite:kettle_pouring"
+}

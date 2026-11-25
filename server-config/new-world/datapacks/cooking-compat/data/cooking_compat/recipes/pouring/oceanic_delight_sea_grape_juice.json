@@ -1,0 +1,12 @@
+{
+  "amount": 1000,
+  "container": {
+    "item": "minecraft:glass_bottle"
+  },
+  "fluid": "kubejs:juice_oceanic_delight_sea_grape_juice_ready",
+  "output": {
+    "count": 1,
+    "item": "oceanic_delight:sea_grape_juice"
+  },
+  "type": "farmersrespite:kettle_pouring"
+}

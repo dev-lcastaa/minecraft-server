@@ -1,0 +1,17 @@
+{
+  "ingredients": [
+    {
+      "item": "unusualend:enderling_scrap"
+    }
+  ],
+  "result": [
+    {
+      "count": 1,
+      "item": "minecraft:black_dye"
+    }
+  ],
+  "tool": {
+    "tag": "forge:tools/knives"
+  },
+  "type": "farmersdelight:cutting"
+}

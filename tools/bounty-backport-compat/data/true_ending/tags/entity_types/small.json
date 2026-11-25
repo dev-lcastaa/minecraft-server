@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "backported_animal_variants:cold_chicken",
+    "backported_animal_variants:cold_pig",
+    "backported_animal_variants:warm_chicken",
+    "backported_animal_variants:warm_pig"
+  ]
+}

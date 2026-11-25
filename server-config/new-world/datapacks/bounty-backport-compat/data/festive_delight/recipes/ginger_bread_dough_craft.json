@@ -1,0 +1,31 @@
+{
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:wheat"
+    },
+    {
+      "item": "minecraft:wheat"
+    },
+    {
+      "item": "minecraft:wheat"
+    },
+    {
+      "tag": "forge:eggs"
+    },
+    {
+      "item": "minecraft:milk_bucket"
+    },
+    {
+      "item": "minecraft:honey_bottle"
+    },
+    {
+      "item": "festive_delight:cinnamon_powder"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "item": "festive_delight:gingerbread_dough"
+  },
+  "type": "minecraft:crafting_shapeless"
+}

@@ -1,0 +1,17 @@
+{
+  "ingredients": [
+    {
+      "item": "butchersdelightfoods:cookedporkloin"
+    }
+  ],
+  "result": [
+    {
+      "count": 3,
+      "item": "minecraft:cooked_porkchop"
+    }
+  ],
+  "tool": {
+    "tag": "forge:tools/knives"
+  },
+  "type": "farmersdelight:cutting"
+}

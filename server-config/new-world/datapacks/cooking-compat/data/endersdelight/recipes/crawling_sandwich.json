@@ -1,0 +1,24 @@
+{
+  "cookingtime": 200,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "tag": "endersdelight:shulker_loot"
+    },
+    {
+      "item": "endersdelight:mite_crust"
+    },
+    {
+      "item": "minecraft:chorus_fruit"
+    },
+    {
+      "item": "minecraft:bread"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "count": 1,
+    "item": "endersdelight:crawling_sandwich"
+  },
+  "type": "dungeonsdelight:monster_cooking"
+}

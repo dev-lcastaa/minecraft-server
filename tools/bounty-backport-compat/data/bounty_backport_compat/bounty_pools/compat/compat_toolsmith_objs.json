@@ -1,0 +1,814 @@
+{
+  "content": {
+    "bounty_backport_compat_compat_toolsmith_objs_butchersdelight_cleaver": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "butchersdelight:cleaver",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 1231.11,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_toolsmith_objs_delightful_amethyst_knife": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "delightful:amethyst_knife",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 270.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_toolsmith_objs_delightful_bone_knife": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "delightful:bone_knife",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 240.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_toolsmith_objs_delightful_brass_knife": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "delightful:brass_knife",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 1200.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_toolsmith_objs_delightful_copper_knife": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "delightful:copper_knife",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 270.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_toolsmith_objs_delightful_emerald_knife": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "delightful:emerald_knife",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 1120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_toolsmith_objs_delightful_lead_knife": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "delightful:lead_knife",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 240.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_toolsmith_objs_delightful_nether_quartz_knife": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "delightful:nether_quartz_knife",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 270.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_toolsmith_objs_delightful_pearlescent_knife": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "delightful:pearlescent_knife",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 10360.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_toolsmith_objs_delightful_steel_knife": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "delightful:steel_knife",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 1320.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_toolsmith_objs_delightful_tin_knife": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "delightful:tin_knife",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 240.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_toolsmith_objs_delightful_zinc_knife": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "delightful:zinc_knife",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 240.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_toolsmith_objs_dungeonsdelight_diamond_cleaver": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "dungeonsdelight:diamond_cleaver",
+      "rarity": "RARE",
+      "repRequired": 20,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 30120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_toolsmith_objs_dungeonsdelight_flint_cleaver": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "dungeonsdelight:flint_cleaver",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 480.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_toolsmith_objs_dungeonsdelight_golden_cleaver": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "dungeonsdelight:golden_cleaver",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 3120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_toolsmith_objs_dungeonsdelight_iron_cleaver": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "dungeonsdelight:iron_cleaver",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 3120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_toolsmith_objs_dungeonsdelight_netherite_cleaver": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "dungeonsdelight:netherite_cleaver",
+      "rarity": "EPIC",
+      "repRequired": 20,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 158120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_toolsmith_objs_ender_sins_ancient_sickle": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "ender_sins:ancient_sickle",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 600.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_toolsmith_objs_farmersdelight_diamond_knife": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "farmersdelight:diamond_knife",
+      "rarity": "EPIC",
+      "repRequired": 20,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 10120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_toolsmith_objs_farmersdelight_flint_knife": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "farmersdelight:flint_knife",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 240.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_toolsmith_objs_farmersdelight_golden_knife": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "farmersdelight:golden_knife",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 1120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_toolsmith_objs_farmersdelight_iron_knife": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "farmersdelight:iron_knife",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 1120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_toolsmith_objs_farmersdelight_netherite_knife": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "farmersdelight:netherite_knife",
+      "rarity": "EPIC",
+      "repRequired": 20,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 138120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_toolsmith_objs_mekanismdelight_osmium_knife": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "mekanismdelight:osmium_knife",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 240.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_toolsmith_objs_mekanismdelight_steel_knife": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "mekanismdelight:steel_knife",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 1320.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_toolsmith_objs_minecraft_diamond_axe": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:diamond_axe",
+      "rarity": "RARE",
+      "repRequired": 20,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 10000,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_toolsmith_objs_minecraft_diamond_hoe": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:diamond_hoe",
+      "rarity": "RARE",
+      "repRequired": 20,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 10000,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_toolsmith_objs_minecraft_diamond_pickaxe": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:diamond_pickaxe",
+      "rarity": "EPIC",
+      "repRequired": 20,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 10000,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_toolsmith_objs_minecraft_diamond_shovel": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:diamond_shovel",
+      "rarity": "RARE",
+      "repRequired": 20,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 10000,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_toolsmith_objs_minecraft_golden_axe": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:golden_axe",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_toolsmith_objs_minecraft_golden_hoe": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:golden_hoe",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_toolsmith_objs_minecraft_golden_pickaxe": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:golden_pickaxe",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_toolsmith_objs_minecraft_golden_shovel": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:golden_shovel",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_toolsmith_objs_minecraft_iron_axe": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:iron_axe",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 1000,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_toolsmith_objs_minecraft_iron_hoe": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:iron_hoe",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 1000,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_toolsmith_objs_minecraft_iron_pickaxe": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:iron_pickaxe",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 1000,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_toolsmith_objs_minecraft_iron_shovel": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:iron_shovel",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 1000,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_toolsmith_objs_minecraft_stone_axe": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:stone_axe",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_toolsmith_objs_minecraft_stone_hoe": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:stone_hoe",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_toolsmith_objs_minecraft_stone_pickaxe": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:stone_pickaxe",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_toolsmith_objs_minecraft_stone_shovel": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:stone_shovel",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_toolsmith_objs_minecraft_wooden_axe": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:wooden_axe",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_toolsmith_objs_minecraft_wooden_hoe": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:wooden_hoe",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_toolsmith_objs_minecraft_wooden_pickaxe": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:wooden_pickaxe",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_toolsmith_objs_minecraft_wooden_shovel": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:wooden_shovel",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_toolsmith_objs_mutantmonsters_hulk_hammer": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "mutantmonsters:hulk_hammer",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_toolsmith_objs_mutantmore_husk_hammer": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "mutantmore:husk_hammer",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 840.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_toolsmith_objs_scp_ultimate_scp_143_tools_axe": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "scp_ultimate:scp_143_tools_axe",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 330.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_toolsmith_objs_scp_ultimate_scp_143_tools_hoe": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "scp_ultimate:scp_143_tools_hoe",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 300.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_toolsmith_objs_scp_ultimate_scp_143_tools_pickaxe": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "scp_ultimate:scp_143_tools_pickaxe",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 330.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_toolsmith_objs_scp_ultimate_scp_143_tools_shovel": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "scp_ultimate:scp_143_tools_shovel",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 270.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_toolsmith_objs_scp_ultimate_scp_1728_knife": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "scp_ultimate:scp_1728_knife",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_toolsmith_objs_scp_ultimate_telekill_axe": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "scp_ultimate:telekill_axe",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 600.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_toolsmith_objs_scp_ultimate_telekill_hoe": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "scp_ultimate:telekill_hoe",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 480.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_toolsmith_objs_scp_ultimate_telekill_pickaxe": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "scp_ultimate:telekill_pickaxe",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 600.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_toolsmith_objs_scp_ultimate_telekill_shovel": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "scp_ultimate:telekill_shovel",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 360.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_toolsmith_objs_sons_of_sins_osseous_axe": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "sons_of_sins:osseous_axe",
+      "rarity": "RARE",
+      "repRequired": 20,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_toolsmith_objs_sons_of_sins_osseous_hoe": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "sons_of_sins:osseous_hoe",
+      "rarity": "EPIC",
+      "repRequired": 20,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 440.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_toolsmith_objs_sons_of_sins_osseous_pickaxe": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "sons_of_sins:osseous_pickaxe",
+      "rarity": "EPIC",
+      "repRequired": 20,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 560.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_toolsmith_objs_sons_of_sins_osseous_shovel": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "sons_of_sins:osseous_shovel",
+      "rarity": "EPIC",
+      "repRequired": 20,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 320.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_toolsmith_objs_sons_of_sins_sickle_of_struggle": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "sons_of_sins:sickle_of_struggle",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 4120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_toolsmith_objs_unusualend_pearlescent_axe": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "unusualend:pearlescent_axe",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 10240.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_toolsmith_objs_unusualend_pearlescent_hoe": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "unusualend:pearlescent_hoe",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 10240.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_toolsmith_objs_unusualend_pearlescent_pickaxe": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "unusualend:pearlescent_pickaxe",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 10240.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_toolsmith_objs_unusualend_pearlescent_shovel": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "unusualend:pearlescent_shovel",
+      "rarity": "UNCOMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 10240.0,
+      "weightMult": 0.1
+    }
+  },
+  "replace": false,
+  "weightMult": 1.0
+}

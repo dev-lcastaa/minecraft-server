@@ -1,0 +1,24 @@
+{
+  "cookingtime": 200,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "item": "endersdelight:mite_crust"
+    },
+    {
+      "item": "minecraft:popped_chorus_fruit"
+    },
+    {
+      "item": "minecraft:chorus_fruit"
+    },
+    {
+      "item": "minecraft:stick"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "count": 1,
+    "item": "endersdelight:crispy_skewer"
+  },
+  "type": "dungeonsdelight:monster_cooking"
+}

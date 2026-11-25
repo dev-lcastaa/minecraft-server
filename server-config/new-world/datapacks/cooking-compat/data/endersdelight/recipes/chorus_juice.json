@@ -1,0 +1,21 @@
+{
+  "base": {
+    "count": 1000,
+    "fluid": "minecraft:water"
+  },
+  "brewingtime": 200,
+  "experience": 0.35,
+  "ingredients": [
+    {
+      "item": "minecraft:chorus_fruit"
+    },
+    {
+      "item": "minecraft:sugar"
+    }
+  ],
+  "result": {
+    "count": 1000,
+    "fluid": "kubejs:juice_endersdelight_chorus_juice_ready"
+  },
+  "type": "farmersrespite:brewing"
+}

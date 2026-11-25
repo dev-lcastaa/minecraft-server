@@ -1,0 +1,20 @@
+{
+  "container": {
+    "item": "endersdelight:shulker_bowl"
+  },
+  "cookingtime": 200,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "item": "minecraft:chorus_fruit"
+    },
+    {
+      "item": "minecraft:chorus_flower"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "item": "endersdelight:chorus_stew"
+  },
+  "type": "dungeonsdelight:monster_cooking"
+}

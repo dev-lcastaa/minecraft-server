@@ -1,0 +1,21 @@
+{
+  "ingredients": [
+    {
+      "item": "minecraft:dried_kelp"
+    },
+    {
+      "item": "farmersdelight:cooked_rice"
+    },
+    {
+      "tag": "cooking_compat:raw_tentacles"
+    },
+    {
+      "tag": "cooking_compat:raw_tentacles"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "item": "culturaldelights:calamari_roll"
+  },
+  "type": "minecraft:crafting_shapeless"
+}

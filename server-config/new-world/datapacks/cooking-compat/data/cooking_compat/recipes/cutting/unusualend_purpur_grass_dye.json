@@ -1,0 +1,17 @@
+{
+  "ingredients": [
+    {
+      "item": "unusualend:purpur_grass"
+    }
+  ],
+  "result": [
+    {
+      "count": 1,
+      "item": "minecraft:pink_dye"
+    }
+  ],
+  "tool": {
+    "tag": "forge:tools/knives"
+  },
+  "type": "farmersdelight:cutting"
+}

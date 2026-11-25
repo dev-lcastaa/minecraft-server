@@ -1,0 +1,177 @@
+{
+  "replace": true,
+  "values": [
+    {
+      "id": "alexscaves:gloomoth",
+      "required": false
+    },
+    {
+      "id": "alexscaves:subterranodon",
+      "required": false
+    },
+    {
+      "id": "alexscaves:vesper",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:bald_eagle",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:blue_jay",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:crimson_mosquito",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:crow",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:emu",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:fly",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:hummingbird",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:potoo",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:roadrunner",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:seagull",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:shoebill",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:sugar_glider",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:sunbird",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:tarantula_hawk",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:toucan",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:warped_mosco",
+      "required": false
+    },
+    {
+      "id": "endergetic:brood_eetle",
+      "required": false
+    },
+    {
+      "id": "endergetic:glider_eetle",
+      "required": false
+    },
+    {
+      "id": "endergetic:puff_bug",
+      "required": false
+    },
+    {
+      "id": "fangs_n_claws:baby_shrike",
+      "required": false
+    },
+    {
+      "id": "fangs_n_claws:evil_bat",
+      "required": false
+    },
+    {
+      "id": "fangs_n_claws:horse_bat",
+      "required": false
+    },
+    {
+      "id": "fangs_n_claws:imp",
+      "required": false
+    },
+    {
+      "id": "fangs_n_claws:shrike",
+      "required": false
+    },
+    {
+      "id": "friendsandfoes:penguin",
+      "required": false
+    },
+    {
+      "id": "graveyard:crow",
+      "required": false
+    },
+    {
+      "id": "graveyard:magpie",
+      "required": false
+    },
+    {
+      "id": "graveyard:raven",
+      "required": false
+    },
+    {
+      "id": "mutantmore:mutant_phantom",
+      "required": false
+    },
+    {
+      "id": "paxos_pink_fairy:pink_fairy",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_1507",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_346",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_3541",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_35415",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_35416",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_772",
+      "required": false
+    },
+    {
+      "id": "the_bumblezone:bee_queen",
+      "required": false
+    },
+    {
+      "id": "unusualend:dragling",
+      "required": false
+    },
+    {
+      "id": "unusualend:ender_firefly",
+      "required": false
+    },
+    {
+      "id": "unusualend:summoned_dragling",
+      "required": false
+    }
+  ]
+}

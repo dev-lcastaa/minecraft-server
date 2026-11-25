@@ -1,0 +1,10 @@
+{
+  "biomes": "#minecraft:is_overworld",
+  "spawners": {
+    "maxCount": 2,
+    "minCount": 1,
+    "type": "fangs_n_claws:goblin",
+    "weight": 8
+  },
+  "type": "forge:add_spawns"
+}

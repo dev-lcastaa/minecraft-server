@@ -217,9 +217,9 @@ their large JARs are downloaded into `/mods` during the Docker build from pinned
 Modrinth version URLs in [`Dockerfile`](./Dockerfile). Each download is verified
 against its pinned SHA-256; a failed download or checksum mismatch fails the build.
 Local copies may remain in `mods/`, but are ignored by Git and excluded from the
-Docker build context. Including the compatibility add-ons, a clean checkout
-contains **257 bundled JARs**; the built image contains **259** including these downloads. Jenkins uses the same
-Docker build and needs no separate download step.
+Docker build context. Bundled JARs and generated compatibility add-ons are copied
+from `mods/`; pinned downloads are added during image construction. Jenkins uses
+the same Docker build and needs no separate download step.
 
 To update either externally hosted mod, change its URL and SHA-256 in
 [`Dockerfile`](./Dockerfile) together, verifying the hash against the intended JAR.
@@ -678,6 +678,170 @@ cake uses a method-shape fixture. After deployment, also check in-game
 consumption, rendered tooltips and audible feedback; automated fixtures do
 not launch Minecraft. Review the hooks before upgrading Cravings or these
 placeable-food mods.
+
+### Cross-mod gameplay compatibility
+
+The compatibility sources live under [`tools/`](./tools/). Their generated
+add-ons are installed in [`mods/`](./mods/) and mirrored in
+[`client-config/mods/`](./client-config/mods/). Import the matching client
+overlay and **restart both server and clients**; coremods, item stack sizes,
+and custom fluids cannot be installed with `/reload`. Existing root-level
+`config/`, `kubejs/`, and `resourcepacks/` are not deployment sources.
+
+#### Cutting, kettles, and Monster Pot cooking
+
+[`cooking-compat`](./server-config/new-world/datapacks/cooking-compat/) adds
+38 cutting-board recipes, including cobweb and wool recovery, cooked-meat
+processing, dye extraction, and a shared recipe covering 58 saplings, and fixes six
+tentacle recipes so Oceanic Delight and Miner's Delight ingredients are
+interchangeable. Existing compatible cutting recipes remain.
+
+Sixteen Ender's Delight foods previously made by ordinary crafting move to
+17 Dungeons Delight Monster Pot recipes. Non-food crafting is preserved.
+Nine juice items move to Farmer's Respite kettles, with 30 brewing/pouring
+recipes rather than ordinary crafting or Supplementaries alternatives.
+Cider and soda are not classified as juice. Ingredient costs, serving counts,
+containers, and missing-mod conditions are preserved; staged kettle recipes
+require their specified fluid amounts and do not multiply water.
+The juice census also distinguishes eight decorative display items, Farmer's
+Respite's already kettle-made juice, and a Backrooms item with no production
+recipe. The [recipe audit](./tools/cooking-compat/manifest.json) records the
+candidate lists and 684 installed cutting definitions across 673 paths.
+
+The mirrored [`startup script`](./server-config/kubejs/startup_scripts/cooking_compat.js)
+registers 19 custom fluids. Clients need the same script before connecting.
+The [`tooltips`](./client-config/kubejs/client_scripts/cooking_compat_tooltips.js)
+explain the new preparation stations.
+
+#### Jade growth and season guidance
+
+[`jade-season-compat`](./tools/jade-season-compat/) adds server-synchronized
+Ecliptic Seasons information to Jade. Hold **Shift** for crop preferences,
+greenhouse/humidity details, and sapling growth gotchas. Guidance distinguishes
+same-species, same-height 2×2 arrangements, sapling stage advancement, and
+light/clearance requirements; it does not label every sapling as a 2×2 tree.
+
+The installed Ecliptic Seasons crop rules remain authoritative. Plants without
+native rules are identified by the registry audit rather than assigned invented
+season preferences; Jade explicitly says “No Ecliptic seasonal growth rule
+configured.” Serene Seasons remains disabled.
+Out-of-season crop bonemeal has a **25% season-gate pass rate**; rejected
+attempts consume bonemeal. Existing native growth and environment checks still
+apply, so passing that gate does not guarantee growth in unsuitable conditions.
+
+The realistic trees come from **Dynamic Trees**. It remains installed:
+removing its registry entries can damage saved trees even without declared mod
+dependents. A backed-up world clone must establish safety before removal.
+Its bundled definitions include 88 block IDs: branches, roots, foliage,
+saplings, rooty soils, and four supporting blocks. For example, an existing
+tree can contain `dynamictrees:oak_branch`, `dynamictrees:oak_leaves`, and
+`dynamictrees:rooty_dirt`, not just vanilla logs, leaves, and dirt.
+This is an installed-definition census, not evidence that all 88 IDs occur
+in the current world; automatic conversion to vanilla blocks is not established.
+
+#### Prepared drinks and safe water
+
+[`hydration-compat`](./tools/hydration-compat/) marks prepared drink outputs
+with Thirst's `Purity:3`, preserving other NBT, potion effects, output counts,
+and returned containers. Brewing changes only drink slots, not fuel or
+ingredients. Successful heated kettle processing purifies the tank without
+changing its amount.
+The installed vendor audit covers 153 declarative recipe outputs for 71 of
+the 103 configured drink IDs across 10 serializers, including conditional
+recipes that may not be active. No unsupported output shapes remain in that
+catalog. The remaining 32 IDs have no declarative production result; this
+count does not imply 103 verified active recipes. Runtime logs report changed,
+already-pure, and unsupported outputs. Already-pure outputs remain untouched.
+
+[`water-compat`](./server-config/new-world/datapacks/water-compat/) adds pot
+and kettle purification. Pot purification requires a serving glass bottle;
+named or effect-bearing potion inputs are excluded to avoid losing their data.
+Doggy Talents water bowls no longer fill glass bottles.
+
+SCP cooler dispensing/refilling is **not implemented**: the installed coolers
+are ordinary blocks without persistent inventory. A coordinate-only reservoir
+would not safely survive moving/replacing blocks or support finite refills.
+Their existing behavior remains unchanged.
+
+#### Carcasses and backpack persistence
+
+[`inventory-carcass-compat`](./tools/inventory-carcass-compat/) prevents
+Butcher's Delight harvesting callbacks from dropping items during Carry On's
+permission checks, while retaining the checks and normal pickup behavior.
+All 87 carcass forms stack to **16**.
+
+Better Inventory slot changes now save through its native inventory handlers,
+preventing old serialized pages from reappearing after items are removed.
+Existing inventory data and the native 180-to-360-slot migration are retained;
+no inventory-clearing workaround is used.
+
+#### Mob loot and sickle blood
+
+[`mob-loot-compat`](./tools/mob-loot-compat/) adds player-kill drops:
+
+- Evil bats: 1–2 Miner's Delight bat wings.
+- Skeletons: **1%** quiver chance, with no Looting increase; quivers contain
+  3–8 vanilla arrows. Randomly generated quivers, including chest loot, are
+  also restricted to vanilla arrows.
+- Zombies: **5%** chance of one cabbage, tomato, onion, rice, cabbage seed,
+  or tomato seed, equally weighted.
+
+Direct player kills with a Sons of Sins sickle can exchange one glass bottle
+for the applicable blood type. Knives and cleavers retain organ slicing but
+cannot perform this blood extraction. Biological equivalents are used;
+bloodless mobs, constructs, and undead are excluded unless Sons of Sins
+already defines a blood type for them.
+
+The [blood coverage audit](./tools/mob-loot-compat/blood_coverage.json) verifies
+447 constructor bindings across 26 namespaces: 326 eligible and 121 excluded,
+with zero unknown classifications in execution fixtures. It includes all 296
+bindings from the original audit. Startup separately audits the actual Forge
+entity registry and logs eligible, bloodless, missing, and failed mappings;
+unclassified entities are excluded rather than assigned invented blood types.
+Constructor-fixture coverage is not a live-world or live-registry census.
+
+#### Bounties and backported animals
+
+[`bounty-backport-compat`](./tools/bounty-backport-compat/) supplies 12 decrees,
+27 additive pools, and 12,404 entries covering 6,090 items across 74 namespaces.
+Two verified goblin hunts include a Forge spawn-compatibility repair.
+Existing bounty pools and villager offers are preserved.
+
+The [item coverage audit](./tools/bounty-backport-compat/coverage.json) accounts
+for 14,285 candidates: 6,930 have recipe/loot evidence, of which 840 are
+explicitly excluded and 6,090 are covered. Exclusions include block entities,
+containers, processing stations, disabled content, vehicles, butchery stations,
+and intermediate items. No evidence-proven candidate is left unaccounted for.
+Recipe/loot evidence is not a guarantee of availability in every world:
+conditional content, fluid/procedural acquisition, and world-spawn limits remain
+documented, and runtime registry/station checks reject invalid candidates.
+
+Backported warm/cold eggs gain 15 recipe overrides and two pot recipes across
+crafting and cooking stations, including copper pots. Nineteen animal tags
+provide shared compatibility. Three farmer trades are appended rather than
+replacing existing trades; backported animals are also included in the bounty
+integration.
+
+#### Validation and rollout
+
+Run `PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests -v`.
+Bytecode fixtures additionally require local Nashorn Core and ASM JARs:
+set `CRAVINGS_TEST_CLASSPATH`, `LUNCH_BASKET_TEST_CLASSPATH`,
+`HYDRATION_TEST_CLASSPATH`, `INVENTORY_CARCASS_TEST_CLASSPATH`,
+`JADE_SEASONS_TEST_CLASSPATH`, and `MOB_LOOT_TEST_CLASSPATH` to that classpath.
+The cooking and bounty fixtures also exercise installed serializers.
+
+These checks cover packaged resources, installed APIs/bytecode, recipe shapes,
+inventory persistence, and matching client/server overlays. They do not replace
+a Forge server startup or multiplayer test. No live deployment is performed
+as part of these changes.
+
+Before deploying, back up the world and inventories, rebuild the image, install
+the client overlay, and restart. Confirm all bundled datapacks are enabled in
+the existing world. Check startup coverage/recipe logs and test carcass pickup,
+backpack removal followed by reconnect, cooking/container returns, drink purity,
+sickle blood, seasonal growth, egg cooking, villager offers, and bounty
+generation/completion in game before calling the rollout complete.
 
 ### Bundled mod config overrides
 

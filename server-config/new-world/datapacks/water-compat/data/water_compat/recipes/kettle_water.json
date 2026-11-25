@@ -1,0 +1,8 @@
+{
+  "type": "farmersrespite:brewing",
+  "base": {"fluid": "minecraft:water", "count": 1000},
+  "result": {"fluid": "minecraft:water", "count": 1000},
+  "ingredients": [],
+  "brewingtime": 200,
+  "experience": 0.0
+}

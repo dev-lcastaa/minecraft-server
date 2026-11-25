@@ -1,0 +1,29 @@
+{
+  "content": {
+    "bounty_backport_compat_dart_goblin": {
+      "amount": {
+        "max": 3,
+        "min": 1
+      },
+      "content": "fangs_n_claws:dart_goblin",
+      "rarity": "UNCOMMON",
+      "timeMult": 12.0,
+      "type": "entity",
+      "unitWorth": 450,
+      "weightMult": 0.15
+    },
+    "bounty_backport_compat_goblin": {
+      "amount": {
+        "max": 3,
+        "min": 1
+      },
+      "content": "fangs_n_claws:goblin",
+      "rarity": "UNCOMMON",
+      "timeMult": 12.0,
+      "type": "entity",
+      "unitWorth": 450,
+      "weightMult": 0.15
+    }
+  },
+  "replace": false
+}

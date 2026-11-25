@@ -1,0 +1,21 @@
+{
+  "base": {
+    "count": 1000,
+    "fluid": "kubejs:juice_farmersdelight_melon_juice_stage_1"
+  },
+  "brewingtime": 200,
+  "experience": 0,
+  "ingredients": [
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "minecraft:melon_slice"
+    }
+  ],
+  "result": {
+    "count": 1000,
+    "fluid": "kubejs:juice_farmersdelight_melon_juice_stage_2"
+  },
+  "type": "farmersrespite:brewing"
+}

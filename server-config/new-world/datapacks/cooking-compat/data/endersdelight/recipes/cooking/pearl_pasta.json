@@ -1,0 +1,23 @@
+{
+  "container": {
+    "item": "endersdelight:shulker_bowl"
+  },
+  "cookingtime": 200,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "tag": "endersdelight:enderman_loot"
+    },
+    {
+      "tag": "forge:pasta"
+    },
+    {
+      "item": "endersdelight:chorus_juice"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "item": "endersdelight:pearl_pasta"
+  },
+  "type": "dungeonsdelight:monster_cooking"
+}

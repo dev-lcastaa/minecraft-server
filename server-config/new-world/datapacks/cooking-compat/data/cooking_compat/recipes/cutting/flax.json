@@ -1,0 +1,17 @@
+{
+  "ingredients": [
+    {
+      "item": "supplementaries:flax"
+    }
+  ],
+  "result": [
+    {
+      "count": 1,
+      "item": "minecraft:string"
+    }
+  ],
+  "tool": {
+    "tag": "forge:tools/knives"
+  },
+  "type": "farmersdelight:cutting"
+}

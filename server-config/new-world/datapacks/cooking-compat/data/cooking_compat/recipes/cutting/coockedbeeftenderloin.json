@@ -1,0 +1,17 @@
+{
+  "ingredients": [
+    {
+      "item": "butchersdelightfoods:coockedbeeftenderloin"
+    }
+  ],
+  "result": [
+    {
+      "count": 4,
+      "item": "minecraft:cooked_beef"
+    }
+  ],
+  "tool": {
+    "tag": "forge:tools/knives"
+  },
+  "type": "farmersdelight:cutting"
+}

@@ -1,0 +1,17 @@
+{
+  "ingredients": [
+    {
+      "tag": "cooking_compat:unprocessed_saplings"
+    }
+  ],
+  "result": [
+    {
+      "count": 1,
+      "item": "minecraft:stick"
+    }
+  ],
+  "tool": {
+    "tag": "forge:tools/knives"
+  },
+  "type": "farmersdelight:cutting"
+}

@@ -1,0 +1,12 @@
+{
+  "objectives": [
+    "compat_toolsmith_objs",
+    "compat_hunts_objs",
+    "compat_supplies_objs"
+  ],
+  "replace": false,
+  "rewards": [
+    "compat_toolsmith_rews",
+    "compat_supplies_rews"
+  ]
+}

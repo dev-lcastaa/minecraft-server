@@ -1,0 +1,2519 @@
+{
+  "content": {
+    "bounty_backport_compat_compat_farmer_objs_alexscaves_caramel_apple": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "alexscaves:caramel_apple",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_alexscaves_chocolate_ice_cream_scoop": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "alexscaves:chocolate_ice_cream_scoop",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_alexscaves_darkened_apple": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "alexscaves:darkened_apple",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 600.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_alexscaves_deep_sea_sushi_roll": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "alexscaves:deep_sea_sushi_roll",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 240.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_alexscaves_primordial_soup": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "alexscaves:primordial_soup",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 480.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_alexscaves_seething_stew": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "alexscaves:seething_stew",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 480.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_alexscaves_serene_salad": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "alexscaves:serene_salad",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 480.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_alexscaves_sweetberry_ice_cream_scoop": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "alexscaves:sweetberry_ice_cream_scoop",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_alexscaves_vanilla_ice_cream_scoop": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "alexscaves:vanilla_ice_cream_scoop",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_alexscaves_vesper_stew": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "alexscaves:vesper_stew",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 480.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_alexsdelight_kangaroo_pasta": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "alexsdelight:kangaroo_pasta",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 420.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_alexsdelight_kangaroo_stew": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "alexsdelight:kangaroo_stew",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 300.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_alexsdelight_lobster_pasta": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "alexsdelight:lobster_pasta",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 480.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_alexsdelight_maggot_salad": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "alexsdelight:maggot_salad",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 720.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_alexsmobs_kangaroo_burger": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "alexsmobs:kangaroo_burger",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 360.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_alexsmobs_rainbow_jelly": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "alexsmobs:rainbow_jelly",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_backported_animal_variants_blue_egg": {
+      "amount": {
+        "max": 32,
+        "min": 8
+      },
+      "content": "backported_animal_variants:blue_egg",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 50,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_backported_animal_variants_brown_egg": {
+      "amount": {
+        "max": 32,
+        "min": 8
+      },
+      "content": "backported_animal_variants:brown_egg",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 50,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_biomeswevegone_allium_oddion_soup": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "biomeswevegone:allium_oddion_soup",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 360.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_biomeswevegone_aloe_vera_juice": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "biomeswevegone:aloe_vera_juice",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_biomeswevegone_cooked_yucca_fruit": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "biomeswevegone:cooked_yucca_fruit",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_biomeswevegone_green_apple": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "biomeswevegone:green_apple",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_biomeswevegone_green_apple_pie": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "biomeswevegone:green_apple_pie",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 290.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_biomeswevegone_white_puffball_stew": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "biomeswevegone:white_puffball_stew",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_bosses_of_mass_destruction_crystal_fruit": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "bosses_of_mass_destruction:crystal_fruit",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_create_blaze_cake_base": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "create:blaze_cake_base",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 290.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_create_builders_tea": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "create:builders_tea",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_create_dough": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "create:dough",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_create_honey_bucket": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "create:honey_bucket",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_create_honeyed_apple": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "create:honeyed_apple",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_create_wheat_flour": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "create:wheat_flour",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_delightful_cactus_soup": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "delightful:cactus_soup",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 420.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_delightful_cantaloupe_bread": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "delightful:cantaloupe_bread",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 300.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_delightful_cantaloupe_seeds": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "delightful:cantaloupe_seeds",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 60.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_delightful_chorus_muffin": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "delightful:chorus_muffin",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 360.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_delightful_chorus_pie_slice": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "delightful:chorus_pie_slice",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 30.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_delightful_field_salad": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "delightful:field_salad",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 600.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_delightful_glow_jam_cookie": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "delightful:glow_jam_cookie",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 105.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_delightful_green_apple_pie_slice": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "delightful:green_apple_pie_slice",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 72.5,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_delightful_green_tea_leaf": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "delightful:green_tea_leaf",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_delightful_nut_butter_and_jam_sandwich": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "delightful:nut_butter_and_jam_sandwich",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 1350.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_delightful_nut_dough": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "delightful:nut_dough",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 226.67,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_delightful_salmonberry_pie_slice": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "delightful:salmonberry_pie_slice",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 225.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_doggytalents_egg_sandwich": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "doggytalents:egg_sandwich",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 130.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_dungeonsdelight_bloated_baked_potato": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "dungeonsdelight:bloated_baked_potato",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 600.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_dungeonsdelight_gelled_salad": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "dungeonsdelight:gelled_salad",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 600.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_dungeonsdelight_salt_soaked_stew": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "dungeonsdelight:salt_soaked_stew",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 480.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_dungeonsdelight_sculk_apple": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "dungeonsdelight:sculk_apple",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 480.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_dungeonsdelight_silverfish_fried_rice": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "dungeonsdelight:silverfish_fried_rice",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 530.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_dungeonsdelight_slime_noodles": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "dungeonsdelight:slime_noodles",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_dungeonsdelight_soft_serve_sniffer_egg": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "dungeonsdelight:soft_serve_sniffer_egg",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_dungeonsdelight_spider_bubble_tea": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "dungeonsdelight:spider_bubble_tea",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 1120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_dungeonsdelight_spider_pie_slice": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "dungeonsdelight:spider_pie_slice",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 405.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_endersdelight_chorus_juice": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "endersdelight:chorus_juice",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 360.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_endersdelight_chorus_pie_slice": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "endersdelight:chorus_pie_slice",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 270.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_endersdelight_chorus_stew": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "endersdelight:chorus_stew",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 240.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_endersdelight_crawling_sandwich": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "endersdelight:crawling_sandwich",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 480.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_endersdelight_endermite_stew": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "endersdelight:endermite_stew",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 620.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_endersdelight_pearl_pasta": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "endersdelight:pearl_pasta",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 980.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_farmersdelight_apple_cider": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:apple_cider",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 360.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_farmersdelight_apple_pie_slice": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:apple_pie_slice",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 270.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_farmersdelight_bacon_sandwich": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:bacon_sandwich",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 372.5,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_farmersdelight_baked_cod_stew": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:baked_cod_stew",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 410.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_farmersdelight_beef_stew": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:beef_stew",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 340.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_farmersdelight_cabbage": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:cabbage",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_farmersdelight_cabbage_leaf": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:cabbage_leaf",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_farmersdelight_cabbage_rolls": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:cabbage_rolls",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 190.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_farmersdelight_cabbage_seeds": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:cabbage_seeds",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_farmersdelight_cake_slice": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:cake_slice",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_farmersdelight_chicken_sandwich": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:chicken_sandwich",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 420.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_farmersdelight_chicken_soup": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:chicken_soup",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 335.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_farmersdelight_chocolate_pie_slice": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:chocolate_pie_slice",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 315.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_farmersdelight_cod_roll": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:cod_roll",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_farmersdelight_cooked_rice": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:cooked_rice",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_farmersdelight_egg_sandwich": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:egg_sandwich",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 220.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_farmersdelight_fish_stew": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:fish_stew",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 400.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_farmersdelight_fried_egg": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:fried_egg",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 50.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_farmersdelight_fried_rice": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:fried_rice",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 410.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_farmersdelight_fruit_salad": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:fruit_salad",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 630.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_farmersdelight_glow_berry_custard": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:glow_berry_custard",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 410.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_farmersdelight_honey_cookie": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:honey_cookie",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 30.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_farmersdelight_kelp_roll": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:kelp_roll",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 720.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_farmersdelight_kelp_roll_slice": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:kelp_roll_slice",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 240.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_farmersdelight_melon_juice": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:melon_juice",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 360.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_farmersdelight_melon_popsicle": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:melon_popsicle",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 840.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_farmersdelight_milk_bottle": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:milk_bottle",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 160.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_farmersdelight_mixed_salad": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:mixed_salad",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 420.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_farmersdelight_mushroom_rice": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:mushroom_rice",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 480.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_farmersdelight_nether_salad": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:nether_salad",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 360.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_farmersdelight_noodle_soup": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:noodle_soup",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 362.5,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_farmersdelight_onion": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:onion",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_farmersdelight_onion_soup": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:onion_soup",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 480.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_farmersdelight_pasta_with_meatballs": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:pasta_with_meatballs",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 410.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_farmersdelight_pasta_with_mutton_chop": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:pasta_with_mutton_chop",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 420.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_farmersdelight_pie_crust": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:pie_crust",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 300.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_farmersdelight_pumpkin_pie_slice": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:pumpkin_pie_slice",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 30.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_farmersdelight_pumpkin_slice": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:pumpkin_slice",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 30.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_farmersdelight_pumpkin_soup": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:pumpkin_soup",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 282.5,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_farmersdelight_raw_pasta": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:raw_pasta",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_farmersdelight_rice_panicle": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:rice_panicle",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 13.33,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_farmersdelight_rotten_tomato": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:rotten_tomato",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_farmersdelight_salmon_roll": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:salmon_roll",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_farmersdelight_squid_ink_pasta": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:squid_ink_pasta",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 420.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_farmersdelight_stuffed_potato": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:stuffed_potato",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 360.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_farmersdelight_sweet_berry_cheesecake_slice": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:sweet_berry_cheesecake_slice",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 285.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_farmersdelight_sweet_berry_cookie": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:sweet_berry_cookie",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 30.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_farmersdelight_tomato": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:tomato",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_farmersdelight_tomato_sauce": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:tomato_sauce",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 240.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_farmersdelight_tomato_seeds": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:tomato_seeds",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_farmersdelight_vegetable_noodles": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:vegetable_noodles",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 540.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_farmersdelight_vegetable_soup": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:vegetable_soup",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 420.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_farmersdelight_wheat_dough": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersdelight:wheat_dough",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 136.67,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_farmersrespite_rose_hip_pie_slice": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "farmersrespite:rose_hip_pie_slice",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 270.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_mekanism_yellow_cake_uranium": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "mekanism:yellow_cake_uranium",
+      "rarity": "EPIC",
+      "repRequired": 20,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 60.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_mekanismdelight_salted_rice_ball": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "mekanismdelight:salted_rice_ball",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 75.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_minecraft_apple": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:apple",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_minecraft_baked_potato": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:baked_potato",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_minecraft_beetroot": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:beetroot",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_minecraft_beetroot_seeds": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:beetroot_seeds",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_minecraft_beetroot_soup": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:beetroot_soup",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_minecraft_blue_ice": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:blue_ice",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_minecraft_bread": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:bread",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_minecraft_cake": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:cake",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_minecraft_carrot": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:carrot",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_minecraft_carrot_on_a_stick": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:carrot_on_a_stick",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_minecraft_carved_pumpkin": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:carved_pumpkin",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_minecraft_chorus_fruit": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:chorus_fruit",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_minecraft_cookie": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:cookie",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_minecraft_egg": {
+      "amount": {
+        "max": 32,
+        "min": 8
+      },
+      "content": "minecraft:egg",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 50,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_minecraft_enchanted_golden_apple": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:enchanted_golden_apple",
+      "rarity": "EPIC",
+      "repRequired": 20,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 64000,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_minecraft_glistering_melon_slice": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:glistering_melon_slice",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_minecraft_glow_berries": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:glow_berries",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_minecraft_golden_apple": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:golden_apple",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_minecraft_golden_carrot": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:golden_carrot",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_minecraft_honey_block": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:honey_block",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_minecraft_honey_bottle": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:honey_bottle",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_minecraft_ice": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:ice",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_minecraft_magma_cream": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:magma_cream",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_minecraft_melon": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:melon",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_minecraft_melon_seeds": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:melon_seeds",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_minecraft_melon_slice": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:melon_slice",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_minecraft_milk_bucket": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:milk_bucket",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_minecraft_mushroom_stew": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:mushroom_stew",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_minecraft_packed_ice": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:packed_ice",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_minecraft_poisonous_potato": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:poisonous_potato",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_minecraft_popped_chorus_fruit": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:popped_chorus_fruit",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_minecraft_potato": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:potato",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_minecraft_pumpkin": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:pumpkin",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_minecraft_pumpkin_pie": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:pumpkin_pie",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_minecraft_pumpkin_seeds": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:pumpkin_seeds",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_minecraft_rabbit_stew": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:rabbit_stew",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_minecraft_sniffer_egg": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:sniffer_egg",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_minecraft_sweet_berries": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:sweet_berries",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_minecraft_torchflower_seeds": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:torchflower_seeds",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_minecraft_turtle_egg": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:turtle_egg",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_minecraft_wheat": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:wheat",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 60,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_minecraft_wheat_seeds": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:wheat_seeds",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_miners_delight_baked_cave_carrot": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "miners_delight:baked_cave_carrot",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_miners_delight_bat_cookie": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "miners_delight:bat_cookie",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 30.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_miners_delight_bat_soup": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "miners_delight:bat_soup",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 240.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_miners_delight_cave_carrot": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "miners_delight:cave_carrot",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_miners_delight_cave_soup": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "miners_delight:cave_soup",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 480.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_miners_delight_copper_carrot": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "miners_delight:copper_carrot",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 1320.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_miners_delight_glow_ink_pasta": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "miners_delight:glow_ink_pasta",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 420.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_miners_delight_insect_sandwich": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "miners_delight:insect_sandwich",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 240.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_miners_delight_insect_stew": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "miners_delight:insect_stew",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 330.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_miners_delight_pasta_with_veggieballs": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "miners_delight:pasta_with_veggieballs",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 480.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_miners_delight_squid_sandwich": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "miners_delight:squid_sandwich",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 240.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_mutantmore_mutant_jungle_zombie_vine_seed": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "mutantmore:mutant_jungle_zombie_vine_seed",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_mynethersdelight_boiled_egg": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "mynethersdelight:boiled_egg",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_mynethersdelight_bread_loaf": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "mynethersdelight:bread_loaf",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 530.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_mynethersdelight_burnt_roll": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "mynethersdelight:burnt_roll",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 137.5,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_mynethersdelight_deviled_egg": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "mynethersdelight:deviled_egg",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 346.25,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_mynethersdelight_dried_ghast_with_milk": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "mynethersdelight:dried_ghast_with_milk",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 360.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_mynethersdelight_egg_soup": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "mynethersdelight:egg_soup",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 340.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_mynethersdelight_ghast_dough": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "mynethersdelight:ghast_dough",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 170.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_mynethersdelight_ghast_salad": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "mynethersdelight:ghast_salad",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 480.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_mynethersdelight_ghasta_with_cream": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "mynethersdelight:ghasta_with_cream",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 1080.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_mynethersdelight_golden_egg": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "mynethersdelight:golden_egg",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 8120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_mynethersdelight_rock_soup": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "mynethersdelight:rock_soup",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 480.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_mynethersdelight_slices_of_bread": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "mynethersdelight:slices_of_bread",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 106.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_mynethersdelight_spicy_curry": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "mynethersdelight:spicy_curry",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 925.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_mynethersdelight_strider_egg": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "mynethersdelight:strider_egg",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_mynethersdelight_strider_stew": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "mynethersdelight:strider_stew",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 420.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_oceanic_delight_caesar_salad": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "oceanic_delight:caesar_salad",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 540.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_oceanic_delight_egg_roll": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "oceanic_delight:egg_roll",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 170.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_oceanic_delight_nautilus_juice": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "oceanic_delight:nautilus_juice",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 360.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_oceanic_delight_potato_salad": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "oceanic_delight:potato_salad",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 600.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_oceanic_delight_sea_grape_juice": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "oceanic_delight:sea_grape_juice",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 480.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_oceanic_delight_sea_salad": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "oceanic_delight:sea_salad",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 420.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_oceanic_delight_sponge_cake_slice": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "oceanic_delight:sponge_cake_slice",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 195.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_quark_ancient_fruit": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "quark:ancient_fruit",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_supplementaries_flax_seeds": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "supplementaries:flax_seeds",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_the_bumblezone_bee_bread": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "the_bumblezone:bee_bread",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_the_bumblezone_bee_soup": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "the_bumblezone:bee_soup",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_the_bumblezone_honey_bucket": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "the_bumblezone:honey_bucket",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 240.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_the_bumblezone_honey_compass": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "the_bumblezone:honey_compass",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_the_bumblezone_honey_crystal_shards": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "the_bumblezone:honey_crystal_shards",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_the_bumblezone_honey_crystal_shield": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "the_bumblezone:honey_crystal_shield",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_the_bumblezone_royal_jelly_bottle": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "the_bumblezone:royal_jelly_bottle",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_unusualend_blob_stew": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "unusualend:blob_stew",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_unusualend_chorus_juice": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "unusualend:chorus_juice",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_unusualend_chorus_pie": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "unusualend:chorus_pie",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_unusualend_chorus_tea": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "unusualend:chorus_tea",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_unusualend_end_blob_jelly": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "unusualend:end_blob_jelly",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_unusualend_ender_firefly_egg": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "unusualend:ender_firefly_egg",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_unusualend_ender_stew": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "unusualend:ender_stew",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_unusualend_warped_berries": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "unusualend:warped_berries",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_farmer_objs_unusualend_warped_stew": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "unusualend:warped_stew",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    }
+  },
+  "replace": false,
+  "weightMult": 1.0
+}

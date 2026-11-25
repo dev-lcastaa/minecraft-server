@@ -1,0 +1,18 @@
+{
+  "amount": 1000,
+  "conditions": [
+    {
+      "modid": "farmersdelight",
+      "type": "forge:mod_loaded"
+    }
+  ],
+  "container": {
+    "item": "minecraft:glass_bottle"
+  },
+  "fluid": "kubejs:juice_unusualend_chorus_juice_farming_delight_ready",
+  "output": {
+    "count": 1,
+    "item": "unusualend:chorus_juice"
+  },
+  "type": "farmersrespite:kettle_pouring"
+}

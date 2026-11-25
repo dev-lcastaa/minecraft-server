@@ -1,0 +1,145 @@
+{
+  "replace": true,
+  "values": [
+    {
+      "id": "alexscaves:deep_one",
+      "required": false
+    },
+    {
+      "id": "alexscaves:deep_one_knight",
+      "required": false
+    },
+    {
+      "id": "alexscaves:deep_one_mage",
+      "required": false
+    },
+    {
+      "id": "alexscaves:gossamer_worm",
+      "required": false
+    },
+    {
+      "id": "alexscaves:hullbreaker",
+      "required": false
+    },
+    {
+      "id": "alexscaves:lanternfish",
+      "required": false
+    },
+    {
+      "id": "alexscaves:radgill",
+      "required": false
+    },
+    {
+      "id": "alexscaves:sea_pig",
+      "required": false
+    },
+    {
+      "id": "alexscaves:sweetish_fish",
+      "required": false
+    },
+    {
+      "id": "alexscaves:tripodfish",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:blobfish",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:cachalot_whale",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:catfish",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:comb_jelly",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:cosmaw",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:cosmic_cod",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:devils_hole_pupfish",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:flying_fish",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:frilled_shark",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:giant_squid",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:hammerhead_shark",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:lobster",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:mantis_shrimp",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:mimic_octopus",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:mudskipper",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:orca",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:sea_bear",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:triops",
+      "required": false
+    },
+    {
+      "id": "endergetic:purpoid",
+      "required": false
+    },
+    {
+      "id": "friendsandfoes:barnacle",
+      "required": false
+    },
+    {
+      "id": "friendsandfoes:crab",
+      "required": false
+    },
+    {
+      "id": "mbackrooms:volt_fish",
+      "required": false
+    },
+    {
+      "id": "sons_of_sins:nibbler",
+      "required": false
+    },
+    {
+      "id": "unusualend:bluk",
+      "required": false
+    },
+    {
+      "id": "unusualend:glub",
+      "required": false
+    }
+  ]
+}

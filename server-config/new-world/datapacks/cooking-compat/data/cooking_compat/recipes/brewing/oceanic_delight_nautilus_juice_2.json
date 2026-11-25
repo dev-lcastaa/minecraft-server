@@ -1,0 +1,18 @@
+{
+  "base": {
+    "count": 1000,
+    "fluid": "kubejs:juice_oceanic_delight_nautilus_juice_stage_1"
+  },
+  "brewingtime": 200,
+  "experience": 3.0,
+  "ingredients": [
+    {
+      "item": "minecraft:sweet_berries"
+    }
+  ],
+  "result": {
+    "count": 1000,
+    "fluid": "kubejs:juice_oceanic_delight_nautilus_juice_ready"
+  },
+  "type": "farmersrespite:brewing"
+}

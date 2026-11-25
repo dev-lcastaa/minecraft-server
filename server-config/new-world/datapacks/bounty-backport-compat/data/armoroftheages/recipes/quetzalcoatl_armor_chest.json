@@ -1,0 +1,29 @@
+{
+  "category": "equipment",
+  "key": {
+    "B": {
+      "item": "minecraft:bone_block"
+    },
+    "O": {
+      "tag": "forge:eggs"
+    },
+    "i": {
+      "item": "minecraft:netherite_chestplate"
+    },
+    "o": {
+      "item": "minecraft:feather"
+    },
+    "x": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  "pattern": [
+    "oBo",
+    "xix",
+    "oOo"
+  ],
+  "result": {
+    "item": "armoroftheages:quetzalcoatl_armor_chest"
+  },
+  "type": "minecraft:crafting_shaped"
+}

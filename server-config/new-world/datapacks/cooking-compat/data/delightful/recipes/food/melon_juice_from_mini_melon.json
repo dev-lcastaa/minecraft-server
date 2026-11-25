@@ -1,0 +1,27 @@
+{
+  "base": {
+    "count": 1000,
+    "fluid": "minecraft:water"
+  },
+  "brewingtime": 200,
+  "conditions": [
+    {
+      "type": "delightful:enabled",
+      "value": "mini_melon"
+    }
+  ],
+  "experience": 0.35,
+  "ingredients": [
+    {
+      "item": "delightful:mini_melon"
+    },
+    {
+      "item": "minecraft:sugar"
+    }
+  ],
+  "result": {
+    "count": 1000,
+    "fluid": "kubejs:juice_delightful_food_melon_juice_from_mini_melon_ready"
+  },
+  "type": "farmersrespite:brewing"
+}

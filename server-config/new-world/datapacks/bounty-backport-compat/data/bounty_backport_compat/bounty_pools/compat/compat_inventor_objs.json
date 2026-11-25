@@ -1,0 +1,695 @@
+{
+  "content": {
+    "bounty_backport_compat_compat_inventor_objs_ad_astra_calorite_ingot": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "ad_astra:calorite_ingot",
+      "rarity": "EPIC",
+      "repRequired": 20,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 32000.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_inventor_objs_ad_astra_calorite_nugget": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "ad_astra:calorite_nugget",
+      "rarity": "EPIC",
+      "repRequired": 20,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 3555.56,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_inventor_objs_ad_astra_calorite_plate": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "ad_astra:calorite_plate",
+      "rarity": "EPIC",
+      "repRequired": 20,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 32000.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_inventor_objs_ad_astra_desh_ingot": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "ad_astra:desh_ingot",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 8000,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_inventor_objs_ad_astra_desh_nugget": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "ad_astra:desh_nugget",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 888.89,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_inventor_objs_ad_astra_desh_plate": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "ad_astra:desh_plate",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 8000.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_inventor_objs_ad_astra_iron_plate": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "ad_astra:iron_plate",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 1000.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_inventor_objs_ad_astra_ostrum_ingot": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "ad_astra:ostrum_ingot",
+      "rarity": "EPIC",
+      "repRequired": 20,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 16000,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_inventor_objs_ad_astra_ostrum_nugget": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "ad_astra:ostrum_nugget",
+      "rarity": "EPIC",
+      "repRequired": 20,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 1777.78,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_inventor_objs_ad_astra_ostrum_plate": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "ad_astra:ostrum_plate",
+      "rarity": "EPIC",
+      "repRequired": 20,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 16000.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_inventor_objs_ad_astra_oxygen_gear": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "ad_astra:oxygen_gear",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 6600.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_inventor_objs_ad_astra_steel_ingot": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "ad_astra:steel_ingot",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 1200,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_inventor_objs_ad_astra_steel_nugget": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "ad_astra:steel_nugget",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 133.33,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_inventor_objs_ad_astra_steel_plate": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "ad_astra:steel_plate",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 1200.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_inventor_objs_alexscaves_azure_neodymium_ingot": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "alexscaves:azure_neodymium_ingot",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_inventor_objs_alexscaves_dinosaur_nugget": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "alexscaves:dinosaur_nugget",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_inventor_objs_alexscaves_scarlet_neodymium_ingot": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "alexscaves:scarlet_neodymium_ingot",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_inventor_objs_backport_recipes_copper_nugget": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "backport_recipes:copper_nugget",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 16.67,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_inventor_objs_create_andesite_alloy": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "create:andesite_alloy",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_inventor_objs_create_brass_ingot": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "create:brass_ingot",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 1080.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_inventor_objs_create_brass_nugget": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "create:brass_nugget",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_inventor_objs_create_copper_nugget": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "create:copper_nugget",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 16.67,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_inventor_objs_create_experience_nugget": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "create:experience_nugget",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_inventor_objs_create_zinc_ingot": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "create:zinc_ingot",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_inventor_objs_create_zinc_nugget": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "create:zinc_nugget",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_inventor_objs_graveyard_dark_iron_ingot": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "graveyard:dark_iron_ingot",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 1000,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_inventor_objs_mekanism_enriched_redstone": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "mekanism:enriched_redstone",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 100.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_inventor_objs_mekanism_ingot_lead": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "mekanism:ingot_lead",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_inventor_objs_mekanism_ingot_osmium": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "mekanism:ingot_osmium",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_inventor_objs_mekanism_ingot_steel": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "mekanism:ingot_steel",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 1200.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_inventor_objs_mekanism_ingot_tin": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "mekanism:ingot_tin",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_inventor_objs_mekanism_ingot_uranium": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "mekanism:ingot_uranium",
+      "rarity": "EPIC",
+      "repRequired": 20,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_inventor_objs_mekanism_nugget_lead": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "mekanism:nugget_lead",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 13.33,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_inventor_objs_mekanism_nugget_osmium": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "mekanism:nugget_osmium",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 13.33,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_inventor_objs_mekanism_nugget_steel": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "mekanism:nugget_steel",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 133.33,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_inventor_objs_mekanism_nugget_tin": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "mekanism:nugget_tin",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 13.33,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_inventor_objs_mekanism_nugget_uranium": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "mekanism:nugget_uranium",
+      "rarity": "EPIC",
+      "repRequired": 20,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 13.33,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_inventor_objs_minecraft_copper_ingot": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:copper_ingot",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 150,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_inventor_objs_minecraft_deepslate_redstone_ore": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:deepslate_redstone_ore",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 100,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_inventor_objs_minecraft_gold_ingot": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:gold_ingot",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 1000,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_inventor_objs_minecraft_gold_nugget": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:gold_nugget",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 111.11,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_inventor_objs_minecraft_heavy_weighted_pressure_plate": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:heavy_weighted_pressure_plate",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_inventor_objs_minecraft_iron_ingot": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:iron_ingot",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 1000,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_inventor_objs_minecraft_iron_nugget": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:iron_nugget",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 111.11,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_inventor_objs_minecraft_light_weighted_pressure_plate": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:light_weighted_pressure_plate",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_inventor_objs_minecraft_netherite_ingot": {
+      "amount": {
+        "max": 1,
+        "min": 1
+      },
+      "content": "minecraft:netherite_ingot",
+      "rarity": "RARE",
+      "repRequired": 20,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 64000,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_inventor_objs_minecraft_redstone": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:redstone",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 100,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_inventor_objs_minecraft_redstone_block": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:redstone_block",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 900,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_inventor_objs_minecraft_redstone_lamp": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:redstone_lamp",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 100,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_inventor_objs_minecraft_redstone_torch": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:redstone_torch",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 100,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_inventor_objs_old_glass_photograph_glass_plate": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "old_glass_photograph:glass_plate",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_inventor_objs_scp_ultimate_gear": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "scp_ultimate:gear",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 1200.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_inventor_objs_scp_ultimate_scp_148_ingot": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "scp_ultimate:scp_148_ingot",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_inventor_objs_unusualend_pearlescent_ingot": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "unusualend:pearlescent_ingot",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    }
+  },
+  "replace": false,
+  "weightMult": 1.0
+}

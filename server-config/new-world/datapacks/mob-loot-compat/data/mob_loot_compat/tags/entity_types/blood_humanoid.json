@@ -1,0 +1,281 @@
+{
+  "replace": true,
+  "values": [
+    {
+      "id": "ad_astra:corrupted_lunarian",
+      "required": false
+    },
+    {
+      "id": "ad_astra:pygro",
+      "required": false
+    },
+    {
+      "id": "ad_astra:pygro_brute",
+      "required": false
+    },
+    {
+      "id": "ad_astra:zombified_pygro",
+      "required": false
+    },
+    {
+      "id": "alexscaves:brainiac",
+      "required": false
+    },
+    {
+      "id": "alexscaves:caniac",
+      "required": false
+    },
+    {
+      "id": "alexscaves:licowitch",
+      "required": false
+    },
+    {
+      "id": "alexscaves:underzealot",
+      "required": false
+    },
+    {
+      "id": "alexscaves:watcher",
+      "required": false
+    },
+    {
+      "id": "dreamshift:dreamspace_observer",
+      "required": false
+    },
+    {
+      "id": "dreamshift:nosi",
+      "required": false
+    },
+    {
+      "id": "dreamshift:pocket_zombie_pigman",
+      "required": false
+    },
+    {
+      "id": "endofherobrine:builder",
+      "required": false
+    },
+    {
+      "id": "endofherobrine:herobrine",
+      "required": false
+    },
+    {
+      "id": "endofherobrine:lurker",
+      "required": false
+    },
+    {
+      "id": "fangs_n_claws:cave_ogre",
+      "required": false
+    },
+    {
+      "id": "fangs_n_claws:dart_goblin",
+      "required": false
+    },
+    {
+      "id": "fangs_n_claws:goblin",
+      "required": false
+    },
+    {
+      "id": "fangs_n_claws:hell_ogre",
+      "required": false
+    },
+    {
+      "id": "fangs_n_claws:ogre",
+      "required": false
+    },
+    {
+      "id": "friendsandfoes:rascal",
+      "required": false
+    },
+    {
+      "id": "graveyard:tormented_villager",
+      "required": false
+    },
+    {
+      "id": "legionary:unbreakable",
+      "required": false
+    },
+    {
+      "id": "mbackrooms:hollow_maw",
+      "required": false
+    },
+    {
+      "id": "mbackrooms:howler",
+      "required": false
+    },
+    {
+      "id": "mbackrooms:skin_stealer",
+      "required": false
+    },
+    {
+      "id": "mbackrooms:sstealer",
+      "required": false
+    },
+    {
+      "id": "mutantmore:mutant_frozen_zombie",
+      "required": false
+    },
+    {
+      "id": "mutantmore:mutant_husk",
+      "required": false
+    },
+    {
+      "id": "mutantmore:mutant_jungle_zombie",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:chara",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:chara_2",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:class_d",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_0191",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_027",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_035_mob",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_049",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_0491",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_053",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_073",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_076",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_0871",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_093mob",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_096",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_0961",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_0962",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_1000",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_106",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_1440",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_14991",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_1728",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_17281",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_178",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_179",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_217_infected_class_d",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_2317",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_2521",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_273",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_35418",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_36681",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_811",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_966",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_guard",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_scientist",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_scientist_skin_1",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_scientist_skin_2",
+      "required": false
+    },
+    {
+      "id": "scp_ultimate:scp_scientist_skin_3",
+      "required": false
+    },
+    {
+      "id": "sons_of_sins:blud_aggressive",
+      "required": false
+    },
+    {
+      "id": "sons_of_sins:ditched",
+      "required": false
+    }
+  ]
+}

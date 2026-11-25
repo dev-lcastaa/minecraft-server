@@ -1,0 +1,1384 @@
+{
+  "content": {
+    "bounty_backport_compat_compat_shepherd_objs_alexsmobs_bison_carpet": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "alexsmobs:bison_carpet",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_biomeswevegone_cattail_thatch_carpet": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "biomeswevegone:cattail_thatch_carpet",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 80.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_dappledforest_black_wool_slab": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "dappledforest:black_wool_slab",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_dappledforest_black_wool_stairs": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "dappledforest:black_wool_stairs",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_dappledforest_blue_wool_slab": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "dappledforest:blue_wool_slab",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_dappledforest_blue_wool_stairs": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "dappledforest:blue_wool_stairs",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 240.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_dappledforest_brown_wool_slab": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "dappledforest:brown_wool_slab",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_dappledforest_brown_wool_stairs": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "dappledforest:brown_wool_stairs",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 240.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_dappledforest_cyan_wool_slab": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "dappledforest:cyan_wool_slab",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_dappledforest_cyan_wool_stairs": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "dappledforest:cyan_wool_stairs",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 240.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_dappledforest_gray_wool_slab": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "dappledforest:gray_wool_slab",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_dappledforest_gray_wool_stairs": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "dappledforest:gray_wool_stairs",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 240.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_dappledforest_green_wool_slab": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "dappledforest:green_wool_slab",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_dappledforest_green_wool_stairs": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "dappledforest:green_wool_stairs",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 240.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_dappledforest_light_blue_wool_slab": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "dappledforest:light_blue_wool_slab",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_dappledforest_light_blue_wool_stairs": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "dappledforest:light_blue_wool_stairs",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 240.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_dappledforest_light_gray_wool_slab": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "dappledforest:light_gray_wool_slab",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_dappledforest_light_gray_wool_stairs": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "dappledforest:light_gray_wool_stairs",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 240.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_dappledforest_lime_wool_slab": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "dappledforest:lime_wool_slab",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_dappledforest_lime_wool_stairs": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "dappledforest:lime_wool_stairs",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 240.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_dappledforest_magenta_wool_slab": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "dappledforest:magenta_wool_slab",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_dappledforest_magenta_wool_stairs": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "dappledforest:magenta_wool_stairs",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 240.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_dappledforest_orange_wool_slab": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "dappledforest:orange_wool_slab",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_dappledforest_orange_wool_stairs": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "dappledforest:orange_wool_stairs",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 240.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_dappledforest_pink_wool_slab": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "dappledforest:pink_wool_slab",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_dappledforest_pink_wool_stairs": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "dappledforest:pink_wool_stairs",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 240.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_dappledforest_purple_wool_slab": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "dappledforest:purple_wool_slab",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_dappledforest_purple_wool_stairs": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "dappledforest:purple_wool_stairs",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 240.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_dappledforest_red_wool_slab": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "dappledforest:red_wool_slab",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_dappledforest_red_wool_stairs": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "dappledforest:red_wool_stairs",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 240.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_dappledforest_white_wool_slab": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "dappledforest:white_wool_slab",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_dappledforest_white_wool_stairs": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "dappledforest:white_wool_stairs",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_dappledforest_yellow_wool_slab": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "dappledforest:yellow_wool_slab",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_dappledforest_yellow_wool_stairs": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "dappledforest:yellow_wool_stairs",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 240.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_dawnoftimebuilder_persian_carpet_delicate_red": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "dawnoftimebuilder:persian_carpet_delicate_red",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 80.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_dawnoftimebuilder_persian_carpet_red": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "dawnoftimebuilder:persian_carpet_red",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_doggytalents_wool_collar": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "doggytalents:wool_collar",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 640.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_doggytalents_wool_collar_thicc": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "doggytalents:wool_collar_thicc",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 1280.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_mekanism_dye_base": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "mekanism:dye_base",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_minecraft_black_dye": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:black_dye",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_minecraft_black_wool": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:black_wool",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_minecraft_black_wool_slab": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:black_wool_slab",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 60.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_minecraft_black_wool_stairs": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:black_wool_stairs",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 180.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_minecraft_blue_dye": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:blue_dye",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_minecraft_blue_wool": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:blue_wool",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_minecraft_blue_wool_slab": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:blue_wool_slab",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 60.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_minecraft_blue_wool_stairs": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:blue_wool_stairs",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 180.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_minecraft_brown_dye": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:brown_dye",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_minecraft_brown_wool": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:brown_wool",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_minecraft_brown_wool_slab": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:brown_wool_slab",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 60.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_minecraft_brown_wool_stairs": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:brown_wool_stairs",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 180.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_minecraft_cyan_dye": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:cyan_dye",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_minecraft_cyan_wool": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:cyan_wool",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_minecraft_cyan_wool_slab": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:cyan_wool_slab",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 60.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_minecraft_cyan_wool_stairs": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:cyan_wool_stairs",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 180.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_minecraft_gray_dye": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:gray_dye",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_minecraft_gray_wool": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:gray_wool",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_minecraft_gray_wool_slab": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:gray_wool_slab",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 180.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_minecraft_gray_wool_stairs": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:gray_wool_stairs",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 240.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_minecraft_green_dye": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:green_dye",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_minecraft_green_wool": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:green_wool",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_minecraft_green_wool_slab": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:green_wool_slab",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 180.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_minecraft_green_wool_stairs": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:green_wool_stairs",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 240.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_minecraft_light_blue_dye": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:light_blue_dye",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_minecraft_light_blue_wool": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:light_blue_wool",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_minecraft_light_blue_wool_slab": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:light_blue_wool_slab",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 180.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_minecraft_light_blue_wool_stairs": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:light_blue_wool_stairs",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 240.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_minecraft_light_gray_dye": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:light_gray_dye",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_minecraft_light_gray_wool": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:light_gray_wool",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_minecraft_light_gray_wool_slab": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:light_gray_wool_slab",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 180.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_minecraft_light_gray_wool_stairs": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:light_gray_wool_stairs",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 240.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_minecraft_lime_dye": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:lime_dye",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_minecraft_lime_wool": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:lime_wool",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_minecraft_lime_wool_slab": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:lime_wool_slab",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 180.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_minecraft_lime_wool_stairs": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:lime_wool_stairs",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 240.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_minecraft_magenta_dye": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:magenta_dye",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_minecraft_magenta_wool": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:magenta_wool",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_minecraft_magenta_wool_slab": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:magenta_wool_slab",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 180.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_minecraft_magenta_wool_stairs": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:magenta_wool_stairs",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 240.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_minecraft_moss_carpet": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:moss_carpet",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_minecraft_orange_dye": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:orange_dye",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_minecraft_orange_wool": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:orange_wool",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_minecraft_orange_wool_slab": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:orange_wool_slab",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 180.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_minecraft_orange_wool_stairs": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:orange_wool_stairs",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 240.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_minecraft_pale_moss_carpet": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:pale_moss_carpet",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 80.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_minecraft_pink_dye": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:pink_dye",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_minecraft_pink_wool": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:pink_wool",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_minecraft_pink_wool_slab": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:pink_wool_slab",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 180.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_minecraft_pink_wool_stairs": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:pink_wool_stairs",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 240.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_minecraft_purple_dye": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:purple_dye",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_minecraft_purple_wool": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:purple_wool",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_minecraft_purple_wool_slab": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:purple_wool_slab",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 180.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_minecraft_purple_wool_stairs": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:purple_wool_stairs",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 240.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_minecraft_red_dye": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:red_dye",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_minecraft_red_wool": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:red_wool",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_minecraft_red_wool_slab": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:red_wool_slab",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 180.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_minecraft_red_wool_stairs": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:red_wool_stairs",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 240.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_minecraft_string": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:string",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 80,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_minecraft_white_dye": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:white_dye",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_minecraft_white_wool": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:white_wool",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_minecraft_white_wool_slab": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:white_wool_slab",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 180.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_minecraft_white_wool_stairs": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:white_wool_stairs",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_minecraft_yellow_dye": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:yellow_dye",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_minecraft_yellow_wool": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:yellow_wool",
+      "rarity": "RARE",
+      "repRequired": 10,
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_minecraft_yellow_wool_slab": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:yellow_wool_slab",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 180.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_minecraft_yellow_wool_stairs": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "minecraft:yellow_wool_stairs",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 240.0,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_quark_bamboo_mat_carpet": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "quark:bamboo_mat_carpet",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_quark_blue_blossom_leaf_carpet": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "quark:blue_blossom_leaf_carpet",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_quark_lavender_blossom_leaf_carpet": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "quark:lavender_blossom_leaf_carpet",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_quark_orange_blossom_leaf_carpet": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "quark:orange_blossom_leaf_carpet",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_quark_red_blossom_leaf_carpet": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "quark:red_blossom_leaf_carpet",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_quark_yellow_blossom_leaf_carpet": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "quark:yellow_blossom_leaf_carpet",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 120,
+      "weightMult": 0.1
+    },
+    "bounty_backport_compat_compat_shepherd_objs_unusualend_spectral_cloth": {
+      "amount": {
+        "max": 8,
+        "min": 2
+      },
+      "content": "unusualend:spectral_cloth",
+      "rarity": "COMMON",
+      "timeMult": 3.0,
+      "type": "item",
+      "unitWorth": 200.0,
+      "weightMult": 0.1
+    }
+  },
+  "replace": false,
+  "weightMult": 1.0
+}

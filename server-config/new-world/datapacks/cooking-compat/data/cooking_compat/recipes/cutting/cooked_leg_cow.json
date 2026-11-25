@@ -1,0 +1,17 @@
+{
+  "ingredients": [
+    {
+      "item": "butchersdelightfoods:cooked_leg_cow"
+    }
+  ],
+  "result": [
+    {
+      "count": 1,
+      "item": "minecraft:cooked_beef"
+    }
+  ],
+  "tool": {
+    "tag": "forge:tools/knives"
+  },
+  "type": "farmersdelight:cutting"
+}

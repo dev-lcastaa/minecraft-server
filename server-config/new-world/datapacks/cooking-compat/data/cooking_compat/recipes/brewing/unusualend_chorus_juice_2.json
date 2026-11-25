@@ -1,0 +1,18 @@
+{
+  "base": {
+    "count": 1000,
+    "fluid": "kubejs:juice_unusualend_chorus_juice_stage_1"
+  },
+  "brewingtime": 200,
+  "experience": 0.35,
+  "ingredients": [
+    {
+      "tag": "unusualend:chorus_juice_material"
+    }
+  ],
+  "result": {
+    "count": 1000,
+    "fluid": "kubejs:juice_unusualend_chorus_juice_ready"
+  },
+  "type": "farmersrespite:brewing"
+}
