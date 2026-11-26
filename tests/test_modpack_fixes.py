@@ -40,44 +40,15 @@ class ModpackFixesTest(unittest.TestCase):
         tag = load("mutantmore/tags/worldgen/structure/on_suspicious_entrance_maps.json")
         self.assertEqual(tag, {"replace": True, "values": []})
 
-    def test_organ_modifier_registered(self):
+    def test_blade_organ_slicing_reverted(self):
+        # Sons of Sins slicing stays exclusive to its own slicers; the kept file unregisters the old modifier
+        # on servers where the deleted JSON still lingers in the world datapack.
         registration = load("forge/loot_modifiers/global_loot_modifiers.json")
-        self.assertFalse(registration["replace"])
-        self.assertIn("serverfixes:sons_of_sins_blade_slicing", registration["entries"])
-        modifier = load("serverfixes/loot_modifiers/sons_of_sins_blade_slicing.json")
-        self.assertEqual(modifier["type"], "farmersdelight:add_loot_table")
-        self.assertEqual(modifier["lootTable"], "serverfixes:sons_of_sins/blade_slicing")
-        self.assertTrue((DATA / "serverfixes/loot_tables/sons_of_sins/blade_slicing.json").is_file())
-        text = json.dumps(modifier)
-        for required in (
-            "minecraft:killed_by_player",
-            "serverfixes:tools/organ_slicers",
-            "sons_of_sins:is_slicer",
-            "minecraft:player",
-        ):
-            self.assertIn(required, text)
-
-    def test_organ_slicers_cover_blades(self):
-        values = load("serverfixes/tags/items/tools/organ_slicers.json")["values"]
-        ids = {value if isinstance(value, str) else value["id"] for value in values}
-        for blade in (
-            "#forge:tools/knives",
-            "#farmersdelight:tools/knives",
-            "#dungeonsdelight:cleavers",
-            "butchersdelight:cleaver",
-            "graveyard:bone_dagger",
-        ):
-            self.assertIn(blade, ids)
-
-    def test_slicing_tables_exist(self):
-        table = (DATA / "serverfixes/loot_tables/sons_of_sins/blade_slicing.json").read_text()
-        references = set(re.findall(r'"name": "(minecraft:slicing/[^"]+)"', table))
-        self.assertTrue(references)
-        with mod_jar("sons_of_sins") as jar:
-            names = set(jar.namelist())
-        for reference in references:
-            path = reference.split(":")[1]
-            self.assertIn(f"data/minecraft/loot_tables/{path}.json", names)
+        self.assertEqual(registration, {"replace": False, "entries": []})
+        for relative in ("serverfixes/loot_modifiers/sons_of_sins_blade_slicing.json",
+                         "serverfixes/loot_tables/sons_of_sins/blade_slicing.json",
+                         "serverfixes/tags/items/tools/organ_slicers.json"):
+            self.assertFalse((DATA / relative).exists(), relative)
 
     def test_graveyard_illagers_keep_corruption_and_add_loot(self):
         extra = {

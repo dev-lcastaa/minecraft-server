@@ -57,6 +57,12 @@ class HydrationCompatTest(unittest.TestCase):
         self.assertEqual(kettle["base"], kettle["result"])
         self.assertEqual(kettle["brewingtime"], 200)
         self.assertNotIn("cookingtime", kettle)
+        pouring = json.loads((recipes / "kettle_pouring_water.json").read_text())
+        self.assertEqual((pouring["fluid"], pouring["amount"], pouring["container"]),
+                         ("minecraft:water", 250, {"item": "minecraft:glass_bottle"}))
+        # Thirst's kettle mixin copies the tank's purity onto the poured bottle; the recipe must not fix one.
+        self.assertEqual(pouring["output"]["item"], "minecraft:potion")
+        self.assertNotIn("Purity", pouring["output"]["nbt"])
 
     def test_client_guidance_syntax(self):
         node = shutil.which("node")
@@ -76,6 +82,8 @@ class HydrationCompatTest(unittest.TestCase):
         self.assertIn("hydration_kettle: installed bytecode verified", result.stdout)
         self.assertIn("hydration_monster_pot: installed bytecode verified", result.stdout)
         self.assertIn("hydration_create: installed bytecode verified", result.stdout)
+        for key in ("kettle_pour_use", "kettle_pour_tick", "skillet_block", "skillet_item"):
+            self.assertIn(f"hydration_{key}: installed bytecode verified", result.stdout)
 
     def test_recipe_and_brewing_runtime_fixture(self):
         node = shutil.which("node")

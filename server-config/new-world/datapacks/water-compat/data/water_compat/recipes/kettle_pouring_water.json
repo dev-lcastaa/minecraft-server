@@ -1,0 +1,7 @@
+{
+  "type": "farmersrespite:kettle_pouring",
+  "amount": 250,
+  "container": {"item": "minecraft:glass_bottle"},
+  "fluid": "minecraft:water",
+  "output": {"item": "minecraft:potion", "nbt": "{Potion:\"minecraft:water\"}"}
+}

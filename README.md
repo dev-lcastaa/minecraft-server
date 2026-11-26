@@ -503,17 +503,11 @@ is deployed and enabled the same way as `loot-compat`:
   `#mutantmore:on_suspicious_entrance_maps` and builds a map using a
   client-only decoration type, crashing the server. The tag is replaced with an
   empty list, so the search finds nothing and the map is never created.
-- **Sons of Sins organs from blades:** a Farmer's Delight `add_loot_table`
-  global loot modifier rolls Sons of Sins' per-mob slicing tables (or a random
-  heart, muscle, or ribs) when a **player** kills a non-player mob with an item
-  in `#serverfixes:tools/organ_slicers`: Forge/Farmer's Delight knives, Dungeons
-  Delight and Butcher's Delight cleavers, and the
-  Graveyard, Alex's Caves, Fangs & Claws, Unusual End, and SCP daggers/knives.
-  Sons of Sins' own slicers, skeletons, flesh creatures, and ether ghosts are
-  excluded to avoid double drops. Knives are deliberately not added to
-  `sons_of_sins:is_slicer`, which would also remove hit cooldowns and fill
-  bottles with blood. This depends on Farmer's Delight's
-  `generateFDChestLoot = true`, which enables its loot modifiers.
+- **Sons of Sins slicing stays sickle-only:** the earlier extension that let
+  knives and cleavers roll Sons of Sins organ drops was reverted.
+  `forge/loot_modifiers/global_loot_modifiers.json` is kept with an empty entry
+  list so the old modifier is unregistered even where its deleted files remain in
+  the server's world datapack.
 - **Graveyard corrupted illagers:** the corrupted evoker, vindicator, and pillager
   keep Graveyard's corruption drop and also roll the vanilla illager table
   (Dungeons & Taverns' versions for pillager/vindicator). The evoker also rolls
@@ -782,7 +776,14 @@ count does not imply 103 verified active recipes. Runtime logs report changed,
 already-pure, and unsupported outputs. Already-pure outputs remain untouched.
 
 [`water-compat`](./server-config/new-world/datapacks/water-compat/) adds pot
-and kettle purification. Pot purification requires a serving glass bottle;
+and kettle purification. Farmer's Respite's copper kettle fills glass bottles
+with water (250 mB each); Thirst gives each bottle the tank's purity, so water
+boiled in the kettle pours out purified and unboiled water pours out at the
+default purity. Potions cannot be poured into the kettle, which previously would
+have turned them into water. Farmer's Delight skillets (placed and handheld)
+ignore Thirst's campfire purification recipes, so bottles, bowls and buckets of
+water cannot be cooked on them; campfires still purify. Pot purification
+requires a serving glass bottle;
 named or effect-bearing potion inputs are excluded to avoid losing their data.
 Doggy Talents food bowls and dog baths no longer fill glass bottles, whether you
 click the block (the dog bath hands out water bottles itself) or the water
@@ -873,8 +874,8 @@ no inventory-clearing workaround is used.
   or tomato seed, equally weighted.
 
 Direct player kills with a Sons of Sins sickle can exchange one glass bottle
-for the applicable blood type. Knives and cleavers retain organ slicing but
-cannot perform this blood extraction. Biological equivalents are used;
+for the applicable blood type. Knives and cleavers get no Sons of Sins blood or
+organ drops. Biological equivalents are used;
 bloodless mobs, constructs, and undead are excluded unless Sons of Sins
 already defines a blood type for them.
 
