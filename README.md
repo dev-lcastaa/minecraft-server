@@ -856,12 +856,21 @@ nine Overworld moons:
 - **Black:** blindness all night.
 - **Ender:** endermen, endermites, rare shulkers and modded ender mobs.
 - **Spider:** spiders, cave spiders, silverfish and scorpions.
-- **Chaos:** mobs fight each other and players.
+- **Chaos:** 4× monsters and 2× animals, using the Super Horde's mixed monster
+  list, all spawning on the surface. Every mob near a fight picks the nearest
+  mob (or, about a third of the time, a nearby player) and attacks it. Hit mobs
+  strike back, and animals with no attack of their own get a basic melee. Tamed
+  pets, villagers, player-built golems and name-tagged mobs are left out.
 
-Harvest, Blue and their Super variants are also peaceful now.
-[`lunar_events_compat.js`](./server-config/kubejs/server_scripts/lunar_events_compat.js)
-adds what the datapack format can't: peaceful spawn blocking, horde health and
-armour, babies, shulker cleanup and Chaos targeting. The new moons are rarer
+Harvest, Blue and their Super variants are also peaceful now. The
+`lunar-events-compat` mod (`mods/lunar-events-compat-1.20.1-1.0.0.jar`, built by
+the same script; clients without it can still join, and the client copy only
+matters in singleplayer) adds what the datapack format can't: peaceful spawn blocking,
+Horde health and armour, babies, Ender Moon shulker cleanup and Chaos fighting.
+It replaced a KubeJS script that errored on every spawn on the server, where
+KubeJS cannot resolve vanilla method names such as `getGameTime()`. Delete
+`/data/kubejs/server_scripts/lunar_events_compat.js` on the server if it is
+still there. The new moons are rarer
 than the stock Blood, Blue and Harvest Moons, and Peaceful and Miner's nights
 never block sleep. Clients need the `client-config/kubejs/assets` language files
 for moon names and messages.

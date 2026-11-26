@@ -2,7 +2,8 @@
   "type": "enhancedcelestials2core:spawn_category_multiplier",
   "settings": {
     "multipliers": {
-      "monster": 1.5
+      "monster": 4.0,
+      "creature": 2.0
     }
   }
 }

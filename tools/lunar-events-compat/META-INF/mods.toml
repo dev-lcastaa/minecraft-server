@@ -1,0 +1,22 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="MIT"
+[[mods]]
+modId="lunar_events_compat"
+version="1.0.0"
+displayName="Lunar Events Compatibility"
+description="Server-side gameplay for the lunar-events-compat moons: Chaos fights, Peaceful spawn blocking, Horde buffs, Baby Horde, Ender Moon shulkers."
+# Server-side only: clients without it can still join.
+displayTest="IGNORE_ALL_VERSION"
+[[dependencies.lunar_events_compat]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.20.1,1.20.2)"
+ordering="NONE"
+side="BOTH"
+[[dependencies.lunar_events_compat]]
+modId="enhancedcelestials2core"
+mandatory=true
+versionRange="[1.0.3,1.1)"
+ordering="AFTER"
+side="BOTH"

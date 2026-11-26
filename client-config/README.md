@@ -147,6 +147,10 @@ hooks, custom juice fluids, or carcass stack sizes.
 - `mods/emi-jei-compat-1.20.1-1.0.0.jar` (client only) fixes EMI's
   "Error rendering tooltip" on an empty kettle tank and "Error Rendering" recipe
   pages such as Brewing.
+- `mods/lunar-events-compat-1.20.1-1.0.0.jar` runs the moon gameplay (Chaos
+  fights, Peaceful, Horde, Baby Horde, Ender shulkers). Servers need it;
+  clients only need it for singleplayer. Delete the old
+  `kubejs/server_scripts/lunar_events_compat.js` if present.
 - Extra lunar events need `kubejs/assets/lunar_events_compat/lang/en_us.json`
   and `kubejs/assets/enhancedcelestials2defaultlunarevents/lang/en_us.json` for
   moon names and rise/set messages; without them clients show raw text keys.

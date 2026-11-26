@@ -12,7 +12,8 @@ from zipfile import ZipFile
 
 ROOT = Path(__file__).resolve().parents[1]
 PACK = ROOT / "server-config/new-world/datapacks/lunar-events-compat"
-SCRIPT = Path("kubejs/server_scripts/lunar_events_compat.js")
+MOD_JAR = ROOT / "mods/lunar-events-compat-1.20.1-1.0.0.jar"
+SOURCE = ROOT / "tools/lunar-events-compat"
 NS = "lunar_events_compat"
 CORE = "enhancedcelestials2core"
 DEFAULTS = "enhancedcelestials2defaultlunarevents"
@@ -204,7 +205,7 @@ class LunarEventsCompatTest(unittest.TestCase):
                             self.assertTrue((PACK / f"data/{namespace}/tags/entity_types/{name}.json").is_file())
                         self.assertTrue(entry["mob_effect"]["effect"].startswith("minecraft:"))
 
-    def test_client_language_and_script(self):
+    def test_client_language(self):
         lang = json.loads((ROOT / f"client-config/kubejs/assets/{NS}/lang/en_us.json").read_text())
         for name in EVENTS:
             with self.subTest(event=name):
@@ -212,33 +213,48 @@ class LunarEventsCompatTest(unittest.TestCase):
                 components = self.modifier(f"{NS}:{name}_text_components")["settings"]["components"]
                 for notification in components.values():
                     self.assertIn(notification["component"]["key"], lang)
-        server = ROOT / "server-config" / SCRIPT
-        self.assertEqual(server.read_bytes(), (ROOT / "client-config" / SCRIPT).read_bytes())
-        script = server.read_text()
-        self.assertIn("dev.corgitaco.enhancedcelestials2core.EnhancedCelestials", script)
-        for name in ("horde_moon", "baby_horde_moon", "ender_moon", "chaos_moon", "peaceful_moon"):
-            self.assertIn(f"'{NS}:{name}'", script)
-        for name in PEACEFUL_DEFAULTS:
-            self.assertIn(f"'{DEFAULTS}:{name}'", script)
-        with jar("Enhanced-Celestials-2-Core-") as core:
-            api = core.read("dev/corgitaco/enhancedcelestials2core/EnhancedCelestials.class")
-            forecast = core.read("dev/corgitaco/enhancedcelestials2core/api/lunarevent/LunarForecast.class")
-        self.assertIn(utf8_constant("lunarForecastWorldData"), api)
-        self.assertIn(utf8_constant("currentLunarEventHolder"), forecast)
 
-    def test_actual_rhino_gameplay(self):
-        classpath = os.environ.get("LUNAR_EVENTS_RHINO_TEST_CLASSPATH")
-        if not classpath:
-            self.skipTest("Set LUNAR_EVENTS_RHINO_TEST_CLASSPATH to Gson and Commons Lang JARs")
-        java = shutil.which("java")
-        self.assertTrue(java, "Java is required for Rhino lunar event verification")
-        result = subprocess.run(
-            [java, "-cp", str(ROOT / "mods/rhino-forge-2001.2.3-build.10.jar") + os.pathsep + classpath,
-             str(ROOT / "tests/LunarEventsCompatRhinoTest.java"), str(ROOT / "server-config" / SCRIPT)],
-            cwd=ROOT, capture_output=True, text=True,
-        )
-        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
-        self.assertIn("Rhino lunar events compat passed", result.stdout)
+    def test_chaos_moon_is_crowded_and_mixed(self):
+        multipliers = self.modifier(f"{NS}:chaos_moon_spawn_category_multiplier")["settings"]["multipliers"]
+        self.assertGreaterEqual(multipliers["monster"], 4.0)
+        self.assertGreaterEqual(multipliers["creature"], 2.0)
+        spawners = self.modifier(f"{NS}:chaos_moon_mob_spawn_settings")["settings"]["spawn_settings"]["spawners"]
+        self.assertGreaterEqual(len({entry["type"] for entry in spawners["monster"]}), 10)
+        self.assertIn(f"{NS}:chaos_moon_force_surface_spawning",
+                      json.loads((PACK / f"data/{NS}/{CORE}/lunar/event/chaos_moon.json").read_text())["modifiers"])
+
+    def test_gameplay_is_a_compiled_server_mod_not_a_kubejs_script(self):
+        # The KubeJS version failed on the server: vanilla names such as getGameTime() are not remapped there.
+        for side in ("server-config", "client-config"):
+            self.assertFalse((ROOT / side / "kubejs/server_scripts/lunar_events_compat.js").exists())
+        self.assertEqual(MOD_JAR.read_bytes(), (ROOT / "client-config/mods" / MOD_JAR.name).read_bytes())
+        with ZipFile(MOD_JAR) as mod:
+            metadata = tomllib.loads(mod.read("META-INF/mods.toml").decode())
+            self.assertEqual(metadata["mods"][0]["modId"], NS)
+            self.assertEqual(metadata["mods"][0]["displayTest"], "IGNORE_ALL_VERSION")
+            classes = {n for n in mod.namelist() if n.endswith(".class")}
+            self.assertTrue({"serverfixes/lunar/LunarEvents.class", "serverfixes/lunar/ChaosTargetGoal.class",
+                             "serverfixes/lunar/ChaosBrawlGoal.class", "serverfixes/lunar/Rules.class"} <= classes)
+            for name in classes:
+                self.assertEqual(int.from_bytes(mod.read(name)[6:8], "big"), 61, name)
+
+    def test_compiled_against_real_classes_and_rules(self):
+        spec = importlib.util.spec_from_file_location("lunar_build", SOURCE / "build.py")
+        build = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(build)
+        classpath = build.classpath()
+        if classpath is None:
+            self.skipTest("Forge 1.20.1 SRG libraries needed; set MC_LIBRARIES")
+        work = SOURCE / (".test-" + __import__("uuid").uuid4().hex)
+        work.mkdir()
+        try:
+            # Compiling against SRG Minecraft/Forge and Enhanced Celestials verifies every API call and override.
+            build.compile_to(work, SOURCE / "BehaviorTest.java")
+            result = subprocess.run(["java", "-cp", os.pathsep.join([str(work), classpath]), "BehaviorTest"],
+                                    cwd=ROOT, capture_output=True, text=True)
+            self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        finally:
+            shutil.rmtree(work)
 
 
 if __name__ == "__main__":

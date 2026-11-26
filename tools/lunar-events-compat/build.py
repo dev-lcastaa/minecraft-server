@@ -1,16 +1,24 @@
-"""Generate the lunar-events-compat datapack and its client language files.
+"""Generate the lunar-events-compat datapack, client language files and the server gameplay mod jar.
 
 Run with `python3 tools/lunar-events-compat/build.py`; the generated files are committed.
 """
+import importlib.util
 import json
+import os
 from pathlib import Path
-from zipfile import ZipFile
+import shutil
+import subprocess
+import uuid
+from zipfile import ZIP_DEFLATED, ZipFile, ZipInfo
 
 
 SOURCE = Path(__file__).resolve().parent
 ROOT = SOURCE.parents[1]
 PACK = ROOT / "server-config/new-world/datapacks/lunar-events-compat"
 CLIENT_ASSETS = ROOT / "client-config/kubejs/assets"
+JAR_NAME = "lunar-events-compat-1.20.1-1.0.0.jar"
+API_JARS = ("Enhanced-Celestials-2-Core-Forge-1.20.1-1.0.3.4.jar", "Data_Anchor-forge-1.20.1-1.0.0.24.jar",
+            "Corgilib-Forge-1.20.1-4.0.3.6.jar")
 NS = "lunar_events_compat"
 DEFAULTS = "enhancedcelestials2defaultlunarevents"
 CORE = "enhancedcelestials2core"
@@ -210,9 +218,13 @@ EVENTS = {
     "chaos_moon": {
         "sky": "ff6600", "moon": "ff3300", "size": 30.0, "name": "ffff55", "style": "yellow",
         "sound": "blood_moon", "weight": 3, "min_nights": 16, "phases": ALL_PHASES,
+        # A crowded, mixed population so the lunar_events_compat mod has plenty of mobs to set on each other.
         "modifiers": {
-            "spawn_category_multiplier": {"multipliers": {"monster": 1.5}},
+            "spawn_category_multiplier": {"multipliers": {"monster": 4.0, "creature": 2.0}},
+            "mob_spawn_settings": spawn_settings(SUPER_HORDE),
+            "force_surface_spawning": {},
             "block_sleeping": NO_SLEEP,
+            "mob_spawn_distances": {"distances": {"monster": 48}},
         },
         "title": "Chaos Moon",
         "rise": "The \"Chaos Moon\" rises... Every creature turns on every other!",
@@ -314,7 +326,46 @@ def resources():
     return files, client
 
 
+def classpath():
+    """Real SRG Minecraft/Forge (see jade-season-compat) plus Enhanced Celestials; None when unavailable."""
+    spec = importlib.util.spec_from_file_location("season_build", ROOT / "tools/jade-season-compat/build.py")
+    season = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(season)
+    base = season.classpath()
+    return None if base is None else os.pathsep.join([base, *(str(ROOT / "mods" / jar) for jar in API_JARS)])
+
+
+def compile_to(classes, *extra):
+    cp = classpath()
+    if cp is None:
+        raise SystemExit("Forge 1.20.1 SRG libraries not found; set MC_LIBRARIES")
+    subprocess.run(["java", "-m", "jdk.compiler/com.sun.tools.javac.Main", "-source", "17", "-target", "17",
+                    "-proc:none", "-nowarn", "-cp", cp, "-d", str(classes),
+                    *map(str, (SOURCE / "src").rglob("*.java")), *map(str, extra)], check=True, cwd=ROOT)
+
+
+def build_jar():
+    work = SOURCE / (".build-" + uuid.uuid4().hex)
+    work.mkdir()
+    try:
+        compile_to(work)
+        entries = {p.relative_to(SOURCE).as_posix(): p.read_bytes() for p in (SOURCE / "META-INF").rglob("*") if p.is_file()}
+        entries["pack.mcmeta"] = (SOURCE / "pack.mcmeta").read_bytes()
+        entries.update({p.relative_to(work).as_posix(): p.read_bytes() for p in (work / "serverfixes").rglob("*.class")})
+        with ZipFile(ROOT / "mods" / JAR_NAME, "w", compression=ZIP_DEFLATED) as jar:
+            for name, data in sorted(entries.items()):
+                info = ZipInfo(name, (1980, 1, 1, 0, 0, 0))
+                info.compress_type = ZIP_DEFLATED
+                info.external_attr = 0o100644 << 16
+                jar.writestr(info, data)
+    finally:
+        shutil.rmtree(work)
+    # Mirrored like every *_compat add-on; on clients it only matters for singleplayer worlds.
+    (ROOT / "client-config/mods" / JAR_NAME).write_bytes((ROOT / "mods" / JAR_NAME).read_bytes())
+
+
 def build():
+    build_jar()
     files, client = resources()
     for base, entries in ((PACK, files), (CLIENT_ASSETS, client)):
         for relative, content in entries.items():
