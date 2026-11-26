@@ -278,6 +278,19 @@
 		["minecraft:chorus_fruit", 1, 2],
 		["create:chocolate_glazed_berries", 1, 2],
 		["mynethersdelight:tear_popsicle", 7, 9],
+		["farmersdelight:ratatouille", 4, 5],
+		["alexscaves:green_soylent", 4, 5],
+		["endersdelight:twisted_cereal", 2, 3],
+		["alexscaves:vanilla_ice_cream", 2, 3],
+		["alexscaves:chocolate_ice_cream", 2, 3],
+		["alexscaves:sweetberry_ice_cream", 2, 3],
+		["mynethersdelight:hot_cream_cone", 2, 3],
+		["alexscaves:giant_sweetberry", 2, 3],
+		["unusualend:warped_squash_wedge", 2, 3],
+		["dungeonsdelight:sculk_apple", 2, 3],
+		["dungeonsdelight:sculk_dogapple", 2, 3],
+		["dungeonsdelight:sculk_catblueberry", 1, 2],
+		["farmersrespite:coffee_berries", 1, 2],
 	]
 
 [Blacklist]

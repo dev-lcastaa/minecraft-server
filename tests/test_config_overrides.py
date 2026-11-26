@@ -177,7 +177,7 @@ class ConfigOverridesTest(unittest.TestCase):
         drinks = config["Drinks"]["drinks"]
         foods = config["Foods"]["foods"]
         self.assertEqual(len(drinks), 103)
-        self.assertEqual(len(foods), 163)
+        self.assertEqual(len(foods), 176)
         self.assertEqual(
             len({row[0] for row in drinks + foods}), len(drinks) + len(foods)
         )
@@ -251,6 +251,18 @@ class ConfigOverridesTest(unittest.TestCase):
         self.assertEqual(foods["biomeswevegone:green_apple"], [2, 3])
         self.assertEqual(foods["biomeswevegone:blueberries"], [1, 2])
         self.assertEqual(foods["mbackrooms:food_can"], [2, 3])
+        for item, values in {
+            "farmersdelight:ratatouille": [4, 5],
+            "alexscaves:green_soylent": [4, 5],
+            "endersdelight:twisted_cereal": [2, 3],
+            "alexscaves:vanilla_ice_cream": [2, 3],
+            "mynethersdelight:hot_cream_cone": [2, 3],
+            "alexscaves:giant_sweetberry": [2, 3],
+            "dungeonsdelight:sculk_apple": [2, 3],
+            "farmersrespite:coffee_berries": [1, 2],
+        }.items():
+            with self.subTest(item=item):
+                self.assertEqual(foods[item], values)
         for item, values in foods.items():
             if item.endswith("_cup"):
                 bowl = item.removesuffix("_cup")

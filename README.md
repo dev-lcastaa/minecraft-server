@@ -1001,7 +1001,7 @@ redeploy. Other mod configs stay persistent in the volume.
 | `quark-common.toml` | `Automatic Tool Restock = false`, `Inventory Sorting = false` | Selected inventory profile |
 | `quark-common.toml` | `Quick Armor Swapping = true` | Sneak-right-click armor stands to exchange equipped armor |
 | `quark-common.toml` | `Villagers Use Simple Harvest = false` | Leave villager farming to Smarter Farmers; player harvesting stays enabled |
-| `thirst/item_settings.toml` | 103 explicit drink IDs and 163 food IDs | Add verified drinks, soups, cups, fruit, and moist foods from the installed pack |
+| `thirst/item_settings.toml` | 103 explicit drink IDs and 176 food IDs | Add verified drinks, soups, cups, fruit, and moist foods from the installed pack |
 | `thirst/common.toml`, `thirst/keyword.toml` | Preserve current balance; keyword matching off | Match client gameplay settings without matching decorative food-display items |
 | `mbackrooms/Mbackrooms-Config-Common.toml` | `partialLootKeeping = false` | Backrooms otherwise saves about 30% of inventory even outside its dimensions |
 | `chunky/config.json` | `updateInterval = 60` | Pregeneration progress logs once a minute instead of every second |
@@ -1041,7 +1041,7 @@ Oddities features remain disabled. The add-on itself contains no gameplay code;
 it unlocks the implementations already in Quark. Its mandatory Quark dependency
 is satisfied by the installed Quark 4.0-462.
 
-Thirst now has **103 drinks and 163 foods**, with identical server and client
+Thirst now has **103 drinks and 176 foods**, with identical server and client
 item settings. The November 4 expansion adds 44 drinks and 101 foods without
 changing the previous entries. The November 7 pass adds 52 more IDs: milk
 buckets, Cold Sweat's filled waterskin (`6/8`), Doggy Talents soy milk and sake,
@@ -1050,6 +1050,20 @@ additional soups, curries, salads, fruit, and jellies across the Delight mods.
 `miners_delight:water_cup` was removed because it is not drinkable. Every
 configured ID was checked against node004's live item registry using
 `clear @a <item> 0`, which does not remove items.
+
+The November 26 audit dumped every edible or drink-animation item from node004's
+live registry with a temporary KubeJS script and added the 13 remaining
+water-bearing foods: Farmer's Delight ratatouille and Alex's Caves green soylent
+(`4/5`); Ender's Delight twisted cereal (made with milk), Alex's Caves ice cream
+bowls, My Nether's Delight hot cream cone, giant sweetberry, warped squash
+wedge, and Dungeons Delight sculk apple/dogapple (`2/3`); and sculk catblueberry
+and Farmer's Respite coffee berries (`1/2`). Every registered drink-animation
+beverage was already configured. The remaining unconfigured drink-animation
+items are splash/lingering potions, fish oil, mayo, eggs, SCP artifacts,
+lumisene, essence, and Mekanism canteen/paste. The other edibles are dry foods.
+Modded drinks only restored thirst after `hydration_hooks.js` began loading
+`ThirstHelper` lazily: loading it in a startup script froze Thirst's drink
+tables before items and configs existed.
 
 Cold Sweat's own Thirst integration requires Thirst 3.x, so the waterskin is
 configured manually; pouring it over yourself may also hydrate. Mekanism
