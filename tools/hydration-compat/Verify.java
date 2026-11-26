@@ -24,7 +24,7 @@ class Verify {
                 Object transforms = engine.eval("initializeCoreMod()");
                 engine.put("transforms", transforms);
                 for (String key : List.of("hydration_pot", "hydration_kettle", "hydration_monster_pot", "hydration_create",
-                        "hydration_kettle_pour_use", "hydration_kettle_pour_tick", "hydration_skillet_block", "hydration_skillet_item")) {
+                        "hydration_kettle_pour_use", "hydration_kettle_boil", "hydration_skillet_block", "hydration_skillet_item")) {
                     String jarName = switch (key) {
                         case "hydration_pot" -> "FarmersDelight-1.20.1-1.3.4.jar";
                         case "hydration_monster_pot" -> "forge-dungeonsdelight-1.20.1-1.3.1.jar";
@@ -46,7 +46,10 @@ class Verify {
                     engine.eval("transforms." + key + ".transformer(method)");
                     method.maxStack += 8;
                     new Analyzer<BasicValue>(new BasicVerifier()).analyze(node.name, method);
-                    if (key.startsWith("hydration_kettle_pour") || key.startsWith("hydration_skillet")) {
+                    if (key.equals("hydration_kettle_boil") && Arrays.stream(method.instructions.toArray()).noneMatch(n ->
+                            n instanceof MethodInsnNode m && m.owner.equals("serverfixes/hydration/KettleBoil") && m.name.equals("tick")))
+                        throw new AssertionError("Kettle boil hook missing");
+                    if (key.startsWith("hydration_kettle_pour") || key.equals("hydration_kettle_boil") || key.startsWith("hydration_skillet")) {
                         String marker = key.startsWith("hydration_skillet") ? "thirst" : null;
                         boolean found = Arrays.stream(method.instructions.toArray()).anyMatch(n -> marker != null
                             ? n instanceof LdcInsnNode ldc && marker.equals(ldc.cst)

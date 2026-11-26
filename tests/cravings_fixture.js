@@ -94,7 +94,7 @@ const context = {
     }
   })},
   Client: {player: {
-    getUUID: () => 'player-one',
+    getProfile: () => ({getId: () => 'player-one'}),
     getCapability: () => ({orElse: () => ({current_craving: craving})}),
     getMainHandItem: () => main,
     getOffhandItem: () => offhand,

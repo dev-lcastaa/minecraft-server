@@ -776,10 +776,14 @@ count does not imply 103 verified active recipes. Runtime logs report changed,
 already-pure, and unsupported outputs. Already-pure outputs remain untouched.
 
 [`water-compat`](./server-config/new-world/datapacks/water-compat/) adds pot
-and kettle purification. Farmer's Respite's copper kettle fills glass bottles
-with water (250 mB each); Thirst gives each bottle the tank's purity, so water
-boiled in the kettle pours out purified and unboiled water pours out at the
-default purity. Potions cannot be poured into the kettle, which previously would
+and kettle purification. A heated Farmer's Respite kettle holding water and no
+ingredient items boils it to Purity 3 after 10 seconds (200 ticks). Farmer's
+Respite only brews when an ingredient slot holds an item, so
+`water_compat:kettle_water` alone never ran; the hydration add-on's
+`KettleBoil` hook does the boiling, and the recipe remains as the boil step shown
+in EMI. Glass bottles fill from the kettle (250 mB each) and carry the tank's
+purity, so boiled water pours out purified and unboiled water at the default
+purity. Potions cannot be poured into the kettle, which previously would
 have turned them into water. Farmer's Delight skillets (placed and handheld)
 ignore Thirst's campfire purification recipes, so bottles, bowls and buckets of
 water cannot be cooked on them; campfires still purify. Pot purification
@@ -793,6 +797,23 @@ SCP cooler dispensing/refilling is **not implemented**: the installed coolers
 are ordinary blocks without persistent inventory. A coordinate-only reservoir
 would not safely survive moving/replacing blocks or support finite refills.
 Their existing behavior remains unchanged.
+
+#### EMI/JEI recipe viewer fixes
+
+[`emi-jei-compat`](./tools/emi-jei-compat/) (client only, in
+`client-config/mods`) patches EMI 1.1.24's JEI bridge, which predates the
+installed JEI 15.74:
+
+- Hovering an empty Farmer's Respite kettle tank no longer shows "Error
+  rendering tooltip"; EMI treats the tank's null ingredient as empty.
+- Recipe pages with JEI recipe transfer, such as Brewing while the kettle is
+  open, no longer show "Error Rendering"; `JemiRecipeSlot` gains JEI's
+  `getAllIngredientsList()`.
+
+JEI cannot simply be downgraded: the method arrived in 15.35, and Polymorph
+requires JEI 15.57 or newer. EMI still lacks JEI's newer `IPlaceable.setPosition`
+and `IRecipeLayoutBuilder.createFocusLink`; a recipe page that calls them can
+still fail. Remove this patch once EMI implements the newer JEI API.
 
 #### Planters and fungus colonies
 

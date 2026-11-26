@@ -30,7 +30,8 @@ function cravingNotify(key) {
 
 ClientEvents.tick(() => {
   cravingFeedbackTick++
-  var playerId = Client.player ? String(Client.player.getUUID()) : null
+  // KubeJS's getProfile(); vanilla getUUID() is not remapped for client scripts and threw every tick.
+  var playerId = Client.player ? String(Client.player.getProfile().getId()) : null
   if (playerId !== cravingFeedbackPlayer) {
     cravingFeedbackPlayer = playerId
     cravingLastChime = -40

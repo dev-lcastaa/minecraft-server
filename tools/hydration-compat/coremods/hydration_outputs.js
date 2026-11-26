@@ -131,10 +131,18 @@ function initializeCoreMod() {
       methodDesc: '(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/phys/BlockHitResult;)Lnet/minecraft/world/InteractionResult;'},
     transformer: guardPouring
   };
-  transforms.hydration_kettle_pour_tick = {
+  // Plain water never brews (Farmer's Respite needs an ingredient item), so boil it from the tick instead.
+  transforms.hydration_kettle_boil = {
     target: {type: 'METHOD', class: 'umpaz.farmersrespite.common.block.entity.KettleBlockEntity', methodName: 'brewingTick',
       methodDesc: '(Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lumpaz/farmersrespite/common/block/entity/KettleBlockEntity;)V'},
-    transformer: guardPouring
+    transformer: function(method) {
+      var patch = new List();
+      for (var v = 0; v < 4; v++) patch.add(new Var(O.ALOAD, v));
+      patch.add(new Call(O.INVOKESTATIC, 'serverfixes/hydration/KettleBoil', 'tick',
+        '(Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lumpaz/farmersrespite/common/block/entity/KettleBlockEntity;)V', false));
+      method.instructions.insert(patch);
+      return guardPouring(method);
+    }
   };
   // Thirst's water purification recipes are campfire recipes; Farmer's Delight skillets reuse that recipe type.
   function skipThirstRecipes(method) {

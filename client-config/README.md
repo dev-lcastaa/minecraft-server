@@ -144,6 +144,9 @@ hooks, custom juice fluids, or carcass stack sizes.
   Supplementaries planters. Crimson and warped fungi on rich soil or a planter
   become My Nether's Delight fungus colonies, and colonies grow on planters.
   Clients need the JAR so seed placement is not rejected locally.
+- `mods/emi-jei-compat-1.20.1-1.0.0.jar` (client only) fixes EMI's
+  "Error rendering tooltip" on an empty kettle tank and "Error Rendering" recipe
+  pages such as Brewing.
 - Extra lunar events need `kubejs/assets/lunar_events_compat/lang/en_us.json`
   and `kubejs/assets/enhancedcelestials2defaultlunarevents/lang/en_us.json` for
   moon names and rise/set messages; without them clients show raw text keys.

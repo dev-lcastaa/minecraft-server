@@ -1,0 +1,20 @@
+modLoader="lowcodefml"
+loaderVersion="[47,48)"
+license="MIT"
+[[mods]]
+modId="emi_jei_compat"
+version="1.0.0"
+displayName="EMI/JEI Compatibility"
+description="Fixes EMI 1.1.24's JEI bridge against JEI 15.74 (kettle tank tooltip, recipe transfer pages)."
+[[dependencies.emi_jei_compat]]
+modId="emi"
+mandatory=true
+versionRange="[1.1.24,1.1.25)"
+ordering="AFTER"
+side="CLIENT"
+[[dependencies.emi_jei_compat]]
+modId="jei"
+mandatory=true
+versionRange="[15.35,)"
+ordering="AFTER"
+side="CLIENT"
