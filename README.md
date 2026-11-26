@@ -954,6 +954,14 @@ and intermediate items. No evidence-proven candidate is left unaccounted for.
 Recipe/loot evidence is not a guarantee of availability in every world:
 conditional content, fluid/procedural acquisition, and world-spawn limits remain
 documented, and runtime registry/station checks reject invalid candidates.
+The add-on also patches Bountiful's registry-tag lookup to use the registry's
+direct tag lookup instead of scanning every tag. On node004 that scan took about
+1.2 seconds of each 1.0–1.4-second board refresh. The patch returns the same
+tag contents, Minecraft refreshes them on datapack reload, and the patch logs a
+warning and leaves Bountiful unchanged if the expected Bountiful methods change.
+Its regression test runs against the Forge 1.20.1-47.4.28 SRG libraries from
+`MC_LIBRARIES` (the Modrinth App library folder by default) and skips when they
+are unavailable.
 Three candidates missing from the installed server's item registry are recorded
 in [`unregistered_items.json`](./tools/bounty-backport-compat/unregistered_items.json).
 Recheck those exclusions against the running registry whenever the corresponding

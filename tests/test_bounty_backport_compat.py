@@ -381,6 +381,125 @@ public class SafetyTest implements Opcodes {
         finally:
             shutil.rmtree(scratch)
 
+    def test_registry_tag_lookup_matches_native_without_scanning_every_tag(self):
+        libraries = Path(os.environ.get("MC_LIBRARIES", Path.home() / ".local/share/ModrinthApp/meta/libraries"))
+        forge = libraries / "net/minecraftforge/forge/1.20.1-47.4.28"
+        minecraft = libraries / "net/minecraft/client/1.20.1-20230612.114412"
+        first = [forge / "forge-1.20.1-47.4.28-client.jar", minecraft / "client-1.20.1-20230612.114412-srg.jar",
+                 forge / "forge-1.20.1-47.4.28-universal.jar"]
+        if not all(path.is_file() for path in first):
+            self.skipTest("Set MC_LIBRARIES to Forge 1.20.1-47.4.28 libraries")
+        rest = sorted(path for path in libraries.rglob("*.jar") if path not in first
+                      and not any(part in path.as_posix() for part in
+                                  ("net/minecraftforge/forge/", "net/minecraft/client/", "net/minecraftforge/coremods/")))
+        mods = [next((ROOT / "mods").glob("Bountiful-*.jar")), next((ROOT / "mods").glob("kotlinforforge-*-all.jar"))]
+        java = shutil.which("java")
+        scratch = SOURCE / f".tag-lookup-test-{os.getpid()}"
+        scratch.mkdir()
+        classpath = os.pathsep.join(map(str, [scratch, *first, *rest, *mods]))
+        stub = """package net.minecraftforge.coremod.api;
+public class ASMAPI {
+public static String mapMethod(String v){return v;}
+public static String mapField(String v){return v;}
+public static void log(String level,String message,Object... args){System.out.println(level+" "+message);}
+}"""
+        fixture = r"""
+import java.lang.reflect.*;
+import java.nio.file.*;
+import java.util.*;
+import java.util.zip.*;
+import javax.script.*;
+import org.objectweb.asm.*;
+import org.objectweb.asm.tree.*;
+import org.objectweb.asm.tree.analysis.*;
+import org.openjdk.nashorn.api.scripting.NashornScriptEngineFactory;
+import com.mojang.datafixers.util.Pair;
+import net.minecraft.core.*;
+import net.minecraft.resources.*;
+import net.minecraft.tags.TagKey;
+public class TagLookupTest {
+  static final String OWNER="io.ejekta.bountiful.util.ExtMiscKt";
+  static class Loader extends ClassLoader {
+    final byte[] bytes;
+    Loader(byte[] b){super(TagLookupTest.class.getClassLoader());bytes=b;}
+    protected Class<?> loadClass(String n,boolean r) throws ClassNotFoundException {
+      if(!n.equals(OWNER))return super.loadClass(n,r);
+      synchronized(getClassLoadingLock(n)){Class<?> c=findLoadedClass(n);return c!=null?c:defineClass(n,bytes,0,bytes.length);}
+    }
+  }
+  static ClassNode read(byte[] b){ClassNode n=new ClassNode();new ClassReader(b).accept(n,0);return n;}
+  static MethodNode target(ClassNode n){return n.methods.stream().filter(m->m.name.equals("getRegistryTags")).findFirst().orElseThrow();}
+  static ClassNode transform(ScriptEngine engine,ClassNode node) throws Exception {
+    engine.put("node",node);return (ClassNode)engine.eval("initializeCoreMod().registry_tag_lookup.transformer(node)");
+  }
+  static Object call(byte[] cls,RegistryAccess access,TagKey<?> key) throws Exception {
+    Method m=new Loader(cls).loadClass(OWNER).getMethod("getRegistryTags",RegistryAccess.class,TagKey.class);
+    try{return m.invoke(null,access,key);}catch(InvocationTargetException e){throw (Exception)e.getCause();}
+  }
+  public static void main(String[] args) throws Exception {
+    ScriptEngine engine=new NashornScriptEngineFactory().getScriptEngine();
+    engine.eval(Files.readString(Path.of(args[0])));
+    byte[] original;
+    try(var jar=new ZipFile(args[1])){original=jar.getInputStream(jar.getEntry(OWNER.replace('.','/')+".class")).readAllBytes();}
+    ClassNode node=transform(engine,read(original));
+    new Analyzer<BasicValue>(new BasicVerifier()).analyze(node.name,target(node));
+    ClassWriter writer=new ClassWriter(ClassWriter.COMPUTE_MAXS);node.accept(writer);
+    byte[] patched=writer.toByteArray();
+
+    // Creating a real registry key bootstraps Minecraft; both paths only pass the key through.
+    ResourceKey<Registry<String>> registryKey=null;
+    TagKey<String> wanted=new TagKey<>(registryKey,new ResourceLocation("test","wanted"));
+    TagKey<String> other=new TagKey<>(registryKey,new ResourceLocation("test","other"));
+    TagKey<String> missing=new TagKey<>(registryKey,new ResourceLocation("test","missing"));
+    Map<TagKey<String>,List<Holder<String>>> tags=new LinkedHashMap<>();
+    tags.put(other,List.of(new Holder.Direct<>("x")));
+    tags.put(wanted,List.of(new Holder.Direct<>("a"),new Holder.Direct<>("b")));
+    boolean[] scanned={false};
+    Object registry=Proxy.newProxyInstance(TagLookupTest.class.getClassLoader(),new Class<?>[]{Registry.class},(p,m,a)->switch(m.getName()){
+      case "m_203612_"->{scanned[0]=true;yield tags.entrySet().stream().map(e->Pair.of(e.getKey(),e.getValue()));}
+      case "m_203431_"->Optional.ofNullable(tags.get(a[0]));
+      default->throw new UnsupportedOperationException(m.getName());
+    });
+    RegistryAccess access=(RegistryAccess)Proxy.newProxyInstance(TagLookupTest.class.getClassLoader(),new Class<?>[]{RegistryAccess.class},(p,m,a)->{
+      if(m.getName().equals("m_175515_")&&a[0]==null)return registry;
+      throw new UnsupportedOperationException(m.getName());
+    });
+    for(TagKey<String> key:List.of(wanted,missing)){
+      scanned[0]=false;Object expected=call(original,access,key);
+      if(!scanned[0])throw new AssertionError("Native fixture did not scan tags");
+      scanned[0]=false;Object actual=call(patched,access,key);
+      if(scanned[0])throw new AssertionError("Patched lookup scanned every tag");
+      if(!expected.equals(actual)||!(actual instanceof ArrayList))throw new AssertionError(key+": "+expected+" != "+actual);
+    }
+    if(!call(patched,access,wanted).equals(List.of("a","b")))throw new AssertionError("Wrong tag values");
+
+    ClassNode changed=read(original);
+    changed.methods.removeIf(m->m.name.equals("getRegistryTags$lambda$10"));
+    int before=target(changed).instructions.size();
+    if(target(transform(engine,changed)).instructions.size()!=before)throw new AssertionError("Patched without converter");
+    System.out.println("Registry tag lookup matches native results without scanning every tag");
+  }
+}
+"""
+        try:
+            paths = []
+            for name, text in {"net/minecraftforge/coremod/api/ASMAPI.java": stub, "TagLookupTest.java": fixture}.items():
+                path = scratch / name
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_text(text)
+                paths.append(str(path))
+            compiled = subprocess.run([java, "-m", "jdk.compiler/com.sun.tools.javac.Main", "-source", "17",
+                                       "-target", "17", "-nowarn", "-cp", classpath, "-d", str(scratch), *paths],
+                                      cwd=ROOT, capture_output=True, text=True)
+            self.assertEqual(compiled.returncode, 0, compiled.stderr)
+            result = subprocess.run([java, "-cp", classpath, "TagLookupTest",
+                                     str(SOURCE / "coremods/tag_lookup.js"), str(mods[0])],
+                                    cwd=ROOT, capture_output=True, text=True)
+            self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+            self.assertIn("without scanning every tag", result.stdout)
+        finally:
+            shutil.rmtree(scratch)
+
     def test_all_actual_raw_egg_recipes_preserve_outputs_and_use_verified_tag(self):
         count = 0
         for name, jar, original in build.recipes(self.data, self.mods):
