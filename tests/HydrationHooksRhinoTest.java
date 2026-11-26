@@ -1,6 +1,7 @@
 import dev.latvian.mods.rhino.Context;
 import dev.latvian.mods.rhino.NativeJavaClass;
 import dev.latvian.mods.rhino.ScriptableObject;
+import dev.latvian.mods.rhino.util.RemapForJS;
 import dev.latvian.mods.rhino.util.RemapPrefixForJS;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -35,9 +36,10 @@ public class HydrationHooksRhinoTest {
         public boolean isEmpty() { return id.equals("minecraft:air"); }
         public String getUseAnimation() { return "NONE"; }
         public Object getItem() { return item; }
-        public boolean m_41782_() { return tag != null; }
-        public Tag getTag() { return tag; }
-        public void setTag(Tag tag) { this.tag = tag; }
+        // KubeJS's ItemStackMixin renames these SRG methods, so getTag/setTag/hasTag never exist in JS.
+        @RemapForJS("hasNBT") public boolean m_41782_() { return tag != null; }
+        @RemapForJS("getNbt") public Tag m_41783_() { return tag; }
+        @RemapForJS("setNbt") public void m_41751_(Tag tag) { this.tag = tag; }
         public Tag getOrCreateTag() { if (tag == null) tag = new Tag(); return tag; }
         public Stack copy() { Stack copy = new Stack(id, drink, item); if (tag != null) copy.tag = tag.copy(); return copy; }
     }
@@ -139,6 +141,9 @@ public class HydrationHooksRhinoTest {
             var reproduced = false;
             try { shadowed.level(); } catch (e) { reproduced = String(e).indexOf('not a function') !== -1; }
             if (!reproduced) throw Error('Fixture did not reproduce the client crash');
+            var probe = make.stack('minecraft:potion', false, make.potion);
+            if (typeof probe.getTag === 'function' || typeof probe.setTag === 'function')
+              throw Error('Fixture exposes getTag/setTag, which KubeJS remaps to getNbt/setNbt');
 
             var click = 'net.minecraftforge.event.entity.player.PlayerInteractEvent$RightClickItem';
             var cases = [[make.bowl, 'minecraft:glass_bottle', true], [{}, 'minecraft:glass_bottle', false],
@@ -151,7 +156,7 @@ public class HydrationHooksRhinoTest {
 
             var drink = make.stack('farmersrespite:green_tea', true, null);
             listeners['net.minecraftforge.event.entity.player.PlayerEvent$ItemCraftedEvent'](make.crafted(drink));
-            if (drink.getTag().get('Purity') != 3) throw Error('Crafted drink not purified');
+            if (drink.getNbt().get('Purity') != 3) throw Error('Crafted drink not purified');
 
             var named = make.stack('minecraft:potion', false, make.potion);
             named.getOrCreateTag().putInt('CustomData', 7);
@@ -161,8 +166,8 @@ public class HydrationHooksRhinoTest {
             var brewed = make.stack('minecraft:potion', false, make.potion);
             var post = make.brew(brewed, air, make.stack('minecraft:potion', false, make.potion));
             listeners['net.minecraftforge.event.brewing.PotionBrewEvent$Post'](post);
-            if (brewed.getTag().get('Purity') != 3 || brewed.getTag().get('CustomData') != 7 ||
-                post.getItem(2).getTag().get('Purity') != 3 || air.getTag() !== null) {
+            if (brewed.getNbt().get('Purity') != 3 || brewed.getNbt().get('CustomData') != 7 ||
+                post.getItem(2).getNbt().get('Purity') != 3 || air.getNbt() !== null) {
               throw Error('Brewing purity or tag preservation failed');
             }
             """, "hydration-fixture-assertions", 1, null);

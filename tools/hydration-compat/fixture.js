@@ -19,9 +19,10 @@ class Stack {
   isEmpty() { return this.id === 'minecraft:air'; }
   getUseAnimation() { return this.animation; }
   getOrCreateTag() { return this.tag ||= new Tag(); }
-  hasTag() { return this.tag !== null; }
-  getTag() { return this.tag; }
-  setTag(tag) { this.tag = tag; }
+  // KubeJS exposes vanilla getTag/setTag/hasTag only as getNbt/setNbt/hasNBT.
+  hasNBT() { return this.tag !== null; }
+  getNbt() { return this.tag; }
+  setNbt(tag) { this.tag = tag; }
   getItem() { return this.item; }
   copy() { return new Stack(this.id, this.animation, this.tag?.copy() || null, this.registered, this.item); }
 }
@@ -70,21 +71,21 @@ let slots = [before, new Stack('minecraft:air'), new Stack('other:juice', 'DRINK
 events['net.minecraftforge.event.brewing.PotionBrewEvent$Pre']({getItem: slot => slots[slot]});
 slots[0] = brewed;
 events['net.minecraftforge.event.brewing.PotionBrewEvent$Post']({getItem: slot => slots[slot]});
-assert.equal(brewed.getTag().data.Potion, 'minecraft:healing');
-assert.equal(brewed.getTag().data.Purity, 3);
-assert.deepEqual(brewed.getTag().data.CustomPotionEffects, [{Id: 1, Duration: 40}]);
-assert.equal(brewed.getTag().data.display.Name, 'Named drink');
-assert.equal(slots[2].getTag().data.Purity, 3);
-assert.equal(fuel.hasTag(), false);
+assert.equal(brewed.getNbt().data.Potion, 'minecraft:healing');
+assert.equal(brewed.getNbt().data.Purity, 3);
+assert.deepEqual(brewed.getNbt().data.CustomPotionEffects, [{Id: 1, Duration: 40}]);
+assert.equal(brewed.getNbt().data.display.Name, 'Named drink');
+assert.equal(slots[2].getNbt().data.Purity, 3);
+assert.equal(fuel.hasNBT(), false);
 assert.equal(brewed.count, 1);
 
 for (const stack of [new Stack('other:registered_drink', 'NONE', null, true), new Stack('other:drink', 'DRINK')]) {
   events['net.minecraftforge.event.entity.player.PlayerEvent$ItemCraftedEvent']({getCrafting: () => stack});
-  assert.equal(stack.getTag().data.Purity, 3);
+  assert.equal(stack.getNbt().data.Purity, 3);
 }
 const food = new Stack('minecraft:apple', 'EAT');
 events['net.minecraftforge.event.entity.player.PlayerEvent$ItemCraftedEvent']({getCrafting: () => food});
-assert.equal(food.hasTag(), false);
+assert.equal(food.hasNBT(), false);
 
 for (const [block, item, expected] of [[new Bowl(), 'minecraft:glass_bottle', true],
   [{}, 'minecraft:glass_bottle', false], [new Bowl(), 'minecraft:water_bucket', false]]) {
