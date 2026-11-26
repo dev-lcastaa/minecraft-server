@@ -1,4 +1,11 @@
-const HydrationThirst = Java.loadClass('dev.ghen.thirst.api.ThirstHelper');
+// Thirst copies its drink/food maps into static fields once, when ThirstHelper initialises.
+// Startup scripts run before items are registered and configs load, so loading it here would
+// freeze every modded drink as minecraft:air. Only load it from event handlers.
+let HydrationThirst = null;
+function hydrationThirst() {
+  if (HydrationThirst === null) HydrationThirst = Java.loadClass('dev.ghen.thirst.api.ThirstHelper');
+  return HydrationThirst;
+}
 const HydrationUseAnim = Java.loadClass('net.minecraft.world.item.UseAnim');
 let HydrationBrewingBefore = null;
 const HydrationForge = Java.loadClass('net.minecraftforge.common.MinecraftForge');
@@ -10,7 +17,7 @@ const HydrationBath = Java.loadClass('doggytalents.common.block.DogBathBlock');
 const HydrationPotion = Java.loadClass('net.minecraft.world.item.PotionItem');
 
 function hydrationPreparedDrink(stack) {
-  return !stack.isEmpty() && (HydrationThirst.isDrink(stack) || stack.getUseAnimation() === HydrationUseAnim.DRINK);
+  return !stack.isEmpty() && (hydrationThirst().isDrink(stack) || stack.getUseAnimation() === HydrationUseAnim.DRINK);
 }
 
 ForgeEvents.onEvent('net.minecraftforge.event.entity.player.PlayerEvent$ItemCraftedEvent', event => {

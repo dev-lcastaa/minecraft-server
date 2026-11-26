@@ -61,6 +61,8 @@ const sandbox = {
 };
 vm.createContext(sandbox);
 vm.runInContext(fs.readFileSync(root + '/server-config/kubejs/startup_scripts/hydration_hooks.js', 'utf8'), sandbox);
+// Initialising ThirstHelper during startup freezes its drink map before modded items exist.
+assert.equal(loadedClasses.includes('dev.ghen.thirst.api.ThirstHelper'), false);
 vm.runInContext(fs.readFileSync(root + '/server-config/kubejs/server_scripts/hydration_recipes.js', 'utf8'), sandbox);
 assert.equal(loadedClasses.includes('java.lang.ThreadLocal'), false);
 
