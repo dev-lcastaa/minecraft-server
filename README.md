@@ -2,17 +2,17 @@
 
 Minecraft **1.20.1**, **Forge**, and **Java 17**, using the
 [`itzg/minecraft-server`](https://docker-minecraft-server.readthedocs.io/)
-base image.
+base image. The server is configured to admit up to two simultaneous players.
 
 ## Requirements
 
 - Docker Engine and Docker Compose v2 with support for `up --wait`.
 - Docker BuildKit with Dockerfile frontend 1.6 support for checksum-verified downloads.
-- Enough host RAM for a 19 GiB Minecraft container plus other services and the
-  operating system. Java heap is 17 GiB, leaving approximately 2 GiB for JVM
+- Enough host RAM for a 16 GiB Minecraft container plus other services and the
+  operating system. Java heap is 12 GiB, leaving approximately 4 GiB for JVM
   overhead within the container limit.
-- Host swap enabled to use the container's additional allowance of up to 4 GiB.
-  Compose sets a 19 GiB RAM limit and a 23 GiB combined RAM-plus-swap limit.
+- Host swap enabled to use the container's additional allowance of up to 2 GiB.
+  Compose sets a 16 GiB RAM limit and an 18 GiB combined RAM-plus-swap limit.
   Swap is a safety net, not a substitute for RAM; heavy swapping can worsen lag
   and host responsiveness. Recreate the container with
   `docker compose up -d --force-recreate minecraft` after changing these limits.
@@ -312,8 +312,8 @@ rejects missing/invalid credentials. Rotate any password previously saved in
 but the runtime properties file and Docker container environment contain the
 password, so restrict host, Docker, volume-backup, and Jenkins access.
 
-Both local and Jenkins deployments use a fixed **17 GiB heap**, **19 GiB RAM
-limit**, and **23 GiB combined RAM-plus-swap limit**, allowing up to **4 GiB of
+Both local and Jenkins deployments use a fixed **12 GiB heap**, **16 GiB RAM
+limit**, and **18 GiB combined RAM-plus-swap limit**, allowing up to **2 GiB of
 host swap**. The host must have swap enabled and Docker swap-limit support.
 Exhausting these limits may trigger an out-of-memory kill. Monitor usage with
 `docker stats` and host swap usage with `swapon --show`; heavy swapping can worsen
@@ -324,20 +324,37 @@ host RAM and swap are not guaranteed.
 
 Both deployment paths enable the image's
 [`USE_AIKAR_FLAGS`](https://docker-minecraft-server.readthedocs.io/en/latest/configuration/jvm-options/#enable-aikars-flags)
-G1GC preset on Java 17. The image adjusts its garbage-collection settings for the
-17 GiB heap (above the preset's 12 GiB threshold). Heap sizing stays controlled by
+G1GC preset on Java 17. The 12 GiB heap is an initial lower-heap trial to leave
+more host and container headroom while evaluating two-player performance. Check
+the effective JVM flags after deployment because the image may select different
+settings at its 12 GiB large-heap threshold. Heap sizing stays controlled by
 `MEMORY`; do not add duplicate `-Xms`/`-Xmx` arguments or combine this preset with
 MeowIce's flags or another garbage collector.
+`JAVA_TOOL_OPTIONS` enables bounded GC and safepoint logs at
+`/data/logs/gc.log` (five rotated files, up to 20 MiB each) to correlate pauses
+with slow ticks.
+The Bountiful board refresh interval is 300 seconds (five minutes) on both sides
+of the pack. This reduces how often expensive objective generation runs; it does
+not make each generation cheaper by itself. The compatibility generator now
+limits the shared supply objective and reward pools to 2,500 entries, selected
+deterministically across item namespaces, and omits 312 unique item IDs (624
+objective/reward entries) that the runtime safety check rejects as block entities.
+The pool weight is recalculated to keep
+the shared pool's overall selection weight unchanged; the trade-off is fewer
+distinct supply bounties and rewards. These source changes take effect after the
+next deploy/restart, not on the currently running server; profile the first
+refresh afterward to measure the improvement.
 
 The November 3 hardware check of `node004` reported an Intel Core i7-4790
 (4 cores/8 threads) and about 23 GiB usable RAM, rather than the expected
-OptiPlex 3090 configuration. The 19 GiB container limit leaves roughly
-4 GiB for the host, with 2 GiB inside the container for non-heap allocations.
+OptiPlex 3090 configuration. The 16 GiB container limit leaves roughly
+7 GiB for the host, with 4 GiB inside the container for non-heap allocations.
 GC thread counts remain JVM-managed rather than hardcoded to a CPU model.
-This is a tuning baseline, not a guarantee of improved tick times; monitor
-tick times and container memory during exploration and with players online.
-If native/non-heap usage approaches the container limit, reduce the heap or
-increase the limit while preserving host headroom.
+This is a tuning trial, not a guarantee of improved tick times. Compare the same
+two-player base and exploration workloads against the previous configuration.
+Monitor post-GC heap, GC pauses, tick times, and container memory for at least
+24 hours. If memory pressure, GC churn, or lag worsens, roll back or test a
+14 GiB heap while preserving host headroom.
 
 Apply the change with your normal Jenkins deployment or
 `docker compose up -d --no-build --wait --wait-timeout 900` for an existing local
@@ -1162,7 +1179,8 @@ docker compose exec -T minecraft rcon-cli list
 docker stats --no-stream
 ```
 
-Both memory values should be **20401094656** bytes (19 GiB). The RCON command
+`Memory` should be **17179869184** bytes (16 GiB), and `MemorySwap` should be
+**19327352832** bytes (18 GiB). The RCON command
 should return the player list without displaying the password. Also test from
 your trusted remote RCON client at `192.168.1.208:25575` (or your configured IP)
 to verify host network/firewall access.

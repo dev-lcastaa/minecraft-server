@@ -127,6 +127,37 @@ class BountyBackportCompatTest(unittest.TestCase):
             contents = json.loads(path.read_text())["content"].values()
             self.assertFalse(set(exclusions) & {entry["content"] for entry in contents}, path)
 
+    def test_shared_supply_pools_filter_runtime_vetoes_and_preserve_weight(self):
+        self.assertEqual(
+            build.round_robin_supply_items(
+                ["alpha:first", "alpha:second", "beta:first", "gamma:first"], 3
+            ),
+            ["alpha:first", "beta:first", "gamma:first"],
+        )
+        vetoed = build.confirmed_runtime_vetoed_items()
+        self.assertEqual(len(vetoed), 312)
+        for identity in vetoed:
+            self.assertEqual(self.coverage["excluded_recipe_items"][identity]["code"],
+                             "RUNTIME_BLOCK_ENTITY")
+        for suffix in ("objs", "rews"):
+            pool = json.loads((SOURCE / f"data/bounty_backport_compat/bounty_pools/compat/compat_supplies_{suffix}.json").read_text())
+            self.assertEqual(len(pool["content"]), build.SUPPLY_POOL_LIMIT)
+            self.assertAlmostEqual(
+                pool["weightMult"] * sum(entry["weightMult"] for entry in pool["content"].values()),
+                2.5,
+            )
+            self.assertFalse(vetoed & {entry["content"] for entry in pool["content"].values()})
+        cap_exclusions = {
+            identity for identity, reason in self.coverage["excluded_recipe_items"].items()
+            if reason["code"] == "SUPPLY_DIVERSITY_CAP"
+        }
+        self.assertEqual(len(cap_exclusions), 2350)
+        pool_paths = (SOURCE / "data/bounty_backport_compat/bounty_pools/compat").glob("*.json")
+        self.assertFalse(any(
+            cap_exclusions & {entry["content"] for entry in json.loads(path.read_text())["content"].values()}
+            for path in pool_paths
+        ))
+
     def test_selected_bounties_exist_in_live_item_registry(self):
         dump = os.environ.get("BOUNTY_ITEM_REGISTRY_DUMP")
         if not dump:
@@ -149,6 +180,7 @@ class BountyBackportCompatTest(unittest.TestCase):
         self.assertEqual(self.coverage["audit"]["unaccounted_proven_candidates"], [])
         self.assertGreater(len(covered), 1000)
         self.assertNotIn("DIVERSITY_CAP", self.coverage["audit"]["exclusion_categories"])
+        self.assertEqual(self.coverage["audit"]["proven_exclusion_categories"]["SUPPLY_DIVERSITY_CAP"], 2350)
         self.assertNotIn("UNCLASSIFIED", self.coverage["audit"]["exclusion_categories"])
         self.assertNotIn("UNVERIFIED_FUNCTIONAL_BLOCK", self.coverage["audit"]["exclusion_categories"])
         self.assertEqual(set(self.coverage["candidate_sources"]),

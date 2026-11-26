@@ -20,6 +20,7 @@ PACK = ROOT / "server-config/new-world/datapacks/bounty-backport-compat"
 JAR_NAME = "bounty-backport-compat-1.20.1-1.0.0.jar"
 EGGS = ["minecraft:egg", "backported_animal_variants:blue_egg",
         "backported_animal_variants:brown_egg"]
+SUPPLY_POOL_LIMIT = 2500
 ANIMALS = {f"minecraft:{animal}": [
     f"backported_animal_variants:{temperature}_{animal}" for temperature in ("cold", "warm")
 ] for animal in ("chicken", "cow", "pig")}
@@ -106,6 +107,39 @@ def confirmed_unregistered_items():
         if hashes[jar] != evidence["sha256"]:
             raise ValueError(f"Recheck runtime registry exclusion for {identity}: {jar.name} changed")
     return exclusions
+
+
+def confirmed_runtime_vetoed_items():
+    manifest = json.loads((SOURCE / "runtime_vetoed_items.json").read_text())
+    items = manifest["items"]
+    if not items or len(items) != len(set(items)):
+        raise ValueError("Runtime-vetoed bounty item list is empty or contains duplicates")
+    for name, expected in manifest["jar_hashes"].items():
+        jar = ROOT / "mods" / name
+        if not jar.is_file():
+            raise ValueError(f"Recheck runtime bounty veto for changed modpack: missing {jar.name}")
+        actual = hashlib.sha256(jar.read_bytes()).hexdigest()
+        if actual != expected:
+            raise ValueError(f"Recheck runtime bounty veto for changed modpack: {jar.name} changed")
+    return set(items)
+
+
+def round_robin_supply_items(identities, limit):
+    by_namespace = defaultdict(list)
+    for identity in sorted(identities):
+        by_namespace[identity.split(":", 1)[0]].append(identity)
+    selected = []
+    while len(selected) < limit:
+        added = False
+        for namespace in sorted(by_namespace):
+            if by_namespace[namespace]:
+                selected.append(by_namespace[namespace].pop(0))
+                added = True
+                if len(selected) == limit:
+                    break
+        if not added:
+            break
+    return sorted(selected)
 
 
 def quark_flags(config):
@@ -812,12 +846,18 @@ def build():
     value_proofs(proofs, data)
     headers, aliases = block_types(classes)
     unregistered = confirmed_unregistered_items()
+    runtime_vetoed = confirmed_runtime_vetoed_items()
+    unknown_vetoes = runtime_vetoed - set(proofs)
+    if unknown_vetoes:
+        raise ValueError(f"Runtime-vetoed items no longer have acquisition proofs: {sorted(unknown_vetoes)}")
     generated, evidence, counts, exclusions, applicable = {}, {}, {}, {}, {}
     choices = defaultdict(list)
     for candidate, proof in sorted(proofs.items()):
         proof["block_item"] = candidate in blocks
         disabled = data["__disabled_bounty_items__"][1].get(candidate)
-        if candidate in unregistered:
+        if candidate in runtime_vetoed:
+            reason = ("RUNTIME_BLOCK_ENTITY", "Bountiful runtime safety veto: BlockItem block implements EntityBlock")
+        elif candidate in unregistered:
             reason = ("RUNTIME_UNREGISTERED", unregistered[candidate]["reason"])
         elif disabled:
             reason = ("CONFIG_DISABLED", disabled)
@@ -844,6 +884,23 @@ def build():
             choices[category].append(candidate)
         evidence[candidate] = proof
         applicable[candidate] = list(DECREES) if categories == ["supplies"] else categories
+    unapplied_vetoes = runtime_vetoed - {
+        identity for identity, reason in exclusions.items() if reason["code"] == "RUNTIME_BLOCK_ENTITY"
+    }
+    if unapplied_vetoes:
+        raise ValueError(f"Runtime bounty vetoes were not excluded: {sorted(unapplied_vetoes)}")
+    all_supplies = choices["supplies"]
+    selected_supplies = set(round_robin_supply_items(all_supplies, SUPPLY_POOL_LIMIT))
+    for identity in set(all_supplies) - selected_supplies:
+        proof = evidence.pop(identity)
+        applicable.pop(identity)
+        exclusions[identity] = {
+            "code": "SUPPLY_DIVERSITY_CAP",
+            "reason": f"Shared supply pool is capped at {SUPPLY_POOL_LIMIT} items with deterministic namespace round-robin selection",
+            "proven": True,
+            "source": proof["source"],
+        }
+    choices["supplies"] = sorted(selected_supplies)
     def emit(name, value):
         generated[name] = value
     for name, (_, value) in data.items():
@@ -980,8 +1037,8 @@ def build():
                                                        "diversity_cap": 243, "loot_only_absent_from_audit": 129,
                                                        "inactive_recipe_but_other_acquisition_evidence": 42}}},
         "egg_recipes": egg_recipes, "kill_entities": [v["content"] for v in hunts.values()],
-        "policy": "Every acquisition-proven item is mapped to all applicable profession pools or shared delivery pools available to all twelve decrees, unless explicitly excluded for creative/admin, disabled content, station/container/NBT or unique progression. No diversity cap or unclassified-item exclusion. Item models are acquisition-audit candidates, never obtainability proofs. Loot requires placement/living-class evidence; complete spawn/config/world reachability and procedural-only acquisition are not claimed. Native registry/block-entity checks still apply.",
-        "runtime_safety": "Native PoolEntry.isValid vetoes bounty_backport_compat-marked BlockItem/EntityBlock entries on every roll/reload. KubeJS verifies registrations and reports any typed runtime exclusions. Unrelated native/addon bounty entries are unchanged.",
+        "policy": f"Every acquisition-proven item is mapped to all applicable profession pools or shared delivery pools available to all twelve decrees, unless explicitly excluded for creative/admin, disabled content, station/container/NBT, unique progression, a runtime-confirmed BlockItem/EntityBlock safety veto, or the {SUPPLY_POOL_LIMIT}-item shared supply cap. The cap uses deterministic namespace round-robin selection. Item models are acquisition-audit candidates, never obtainability proofs. Loot requires placement/living-class evidence; complete spawn/config/world reachability and procedural-only acquisition are not claimed. Native registry/block-entity checks still apply.",
+        "runtime_safety": "Runtime-confirmed BlockItem/EntityBlock vetoes are excluded before pool generation. Native PoolEntry.isValid remains a defensive veto on every roll/reload. KubeJS verifies registrations and reports any typed runtime exclusions. Unrelated native/addon bounty entries are unchanged.",
     })
     java = shutil.which("java")
     if not java:
