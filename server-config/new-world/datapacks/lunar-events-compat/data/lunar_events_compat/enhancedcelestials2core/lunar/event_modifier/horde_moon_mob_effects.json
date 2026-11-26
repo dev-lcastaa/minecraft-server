@@ -1,0 +1,35 @@
+{
+  "type": "enhancedcelestials2core:mob_effects",
+  "settings": {
+    "effects": [
+      {
+        "filter": {
+          "type": "corgilib:is_type_tag",
+          "tag": "#lunar_events_compat:horde_zombies"
+        },
+        "mob_effect": {
+          "ambient": true,
+          "amplifier": 0,
+          "duration_in_ticks": 100,
+          "effect": "minecraft:strength",
+          "show_icon": false,
+          "visible": false
+        }
+      },
+      {
+        "filter": {
+          "type": "corgilib:is_type_tag",
+          "tag": "#lunar_events_compat:horde_zombies"
+        },
+        "mob_effect": {
+          "ambient": true,
+          "amplifier": 0,
+          "duration_in_ticks": 100,
+          "effect": "minecraft:speed",
+          "show_icon": false,
+          "visible": false
+        }
+      }
+    ]
+  }
+}

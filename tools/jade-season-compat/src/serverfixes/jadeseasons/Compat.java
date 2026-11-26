@@ -1,173 +1,236 @@
 package serverfixes.jadeseasons;
 
-import java.lang.reflect.Method;
-import java.lang.reflect.Modifier;
-import java.util.ArrayDeque;
+import com.teamtea.eclipticseasons.api.EclipticSeasonsApi;
+import com.teamtea.eclipticseasons.api.constant.biome.Humidity;
+import com.teamtea.eclipticseasons.api.constant.solar.Season;
+import com.teamtea.eclipticseasons.api.constant.solar.SolarTerm;
+import com.teamtea.eclipticseasons.api.data.climate.AgroClimaticZone;
+import com.teamtea.eclipticseasons.api.data.crop.CropGrowControl;
+import com.teamtea.eclipticseasons.api.data.crop.GrowParameter;
+import com.teamtea.eclipticseasons.common.core.SolarHolders;
+import com.teamtea.eclipticseasons.common.core.crop.CropGrowthHandler;
+import com.teamtea.eclipticseasons.common.core.solar.SolarDataManager;
+import com.teamtea.eclipticseasons.common.item.GrowthDetectorItem;
+import com.teamtea.eclipticseasons.config.CommonConfig;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Consumer;
-import net.minecraft.nbt.CompoundTag;
+import java.util.Locale;
+import java.util.Map;
+import net.minecraft.ChatFormatting;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Holder;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.chat.MutableComponent;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.context.UseOnContext;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.biome.Biome;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.BonemealableBlock;
+import net.minecraft.world.level.block.CropBlock;
+import net.minecraft.world.level.block.FungusBlock;
+import net.minecraft.world.level.block.MushroomBlock;
+import net.minecraft.world.level.block.SaplingBlock;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraftforge.common.IPlantable;
+import net.minecraftforge.common.util.FakePlayer;
+import net.minecraftforge.event.entity.player.BonemealEvent;
+import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.fml.common.Mod;
-import snownee.jade.api.*;
-import snownee.jade.api.config.IPluginConfig;
 
+/** Season-aware bonemeal and Growth Detector reports for Ecliptic Seasons. */
 @Mod("jade_season_compat")
-@WailaPlugin("jade_season_compat")
-public final class Compat implements IWailaPlugin {
-    static final ResourceLocation UID = new ResourceLocation("jade_season_compat", "details");
-    static final String KEY = "jade_season_compat";
-    static final String API = "com.teamtea.eclipticseasons.api.EclipticSeasonsApi";
-    static final String RESOLVER = "com.teamtea.eclipticseasons.common.item.info.GrowthInfoResolver";
+public final class Compat {
+    public static final float OUT_OF_SEASON_BONEMEAL = 0.25F;
+    // Ecliptic's own "liked season" threshold (CropGrowthHandler.getLikeSeasonsInTemperate).
+    static final float IN_SEASON_THRESHOLD = 0.4F;
 
-    public static Object call(Object target, String name, Object... args) {
-        Class<?> type = target instanceof Class<?> c ? c : target.getClass();
-        for (Method method : type.getMethods()) {
-            if (!method.getName().equals(name) || method.getParameterCount() != args.length) continue;
-            Class<?>[] parameters = method.getParameterTypes();
-            boolean matches = true;
-            for (int i = 0; i < args.length; i++) {
-                if (args[i] != null && !parameters[i].isInstance(args[i]) && !parameters[i].isPrimitive()) matches = false;
-            }
-            if (!matches) continue;
-            try {
-                return accessible(method).invoke(target instanceof Class<?> ? null : target, args);
-            } catch (ReflectiveOperationException e) {
-                throw new IllegalStateException(type.getName() + "." + name, e);
-            }
+    /** Seasonal state of one plant at one position; {@code null} from {@link #season} means no Ecliptic rule. */
+    public record SeasonState(boolean inSeason, boolean greenhouse, List<Season> liked) { }
+
+    public static SeasonState season(Level level, BlockPos pos, BlockState state) {
+        if (!EclipticSeasonsApi.getInstance().isSeasonEnabled(level) || !CommonConfig.Crop.enableCrop.get()) return null;
+        Map<Holder<AgroClimaticZone>, CropGrowControl> controls = CropGrowthHandler.getControlMap(state.m_60734_());
+        if (controls == null) return null;
+        Holder<Biome> biome = CropGrowthHandler.getCropBiome(level, pos);
+        Holder<AgroClimaticZone> climate = CropGrowthHandler.getclimateTypeHolder(biome);
+        if (climate == null) return null;
+        Holder<AgroClimaticZone> fallback = CropGrowthHandler.getDefaultAgroClimaticZoneHolder(level);
+        CropGrowControl control = CropGrowthHandler.getCropGrowControl(controls, climate);
+        CropGrowControl fallbackControl = CropGrowthHandler.getCropGrowControl(controls, fallback);
+        if (control == null && fallbackControl == null) return null;
+        SolarTerm term = EclipticSeasonsApi.getInstance().getSolarTerm(level);
+        // Same parameter Ecliptic uses for this biome's climate zone and the current solar term.
+        GrowParameter parameter = CropGrowthHandler.getSeasonGrowParameter(state, control, fallbackControl, term, climate);
+        List<Season> liked = CropGrowthHandler.getLikeSeasonsInTemperate(state, controls, fallback);
+        boolean greenhouse = CropGrowthHandler.getGreenHouseProvider(level, pos, state, controls, fallback) != null
+            && CropGrowthHandler.isInRoom(level, pos, state, (control != null ? control : fallbackControl).notGreenHouse());
+        return new SeasonState(inSeason(parameter == null ? null : parameter.grow_chance(), greenhouse), greenhouse, liked);
+    }
+
+    /** A crop is in season when this solar term's chance clears Ecliptic's liked threshold, or a season core covers it. */
+    public static boolean inSeason(Float seasonGrowChance, boolean greenhouse) {
+        return seasonGrowChance == null || seasonGrowChance > IN_SEASON_THRESHOLD || greenhouse;
+    }
+
+    /** Probability that the season gate lets bonemeal through; {@code 1} when the plant has no seasonal rule. */
+    public static float bonemealGate(SeasonState season) {
+        return season == null || season.inSeason() ? 1.0F : OUT_OF_SEASON_BONEMEAL;
+    }
+
+    /** The block's own vanilla isBonemealSuccess odds, which apply after the season gate. */
+    public static float nativeBonemealChance(Block block) {
+        if (block instanceof SaplingBlock) return 0.45F;
+        if (block instanceof MushroomBlock || block instanceof FungusBlock) return 0.4F;
+        return 1.0F;
+    }
+
+    // Replaces Ecliptic's BonemealEvent handler: in season bonemeal behaves normally, out of season it passes 25%.
+    public static boolean bonemeal(BonemealEvent event) {
+        Level level = event.getLevel();
+        if (level.m_5776_() || !CommonConfig.Crop.restrictBoneMeal.get()) return false;
+        if (event.getEntity() != null && event.getEntity().m_7500_()) return false;
+        if (event.getResult() != Event.Result.DEFAULT) return false;
+        BlockState state = event.getBlock();
+        BlockPos pos = event.getPos();
+        if (!(state.m_60734_() instanceof BonemealableBlock block) || !block.m_7370_(level, pos, state, false)) return false;
+        SeasonState season = season(level, pos, state);
+        if (season == null) return false;
+        if (level.m_213780_().m_188501_() < bonemealGate(season)) {
+            // Ecliptic would otherwise re-roll the season for the growth this bonemeal triggers (e.g. sapling -> tree).
+            SolarDataManager data = SolarHolders.getSaveData(level);
+            if (data != null) data.addSkipNextCheck(pos, state);
+            return true;
         }
-        throw new IllegalStateException("Missing API: " + type.getName() + "." + name);
+        if (CommonConfig.Crop.boneMealConsumeOnFailure.get()) event.setResult(Event.Result.ALLOW);
+        else event.setCanceled(true);
+        if (event.getEntity() instanceof ServerPlayer player && !(player instanceof FakePlayer))
+            player.m_5661_(Component.m_237113_("Out of season: bonemeal failed ("
+                + percent(OUT_OF_SEASON_BONEMEAL) + " chance)").m_130940_(ChatFormatting.GOLD), true);
+        return true;
     }
 
-    // Public methods on non-public implementations (e.g. Ecliptic's anonymous EclipticUtil$1)
-    // can only be invoked through the public supertype that declares them.
-    static Method accessible(Method method) {
-        if (Modifier.isPublic(method.getDeclaringClass().getModifiers())) return method;
-        ArrayDeque<Class<?>> pending = new ArrayDeque<>(List.of(method.getDeclaringClass()));
-        while (!pending.isEmpty()) {
-            Class<?> candidate = pending.poll();
-            if (Modifier.isPublic(candidate.getModifiers())) {
-                try { return candidate.getMethod(method.getName(), method.getParameterTypes()); }
-                catch (NoSuchMethodException ignored) { }
-            }
-            if (candidate.getSuperclass() != null) pending.add(candidate.getSuperclass());
-            pending.addAll(List.of(candidate.getInterfaces()));
+    static boolean isSapling(Block block) {
+        return block instanceof SaplingBlock || name(block).contains("sapling") || name(block).contains("propagule");
+    }
+
+    static String name(Block block) {
+        return block.getClass().getName().toLowerCase(Locale.ROOT) + " " + block.m_7705_().toLowerCase(Locale.ROOT);
+    }
+
+    public static boolean isPlantable(Block block) {
+        return block instanceof IPlantable || block instanceof BonemealableBlock || isSapling(block)
+            || CropGrowthHandler.getControlMap(block) != null;
+    }
+
+    // Growth Detector right-click on any plantable: server-built chat report. Returns null to run the original item.
+    public static InteractionResult detect(UseOnContext context) {
+        Level level = context.m_43725_();
+        Player player = context.m_43723_();
+        if (level.m_5776_() || player == null) return null;
+        BlockPos pos = context.m_8083_();
+        BlockState state = level.m_8055_(pos);
+        if (state.m_60795_() || !isPlantable(state.m_60734_())) return null;
+        MutableComponent message = Component.m_237113_("Growth Detector: ").m_130940_(ChatFormatting.GREEN)
+            .m_7220_(state.m_60734_().m_49954_().m_6881_().m_130940_(ChatFormatting.WHITE));
+        for (Component line : report(level, pos, state)) message.m_130946_("\n").m_7220_(line);
+        player.m_213846_(message);
+        return InteractionResult.CONSUME;
+    }
+
+    static MutableComponent line(String label, String value, ChatFormatting color) {
+        return Component.m_237113_(label + ": ").m_130940_(ChatFormatting.GRAY)
+            .m_7220_(Component.m_237113_(value).m_130940_(color));
+    }
+
+    static String percent(float chance) {
+        return Math.round(chance * 100) + "%";
+    }
+
+    static String seasons(List<Season> seasons) {
+        List<String> names = new ArrayList<>();
+        for (Season season : seasons) names.add(title(season.getName()));
+        return String.join(", ", names);
+    }
+
+    static String title(String raw) {
+        String text = raw.replace('_', ' ').toLowerCase(Locale.ROOT);
+        return text.isEmpty() ? text : Character.toUpperCase(text.charAt(0)) + text.substring(1);
+    }
+
+    public static List<Component> report(Level level, BlockPos pos, BlockState state) {
+        List<Component> lines = new ArrayList<>();
+        Block block = state.m_60734_();
+        boolean sapling = isSapling(block);
+        boolean enabled = EclipticSeasonsApi.getInstance().isSeasonEnabled(level);
+        SeasonState season = season(level, pos, state);
+
+        lines.add(line("Type", sapling ? "Sapling (grows into a tree)"
+            : block instanceof CropBlock ? "Crop" : "Plant", ChatFormatting.WHITE));
+        if (enabled) {
+            Season now = EclipticSeasonsApi.getInstance().getSeasonSignal(level, pos);
+            SolarTerm term = EclipticSeasonsApi.getInstance().getSolarTerm(level);
+            lines.add(line("Season", title(now.getName()) + " (" + title(term.name()) + ")", ChatFormatting.WHITE));
         }
-        return method;
-    }
-
-    static Class<?> type(String name) {
-        try { return Class.forName(name); }
-        catch (ClassNotFoundException e) { throw new IllegalStateException("Required Ecliptic Seasons API missing", e); }
-    }
-
-    static Object field(String owner, String name) {
-        try { return type(owner).getField(name).get(null); }
-        catch (ReflectiveOperationException e) { throw new IllegalStateException(owner + "." + name, e); }
-    }
-
-    static Object api() { return call(type(API), "getInstance"); }
-    static boolean enabled(Object level) { return (Boolean) call(api(), "isSeasonEnabled", level); }
-    static Object growth(Object level, Object pos, Object state) {
-        return call(type(RESOLVER), "resolve", level, pos, state);
-    }
-    static boolean cropBonemeal(Object block) {
-        return type("net.minecraft.world.level.block.BonemealableBlock").isInstance(block)
-            && !type("net.minecraft.world.level.block.SaplingBlock").isInstance(block)
-            && !block.getClass().getSimpleName().toLowerCase(java.util.Locale.ROOT).contains("sapling");
-    }
-
-    public static boolean request(BlockAccessor accessor) {
-        return enabled(accessor.getLevel());
-    }
-
-    // Jade 11 only requests/sends block-entity NBT; crops need the same validated packet path.
-    public static boolean sync(BlockAccessor accessor, Consumer<CompoundTag> sender) {
-        if (!enabled(accessor.getLevel())) return false;
-        CompoundTag tag = accessor.getServerData();
-        String info = season(accessor.getLevel());
-        Object report = growth(accessor.getLevel(), accessor.getPosition(), accessor.getBlockState());
-        if (report != null) {
-            info += "\nLocal growth: " + Math.round(((Number) call(report, "growChance")).floatValue()) + "%";
-            info += (Boolean) call(report, "needsSeasonCore")
-                ? (cropBonemeal(accessor.getBlock())
-                    ? "\nOut of season: crop bonemeal 25% chance (consumed)"
-                    : "\nOut of season: native plant growth restrictions")
-                : "\nSeason/greenhouse conditions satisfied";
-            if ((Boolean) call(report, "humidityMismatch")) info += "\nHumidity mismatch";
-            info += "\nGreenhouse level: " + call(report, "greenhouseLevel");
+        if (season == null) {
+            lines.add(line("In season", "Yes - no seasonal rule, grows all year", ChatFormatting.GREEN));
         } else {
-            info += "\nNo Ecliptic seasonal growth rule configured";
+            String liked = season.liked().isEmpty() ? "" : " - grows in " + seasons(season.liked());
+            lines.add(line("In season", (season.inSeason()
+                ? (season.greenhouse() ? "Yes (greenhouse)" : "Yes") : "No") + liked,
+                season.inSeason() ? ChatFormatting.GREEN : ChatFormatting.RED));
         }
-        tag.m_128359_(KEY, info);
-        StringBuilder preferences = new StringBuilder();
-        for (Object component : (List<?>) call(type("com.teamtea.eclipticseasons.common.core.crop.CropGrowthHandler"),
-                "appendInfo", accessor.getLevel(), accessor.getBlockState())) {
-            if (preferences.length() > 0) preferences.append('\n');
-            preferences.append(call(type("net.minecraft.network.chat.Component$Serializer"), "m_130703_", component));
+
+        float growth = 0.0F;
+        for (int i = 0; i < 100; i++) growth += GrowthDetectorItem.getGrowChance(level, pos, state);
+        growth /= 100.0F;
+        int light = level.m_45524_(pos, 0);
+        boolean dark = (sapling || block instanceof CropBlock) && light < 9;
+        lines.add(line("Growth chance", percent(growth) + " of normal speed"
+            + (dark ? " (too dark: light " + light + ", needs 9+)" : ""),
+            growth <= 0.0F || dark ? ChatFormatting.RED : growth < 0.5F ? ChatFormatting.GOLD : ChatFormatting.GREEN));
+
+        if (block instanceof BonemealableBlock bonemealable && bonemealable.m_7370_(level, pos, state, false)) {
+            float gate = CommonConfig.Crop.restrictBoneMeal.get() ? bonemealGate(season) : 1.0F;
+            float chance = gate * nativeBonemealChance(block);
+            String detail = gate < 1.0F ? " (out of season " + percent(gate) + " gate"
+                + (nativeBonemealChance(block) < 1.0F ? " x " + percent(nativeBonemealChance(block)) + " plant chance" : "") + ")"
+                : nativeBonemealChance(block) < 1.0F ? " (plant's own chance per use)" : "";
+            lines.add(line("Bonemeal success", percent(chance) + detail,
+                chance >= 1.0F ? ChatFormatting.GREEN : chance >= 0.4F ? ChatFormatting.GOLD : ChatFormatting.RED));
+        } else {
+            lines.add(line("Bonemeal success", "No effect (fully grown or not bonemealable)", ChatFormatting.GRAY));
         }
-        tag.m_128359_(KEY + "_preferences", preferences.toString());
-        if (accessor.getBlockEntity() != null &&
-            !((List<?>) call(field("snownee.jade.impl.WailaCommonRegistration", "INSTANCE"),
-                "getBlockNBTProviders", accessor.getBlockEntity())).isEmpty()) return false;
-        Object pos = accessor.getPosition();
-        tag.m_128405_("x", ((Number) call(pos, "m_123341_")).intValue());
-        tag.m_128405_("y", ((Number) call(pos, "m_123342_")).intValue());
-        tag.m_128405_("z", ((Number) call(pos, "m_123343_")).intValue());
-        sender.accept(tag);
-        return true;
-    }
 
-    static String season(Object level) {
-        return "Season: " + call(api(), "getSeason", level) + " | Solar term: " + call(api(), "getSolarTerm", level);
-    }
-
-    public static boolean bonemeal(Object event) {
-        Object level = call(event, "getLevel");
-        if (!enabled(level) || (Boolean) call(level, "m_5776_")) return false;
-        Object state = call(event, "getBlock");
-        Object pos = call(event, "getPos");
-        Object report = growth(level, pos, state);
-        if (report == null || !(Boolean) call(report, "needsSeasonCore")) return false;
-        Object block = call(state, "m_60734_");
-        if (!cropBonemeal(block)) return false;
-        if (!(Boolean) call(block, "m_7370_", level, pos, state, false)) return false;
-        Object result = call(event, "getResult");
-        if (!result.toString().equals("DEFAULT")) return false;
-        Object random = call(level, "m_213780_");
-        boolean success = ((Number) call(random, "m_188503_", 4)).intValue() == 0;
-        if (!success) {
-            Object allow = java.lang.Enum.valueOf(result.getClass().asSubclass(Enum.class), "ALLOW");
-            // Forge ALLOW consumes one bonemeal but skips performBonemeal. DEFAULT continues vanilla growth.
-            call(event, "setResult", allow);
+        if (sapling) {
+            boolean grows = growth > 0.0F && !dark;
+            lines.add(line("Sapling growth", grows ? "Can grow into a tree now (needs clear space above)"
+                : "Cannot grow into a tree right now", grows ? ChatFormatting.GREEN : ChatFormatting.RED));
+            for (String hint : saplingHints(String.valueOf(state))) lines.add(Component.m_237113_(" - " + hint).m_130940_(ChatFormatting.GRAY));
+        } else {
+            lines.add(line("Sapling growth", "Not a sapling - regular crop/plant growth only", ChatFormatting.GRAY));
         }
-        return true;
-    }
 
-    @Override public void register(IWailaCommonRegistration registration) {
-        registration.registerEntityDataProvider(new EntityDetails(), net.minecraft.world.entity.Entity.class);
-    }
-    @Override public void registerClient(IWailaClientRegistration registration) {
-        registration.registerBlockComponent(new BlockDetails(), net.minecraft.world.level.block.Block.class);
-        registration.registerEntityComponent(new EntityDetails(), net.minecraft.world.entity.Entity.class);
-    }
-
-    static void lines(ITooltip tooltip, CompoundTag tag) {
-        String text = tag.m_128461_(KEY);
-        if (!text.isEmpty()) for (String line : text.split("\n")) tooltip.add(Component.m_237113_(line));
-    }
-
-    static final class BlockDetails implements IBlockComponentProvider {
-        @Override public ResourceLocation getUid() { return UID; }
-        @Override public void appendTooltip(ITooltip tooltip, BlockAccessor accessor, IPluginConfig config) {
-            lines(tooltip, accessor.getServerData());
-            if (!accessor.showDetails()) return;
-            for (String json : accessor.getServerData().m_128461_(KEY + "_preferences").split("\n"))
-                if (!json.isEmpty()) tooltip.add((Component) call(type("net.minecraft.network.chat.Component$Serializer"), "m_130691_", json));
-            tooltip.add(Component.m_237113_(accessor.getBlockState().toString()));
-            String state = accessor.getBlockState().toString();
-            for (String hint : saplingHints(state)) tooltip.add(Component.m_237113_(hint));
+        if (enabled && level instanceof ServerLevel server) {
+            Humidity humidity = EclipticSeasonsApi.getInstance().getAdjustedHumidity(server, pos);
+            String value = title(humidity.getName()) + (humidity == Humidity.HUMID ? " (humid)" : " (not humid)");
+            Map<Holder<AgroClimaticZone>, CropGrowControl> controls = CropGrowthHandler.getControlMap(block);
+            if (controls != null) {
+                List<Humidity> liked = CropGrowthHandler.getLikeHumidityInTemperate(state, controls,
+                    CropGrowthHandler.getDefaultAgroClimaticZoneHolder(level));
+                if (!liked.isEmpty()) {
+                    List<String> names = new ArrayList<>();
+                    for (Humidity h : liked) names.add(title(h.getName()));
+                    value += " - prefers " + String.join(", ", names);
+                }
+            }
+            if (!CommonConfig.Crop.enableCropHumidityControl.get()) value += "; does not affect growth on this server";
+            lines.add(line("Humidity", value, humidity == Humidity.HUMID ? ChatFormatting.AQUA : ChatFormatting.WHITE));
         }
+        return lines;
     }
 
     public static List<String> saplingHints(String state) {
@@ -185,33 +248,7 @@ public final class Compat implements IWailaPlugin {
             "Dynamic Trees uses its own species/soil/space growth; vanilla 2x2 rules do not apply");
         if (state.contains("sapling")) return List.of(
             "Growth rules are species-specific; do not assume modded saplings accept 2x2",
-            "Check soil, light, overhead/side clearance, and season/humidity");
+            "Check soil, light, overhead/side clearance, and season");
         return List.of();
-    }
-
-    static final class EntityDetails implements IEntityComponentProvider, IServerDataProvider<EntityAccessor> {
-        @Override public ResourceLocation getUid() { return UID; }
-        @Override public void appendServerData(CompoundTag tag, EntityAccessor accessor) {
-            if (enabled(accessor.getLevel())) tag.m_128359_(KEY, season(accessor.getLevel()));
-            Object entity = accessor.getEntity();
-            String details = call(entity, "m_6095_").toString();
-            if (type("net.minecraft.world.entity.LivingEntity").isInstance(entity)) {
-                details += "\nHealth: " + call(entity, "m_21223_") + "/" + call(entity, "m_21233_");
-                details += "\nArmor: " + call(entity, "m_21230_");
-            }
-            if (type("net.minecraft.world.entity.AgeableMob").isInstance(entity)) {
-                int age = ((Number) call(entity, "m_146764_")).intValue();
-                details += age < 0 ? "\nGrows up in: " + (-age / 20) + "s"
-                    : age > 0 ? "\nBreeding cooldown: " + (age / 20) + "s" : "\nAdult; age cooldown ready";
-            }
-            if (type("net.minecraft.world.entity.TamableAnimal").isInstance(entity))
-                details += (Boolean) call(entity, "m_21824_") ? "\nTamed" : "\nUntamed";
-            tag.m_128359_(KEY + "_entity", details);
-        }
-        @Override public void appendTooltip(ITooltip tooltip, EntityAccessor accessor, IPluginConfig config) {
-            lines(tooltip, accessor.getServerData());
-            if (accessor.showDetails()) for (String line : accessor.getServerData().m_128461_(KEY + "_entity").split("\n"))
-                if (!line.isEmpty()) tooltip.add(Component.m_237113_(line));
-        }
     }
 }

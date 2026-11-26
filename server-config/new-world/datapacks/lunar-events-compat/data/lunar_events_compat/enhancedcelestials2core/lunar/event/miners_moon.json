@@ -1,0 +1,13 @@
+{
+  "modifiers": [
+    "lunar_events_compat:miners_moon_sky_light_color",
+    "lunar_events_compat:miners_moon_moon_texture_color",
+    "lunar_events_compat:miners_moon_moon_size",
+    "lunar_events_compat:miners_moon_sound_track",
+    "lunar_events_compat:miners_moon_text_components",
+    "lunar_events_compat:miners_moon_name_color",
+    "lunar_events_compat:miners_moon_spawn_category_multiplier",
+    "lunar_events_compat:miners_moon_mob_effects",
+    "lunar_events_compat:miners_moon_block_item_drop"
+  ]
+}

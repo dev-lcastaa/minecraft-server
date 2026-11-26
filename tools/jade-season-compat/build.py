@@ -1,4 +1,9 @@
-"""Compile against installed Jade APIs; compile-only Minecraft stubs are never packaged."""
+"""Compile against the real SRG-named Minecraft/Forge and installed Ecliptic Seasons classes.
+
+Set MC_LIBRARIES to a Forge 1.20.1-47.4.28 libraries folder (defaults to the Modrinth App's).
+Nothing from the compile classpath is packaged.
+"""
+import os
 from pathlib import Path
 import hashlib
 import shutil
@@ -10,42 +15,41 @@ SOURCE = Path(__file__).resolve().parent
 ROOT = SOURCE.parents[1]
 JAR_NAME = "jade-season-compat-1.20.1-1.0.0.jar"
 SCRIPT = Path("kubejs/server_scripts/jade_season_audit.js")
+FORGE = "1.20.1-47.4.28"
+MINECRAFT = "1.20.1-20230612.114412"
+LIBRARIES = Path(os.environ.get("MC_LIBRARIES", Path.home() / ".local/share/ModrinthApp/meta/libraries"))
 
-STUBS = {
-    "net.minecraft.nbt.CompoundTag": "public class CompoundTag { public void m_128359_(String k,String v) {} public void m_128405_(String k,int v) {} public String m_128461_(String k) {return \"\";} }",
-    "net.minecraft.network.chat.Component": "public interface Component { static MutableComponent m_237113_(String s) {return null;} }",
-    "net.minecraft.network.chat.MutableComponent": "public class MutableComponent implements Component {}",
-    "net.minecraft.resources.ResourceLocation": "public class ResourceLocation { public ResourceLocation(String a,String b) {} }",
-    "net.minecraft.world.level.block.Block": "public class Block {}",
-    "net.minecraft.world.level.block.entity.BlockEntity": "public class BlockEntity {}",
-    "net.minecraft.world.level.block.state.BlockState": "public class BlockState {}",
-    "net.minecraft.world.entity.Entity": "public class Entity {}",
-    "net.minecraft.world.entity.player.Player": "public class Player extends net.minecraft.world.entity.Entity {}",
-    "net.minecraft.world.level.Level": "public class Level {}",
-    "net.minecraft.core.BlockPos": "public class BlockPos {}",
-    "net.minecraft.world.phys.HitResult": "public class HitResult {}",
-    "net.minecraft.world.phys.BlockHitResult": "public class BlockHitResult extends HitResult {}",
-    "net.minecraft.world.phys.EntityHitResult": "public class EntityHitResult extends HitResult {}",
-    "net.minecraft.world.item.ItemStack": "public class ItemStack {}",
-    "net.minecraftforge.fml.common.Mod": "@java.lang.annotation.Retention(java.lang.annotation.RetentionPolicy.RUNTIME) public @interface Mod { String value(); }",
-}
+
+def classpath():
+    """Patched Forge classes must shadow the vanilla SRG jar; returns None when libraries are unavailable."""
+    forge = LIBRARIES / "net/minecraftforge/forge" / FORGE
+    first = [forge / f"forge-{FORGE}-client.jar",
+             LIBRARIES / "net/minecraft/client" / MINECRAFT / f"client-{MINECRAFT}-srg.jar",
+             forge / f"forge-{FORGE}-universal.jar"]
+    if not all(p.is_file() for p in first):
+        return None
+    rest = sorted(p for p in LIBRARIES.rglob("*.jar") if p not in first and "net/minecraftforge/forge/" not in p.as_posix()
+                  and "net/minecraft/client/" not in p.as_posix())
+    seasons, = (ROOT / "mods").glob("Ecliptic-Seasons-1.20.1-forge-0.15.5-all.jar")
+    return os.pathsep.join(map(str, [*first, *rest, seasons]))
+
+
+def compile_to(classes, *extra):
+    cp = classpath()
+    if cp is None:
+        raise SystemExit(f"Forge {FORGE} libraries not found under {LIBRARIES}; set MC_LIBRARIES")
+    subprocess.run(["java", "-m", "jdk.compiler/com.sun.tools.javac.Main", "-source", "17", "-target", "17",
+                    "-proc:none", "-nowarn", "-cp", cp, "-d", str(classes),
+                    *map(str, (SOURCE / "src").rglob("*.java")), *map(str, extra)], check=True, cwd=ROOT)
+
 
 def build():
     work = SOURCE / (".build-" + uuid.uuid4().hex)
     work.mkdir()
     try:
-        files = []
-        for name, body in STUBS.items():
-            path = work / "stubs" / (name.replace(".", "/") + ".java")
-            path.parent.mkdir(parents=True, exist_ok=True)
-            path.write_text("package " + name.rsplit(".", 1)[0] + "; " + body + "\n")
-            files.append(str(path))
         classes = work / "classes"
-        classes.mkdir(exist_ok=True)
-        jade, = (ROOT / "mods").glob("Jade-1.20.1-Forge-11.13.3.jar")
-        subprocess.run(["java", "-m", "jdk.compiler/com.sun.tools.javac.Main", "-source", "17", "-target", "17",
-                        "-cp", str(jade), "-d", str(classes), *files,
-                        *map(str, (SOURCE / "src").rglob("*.java"))], check=True, cwd=ROOT)
+        classes.mkdir()
+        compile_to(classes)
         entries = {p.relative_to(SOURCE).as_posix(): p.read_bytes()
                    for folder in ("META-INF", "coremods", "assets", "data")
                    for p in (SOURCE / folder).rglob("*") if p.is_file()}

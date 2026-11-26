@@ -1,0 +1,35 @@
+{
+  "type": "enhancedcelestials2core:mob_effects",
+  "settings": {
+    "effects": [
+      {
+        "filter": {
+          "type": "corgilib:is_type",
+          "id": "minecraft:player"
+        },
+        "mob_effect": {
+          "ambient": true,
+          "amplifier": 1,
+          "duration_in_ticks": 100,
+          "effect": "minecraft:haste",
+          "show_icon": false,
+          "visible": false
+        }
+      },
+      {
+        "filter": {
+          "type": "corgilib:is_type",
+          "id": "minecraft:player"
+        },
+        "mob_effect": {
+          "ambient": true,
+          "amplifier": 0,
+          "duration_in_ticks": 300,
+          "effect": "minecraft:night_vision",
+          "show_icon": false,
+          "visible": false
+        }
+      }
+    ]
+  }
+}

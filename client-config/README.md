@@ -139,6 +139,17 @@ hooks, custom juice fluids, or carcass stack sizes.
 - Bounty/backport compatibility adds 12 decrees with cross-mod item pools and
   goblin hunts, shared backported-animal tags, warm/cold egg cooking, and three
   additional farmer trades. Existing trades and bounty pools are preserved.
+- Planter compatibility (`mods/planter-compat-1.20.1-1.0.0.jar`) lets any seed,
+  crop, sapling, flower, bush, mushroom or fungus be placed on and survive on
+  Supplementaries planters. Crimson and warped fungi on rich soil or a planter
+  become My Nether's Delight fungus colonies, and colonies grow on planters.
+  Clients need the JAR so seed placement is not rejected locally.
+- Extra lunar events need `kubejs/assets/lunar_events_compat/lang/en_us.json`
+  and `kubejs/assets/enhancedcelestials2defaultlunarevents/lang/en_us.json` for
+  moon names and rise/set messages; without them clients show raw text keys.
+- The Season Growth Compatibility JAR (`jade-season-compat-1.20.1-1.0.0.jar`)
+  no longer adds Jade tooltip lines; right-click plants with the Growth Detector
+  instead.
 
 See the [server compatibility and rollout notes](../README.md#cross-mod-gameplay-compatibility)
 for coverage, build/test commands, and required in-game validation.

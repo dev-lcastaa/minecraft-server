@@ -1,0 +1,23 @@
+{
+  "type": "enhancedcelestials2core:block_item_drop",
+  "settings": {
+    "settings": {
+      "drop_enhancer": [
+        {
+          "minimum_count": 1,
+          "multipliers": {
+            "#forge:raw_materials": 2.0,
+            "#forge:gems": 2.0,
+            "minecraft:coal": 2.0
+          }
+        },
+        {
+          "minimum_count": 2,
+          "multipliers": {
+            "minecraft:redstone": 2.0
+          }
+        }
+      ]
+    }
+  }
+}

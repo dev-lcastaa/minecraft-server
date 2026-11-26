@@ -3,20 +3,14 @@ loaderVersion="[47,)"
 license="MIT"
 [[mods]]
 modId="jade_season_compat"
-version="1.0.0"
-displayName="Jade Season Compatibility"
-description="Server-synchronized Ecliptic Seasons details and out-of-season bonemeal."
+version="1.1.0"
+displayName="Season Growth Compatibility"
+description="Season-aware bonemeal and detailed Growth Detector reports for Ecliptic Seasons."
 [[dependencies.jade_season_compat]]
 modId="minecraft"
 mandatory=true
 versionRange="[1.20.1,1.20.2)"
 ordering="NONE"
-side="BOTH"
-[[dependencies.jade_season_compat]]
-modId="jade"
-mandatory=true
-versionRange="[11.13.3,11.14)"
-ordering="AFTER"
 side="BOTH"
 [[dependencies.jade_season_compat]]
 modId="eclipticseasons"

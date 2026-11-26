@@ -1,0 +1,32 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="MIT"
+[[mods]]
+modId="planter_compat"
+version="1.0.0"
+displayName="Planter Compatibility"
+description="Any seed, sapling, flower or fungus survives on Supplementaries planters; rich soil grows Nether fungus colonies."
+[[dependencies.planter_compat]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.20.1,1.20.2)"
+ordering="NONE"
+side="BOTH"
+[[dependencies.planter_compat]]
+modId="supplementaries"
+mandatory=true
+versionRange="*"
+ordering="AFTER"
+side="BOTH"
+[[dependencies.planter_compat]]
+modId="farmersdelight"
+mandatory=false
+versionRange="*"
+ordering="AFTER"
+side="BOTH"
+[[dependencies.planter_compat]]
+modId="mynethersdelight"
+mandatory=false
+versionRange="*"
+ordering="AFTER"
+side="BOTH"

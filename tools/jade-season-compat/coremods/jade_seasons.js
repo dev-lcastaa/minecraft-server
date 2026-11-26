@@ -7,51 +7,42 @@ function initializeCoreMod() {
     var LabelNode = Java.type('org.objectweb.asm.tree.LabelNode');
     var InsnNode = Java.type('org.objectweb.asm.tree.InsnNode');
     var helper = 'serverfixes/jadeseasons/Compat';
-    function early(method, name, descriptor, vars, result) {
-        var code = new InsnList();
-        vars.forEach(function (v) { code.add(new VarInsnNode(Opcodes.ALOAD, v)); });
-        code.add(new MethodInsnNode(Opcodes.INVOKESTATIC, helper, name, descriptor, false));
-        var original = new LabelNode();
-        code.add(new JumpInsnNode(Opcodes.IFEQ, original));
-        if (result) code.add(new InsnNode(Opcodes.ICONST_1));
-        code.add(new InsnNode(result ? Opcodes.IRETURN : Opcodes.RETURN));
-        code.add(original);
-        return code;
-    }
     return {
-        jade_season_requests: {
-            target: {type: 'METHOD', class: 'snownee.jade.impl.BlockAccessorClientHandler',
-                methodName: 'shouldRequestData', methodDesc: '(Lsnownee/jade/api/BlockAccessor;)Z'},
-            transformer: function (method) {
-                method.instructions.insert(early(method, 'request', '(Lsnownee/jade/api/BlockAccessor;)Z', [1], true));
-                return method;
-            }
-        },
-        jade_season_sync: {
-            target: {type: 'METHOD', class: 'snownee.jade.impl.BlockAccessorImpl',
-                methodName: 'lambda$handleRequest$0',
-                methodDesc: '(Lsnownee/jade/api/BlockAccessor;Lnet/minecraft/server/level/ServerPlayer;Ljava/util/function/Consumer;)V'},
-            transformer: function (method) {
-                var nodes = method.instructions.toArray();
-                var matches = 0;
-                for (var i = 0; i < nodes.length; i++) {
-                    if (nodes[i] instanceof MethodInsnNode && nodes[i].name === 'getBlockEntity') {
-                        // Insert after Jade's loaded-chunk/distance checks, before its no-block-entity return.
-                        method.instructions.insertBefore(nodes[i].getPrevious(),
-                            early(method, 'sync', '(Lsnownee/jade/api/BlockAccessor;Ljava/util/function/Consumer;)Z', [0, 2], false));
-                        matches++;
-                    }
-                }
-                if (matches !== 1) throw new Error('Jade season server hook expected exactly one getBlockEntity');
-                return method;
-            }
-        },
         season_bonemeal: {
             target: {type: 'METHOD', class: 'com.teamtea.eclipticseasons.common.core.crop.CropGrowthHandler',
                 methodName: 'beforeCropGrowUp',
                 methodDesc: '(Lnet/minecraftforge/event/entity/player/BonemealEvent;)V'},
             transformer: function (method) {
-                method.instructions.insert(early(method, 'bonemeal', '(Ljava/lang/Object;)Z', [0], false));
+                // if (Compat.bonemeal(event)) return;
+                var code = new InsnList();
+                var original = new LabelNode();
+                code.add(new VarInsnNode(Opcodes.ALOAD, 0));
+                code.add(new MethodInsnNode(Opcodes.INVOKESTATIC, helper, 'bonemeal',
+                    '(Lnet/minecraftforge/event/entity/player/BonemealEvent;)Z', false));
+                code.add(new JumpInsnNode(Opcodes.IFEQ, original));
+                code.add(new InsnNode(Opcodes.RETURN));
+                code.add(original);
+                method.instructions.insert(code);
+                return method;
+            }
+        },
+        growth_detector: {
+            target: {type: 'METHOD', class: 'com.teamtea.eclipticseasons.common.item.GrowthDetectorItem',
+                methodName: 'm_6225_',
+                methodDesc: '(Lnet/minecraft/world/item/context/UseOnContext;)Lnet/minecraft/world/InteractionResult;'},
+            transformer: function (method) {
+                // InteractionResult r = Compat.detect(context); if (r != null) return r;
+                var code = new InsnList();
+                var original = new LabelNode();
+                code.add(new VarInsnNode(Opcodes.ALOAD, 1));
+                code.add(new MethodInsnNode(Opcodes.INVOKESTATIC, helper, 'detect',
+                    '(Lnet/minecraft/world/item/context/UseOnContext;)Lnet/minecraft/world/InteractionResult;', false));
+                code.add(new InsnNode(Opcodes.DUP));
+                code.add(new JumpInsnNode(Opcodes.IFNULL, original));
+                code.add(new InsnNode(Opcodes.ARETURN));
+                code.add(original);
+                code.add(new InsnNode(Opcodes.POP));
+                method.instructions.insert(code);
                 return method;
             }
         }

@@ -1,0 +1,23 @@
+{
+  "type": "enhancedcelestials2core:text_components",
+  "settings": {
+    "components": {
+      "end_notification": {
+        "type": "CHAT",
+        "component": {
+          "key": "lunar_events_compat.notification.peaceful_moon.set"
+        }
+      },
+      "start_notification": {
+        "type": "CHAT",
+        "component": {
+          "key": "lunar_events_compat.notification.peaceful_moon.rise",
+          "style": {
+            "color": "green",
+            "font": "minecraft:default"
+          }
+        }
+      }
+    }
+  }
+}

@@ -29,8 +29,7 @@
     "ad_astra:mogler", "ad_astra:zombified_mogler", "fangs_n_claws:nightmare_horse",
     "alexscaves:candicorn", "endergetic:booflo"],
   "humanoid": [
-    "alexscaves:brainiac", "alexscaves:caniac", "dreamshift:nosi", "dreamshift:dreamspace_observer",
-    "dreamshift:pocket_zombie_pigman", "mbackrooms:hollow_maw", "mbackrooms:howler",
+    "alexscaves:brainiac", "alexscaves:caniac", "mbackrooms:hollow_maw", "mbackrooms:howler",
     "mbackrooms:skin_stealer", "mbackrooms:sstealer",
     "scp_ultimate:chara", "scp_ultimate:chara_2", "scp_ultimate:scp_0191",
     "scp_ultimate:scp_027", "scp_ultimate:scp_035_mob", "scp_ultimate:scp_049",

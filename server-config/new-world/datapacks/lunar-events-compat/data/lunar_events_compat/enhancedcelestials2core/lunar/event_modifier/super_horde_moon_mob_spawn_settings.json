@@ -1,0 +1,246 @@
+{
+  "type": "enhancedcelestials2core:mob_spawn_settings",
+  "settings": {
+    "spawn_settings": {
+      "spawners": {
+        "monster": [
+          {
+            "type": "minecraft:zombie",
+            "weight": 100,
+            "minCount": 2,
+            "maxCount": 4
+          },
+          {
+            "type": "minecraft:skeleton",
+            "weight": 100,
+            "minCount": 2,
+            "maxCount": 4
+          },
+          {
+            "type": "minecraft:spider",
+            "weight": 100,
+            "minCount": 2,
+            "maxCount": 4
+          },
+          {
+            "type": "minecraft:creeper",
+            "weight": 80,
+            "minCount": 1,
+            "maxCount": 3
+          },
+          {
+            "type": "minecraft:witch",
+            "weight": 20,
+            "minCount": 1,
+            "maxCount": 1
+          },
+          {
+            "type": "minecraft:enderman",
+            "weight": 20,
+            "minCount": 1,
+            "maxCount": 2
+          },
+          {
+            "type": "minecraft:husk",
+            "weight": 20,
+            "minCount": 1,
+            "maxCount": 3
+          },
+          {
+            "type": "minecraft:stray",
+            "weight": 20,
+            "minCount": 1,
+            "maxCount": 3
+          },
+          {
+            "type": "minecraft:zombie_villager",
+            "weight": 20,
+            "minCount": 1,
+            "maxCount": 2
+          },
+          {
+            "type": "minecraft:pillager",
+            "weight": 10,
+            "minCount": 1,
+            "maxCount": 2
+          },
+          {
+            "type": "minecraft:vindicator",
+            "weight": 5,
+            "minCount": 1,
+            "maxCount": 1
+          },
+          {
+            "type": "fangs_n_claws:goblin",
+            "weight": 15,
+            "minCount": 1,
+            "maxCount": 3
+          },
+          {
+            "type": "fangs_n_claws:dart_goblin",
+            "weight": 10,
+            "minCount": 1,
+            "maxCount": 2
+          },
+          {
+            "type": "fangs_n_claws:ghost",
+            "weight": 8,
+            "minCount": 1,
+            "maxCount": 1
+          },
+          {
+            "type": "fangs_n_claws:scorpion",
+            "weight": 10,
+            "minCount": 1,
+            "maxCount": 2
+          },
+          {
+            "type": "fangs_n_claws:ogre",
+            "weight": 4,
+            "minCount": 1,
+            "maxCount": 1
+          },
+          {
+            "type": "fangs_n_claws:werewolf",
+            "weight": 4,
+            "minCount": 1,
+            "maxCount": 1
+          },
+          {
+            "type": "graveyard:ghoul",
+            "weight": 15,
+            "minCount": 1,
+            "maxCount": 2
+          },
+          {
+            "type": "graveyard:revenant",
+            "weight": 15,
+            "minCount": 1,
+            "maxCount": 2
+          },
+          {
+            "type": "graveyard:skeleton_creeper",
+            "weight": 10,
+            "minCount": 1,
+            "maxCount": 1
+          },
+          {
+            "type": "graveyard:wraith",
+            "weight": 5,
+            "minCount": 1,
+            "maxCount": 1
+          },
+          {
+            "type": "rottencreatures:burned",
+            "weight": 10,
+            "minCount": 1,
+            "maxCount": 2
+          },
+          {
+            "type": "rottencreatures:frostbitten",
+            "weight": 10,
+            "minCount": 1,
+            "maxCount": 2
+          },
+          {
+            "type": "rottencreatures:swampy",
+            "weight": 10,
+            "minCount": 1,
+            "maxCount": 2
+          },
+          {
+            "type": "rottencreatures:undead_miner",
+            "weight": 10,
+            "minCount": 1,
+            "maxCount": 2
+          },
+          {
+            "type": "rottencreatures:mummy",
+            "weight": 6,
+            "minCount": 1,
+            "maxCount": 1
+          },
+          {
+            "type": "rottencreatures:zap",
+            "weight": 6,
+            "minCount": 1,
+            "maxCount": 1
+          },
+          {
+            "type": "dungeonsdelight:rotten_zombie",
+            "weight": 15,
+            "minCount": 1,
+            "maxCount": 2
+          },
+          {
+            "type": "illagerinvasion:basher",
+            "weight": 5,
+            "minCount": 1,
+            "maxCount": 1
+          },
+          {
+            "type": "illagerinvasion:provoker",
+            "weight": 5,
+            "minCount": 1,
+            "maxCount": 1
+          },
+          {
+            "type": "takesapillage:legioner",
+            "weight": 5,
+            "minCount": 1,
+            "maxCount": 1
+          },
+          {
+            "type": "takesapillage:archer",
+            "weight": 5,
+            "minCount": 1,
+            "maxCount": 1
+          },
+          {
+            "type": "takesapillage:skirmisher",
+            "weight": 5,
+            "minCount": 1,
+            "maxCount": 1
+          },
+          {
+            "type": "friendsandfoes:iceologer",
+            "weight": 3,
+            "minCount": 1,
+            "maxCount": 1
+          },
+          {
+            "type": "friendsandfoes:illusioner",
+            "weight": 3,
+            "minCount": 1,
+            "maxCount": 1
+          },
+          {
+            "type": "quark:forgotten",
+            "weight": 4,
+            "minCount": 1,
+            "maxCount": 1
+          },
+          {
+            "type": "mutantmonsters:mutant_zombie",
+            "weight": 1,
+            "minCount": 1,
+            "maxCount": 1
+          },
+          {
+            "type": "mutantmonsters:mutant_skeleton",
+            "weight": 1,
+            "minCount": 1,
+            "maxCount": 1
+          },
+          {
+            "type": "mutantmonsters:mutant_creeper",
+            "weight": 1,
+            "minCount": 1,
+            "maxCount": 1
+          }
+        ]
+      },
+      "spawn_costs": {}
+    }
+  }
+}

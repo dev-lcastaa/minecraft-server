@@ -720,21 +720,37 @@ registers 19 custom fluids. Clients need the same script before connecting.
 The [`tooltips`](./client-config/kubejs/client_scripts/cooking_compat_tooltips.js)
 explain the new preparation stations.
 
-#### Jade growth and season guidance
+#### Growth Detector and seasonal bonemeal
 
-[`jade-season-compat`](./tools/jade-season-compat/) adds server-synchronized
-Ecliptic Seasons information to Jade. Hold **Shift** for crop preferences,
-greenhouse/humidity details, and sapling growth gotchas. Guidance distinguishes
-same-species, same-height 2×2 arrangements, sapling stage advancement, and
-light/clearance requirements; it does not label every sapling as a 2×2 tree.
+[`jade-season-compat`](./tools/jade-season-compat/) (the jar keeps its old name)
+no longer adds anything to Jade tooltips. Instead, **right-clicking any crop,
+sapling, or other plantable with Ecliptic Seasons' Growth Detector** sends a
+chat report:
+
+- plant type: sapling (and whether it can grow into a tree right now, plus 2×2
+  and clearance hints) or a regular crop/plant
+- current season and whether the plant is **in season**, with the seasons it
+  grows in
+- growth chance under current conditions, including a too-dark warning below
+  light 9
+- **bonemeal success %** if used now
+- current humidity, whether it is humid, and the plant's preferred humidity
+
+Hovering with the detector still shows Ecliptic's own in-world panel.
+
+Bonemeal follows the plant's season. A plant is in season when its current
+solar-term growth chance in that biome's climate zone exceeds Ecliptic's 0.4
+"liked" threshold, or when a season core greenhouse covers it. **In season,
+bonemeal always passes the season gate**; **out of season it passes 25%**, and a
+failed attempt still consumes the bonemeal (`BoneMealConsumeOnFailure`).
+Successful attempts skip Ecliptic's follow-up season roll, so a bonemealed
+sapling is not re-checked when it tries to grow into a tree. Plants with their
+own odds apply them after the gate: saplings 45%, mushrooms and fungi 40%.
+Creative players and plants without Ecliptic rules use vanilla bonemeal.
 
 The installed Ecliptic Seasons crop rules remain authoritative. Plants without
 native rules are identified by the registry audit rather than assigned invented
-season preferences; Jade explicitly says “No Ecliptic seasonal growth rule
-configured.” Serene Seasons remains disabled.
-Out-of-season crop bonemeal has a **25% season-gate pass rate**; rejected
-attempts consume bonemeal. Existing native growth and environment checks still
-apply, so passing that gate does not guarantee growth in unsuitable conditions.
+season preferences. Serene Seasons remains disabled.
 
 The realistic trees come from **Dynamic Trees**. It remains installed:
 removing its registry entries can damage saved trees even without declared mod
@@ -768,12 +784,70 @@ already-pure, and unsupported outputs. Already-pure outputs remain untouched.
 [`water-compat`](./server-config/new-world/datapacks/water-compat/) adds pot
 and kettle purification. Pot purification requires a serving glass bottle;
 named or effect-bearing potion inputs are excluded to avoid losing their data.
-Doggy Talents water bowls no longer fill glass bottles.
+Doggy Talents food bowls and dog baths no longer fill glass bottles, whether you
+click the block (the dog bath hands out water bottles itself) or the water
+inside a waterlogged bowl or bath.
 
 SCP cooler dispensing/refilling is **not implemented**: the installed coolers
 are ordinary blocks without persistent inventory. A coordinate-only reservoir
 would not safely survive moving/replacing blocks or support finite refills.
 Their existing behavior remains unchanged.
+
+#### Planters and fungus colonies
+
+[`planter-compat`](./tools/planter-compat/) (also needed on clients) lets any
+seed, crop, sapling, flower, bush, mushroom or fungus be placed on and survive on
+Supplementaries planters. This covers vanilla and modded plants, including
+Ender's Delight, Farmer's Respite, My Nether's Delight, KubeJS crops and bamboo,
+and it overrides each plant's own soil and light survival checks. Normal growth
+rules, such as crop light and Ecliptic Seasons, still apply. Crimson and warped
+fungi on Farmer's Delight rich soil or on a planter turn into My Nether's Delight
+fungus colonies, which then grow over time. On rich soil, as with mushroom
+colonies, that needs light below 13; on planters it works at any light level.
+Rebuild with `python3 tools/planter-compat/build.py`; test with
+`python3 -m unittest tests.test_planter_compat`.
+
+#### Stray light blocks
+
+Invisible light patches in the world are `minecraft:light` blocks left by
+Tschipcraft's Dynamic Lights when the server crashes or is force-stopped before
+it removes them; they do not come from worldgen or End of Herobrine. To clear
+them, stand near the area as an op and run
+`/function serverfixes:clear_stray_lights`. It removes every light block within
+15 blocks, so active dynamic lights blink off for one tick and any light blocks
+placed on purpose are also removed. To remove the mod entirely, run
+`/function dynamiclights:uninstall` before deleting its JAR.
+
+#### Extra lunar events (Enhanced Celestials 2)
+
+The `lunar-events-compat` world datapack, generated by
+[`tools/lunar-events-compat/build.py`](./tools/lunar-events-compat/build.py), adds
+nine Overworld moons:
+
+- **Peaceful:** no natural hostile spawns.
+- **Horde:** only zombie types spawn, buffed with Strength, Speed, double
+  health and extra armour.
+- **Super Horde:** 5× monster cap plus hostiles from Fangs & Claws, Graveyard,
+  Rotten Creatures, the illager mods, Quark and Mutant Monsters.
+- **Baby Horde:** most new mob spawns become babies.
+- **Miner's:** Haste II, Night Vision and doubled ore drops.
+- **Black:** blindness all night.
+- **Ender:** endermen, endermites, rare shulkers and modded ender mobs.
+- **Spider:** spiders, cave spiders, silverfish and scorpions.
+- **Chaos:** mobs fight each other and players.
+
+Harvest, Blue and their Super variants are also peaceful now.
+[`lunar_events_compat.js`](./server-config/kubejs/server_scripts/lunar_events_compat.js)
+adds what the datapack format can't: peaceful spawn blocking, horde health and
+armour, babies, shulker cleanup and Chaos targeting. The new moons are rarer
+than the stock Blood, Blue and Harvest Moons, and Peaceful and Miner's nights
+never block sleep. Clients need the `client-config/kubejs/assets` language files
+for moon names and messages.
+
+After deploying, restart the server and run `/ec lunarForecast recompute` so
+already-scheduled years include the new moons. Test with
+`/ec setLunarEvent lunar_events_compat:<id>` and
+`python3 -m unittest tests.test_lunar_events_compat`.
 
 #### Carcasses and backpack persistence
 

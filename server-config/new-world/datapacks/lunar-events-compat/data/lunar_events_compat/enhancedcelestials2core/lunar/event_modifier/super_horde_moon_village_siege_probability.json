@@ -1,0 +1,6 @@
+{
+  "type": "enhancedcelestials2core:village_siege_probability",
+  "settings": {
+    "probability": 1.0
+  }
+}

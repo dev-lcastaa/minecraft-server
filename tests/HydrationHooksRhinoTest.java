@@ -10,6 +10,7 @@ import java.util.Map;
 
 public class HydrationHooksRhinoTest {
     public static class Bowl {}
+    public static class Bath {}
     public static class PotionItem {}
 
     public static final class Tag {
@@ -80,6 +81,7 @@ public class HydrationHooksRhinoTest {
         public Stack getItemStack() { return stack; }
         public Player getEntity() { return player; }
         public Level getLevel() { return player.level; }
+        public Object getPos() { return "pos"; }
         public void setCanceled(boolean value) { canceled = value; }
     }
 
@@ -97,6 +99,7 @@ public class HydrationHooksRhinoTest {
 
     public static final class Factory {
         public final Object bowl = new Bowl();
+        public final Object bath = new Bath();
         public final Object potion = new PotionItem();
         public Stack stack(String id, boolean drink, Object item) { return new Stack(id, drink, item); }
         public Player player(Object block) { return new Player(new Level(block)); }
@@ -110,6 +113,7 @@ public class HydrationHooksRhinoTest {
         ScriptableObject scope = context.initStandardObjects();
         ScriptableObject.putProperty(scope, "make", Context.javaToJS(context, new Factory(), scope), context);
         ScriptableObject.putProperty(scope, "BowlClass", new NativeJavaClass(context, scope, Bowl.class), context);
+        ScriptableObject.putProperty(scope, "BathClass", new NativeJavaClass(context, scope, Bath.class), context);
         ScriptableObject.putProperty(scope, "PotionClass", new NativeJavaClass(context, scope, PotionItem.class), context);
         context.evaluateString(scope, """
             var listeners = {};
@@ -127,6 +131,7 @@ public class HydrationHooksRhinoTest {
               },
               'net.minecraft.world.level.ClipContext$Fluid': {ANY: 'ANY'},
               'doggytalents.common.block.FoodBowlBlock': BowlClass,
+              'doggytalents.common.block.DogBathBlock': BathClass,
               'net.minecraft.world.item.PotionItem': PotionClass
             };
             var Java = {loadClass: function(name) {
@@ -145,13 +150,15 @@ public class HydrationHooksRhinoTest {
             if (typeof probe.getTag === 'function' || typeof probe.setTag === 'function')
               throw Error('Fixture exposes getTag/setTag, which KubeJS remaps to getNbt/setNbt');
 
-            var click = 'net.minecraftforge.event.entity.player.PlayerInteractEvent$RightClickItem';
-            var cases = [[make.bowl, 'minecraft:glass_bottle', true], [{}, 'minecraft:glass_bottle', false],
-                         [make.bowl, 'minecraft:water_bucket', false]];
-            cases.forEach(function(c) {
-              var event = make.click(make.stack(c[1], false, null), make.player(c[0]));
-              listeners[click](event);
-              if (event.canceled !== c[2]) throw Error('Unexpected bowl result for ' + c[1]);
+            var cases = [[make.bowl, 'minecraft:glass_bottle', true], [make.bath, 'minecraft:glass_bottle', true],
+                         [{}, 'minecraft:glass_bottle', false], [make.bowl, 'minecraft:water_bucket', false],
+                         [make.bath, 'minecraft:water_bucket', false]];
+            ['RightClickItem', 'RightClickBlock'].forEach(function(type) {
+              cases.forEach(function(c) {
+                var event = make.click(make.stack(c[1], false, null), make.player(c[0]));
+                listeners['net.minecraftforge.event.entity.player.PlayerInteractEvent$' + type](event);
+                if (event.canceled !== c[2]) throw Error('Unexpected ' + type + ' result for ' + c[1]);
+              });
             });
 
             var drink = make.stack('farmersrespite:green_tea', true, null);

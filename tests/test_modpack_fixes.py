@@ -177,6 +177,25 @@ class ModpackFixesTest(unittest.TestCase):
             self.assertIn(label, script)
         self.assertNotIn("const ", script)
 
+    def test_clear_stray_lights_function(self):
+        lines = [
+            line
+            for line in (DATA / "serverfixes/functions/clear_stray_lights.mcfunction").read_text().splitlines()
+            if line and not line.startswith("#")
+        ]
+        self.assertEqual(len(lines), 2)
+        self.assertTrue(lines[0].endswith("minecraft:water replace minecraft:light[waterlogged=true]"))
+        self.assertTrue(lines[1].endswith("minecraft:air replace minecraft:light"))
+        for line in lines:
+            coords = [int(token[1:] or 0) for token in line.split()[1:7]]
+            volume = 1
+            for low, high in zip(coords[:3], coords[3:]):
+                volume *= high - low + 1
+            self.assertLessEqual(volume, 32768)
+        with mod_jar("dynamiclights-") as jar:
+            remover = jar.read("data/dynamiclights/functions/internal/remove_light.mcfunction").decode()
+        self.assertIn("minecraft:air replace minecraft:light", remover)
+
     def test_image_includes_fixes(self):
         dockerfile = (ROOT / "Dockerfile").read_text()
         self.assertIn("COPY server-config/new-world/datapacks/ /config/new-world/datapacks/", dockerfile)

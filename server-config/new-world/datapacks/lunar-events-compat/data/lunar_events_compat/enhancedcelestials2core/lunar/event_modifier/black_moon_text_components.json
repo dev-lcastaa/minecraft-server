@@ -1,0 +1,23 @@
+{
+  "type": "enhancedcelestials2core:text_components",
+  "settings": {
+    "components": {
+      "end_notification": {
+        "type": "CHAT",
+        "component": {
+          "key": "lunar_events_compat.notification.black_moon.set"
+        }
+      },
+      "start_notification": {
+        "type": "CHAT",
+        "component": {
+          "key": "lunar_events_compat.notification.black_moon.rise",
+          "style": {
+            "color": "dark_gray",
+            "font": "minecraft:default"
+          }
+        }
+      }
+    }
+  }
+}

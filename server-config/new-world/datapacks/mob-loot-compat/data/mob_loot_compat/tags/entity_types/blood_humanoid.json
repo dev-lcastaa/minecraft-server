@@ -38,18 +38,6 @@
       "required": false
     },
     {
-      "id": "dreamshift:dreamspace_observer",
-      "required": false
-    },
-    {
-      "id": "dreamshift:nosi",
-      "required": false
-    },
-    {
-      "id": "dreamshift:pocket_zombie_pigman",
-      "required": false
-    },
-    {
       "id": "endofherobrine:builder",
       "required": false
     },

@@ -1,0 +1,12 @@
+{
+  "modifiers": [
+    "lunar_events_compat:peaceful_moon_sky_light_color",
+    "lunar_events_compat:peaceful_moon_moon_texture_color",
+    "lunar_events_compat:peaceful_moon_moon_size",
+    "lunar_events_compat:peaceful_moon_sound_track",
+    "lunar_events_compat:peaceful_moon_text_components",
+    "lunar_events_compat:peaceful_moon_name_color",
+    "lunar_events_compat:peaceful_moon_spawn_category_multiplier",
+    "lunar_events_compat:peaceful_moon_village_siege_probability"
+  ]
+}

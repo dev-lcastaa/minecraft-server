@@ -12,6 +12,7 @@ class Tag {
 }
 class Potion {}
 class Bowl {}
+class Bath {}
 class Stack {
   constructor(id, animation = 'NONE', tag = null, registered = false, item = {}) {
     Object.assign(this, {id, animation, tag, registered, item, count: 1});
@@ -32,6 +33,7 @@ const classes = {
   'net.minecraft.world.item.UseAnim': {DRINK: 'DRINK'},
   'net.minecraft.world.item.PotionItem': Potion,
   'doggytalents.common.block.FoodBowlBlock': Bowl,
+  'doggytalents.common.block.DogBathBlock': Bath,
   'net.minecraftforge.eventbus.api.EventPriority': {HIGHEST: 'HIGHEST', LOWEST: 'LOWEST'},
   'net.minecraft.world.level.ClipContext$Fluid': {ANY: 'ANY'},
   'dev.ghen.thirst.foundation.util.MathHelper': {
@@ -88,17 +90,21 @@ events['net.minecraftforge.event.entity.player.PlayerEvent$ItemCraftedEvent']({g
 assert.equal(food.hasNBT(), false);
 
 for (const [block, item, expected] of [[new Bowl(), 'minecraft:glass_bottle', true],
-  [{}, 'minecraft:glass_bottle', false], [new Bowl(), 'minecraft:water_bucket', false]]) {
-  let canceled = false;
-  const level = {pos: {}, getBlockState: () => ({getBlock: () => block})};
-  events['net.minecraftforge.event.entity.player.PlayerInteractEvent$RightClickItem']({
-    getItemStack: () => new Stack(item),
-    getLevel: () => level,
-    // KubeJS's kjs$getLevel exposes `level` as a property, hiding vanilla level().
-    getEntity: () => ({level}),
-    setCanceled: value => {canceled = value;}
-  });
-  assert.equal(canceled, expected);
+  [new Bath(), 'minecraft:glass_bottle', true], [{}, 'minecraft:glass_bottle', false],
+  [new Bowl(), 'minecraft:water_bucket', false], [new Bath(), 'minecraft:water_bucket', false]]) {
+  for (const type of ['RightClickItem', 'RightClickBlock']) {
+    let canceled = false;
+    const level = {pos: {}, getBlockState: () => ({getBlock: () => block})};
+    events['net.minecraftforge.event.entity.player.PlayerInteractEvent$' + type]({
+      getItemStack: () => new Stack(item),
+      getLevel: () => level,
+      getPos: () => level.pos,
+      // KubeJS's kjs$getLevel exposes `level` as a property, hiding vanilla level().
+      getEntity: () => ({level}),
+      setCanceled: value => {canceled = value;}
+    });
+    assert.equal(canceled, expected, type + ' ' + item);
+  }
 }
 const recipeData = {
   type: 'create:mixing',

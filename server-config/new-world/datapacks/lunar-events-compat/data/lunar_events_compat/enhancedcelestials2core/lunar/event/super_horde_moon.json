@@ -1,0 +1,16 @@
+{
+  "modifiers": [
+    "lunar_events_compat:super_horde_moon_sky_light_color",
+    "lunar_events_compat:super_horde_moon_moon_texture_color",
+    "lunar_events_compat:super_horde_moon_moon_size",
+    "lunar_events_compat:super_horde_moon_sound_track",
+    "lunar_events_compat:super_horde_moon_text_components",
+    "lunar_events_compat:super_horde_moon_name_color",
+    "lunar_events_compat:super_horde_moon_spawn_category_multiplier",
+    "lunar_events_compat:super_horde_moon_mob_spawn_settings",
+    "lunar_events_compat:super_horde_moon_force_surface_spawning",
+    "lunar_events_compat:super_horde_moon_block_sleeping",
+    "lunar_events_compat:super_horde_moon_village_siege_probability",
+    "lunar_events_compat:super_horde_moon_mob_spawn_distances"
+  ]
+}

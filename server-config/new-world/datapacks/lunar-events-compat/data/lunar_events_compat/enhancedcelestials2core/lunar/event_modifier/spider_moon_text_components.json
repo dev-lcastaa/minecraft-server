@@ -1,0 +1,23 @@
+{
+  "type": "enhancedcelestials2core:text_components",
+  "settings": {
+    "components": {
+      "end_notification": {
+        "type": "CHAT",
+        "component": {
+          "key": "lunar_events_compat.notification.spider_moon.set"
+        }
+      },
+      "start_notification": {
+        "type": "CHAT",
+        "component": {
+          "key": "lunar_events_compat.notification.spider_moon.rise",
+          "style": {
+            "color": "red",
+            "font": "minecraft:default"
+          }
+        }
+      }
+    }
+  }
+}

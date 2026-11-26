@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    {"id": "#supplementaries:planters", "required": false},
+    {"id": "supplementaries:planter", "required": false}
+  ]
+}

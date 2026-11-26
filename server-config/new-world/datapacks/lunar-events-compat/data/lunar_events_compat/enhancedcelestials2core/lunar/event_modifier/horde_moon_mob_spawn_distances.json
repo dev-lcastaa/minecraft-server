@@ -1,0 +1,8 @@
+{
+  "type": "enhancedcelestials2core:mob_spawn_distances",
+  "settings": {
+    "distances": {
+      "monster": 64
+    }
+  }
+}

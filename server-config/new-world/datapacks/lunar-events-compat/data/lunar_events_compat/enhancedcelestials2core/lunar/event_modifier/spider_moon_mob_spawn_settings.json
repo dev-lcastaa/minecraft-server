@@ -1,0 +1,54 @@
+{
+  "type": "enhancedcelestials2core:mob_spawn_settings",
+  "settings": {
+    "spawn_settings": {
+      "spawners": {
+        "monster": [
+          {
+            "type": "minecraft:spider",
+            "weight": 400,
+            "minCount": 2,
+            "maxCount": 4
+          },
+          {
+            "type": "minecraft:cave_spider",
+            "weight": 150,
+            "minCount": 2,
+            "maxCount": 4
+          },
+          {
+            "type": "minecraft:silverfish",
+            "weight": 60,
+            "minCount": 2,
+            "maxCount": 4
+          },
+          {
+            "type": "fangs_n_claws:scorpion",
+            "weight": 25,
+            "minCount": 1,
+            "maxCount": 2
+          },
+          {
+            "type": "fangs_n_claws:desert_scorpion",
+            "weight": 15,
+            "minCount": 1,
+            "maxCount": 2
+          },
+          {
+            "type": "fangs_n_claws:frost_scorpion",
+            "weight": 15,
+            "minCount": 1,
+            "maxCount": 2
+          },
+          {
+            "type": "fangs_n_claws:nether_scorpion",
+            "weight": 8,
+            "minCount": 1,
+            "maxCount": 2
+          }
+        ]
+      },
+      "spawn_costs": {}
+    }
+  }
+}

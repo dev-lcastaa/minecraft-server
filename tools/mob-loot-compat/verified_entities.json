@@ -824,31 +824,6 @@
     "jar": "DoggyTalentsNext-1.20.1-1.19.1.jar",
     "registry": "doggytalents.DoggyEntityTypes"
   },
-  "dreamshift:dreamspace_observer": {
-    "class": "dev.multision.dreamshift.entity.DreamspaceObserverEntity",
-    "jar": "dreamshift-0.2.2-hotfix-forge.jar",
-    "registry": "dev.multision.dreamshift.registry.ModEntityTypes"
-  },
-  "dreamshift:nosi": {
-    "class": "dev.multision.dreamshift.entity.NosiEntity",
-    "jar": "dreamshift-0.2.2-hotfix-forge.jar",
-    "registry": "dev.multision.dreamshift.registry.ModEntityTypes"
-  },
-  "dreamshift:pocket_zombie_pigman": {
-    "class": "dev.multision.dreamshift.entity.PocketZombiePigmanEntity",
-    "jar": "dreamshift-0.2.2-hotfix-forge.jar",
-    "registry": "dev.multision.dreamshift.registry.ModEntityTypes"
-  },
-  "dreamshift:silk_circus_statue": {
-    "class": "dev.multision.dreamshift.entity.SilkCircusStatueEntity",
-    "jar": "dreamshift-0.2.2-hotfix-forge.jar",
-    "registry": "dev.multision.dreamshift.registry.ModEntityTypes"
-  },
-  "dreamshift:still_life": {
-    "class": "dev.multision.dreamshift.entity.StillLifeEntity",
-    "jar": "dreamshift-0.2.2-hotfix-forge.jar",
-    "registry": "dev.multision.dreamshift.registry.ModEntityTypes"
-  },
   "dungeonsdelight:monster_yam": {
     "class": "net.yirmiri.dungeonsdelight.common.entity.monster_yam.MonsterYamEntity",
     "jar": "forge-dungeonsdelight-1.20.1-1.3.1.jar",

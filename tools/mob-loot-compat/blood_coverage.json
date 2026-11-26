@@ -6648,241 +6648,6 @@
       "net.minecraft.client.model.geom.ModelPart": []
     }
   },
-  "dreamshift:dreamspace_observer": {
-    "category": "humanoid",
-    "eligible": true,
-    "basis": "reviewed biological-equivalent anatomy/material exclusion",
-    "entity_label": "dreamshift:dreamspace_observer",
-    "ancestors": [
-      "dev.multision.dreamshift.entity.DreamspaceObserverEntity",
-      "net.minecraft.world.entity.LivingEntity"
-    ],
-    "native_mob_type": "inherited_default",
-    "native_tags": [],
-    "native_strings": [
-      "DreamshiftAppearance",
-      "DreamshiftAuthored",
-      "DreamshiftCeilingPose",
-      "DreamshiftLyingPose",
-      "DreamshiftSittingPose"
-    ],
-    "models": {
-      "dev.multision.dreamshift.client.render.DreamspaceObserverRenderer$SittingPlayerModel": [
-        ""
-      ],
-      "dev.multision.dreamshift.client.render.StaticAveMonsterModel": [
-        ""
-      ],
-      "net.minecraft.client.model.PlayerModel": [],
-      "net.minecraft.client.model.geom.ModelLayers": [],
-      "net.minecraft.client.model.geom.ModelPart": []
-    }
-  },
-  "dreamshift:nosi": {
-    "category": "humanoid",
-    "eligible": true,
-    "basis": "reviewed biological-equivalent anatomy/material exclusion",
-    "entity_label": "Nosi the Clown",
-    "ancestors": [
-      "dev.multision.dreamshift.entity.NosiEntity",
-      "net.minecraft.world.entity.PathfinderMob"
-    ],
-    "native_mob_type": "inherited_default",
-    "native_tags": [],
-    "native_strings": [
-      "",
-      "Minecraft rejected damage (shield, invulnerability or another hook)",
-      "Nosi {}: {}",
-      "NosiAnchor",
-      "NosiAttackAllowed",
-      "NosiCooldowns",
-      "NosiDestinations",
-      "NosiFoundAtAnchor",
-      "NosiLastKnown",
-      "NosiLastObservation",
-      "NosiLastReposition",
-      "NosiNextReposition",
-      "NosiObservedAt",
-      "NosiObserver",
-      "NosiReason",
-      "NosiRecent",
-      "NosiTarget",
-      "NosiVisited",
-      "Pos",
-      "X",
-      "Y",
-      "Z",
-      "arg_corridor",
-      "attack target changed",
-      "book_finale",
-      "collision or occupied",
-      "destination does not improve committed hunt",
-      "destination has no local path to a participant",
-      "destination observed",
-      "dynamic",
-      "encounter empty",
-      "entity unloaded",
-      "essential interaction clearance",
-      "frozen: observer/grace or inactive/empty encounter",
-      "hazard",
-      "initial stage placement",
-      "lectern exclusion or reading lane",
-      "liquid",
-      "map encounter transition",
-      "no reachable navigation path",
-      "none",
-      "none; hit applied",
-      "observation suspended attack",
-      "observed",
-      "obstructed",
-      "outside active world",
-      "path validation budget exhausted",
-      "range",
-      "rolling attack-attempt budget exhausted",
-      "scene/sector not eligible",
-      "scripted performance hold",
-      "stage",
-      "target disconnected or left encounter sector",
-      "target disconnected, changed sector, or controller disabled",
-      "too close to participant",
-      "too far from target",
-      "unloaded chunk",
-      "unsupported floor",
-      "wrong instance"
-    ],
-    "models": {
-      "dev.multision.dreamshift.client.render.NosiRenderer$Model": [
-        ""
-      ],
-      "net.minecraft.client.model.geom.ModelLayers": [],
-      "net.minecraft.client.model.geom.ModelPart": []
-    }
-  },
-  "dreamshift:pocket_zombie_pigman": {
-    "category": "humanoid",
-    "eligible": true,
-    "basis": "reviewed biological-equivalent anatomy/material exclusion",
-    "entity_label": "Zombie Pigman",
-    "ancestors": [
-      "dev.multision.dreamshift.entity.PocketZombiePigmanEntity",
-      "net.minecraft.world.entity.monster.Monster"
-    ],
-    "native_mob_type": "inherited_default",
-    "native_tags": [],
-    "native_strings": [
-      "Anger"
-    ],
-    "models": {
-      "dev.multision.dreamshift.client.render.PocketZombiePigmanModel": [
-        "main",
-        "pocket_zombie_pigman"
-      ],
-      "net.minecraft.client.model.HumanoidModel$ArmPose": [],
-      "net.minecraft.client.model.geom.ModelLayerLocation": [],
-      "net.minecraft.client.model.geom.builders.CubeDeformation": []
-    }
-  },
-  "dreamshift:silk_circus_statue": {
-    "category": "bloodless",
-    "eligible": false,
-    "basis": "reviewed biological-equivalent anatomy/material exclusion",
-    "entity_label": "Silk Circus Figure",
-    "ancestors": [
-      "dev.multision.dreamshift.entity.SilkCircusStatueEntity",
-      "net.minecraft.world.entity.monster.Monster"
-    ],
-    "native_mob_type": "inherited_default",
-    "native_tags": [],
-    "native_strings": [
-      "DreamshiftActiveStatue"
-    ],
-    "models": {
-      "net.minecraft.client.model.PlayerModel": [],
-      "net.minecraft.client.model.geom.ModelLayers": []
-    }
-  },
-  "dreamshift:still_life": {
-    "category": "bloodless",
-    "eligible": false,
-    "basis": "reviewed biological-equivalent anatomy/material exclusion",
-    "entity_label": "Still Life",
-    "ancestors": [
-      "dev.multision.dreamshift.entity.StillLifeEntity",
-      "net.minecraft.world.entity.monster.Monster"
-    ],
-    "native_mob_type": "inherited_default",
-    "native_tags": [],
-    "native_strings": [
-      "",
-      "BehaviorState",
-      "BundledTexture",
-      "ComplexGenerated",
-      "CopiedPlayerName",
-      "CopiedPlayerUuid",
-      "CorruptionSeed",
-      "CorruptionStrength",
-      "EmissiveEyesTexture",
-      "EscapeRumbleRadius",
-      "EscapeRumbleSound",
-      "EyeRevealState",
-      "FixedInitialFacing",
-      "IntentCooldown",
-      "IntentRepetitions",
-      "IntentSequence",
-      "PoseVariant",
-      "RepeatedIntent",
-      "RepositionCount",
-      "ScriptedChaseActive",
-      "SkinModelType",
-      "Still Life geometry slot must be between 0 and 2",
-      "TextureSignature",
-      "TextureValue",
-      "UnobservedTicks",
-      "textures"
-    ],
-    "models": {
-      "dev.multision.dreamshift.client.render.StillLifeModel": [
-        "Still Life geometry parts do not match geometry variants",
-        "body",
-        "classic",
-        "dreamshift_arm_lump",
-        "dreamshift_arm_tendril",
-        "dreamshift_back_branch",
-        "dreamshift_back_lump",
-        "dreamshift_cheek_bud",
-        "dreamshift_cheek_stalk",
-        "dreamshift_chest_bloom",
-        "dreamshift_chest_stalk",
-        "dreamshift_crown_lump",
-        "dreamshift_crown_spur",
-        "dreamshift_elbow_lump",
-        "dreamshift_elbow_spur",
-        "dreamshift_face_prong",
-        "dreamshift_face_shard",
-        "dreamshift_hip_lump",
-        "dreamshift_hip_spur",
-        "dreamshift_jaw_drop",
-        "dreamshift_jaw_lump",
-        "dreamshift_knee_lump",
-        "dreamshift_knee_spur",
-        "dreamshift_shoulder_lump",
-        "dreamshift_shoulder_spur",
-        "dreamshift_spine_lump",
-        "dreamshift_spine_spur",
-        "extendedGrowths",
-        "head",
-        "left_arm",
-        "primaryGrowths",
-        "right_arm",
-        "right_leg",
-        "slim",
-        "still_life"
-      ],
-      "net.minecraft.client.model.geom.ModelLayerLocation": [],
-      "net.minecraft.client.model.geom.ModelPart": [],
-      "net.minecraft.client.model.geom.builders.CubeDeformation": []
-    }
-  },
   "dungeonsdelight:monster_yam": {
     "category": "bloodless",
     "eligible": false,
@@ -9403,7 +9168,7 @@
     "native_mob_type": "inherited_default",
     "native_tags": [],
     "native_strings": [
-      " \u00a7cI need charged a battery to do that...",
+      " §cI need charged a battery to do that...",
       ".",
       "[BED] Entity was sleeping, waking up now!",
       "entities/hexapod_bed_drop",
@@ -9926,7 +9691,7 @@
       "nah that's crazy",
       "no one asked",
       "ok now i'm mad",
-      "ok that\u2019s it",
+      "ok that’s it",
       "please stop",
       "seriously?",
       "stop it!",
@@ -9943,7 +9708,7 @@
       "you're obsessed",
       "you're so annoying",
       "you're weird",
-      "you\u2019re not even good at this"
+      "you’re not even good at this"
     ],
     "models": {
       "fr.meulti.mbackrooms.entity.client.SkinStealerModel": [
@@ -15697,7 +15462,7 @@
     "category": "humanoid",
     "eligible": true,
     "basis": "authored Sons of Sins entity tag",
-    "entity_label": "Bl\u00fcd",
+    "entity_label": "Blüd",
     "ancestors": [
       "net.mcreator.sonsofsins.entity.BludEntity",
       "net.minecraft.world.entity.monster.RangedAttackMob",
@@ -16228,7 +15993,7 @@
     "category": "bloodless",
     "eligible": false,
     "basis": "native MobType.UNDEAD without authored blood exception",
-    "entity_label": "Gulb\u00e8r",
+    "entity_label": "Gulbèr",
     "ancestors": [
       "net.mcreator.sonsofsins.entity.GulberEntity",
       "net.minecraft.world.entity.monster.RangedAttackMob",

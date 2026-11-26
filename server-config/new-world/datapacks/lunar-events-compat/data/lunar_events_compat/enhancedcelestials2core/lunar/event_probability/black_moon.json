@@ -1,0 +1,29 @@
+{
+  "dimensions": {
+    "minecraft:overworld": {
+      "priority": 0,
+      "spawn_requirements": {
+        "rules": [
+          {
+            "type": "enhancedcelestials2core:min_nights_between",
+            "settings": {
+              "min_nights": 16
+            }
+          },
+          {
+            "type": "enhancedcelestials2core:valid_moon_phase",
+            "settings": {
+              "valid_moon_phases": [
+                3,
+                4,
+                5
+              ]
+            }
+          }
+        ],
+        "weight": 7
+      }
+    }
+  },
+  "lunar_event": "lunar_events_compat:black_moon"
+}

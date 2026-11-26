@@ -1,0 +1,66 @@
+{
+  "type": "enhancedcelestials2core:mob_spawn_settings",
+  "settings": {
+    "spawn_settings": {
+      "spawners": {
+        "monster": [
+          {
+            "type": "minecraft:enderman",
+            "weight": 400,
+            "minCount": 1,
+            "maxCount": 4
+          },
+          {
+            "type": "minecraft:endermite",
+            "weight": 60,
+            "minCount": 1,
+            "maxCount": 3
+          },
+          {
+            "type": "minecraft:shulker",
+            "weight": 2,
+            "minCount": 1,
+            "maxCount": 1
+          },
+          {
+            "type": "unusualend:undead_enderling",
+            "weight": 20,
+            "minCount": 1,
+            "maxCount": 2
+          },
+          {
+            "type": "unusualend:ender_blob",
+            "weight": 10,
+            "minCount": 1,
+            "maxCount": 2
+          },
+          {
+            "type": "endergetic:charger_eetle",
+            "weight": 10,
+            "minCount": 1,
+            "maxCount": 2
+          },
+          {
+            "type": "endergetic:glider_eetle",
+            "weight": 6,
+            "minCount": 1,
+            "maxCount": 1
+          },
+          {
+            "type": "alexsmobs:enderiophage",
+            "weight": 10,
+            "minCount": 1,
+            "maxCount": 3
+          },
+          {
+            "type": "mutantmonsters:mutant_enderman",
+            "weight": 1,
+            "minCount": 1,
+            "maxCount": 1
+          }
+        ]
+      },
+      "spawn_costs": {}
+    }
+  }
+}

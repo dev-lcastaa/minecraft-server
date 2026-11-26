@@ -6,6 +6,7 @@ const HydrationPriority = Java.loadClass('net.minecraftforge.eventbus.api.EventP
 const HydrationMath = Java.loadClass('dev.ghen.thirst.foundation.util.MathHelper');
 const HydrationClipFluid = Java.loadClass('net.minecraft.world.level.ClipContext$Fluid');
 const HydrationBowl = Java.loadClass('doggytalents.common.block.FoodBowlBlock');
+const HydrationBath = Java.loadClass('doggytalents.common.block.DogBathBlock');
 const HydrationPotion = Java.loadClass('net.minecraft.world.item.PotionItem');
 
 function hydrationPreparedDrink(stack) {
@@ -40,12 +41,23 @@ HydrationForge.EVENT_BUS.addListener(HydrationPriority.LOWEST, false,
     }
   });
 
-// Block both vanilla and Thirst's running-water path before either consumes a glass bottle.
+function hydrationDogWater(block) {
+  return block instanceof HydrationBowl || block instanceof HydrationBath;
+}
+
+// Doggy Talents' dog bath hands out water bottles from its own use() method, before any item use.
+HydrationForge.EVENT_BUS.addListener(HydrationPriority.HIGHEST, false,
+  Java.loadClass('net.minecraftforge.event.entity.player.PlayerInteractEvent$RightClickBlock'), event => {
+    if (event.getItemStack().id !== 'minecraft:glass_bottle') return;
+    if (hydrationDogWater(event.getLevel().getBlockState(event.getPos()).getBlock())) event.setCanceled(true);
+  });
+
+// Block both vanilla and Thirst's running-water path (waterlogged bowls/baths) before either consumes a glass bottle.
 HydrationForge.EVENT_BUS.addListener(HydrationPriority.HIGHEST, false,
   Java.loadClass('net.minecraftforge.event.entity.player.PlayerInteractEvent$RightClickItem'), event => {
     if (event.getItemStack().id !== 'minecraft:glass_bottle') return;
     const player = event.getEntity();
     const level = event.getLevel();
     const hit = HydrationMath.getPlayerPOVHitResult(level, player, HydrationClipFluid.ANY);
-    if (level.getBlockState(hit.getBlockPos()).getBlock() instanceof HydrationBowl) event.setCanceled(true);
+    if (hydrationDogWater(level.getBlockState(hit.getBlockPos()).getBlock())) event.setCanceled(true);
   });
