@@ -212,16 +212,20 @@ automatically; see the food coverage and meal rewards section below.
 Rebuild and redeploy after changing these lists; the
 image syncs the world server config into the persistent data volume.
 
-Dreamshift `0.2.2-hotfix` and The Bumblezone `7.15.2` are exceptions to Git storage:
-their large JARs are downloaded into `/mods` during the Docker build from pinned
-Modrinth version URLs in [`Dockerfile`](./Dockerfile). Each download is verified
-against its pinned SHA-256; a failed download or checksum mismatch fails the build.
-Local copies may remain in `mods/`, but are ignored by Git and excluded from the
-Docker build context. Bundled JARs and generated compatibility add-ons are copied
-from `mods/`; pinned downloads are added during image construction. Jenkins uses
-the same Docker build and needs no separate download step.
+The Bumblezone `7.15.2` is an exception to Git storage: its large JAR is
+downloaded into `/mods` during the Docker build from a pinned Modrinth version
+URL in [`Dockerfile`](./Dockerfile). The download is verified against its pinned
+SHA-256; a failed download or checksum mismatch fails the build. A local copy may
+remain in `mods/`, but is ignored by Git and excluded from the Docker build
+context. Bundled JARs and generated compatibility add-ons are copied from
+`mods/`; pinned downloads are added during image construction. Jenkins uses the
+same Docker build and needs no separate download step.
 
-To update either externally hosted mod, change its URL and SHA-256 in
+Dreamshift is no longer part of the pack. It bundles Immersive Portals, which
+crashes clients that have it when the server does not; remove
+`dreamshift-0.2.2-hotfix-forge.jar` from client `mods/` folders.
+
+To update an externally hosted mod, change its URL and SHA-256 in
 [`Dockerfile`](./Dockerfile) together, verifying the hash against the intended JAR.
 If its filename changes, update the matching `.gitignore` and `.dockerignore`
 entries too.

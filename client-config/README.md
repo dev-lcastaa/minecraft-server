@@ -14,8 +14,9 @@ For the Minecraft 1.20.1 Forge pack used by this server.
 4. Restart Minecraft. In **Options > Resource Packs**, enable **Butcher's Delight
    Refresh** above other packs that change Butcher textures, then connect to the server.
 
-Remove `weather2-1.20.1-2.8.3.jar` and the outdated duplicate
+Remove `weather2-1.20.1-2.8.3.jar`, `dreamshift-0.2.2-hotfix-forge.jar`, and the outdated duplicate
 `alexsmobs-1.22.9.jar` (keep Alex's Mobs 2.2.4) from the client `mods/` folder.
+Dreamshift bundles Immersive Portals and crashes clients connected to this server.
 Weather2 was removed from the server after profiling showed storm biome checks
 blocking the server thread on chunk loads. Its config overlay is no longer included.
 Keep CoroUtil: What Are They Up To and Zombie Awareness still require it.
