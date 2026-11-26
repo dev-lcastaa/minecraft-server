@@ -30,9 +30,10 @@ HydrationForge.EVENT_BUS.addListener(HydrationPriority.LOWEST, false,
       if (result.isEmpty() || !(hydrationPreparedDrink(result) || result.getItem() instanceof HydrationPotion)) continue;
       // Rhino binds const/let inside loop bodies once, so per-slot values must use var.
       // Vanilla mixing can replace the entire stack: merge old custom data, but let new Potion/effects win.
-      if (before !== null && before[slot].hasTag()) {
+      // KubeJS's kjs$hasTag(itemTag) shadows vanilla ItemStack.hasTag(), so test the NBT directly.
+      if (before !== null && before[slot].getTag() !== null) {
         var tag = before[slot].getTag().copy();
-        if (result.hasTag()) tag.merge(result.getTag());
+        if (result.getTag() !== null) tag.merge(result.getTag());
         result.setTag(tag);
       }
       result.getOrCreateTag().putInt('Purity', 3);

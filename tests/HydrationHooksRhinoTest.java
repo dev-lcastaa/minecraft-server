@@ -19,7 +19,14 @@ public class HydrationHooksRhinoTest {
         public Object get(String key) { return values.get(key); }
     }
 
-    public static final class Stack {
+    // Same shape as KubeJS's ItemStackKJS: kjs$hasTag(item tag) claims `hasTag`, and
+    // vanilla ItemStack.hasTag() is only reachable as m_41782_ on the server.
+    @RemapPrefixForJS("kjs$")
+    public interface ItemStackKJS {
+        default boolean kjs$hasTag(String itemTag) { return false; }
+    }
+
+    public static final class Stack implements ItemStackKJS {
         public final String id;
         public final boolean drink;
         private final Object item;
@@ -28,7 +35,7 @@ public class HydrationHooksRhinoTest {
         public boolean isEmpty() { return id.equals("minecraft:air"); }
         public String getUseAnimation() { return "NONE"; }
         public Object getItem() { return item; }
-        public boolean hasTag() { return tag != null; }
+        public boolean m_41782_() { return tag != null; }
         public Tag getTag() { return tag; }
         public void setTag(Tag tag) { this.tag = tag; }
         public Tag getOrCreateTag() { if (tag == null) tag = new Tag(); return tag; }
@@ -155,7 +162,7 @@ public class HydrationHooksRhinoTest {
             var post = make.brew(brewed, air, make.stack('minecraft:potion', false, make.potion));
             listeners['net.minecraftforge.event.brewing.PotionBrewEvent$Post'](post);
             if (brewed.getTag().get('Purity') != 3 || brewed.getTag().get('CustomData') != 7 ||
-                post.getItem(2).getTag().get('Purity') != 3 || air.hasTag()) {
+                post.getItem(2).getTag().get('Purity') != 3 || air.getTag() !== null) {
               throw Error('Brewing purity or tag preservation failed');
             }
             """, "hydration-fixture-assertions", 1, null);
