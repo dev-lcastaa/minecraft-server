@@ -3,10 +3,11 @@ const vm = require('vm')
 const assert = require('assert')
 const root = process.argv[2]
 const classes = {}
+const entityTypes = {}
 class Player {}
 class ItemEntity { constructor(level, x, y, z, item) { this.item = item } getItem() { return this.item } }
 classes['net.minecraftforge.registries.ForgeRegistries'] = {
-  ENTITY_TYPES: { getKey: type => type.id, getValues: () => [] }
+  ENTITY_TYPES: { getKey: type => type.id, getValue: location => entityTypes[location.id], getValues: () => [] }
 }
 classes['net.minecraft.tags.TagKey'] = { create: (registry, location) => location.id }
 classes['net.minecraft.core.registries.Registries'] = { ENTITY_TYPE: 'entities' }
@@ -42,9 +43,11 @@ function entity(id, ancestors, tags = [], mob = 'normal', roll = 0.9) {
   }))
   types.forEach((type, i) => type.getSuperclass = () => types[i + 1] || null)
   const type = {id, is: tag => tags.includes(tag), getWidth: () => 0.6}
+  entityTypes[id] = type
+  // Like KubeJS EntityKJS, getType() returns the registry id, not the vanilla EntityType.
   return {
     level: {isClientSide: () => false}, x: 0, y: 0, z: 0,
-    getClass: () => types[0], getType: () => type, getMobType: () => mob,
+    getClass: () => types[0], getType: () => id, getMobType: () => mob,
     getRandom: () => ({nextFloat: () => roll})
   }
 }

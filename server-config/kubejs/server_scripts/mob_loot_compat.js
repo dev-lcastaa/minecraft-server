@@ -9,10 +9,15 @@ var $MobLootArrows = Java.loadClass('net.mehvahdjukaar.supplementaries.common.it
 var mobLootTags = {}
 var mobLootMissing = {}
 
+// KubeJS's EntityKJS.kjs$getType() shadows vanilla Entity.getType() and returns the id string.
+function mobLootEntityType(entity) {
+  return $MobLootRegistries.ENTITY_TYPES.getValue(new $MobLootLocation(String(entity.getType())))
+}
+
 function mobLootTagged(entity, id) {
   if (!mobLootTags[id]) mobLootTags[id] = $MobLootTagKey.create(
     $MobLootRegistriesKeys.ENTITY_TYPE, new $MobLootLocation(id))
-  return entity.getType().is(mobLootTags[id])
+  return mobLootEntityType(entity).is(mobLootTags[id])
 }
 
 function mobLootAncestors(entity) {
@@ -25,7 +30,7 @@ function mobLootAncestors(entity) {
 }
 
 function mobLootBloodType(entity) {
-  var id = String($MobLootRegistries.ENTITY_TYPES.getKey(entity.getType()))
+  var id = String(entity.getType())
   var names = mobLootAncestors(entity)
   var mobType = String(entity.getMobType())
   if (mobLootTagged(entity, 'mob_loot_compat:bloodless') ||
@@ -60,7 +65,7 @@ function mobLootBloodType(entity) {
   if (names.indexOf('net.minecraft.world.entity.monster.piglin.AbstractPiglin') >= 0) return 3
   if (names.indexOf('net.minecraft.world.entity.animal.horse.AbstractHorse') >= 0) return 2
   if (names.indexOf('net.minecraft.world.entity.animal.Animal') >= 0) {
-    return entity.getType().getWidth() >= 1.4 ? 2 : 0
+    return mobLootEntityType(entity).getWidth() >= 1.4 ? 2 : 0
   }
   if (mobType === String($MobLootMobType.ARTHROPOD) ||
       names.indexOf('net.minecraft.world.entity.monster.Creeper') >= 0 ||
@@ -78,7 +83,7 @@ function mobLootBloodType(entity) {
 global.mobLootCompatDrops = event => {
   var entity = event.getEntity()
   if (entity.level.isClientSide()) return
-  var id = String($MobLootRegistries.ENTITY_TYPES.getKey(entity.getType()))
+  var id = String(entity.getType())
   var names = mobLootAncestors(entity)
   var drops = event.getDrops()
   if (names.indexOf('net.minecraft.world.entity.monster.AbstractSkeleton') >= 0) {

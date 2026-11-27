@@ -63,9 +63,17 @@ public class DamageSourceRhinoTest {
               this.item = item;
               this.getItem = function() { return this.item; };
             }
+            // KubeJS EntityKJS.getType() returns the id; the vanilla type comes from the registry.
+            var entityTypes = {
+              'example:bat': {id: 'example:bat',
+                is: function(tag) { return tag === 'mob_loot_compat:blood_winged'; }},
+              'minecraft:skeleton': {id: 'minecraft:skeleton', is: function(tag) { return false; }}
+            };
             var classes = {
               'net.minecraftforge.registries.ForgeRegistries': {
-                ENTITY_TYPES: {getKey: function(type) { return type.id; }, getValues: function() {
+                ENTITY_TYPES: {getKey: function(type) { return type.id; },
+                  getValue: function(location) { return entityTypes[location.id]; },
+                  getValues: function() {
                   return [{id: 'example:bat', create: function(level) {
                             if (level !== 'overworld-level') throw Error('wrong level');
                             return mob(false);
@@ -98,8 +106,7 @@ public class DamageSourceRhinoTest {
             var logged = {info: [], warn: []};
             var console = {warn: function(m) { logged.warn.push(m); }, info: function(m) { logged.info.push(m); }};
             function mob(skeleton) {
-              var type = {id: skeleton ? 'minecraft:skeleton' : 'example:bat',
-                is: function(tag) { return !skeleton && tag === 'mob_loot_compat:blood_winged'; }};
+              var id = skeleton ? 'minecraft:skeleton' : 'example:bat';
               var klass = {
                 getName: function() {
                   return skeleton ? 'net.minecraft.world.entity.monster.AbstractSkeleton' : 'example.Bat';
@@ -108,7 +115,7 @@ public class DamageSourceRhinoTest {
                 getSuperclass: function() { return null; }
               };
               return {level: {isClientSide: function() { return false; }}, x: 0, y: 0, z: 0,
-                getClass: function() { return klass; }, getType: function() { return type; },
+                getClass: function() { return klass; }, getType: function() { return id; },
                 getMobType: function() { return 'normal'; }};
             }
             function death(victim, source) {

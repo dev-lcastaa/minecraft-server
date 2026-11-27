@@ -104,6 +104,19 @@ class MobLootCompatTests(unittest.TestCase):
             self.assertIn("dev.latvian.mods.rhino.util.RemapForJS", match.group(1), method)
             self.assertIn(f'value="{alias}"', match.group(1), method)
 
+    def test_installed_kubejs_entity_type_is_an_id(self):
+        # The script resolves the vanilla EntityType from the registry because of this shadowing.
+        java = shutil.which("java")
+        self.assertTrue(java, "Java is required for KubeJS entity mapping verification")
+        result = subprocess.run(
+            [java, "-m", "jdk.jdeps/com.sun.tools.javap.Main", "-p",
+             "-classpath", str(ROOT / "mods/kubejs-forge-2001.6.5-build.26.jar"),
+             "dev.latvian.mods.kubejs.core.EntityKJS"],
+            cwd=ROOT, capture_output=True, text=True,
+        )
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        self.assertIn("public default java.lang.String kjs$getType();", result.stdout)
+
     def test_actual_rhino_damage_source_gameplay(self):
         classpath = os.environ.get("MOB_LOOT_RHINO_TEST_CLASSPATH")
         if not classpath:

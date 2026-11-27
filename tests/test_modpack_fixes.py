@@ -167,6 +167,45 @@ class ModpackFixesTest(unittest.TestCase):
             remover = jar.read("data/dynamiclights/functions/internal/remove_light.mcfunction").decode()
         self.assertIn("minecraft:air replace minecraft:light", remover)
 
+    def test_dynamic_lights_scan_limited_to_nearby_entities(self):
+        functions = "data/dynamiclights/functions/internal/"
+        with mod_jar("dynamiclights-") as jar:
+            original = jar.read(functions + "main.mcfunction").decode().splitlines()
+            main_exec = jar.read(functions + "main_exec.mcfunction").decode()
+        # The range check this override relies on must still be in main_exec.
+        self.assertIn("if entity @p[gamemode=!spectator,distance=..55] run function "
+                      "dynamiclights:internal/main_exec_pass", main_exec)
+        scan = [line for line in original if "run function dynamiclights:internal/main_exec" in line
+                and "as @e[" in line]
+        self.assertEqual(len(scan), 1)
+        guard = "execute if score $enable ts.dl.settings matches 1..2 unless score $global ts.dl.tnt.fuse matches 1 "
+        self.assertTrue(scan[0].startswith(guard + "as @e["))
+        selector = re.search(r"@e\[([^\]]*),limit=1000\]", scan[0]).group(1)
+
+        override = (DATA / "dynamiclights/functions/internal/main.mcfunction").read_text().splitlines()
+        code = [line for line in override if line and not line.startswith("#")]
+        expected = [line for line in original if line and not line.startswith("#")]
+        index = expected.index(scan[0])
+        expected[index:index + 1] = [
+            guard + "if score $unlimited ts.dl.settings matches 1..2 " + scan[0][len(guard):],
+            guard + "unless score $unlimited ts.dl.settings matches 1..2 run function "
+                    "serverfixes:dynamic_lights/limited",
+        ]
+        self.assertEqual(code, expected)
+
+        limited = (DATA / "serverfixes/functions/dynamic_lights/limited.mcfunction").read_text()
+        tagging = [line for line in limited.splitlines() if " add ts.dl.near" in line]
+        self.assertEqual(len(tagging), 2)
+        for line in tagging:
+            self.assertIn("as @a[gamemode=!spectator] at @s run tag @e[" + selector + ",", line)
+            self.assertIn("distance=..55,limit=1000]", line)
+        self.assertIn("type=!minecraft:ghast", tagging[0])
+        self.assertNotIn("minecraft:ghast", tagging[1])
+        process = (DATA / "serverfixes/functions/dynamic_lights/process.mcfunction").read_text()
+        self.assertIn("execute if entity @s[tag=ts.dl.near] run function dynamiclights:internal/main_exec",
+                      process)
+        self.assertIn("tag @s remove ts.dl.near", process)
+
     def test_image_includes_fixes(self):
         dockerfile = (ROOT / "Dockerfile").read_text()
         self.assertIn("COPY server-config/new-world/datapacks/ /config/new-world/datapacks/", dockerfile)
