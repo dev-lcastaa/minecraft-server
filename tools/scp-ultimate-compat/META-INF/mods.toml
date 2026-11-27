@@ -1,0 +1,26 @@
+modLoader="lowcodefml"
+loaderVersion="[47,48)"
+license="MIT"
+[[mods]]
+modId="scp_ultimate_compat"
+version="1.0.0"
+displayName="SCP Ultimate Sync Compatibility"
+description="Stops SCP-250's day/night flag from re-broadcasting SCP Ultimate's global variables every dimension tick."
+[[dependencies.scp_ultimate_compat]]
+modId="forge"
+mandatory=true
+versionRange="[47,48)"
+ordering="NONE"
+side="BOTH"
+[[dependencies.scp_ultimate_compat]]
+modId="scp_ultimate"
+mandatory=true
+versionRange="[1.2.2]"
+ordering="AFTER"
+side="BOTH"
+[[dependencies.scp_ultimate_compat]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.20.1,1.20.2)"
+ordering="NONE"
+side="BOTH"

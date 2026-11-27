@@ -909,6 +909,18 @@ preventing old serialized pages from reappearing after items are removed.
 Existing inventory data and the native 180-to-360-slot migration are retained;
 no inventory-clearing workaround is used.
 
+#### SCP Ultimate variable sync
+
+[`scp-ultimate-compat`](./tools/scp-ultimate-compat/) fixes SCP-250's day/night
+check. SCP Ultimate ran it at the end of every dimension tick, re-sending all of
+its global variables to every player each time. With 83 dimensions that was
+about 1,600 packets per second per player, and the shared flag flipped between
+dimensions so SCP-250's sleep state followed whichever dimension ticked last.
+The server now follows only the overworld's day/night and syncs when it changes;
+client-side behavior is unchanged. Rebuild with
+`python3 tools/scp-ultimate-compat/build.py`; the JAR is pinned to SCP Ultimate
+1.2.2 and refuses to patch a changed procedure.
+
 #### Mob loot and sickle blood
 
 [`mob-loot-compat`](./tools/mob-loot-compat/) adds player-kill drops:
@@ -980,7 +992,8 @@ Run `PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests -v`.
 Bytecode fixtures additionally require local Nashorn Core and ASM JARs:
 set `CRAVINGS_TEST_CLASSPATH`, `LUNCH_BASKET_TEST_CLASSPATH`,
 `HYDRATION_TEST_CLASSPATH`, `INVENTORY_CARCASS_TEST_CLASSPATH`,
-`JADE_SEASONS_TEST_CLASSPATH`, and `MOB_LOOT_TEST_CLASSPATH` to that classpath.
+`JADE_SEASONS_TEST_CLASSPATH`, `MOB_LOOT_TEST_CLASSPATH`, and
+`SCP_ULTIMATE_TEST_CLASSPATH` to that classpath (Nashorn also needs ASM Commons).
 To exercise the mob-loot handler with the installed Rhino engine, set
 `MOB_LOOT_RHINO_TEST_CLASSPATH` to a classpath containing Gson 2.10.1 and
 Commons Lang 3.12.0. Set `COOKING_RHINO_TEST_CLASSPATH` to the same classpath

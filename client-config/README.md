@@ -151,6 +151,9 @@ hooks, custom juice fluids, or carcass stack sizes.
   fights, Peaceful, Horde, Baby Horde, Ender shulkers). Servers need it;
   clients only need it for singleplayer. Delete the old
   `kubejs/server_scripts/lunar_events_compat.js` if present.
+- `mods/scp-ultimate-compat-1.20.1-1.0.0.jar` stops SCP Ultimate from
+  re-sending its global variables every dimension tick. Servers need it;
+  clients only need it for singleplayer.
 - Extra lunar events need `kubejs/assets/lunar_events_compat/lang/en_us.json`
   and `kubejs/assets/enhancedcelestials2defaultlunarevents/lang/en_us.json` for
   moon names and rise/set messages; without them clients show raw text keys.
