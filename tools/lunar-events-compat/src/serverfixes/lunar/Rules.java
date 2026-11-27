@@ -47,4 +47,17 @@ public final class Rules {
     public static boolean isChaos(String moon) {
         return CHAOS.equals(moon);
     }
+
+    /**
+     * Day time as Enhanced Celestials should see it: Ecliptic Seasons' solar time (vanilla-equivalent time of day,
+     * sunset at 12000 and sunrise at 0) on the day whose night is in progress, so EC2's fixed 12500-23999 window
+     * follows the seasonal sunset and sunrise.
+     */
+    public static long seasonalDayTime(long dayTime, int solarTime) {
+        long base = dayTime - Math.floorMod(dayTime, 24000L);
+        long timeOfDay = dayTime - base;
+        if (timeOfDay < 12000L && solarTime >= 18000) base -= 24000L; // long night continues past tick 24000
+        else if (timeOfDay >= 12000L && solarTime < 6000) base += 24000L; // short night ended before tick 24000
+        return base + solarTime;
+    }
 }

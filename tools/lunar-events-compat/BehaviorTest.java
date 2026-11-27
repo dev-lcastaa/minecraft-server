@@ -16,6 +16,13 @@ class BehaviorTest {
             "Ender shulkers only in the dark");
         check(Rules.isChaos(Rules.CHAOS) && !Rules.isChaos(Rules.HORDE), "Chaos detection");
         check(Rules.CHAOS_PLAYER_CHANCE < 0.5F, "Chaos mobs mostly fight each other");
+        long day = 10 * 24000L;
+        check(Rules.seasonalDayTime(day + 18000, 18000) == day + 18000, "Midnight is unchanged");
+        check(Rules.seasonalDayTime(day + 13000, 11600) == day + 11600, "Summer: no moon before the late sunset");
+        check(Rules.seasonalDayTime(day + 23000, 400) == day + 24400, "Summer: moon gone after the early sunrise");
+        check(Rules.seasonalDayTime(day + 11000, 12400) == day + 12400, "Winter: night starts at the early sunset");
+        check(Rules.seasonalDayTime(day + 24000 + 1000, 23600) == day + 23600, "Winter: night continues past tick 24000");
+        check(Rules.seasonalDayTime(day + 24000 + 2000, 300) == day + 24300, "Winter: next morning after sunrise");
         System.out.println("Lunar rules behave as specified");
     }
 }

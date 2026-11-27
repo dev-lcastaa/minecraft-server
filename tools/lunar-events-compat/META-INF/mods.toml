@@ -5,8 +5,8 @@ license="MIT"
 modId="lunar_events_compat"
 version="1.0.0"
 displayName="Lunar Events Compatibility"
-description="Server-side gameplay for the lunar-events-compat moons: Chaos fights, Peaceful spawn blocking, Horde buffs, Baby Horde, Ender Moon shulkers."
-# Server-side only: clients without it can still join.
+description="Gameplay for the lunar-events-compat moons (Chaos fights, Peaceful spawn blocking, Horde buffs, Baby Horde, Ender Moon shulkers) and moon nights that follow Ecliptic Seasons' sunset and sunrise."
+# Clients without it can still join; their moon sky then uses the unseasonal night window.
 displayTest="IGNORE_ALL_VERSION"
 [[dependencies.lunar_events_compat]]
 modId="minecraft"
@@ -19,4 +19,10 @@ modId="enhancedcelestials2core"
 mandatory=true
 versionRange="[1.0.3,1.1)"
 ordering="AFTER"
+side="BOTH"
+[[dependencies.lunar_events_compat]]
+modId="eclipticseasons"
+mandatory=true
+versionRange="[0.15,)"
+ordering="NONE"
 side="BOTH"

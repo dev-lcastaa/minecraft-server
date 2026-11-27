@@ -18,7 +18,7 @@ PACK = ROOT / "server-config/new-world/datapacks/lunar-events-compat"
 CLIENT_ASSETS = ROOT / "client-config/kubejs/assets"
 JAR_NAME = "lunar-events-compat-1.20.1-1.0.0.jar"
 API_JARS = ("Enhanced-Celestials-2-Core-Forge-1.20.1-1.0.3.4.jar", "Data_Anchor-forge-1.20.1-1.0.0.24.jar",
-            "Corgilib-Forge-1.20.1-4.0.3.6.jar")
+            "Corgilib-Forge-1.20.1-4.0.3.6.jar", "Ecliptic-Seasons-1.20.1-forge-0.15.5-all.jar")
 NS = "lunar_events_compat"
 DEFAULTS = "enhancedcelestials2defaultlunarevents"
 CORE = "enhancedcelestials2core"
@@ -349,7 +349,8 @@ def build_jar():
     work.mkdir()
     try:
         compile_to(work)
-        entries = {p.relative_to(SOURCE).as_posix(): p.read_bytes() for p in (SOURCE / "META-INF").rglob("*") if p.is_file()}
+        entries = {p.relative_to(SOURCE).as_posix(): p.read_bytes()
+                   for folder in ("META-INF", "coremods") for p in (SOURCE / folder).rglob("*") if p.is_file()}
         entries["pack.mcmeta"] = (SOURCE / "pack.mcmeta").read_bytes()
         entries.update({p.relative_to(work).as_posix(): p.read_bytes() for p in (work / "serverfixes").rglob("*.class")})
         with ZipFile(ROOT / "mods" / JAR_NAME, "w", compression=ZIP_DEFLATED) as jar:
@@ -360,7 +361,7 @@ def build_jar():
                 jar.writestr(info, data)
     finally:
         shutil.rmtree(work)
-    # Mirrored like every *_compat add-on; on clients it only matters for singleplayer worlds.
+    # Mirrored like every *_compat add-on; clients need it for seasonal moon timing (sky blend and fades).
     (ROOT / "client-config/mods" / JAR_NAME).write_bytes((ROOT / "mods" / JAR_NAME).read_bytes())
 
 

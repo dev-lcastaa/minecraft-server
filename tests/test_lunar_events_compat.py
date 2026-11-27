@@ -256,6 +256,24 @@ class LunarEventsCompatTest(unittest.TestCase):
         finally:
             shutil.rmtree(work)
 
+    def test_moon_night_follows_seasonal_sunset_and_sunrise(self):
+        with ZipFile(MOD_JAR) as mod:
+            self.assertEqual(json.loads(mod.read("META-INF/coremods.json")),
+                             {"seasonal_moon_night": "coremods/seasonal_moon_night.js"})
+            self.assertEqual(mod.read("coremods/seasonal_moon_night.js"),
+                             (SOURCE / "coremods/seasonal_moon_night.js").read_bytes())
+            self.assertIn("serverfixes/lunar/LunarClock.class", mod.namelist())
+        classpath = os.environ.get("LUNAR_EVENTS_TEST_CLASSPATH")
+        if not classpath:
+            self.skipTest("Set LUNAR_EVENTS_TEST_CLASSPATH to Nashorn and ASM JARs for bytecode execution")
+        result = subprocess.run(
+            ["java", "-cp", classpath, str(ROOT / "tests/LunarClockCoremodTest.java"),
+             str(SOURCE / "coremods/seasonal_moon_night.js"),
+             str(ROOT / "mods/Enhanced-Celestials-2-Core-Forge-1.20.1-1.0.3.4.jar")],
+            cwd=ROOT, capture_output=True, text=True)
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        self.assertIn("Seasonal moon night coremod tests passed", result.stdout)
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -900,6 +900,18 @@ than the stock Blood, Blue and Harvest Moons, and Peaceful and Miner's nights
 never block sleep. Clients need the `client-config/kubejs/assets` language files
 for moon names and messages.
 
+Moon nights follow the season. Enhanced Celestials 2 always runs a moon from day
+tick 12500 to 23999, but Ecliptic Seasons' `DynamicDaylightDuration` moves sunset
+and sunrise (summer sunset about tick 13500 and sunrise 22500; winter sunset 10500
+and sunrise 1500 the next day), and Better Days makes each offset three times
+longer in real time. So summer moons rose about 2.5 minutes before sunset and stayed
+about 4 minutes into the morning, while winter moons rose about 5 minutes after dark
+and set about 4 minutes before dawn. The `seasonal_moon_night` coremod in the same
+JAR makes `LunarForecast` read Ecliptic Seasons' solar time instead of the raw day
+time, so moons rise just after sunset and end at sunrise. Clients need the JAR too,
+otherwise their moon sky and fades keep the old window. The EC2 debug overlay
+still shows the real day time.
+
 After deploying, restart the server and run `/ec lunarForecast recompute` so
 already-scheduled years include the new moons. Test with
 `/ec setLunarEvent lunar_events_compat:<id>` and
@@ -1000,8 +1012,8 @@ Run `PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests -v`.
 Bytecode fixtures additionally require local Nashorn Core and ASM JARs:
 set `CRAVINGS_TEST_CLASSPATH`, `LUNCH_BASKET_TEST_CLASSPATH`,
 `HYDRATION_TEST_CLASSPATH`, `INVENTORY_CARCASS_TEST_CLASSPATH`,
-`JADE_SEASONS_TEST_CLASSPATH`, `MOB_LOOT_TEST_CLASSPATH`, and
-`SCP_ULTIMATE_TEST_CLASSPATH` to that classpath (Nashorn also needs ASM Commons).
+`JADE_SEASONS_TEST_CLASSPATH`, `MOB_LOOT_TEST_CLASSPATH`,
+`SCP_ULTIMATE_TEST_CLASSPATH`, and `LUNAR_EVENTS_TEST_CLASSPATH` to that classpath (Nashorn also needs ASM Commons).
 To exercise the mob-loot handler with the installed Rhino engine, set
 `MOB_LOOT_RHINO_TEST_CLASSPATH` to a classpath containing Gson 2.10.1 and
 Commons Lang 3.12.0. Set `COOKING_RHINO_TEST_CLASSPATH` to the same classpath

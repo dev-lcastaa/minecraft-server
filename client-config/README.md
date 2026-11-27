@@ -148,8 +148,9 @@ hooks, custom juice fluids, or carcass stack sizes.
   "Error rendering tooltip" on an empty kettle tank and "Error Rendering" recipe
   pages such as Brewing.
 - `mods/lunar-events-compat-1.20.1-1.0.0.jar` runs the moon gameplay (Chaos
-  fights, Peaceful, Horde, Baby Horde, Ender shulkers). Servers need it;
-  clients only need it for singleplayer. Delete the old
+  fights, Peaceful, Horde, Baby Horde, Ender shulkers) and makes moons rise at
+  the seasonal sunset and end at sunrise. Servers and clients both need it;
+  without it a client's moon sky keeps vanilla night times. Delete the old
   `kubejs/server_scripts/lunar_events_compat.js` if present.
 - `mods/scp-ultimate-compat-1.20.1-1.0.0.jar` stops SCP Ultimate from
   re-sending its global variables every dimension tick. Servers need it;
