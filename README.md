@@ -330,6 +330,9 @@ the effective JVM flags after deployment because the image may select different
 settings at its 12 GiB large-heap threshold. Heap sizing stays controlled by
 `MEMORY`; do not add duplicate `-Xms`/`-Xmx` arguments or combine this preset with
 MeowIce's flags or another garbage collector.
+`JVM_XX_OPTS` adds `-XX:+UseTransparentHugePages`, backing the heap with 2 MiB
+pages through the host's `madvise` transparent huge page mode to reduce TLB
+misses; check that it appears in `/data/user_jvm_args.txt` after deployment.
 `JAVA_TOOL_OPTIONS` enables bounded GC and safepoint logs at
 `/data/logs/gc.log` (five rotated files, up to 20 MiB each) to correlate pauses
 with slow ticks.
@@ -350,6 +353,11 @@ The November 3 hardware check of `node004` reported an Intel Core i7-4790
 OptiPlex 3090 configuration. The 16 GiB container limit leaves roughly
 7 GiB for the host, with 4 GiB inside the container for non-heap allocations.
 GC thread counts remain JVM-managed rather than hardcoded to a CPU model.
+The November 27 check found the four DIMMs (2×8 GiB + 2×4 GiB DDR3-1600) in
+symmetric dual-channel (12 GiB per channel) and no thermal throttling. The host
+runs a persistent `cpu-performance.service` (performance CPU governor) and
+`vm.swappiness=10` (`/etc/sysctl.d/90-minecraft-swappiness.conf`) to cut
+clock ramp-up latency and keep the heap out of swap.
 This is a tuning trial, not a guarantee of improved tick times. Compare the same
 two-player base and exploration workloads against the previous configuration.
 Monitor post-GC heap, GC pauses, tick times, and container memory for at least
