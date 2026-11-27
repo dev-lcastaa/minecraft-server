@@ -1,0 +1,19 @@
+{
+  "required_mods": [
+    "planetsplus"
+  ],
+  "dimensions": [
+    "planetsplus:atmas",
+    "planetsplus:charon",
+    "planetsplus:diater",
+    "planetsplus:enceladus",
+    "planetsplus:ganymede",
+    "planetsplus:iapetus",
+    "planetsplus:io",
+    "planetsplus:pluto",
+    "planetsplus:ringetic"
+  ],
+  "min_temp": -25,
+  "max_temp": 10,
+  "units": "f"
+}

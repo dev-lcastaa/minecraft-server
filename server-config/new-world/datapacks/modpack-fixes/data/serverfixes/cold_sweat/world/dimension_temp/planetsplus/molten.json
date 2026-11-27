@@ -1,0 +1,12 @@
+{
+  "required_mods": [
+    "planetsplus"
+  ],
+  "dimensions": [
+    "planetsplus:sorea",
+    "planetsplus:vulcan"
+  ],
+  "min_temp": 150,
+  "max_temp": 175,
+  "units": "f"
+}

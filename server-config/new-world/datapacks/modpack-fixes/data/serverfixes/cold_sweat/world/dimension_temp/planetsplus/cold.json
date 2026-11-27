@@ -1,0 +1,14 @@
+{
+  "required_mods": [
+    "planetsplus"
+  ],
+  "dimensions": [
+    "planetsplus:dread",
+    "planetsplus:dytiona",
+    "planetsplus:evedva",
+    "planetsplus:reveda"
+  ],
+  "min_temp": 0,
+  "max_temp": 40,
+  "units": "f"
+}

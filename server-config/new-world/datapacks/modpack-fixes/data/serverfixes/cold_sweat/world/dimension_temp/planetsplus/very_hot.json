@@ -1,0 +1,13 @@
+{
+  "required_mods": [
+    "planetsplus"
+  ],
+  "dimensions": [
+    "planetsplus:flade",
+    "planetsplus:molvon",
+    "planetsplus:soulfer"
+  ],
+  "min_temp": 110,
+  "max_temp": 155,
+  "units": "f"
+}

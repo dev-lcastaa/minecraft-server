@@ -1,0 +1,11 @@
+{
+  "required_mods": [
+    "planetsplus"
+  ],
+  "dimensions": [
+    "planetsplus:fierer"
+  ],
+  "min_temp": 130,
+  "max_temp": 165,
+  "units": "f"
+}

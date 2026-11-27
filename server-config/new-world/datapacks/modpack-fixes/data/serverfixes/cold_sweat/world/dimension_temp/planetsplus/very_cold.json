@@ -1,0 +1,15 @@
+{
+  "required_mods": [
+    "planetsplus"
+  ],
+  "dimensions": [
+    "planetsplus:callisto",
+    "planetsplus:eclipsa",
+    "planetsplus:europa",
+    "planetsplus:jada",
+    "planetsplus:titan"
+  ],
+  "min_temp": -15,
+  "max_temp": 25,
+  "units": "f"
+}

@@ -1,6 +1,6 @@
 {
   "pack": {
     "pack_format": 15,
-    "description": "Server fixes: bone meal recipe, Mutant More trader crash, knife/cleaver organ drops, Graveyard corrupted illager loot, Alex's Mobs / vanilla spawn balance, stray Dynamic Lights cleanup, nearby-only Dynamic Lights entity scan, livable Bumblezone temperature"
+    "description": "Server fixes: bone meal recipe, Mutant More trader crash, knife/cleaver organ drops, Graveyard corrupted illager loot, Alex's Mobs / vanilla spawn balance, stray Dynamic Lights cleanup, nearby-only Dynamic Lights entity scan, livable Bumblezone temperature, survivable space dimension temperatures"
   }
 }

@@ -1,0 +1,12 @@
+{
+  "required_mods": [
+    "planetsplus"
+  ],
+  "dimensions": [
+    "planetsplus:dune",
+    "planetsplus:mixeus"
+  ],
+  "min_temp": 95,
+  "max_temp": 130,
+  "units": "f"
+}

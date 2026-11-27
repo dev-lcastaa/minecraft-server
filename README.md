@@ -871,9 +871,37 @@ Bumblezone biomes use vanilla temperature 1.85, so Cold Sweat treated the
 whole hive like a desert at noon: 115 °F, above its 100 °F damage threshold.
 The Bumblezone is always noon, so it never cooled down. `modpack-fixes` sets
 every biome in `#the_bumblezone:the_bumblezone` to a constant 80 °F, which is
-warm but safe. The Nether, Ad Astra and Planets+ heat is unchanged. Cold Sweat
-loads these files as datapack registries, so changes need a server restart, not
-`/reload`.
+warm but safe. The Nether heat is unchanged. Cold Sweat loads these files as
+datapack registries, so changes need a server restart, not `/reload`.
+
+#### Space dimension temperatures
+
+Planets+ has no Cold Sweat data, so its planets used their biome temperatures:
+Pluto was 77 °F and Vulcan up to 257 °F. Cold Sweat's own Ad Astra values are
+literal: Venus about 940 °F and orbits about −430 °F. Both are lethal even in a
+space suit, because a suit with oxygen only pulls the felt temperature 75% of the
+way toward neutral (about 75 °F). `modpack-fixes` sets absolute day/night ranges
+in `cold_sweat/world/dimension_temp/<mod>/` from each body's official Ad Astra
+planet temperature:
+
+| Official °C | World °F (night–day) | Dimensions |
+| --- | --- | --- |
+| orbit | −20 | every Ad Astra and Planets+ orbit, including `moon_orbit` |
+| ≤ −150 | −25 to 10 | Atmas, Charon, Diater, Enceladus, Ganymede, Iapetus, Io, Pluto, Ringetic |
+| ≤ −100 | −15 to 25 | Callisto, Eclipsa, Europa, Jada, Titan |
+| ≤ −50 | 0 to 40 | Dread, Dytiona, Evedva, Reveda |
+| < 0 | 15 to 50 | Glacio (breathable), Galia, Glacies |
+| < 100 | 45 to 75 | Vonic |
+| < 150 | 95 to 130 | Dune, Mixeus |
+| < 300 | 110 to 155 | Flade, Molvon, Soulfer |
+| < 500 | 130 to 165 | Venus, Fierer |
+| ≥ 500 | 150 to 175 | Sorea, Vulcan |
+| 167 | −20 to 170 | Mercury (airless day/night swing) |
+
+Everything stays within −25 to 175 °F, which a suited player feels as 50–100 °F,
+and the airless bodies are still deadly without a suit. Cold Sweat's Moon and
+Mars offsets were already in that range and are unchanged. These files also need
+a server restart.
 
 #### Dynamic Lights performance
 

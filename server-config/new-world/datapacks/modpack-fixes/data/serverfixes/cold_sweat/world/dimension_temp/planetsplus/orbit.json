@@ -1,0 +1,35 @@
+{
+  "required_mods": [
+    "planetsplus"
+  ],
+  "dimensions": [
+    "planetsplus:atmas_orbit",
+    "planetsplus:diater_orbit",
+    "planetsplus:charon_orbit",
+    "planetsplus:dread_orbit",
+    "planetsplus:dune_orbit",
+    "planetsplus:dytiona_orbit",
+    "planetsplus:eclipsa_orbit",
+    "planetsplus:enceladus_orbit",
+    "planetsplus:europa_orbit",
+    "planetsplus:evedva_orbit",
+    "planetsplus:fierer_orbit",
+    "planetsplus:flade_orbit",
+    "planetsplus:galia_orbit",
+    "planetsplus:ganymede_orbit",
+    "planetsplus:glacies_orbit",
+    "planetsplus:iapetus_orbit",
+    "planetsplus:io_orbit",
+    "planetsplus:jada_orbit",
+    "planetsplus:mixeus_orbit",
+    "planetsplus:molvon_orbit",
+    "planetsplus:pluto_orbit",
+    "planetsplus:ringetic_orbit",
+    "planetsplus:sorea_orbit",
+    "planetsplus:soulfer_orbit",
+    "planetsplus:titan_orbit",
+    "planetsplus:vulcan_orbit"
+  ],
+  "temperature": -20,
+  "units": "f"
+}

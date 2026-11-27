@@ -1,0 +1,12 @@
+{
+  "required_mods": [
+    "planetsplus"
+  ],
+  "dimensions": [
+    "planetsplus:galia",
+    "planetsplus:glacies"
+  ],
+  "min_temp": 15,
+  "max_temp": 50,
+  "units": "f"
+}

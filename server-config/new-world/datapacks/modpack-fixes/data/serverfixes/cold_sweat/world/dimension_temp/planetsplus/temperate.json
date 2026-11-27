@@ -1,0 +1,11 @@
+{
+  "required_mods": [
+    "planetsplus"
+  ],
+  "dimensions": [
+    "planetsplus:vonic"
+  ],
+  "min_temp": 45,
+  "max_temp": 75,
+  "units": "f"
+}

@@ -224,6 +224,51 @@ class ModpackFixesTest(unittest.TestCase):
             self.assertIn("data/cold_sweat/cold_sweat/world/dimension_temp/adastra/venus.json",
                           jar.namelist())
 
+    def test_space_dimension_temperatures_follow_planet_data(self):
+        # Without oxygen, a suited player feels the world 75% blended toward ~75 °F, so world
+        # temperatures in [-25, 175] °F stay survivable in a suit but not without one.
+        official, types = {}, {}
+        for prefix in ("ad_astra-", "planets+-bv"):
+            with mod_jar(prefix) as jar:
+                for name in jar.namelist():
+                    if re.fullmatch(r"data/[a-z_]+/planets/[a-z_]+\.json", name):
+                        planet = json.loads(jar.read(name))
+                        official[planet["dimension"]] = planet["temperature"]
+                    match = re.fullmatch(r"data/([a-z_]+)/dimension/([a-z_]+)\.json", name)
+                    if match:
+                        types[f"{match[1]}:{match[2]}"] = json.loads(jar.read(name))["type"]
+        ranges = {}
+        for path in (DATA / "serverfixes/cold_sweat/world/dimension_temp").rglob("*.json"):
+            data = json.loads(path.read_text())
+            self.assertEqual(data["units"], "f")
+            self.assertFalse(data.get("is_offset", False))
+            self.assertEqual(data["required_mods"], [path.parent.name])
+            low = data.get("min_temp", data.get("temperature"))
+            high = data.get("max_temp", data.get("temperature"))
+            for dimension_type in data["dimensions"]:
+                self.assertTrue(dimension_type.startswith(path.parent.name + ":"))
+                self.assertNotIn(dimension_type, ranges)
+                ranges[dimension_type] = (low, high)
+        # Cold Sweat's own Moon and Mars offsets are already playable and stay as they are.
+        kept = {"minecraft:overworld", "ad_astra:moon", "ad_astra:mars"}
+        planets = {}
+        for dimension, celsius in official.items():
+            if dimension in kept:
+                self.assertNotIn(types.get(dimension), ranges)
+                continue
+            with self.subTest(dimension=dimension):
+                low, high = ranges[types[dimension]]
+                self.assertTrue(-25 <= low <= high <= 175)
+                self.assertTrue(low < 50 or high > 100)
+                if dimension.endswith("_orbit"):
+                    self.assertEqual((low, high), ranges["ad_astra:earth_orbit"])
+                elif dimension != "ad_astra:mercury":  # airless day/night swing
+
+                    planets[dimension] = (celsius, low, high)
+        ordered = sorted(planets.values())
+        for colder, warmer in zip(ordered, ordered[1:]):
+            self.assertLessEqual(colder[2], warmer[2])
+
     def test_image_includes_fixes(self):
         dockerfile = (ROOT / "Dockerfile").read_text()
         self.assertIn("COPY server-config/new-world/datapacks/ /config/new-world/datapacks/", dockerfile)
