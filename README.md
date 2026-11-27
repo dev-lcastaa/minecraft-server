@@ -865,6 +865,16 @@ them, stand near the area as an op and run
 placed on purpose are also removed. To remove the mod entirely, run
 `/function dynamiclights:uninstall` before deleting its JAR.
 
+#### Bumblezone temperature
+
+Bumblezone biomes use vanilla temperature 1.85, so Cold Sweat treated the
+whole hive like a desert at noon: 115 °F, above its 100 °F damage threshold.
+The Bumblezone is always noon, so it never cooled down. `modpack-fixes` sets
+every biome in `#the_bumblezone:the_bumblezone` to a constant 80 °F, which is
+warm but safe. The Nether, Ad Astra and Planets+ heat is unchanged. Cold Sweat
+loads these files as datapack registries, so changes need a server restart, not
+`/reload`.
+
 #### Dynamic Lights performance
 
 Each tick, Dynamic Lights normally runs its per-entity function for every

@@ -206,6 +206,24 @@ class ModpackFixesTest(unittest.TestCase):
                       process)
         self.assertIn("tag @s remove ts.dl.near", process)
 
+    def test_bumblezone_is_warm_not_lethal(self):
+        # Bumblezone biomes are vanilla temperature 1.85, which Cold Sweat reads as 115 °F,
+        # above the 100 °F maximum habitable temperature.
+        data = load("serverfixes/cold_sweat/world/biome_temp/bumblezone.json")
+        self.assertEqual(data["biomes"], ["#the_bumblezone:the_bumblezone"])
+        self.assertEqual(data["units"], "f")
+        self.assertTrue(70 <= data["temperature"] < 100)
+        self.assertEqual(data["required_mods"], ["the_bumblezone"])
+        with mod_jar("the_bumblezone-") as jar:
+            tag = json.loads(jar.read("data/the_bumblezone/tags/worldgen/biome/the_bumblezone.json"))
+            biomes = {name[len("data/the_bumblezone/worldgen/biome/"):-len(".json")]
+                      for name in jar.namelist()
+                      if re.fullmatch(r"data/the_bumblezone/worldgen/biome/[a-z_]+\.json", name)}
+        self.assertEqual(set(tag["values"]), {"the_bumblezone:" + biome for biome in biomes})
+        with mod_jar("ColdSweat-") as jar:
+            self.assertIn("data/cold_sweat/cold_sweat/world/dimension_temp/adastra/venus.json",
+                          jar.namelist())
+
     def test_image_includes_fixes(self):
         dockerfile = (ROOT / "Dockerfile").read_text()
         self.assertIn("COPY server-config/new-world/datapacks/ /config/new-world/datapacks/", dockerfile)

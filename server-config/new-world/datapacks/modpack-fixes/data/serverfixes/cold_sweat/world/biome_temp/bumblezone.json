@@ -1,0 +1,6 @@
+{
+  "required_mods": ["the_bumblezone"],
+  "biomes": ["#the_bumblezone:the_bumblezone"],
+  "temperature": 80,
+  "units": "f"
+}
