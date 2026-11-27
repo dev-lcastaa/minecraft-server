@@ -889,7 +889,7 @@ planet temperature:
 | orbit | −20 | every Ad Astra and Planets+ orbit, including `moon_orbit` |
 | ≤ −150 | −25 to 10 | Atmas, Charon, Diater, Enceladus, Ganymede, Iapetus, Io, Pluto, Ringetic |
 | ≤ −100 | −15 to 25 | Callisto, Eclipsa, Europa, Jada, Titan |
-| ≤ −50 | 0 to 40 | Dread, Dytiona, Evedva, Reveda |
+| ≤ −50 | 0 to 40 | Mars, Dread, Dytiona, Evedva, Reveda |
 | < 0 | 15 to 50 | Glacio (breathable), Galia, Glacies |
 | < 100 | 45 to 75 | Vonic |
 | < 150 | 95 to 130 | Dune, Mixeus |
@@ -899,9 +899,11 @@ planet temperature:
 | 167 | −20 to 170 | Mercury (airless day/night swing) |
 
 Everything stays within −25 to 175 °F, which a suited player feels as 50–100 °F,
-and the airless bodies are still deadly without a suit. Cold Sweat's Moon and
-Mars offsets were already in that range and are unchanged. These files also need
-a server restart.
+and the airless bodies are still deadly without a suit. Cold Sweat only gives
+Mars a −10 °F offset on its biomes, so the wastelands and canyons ran about
+35–80 °F (comfortable despite −65 °C) and the polar caps about −21 to 2 °F; it
+now uses the same band as the other ≤ −50 °C bodies. Cold Sweat's Moon offset is
+already in range and unchanged. These files also need a server restart.
 
 #### Dynamic Lights performance
 

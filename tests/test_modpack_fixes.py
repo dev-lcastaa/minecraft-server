@@ -249,8 +249,8 @@ class ModpackFixesTest(unittest.TestCase):
                 self.assertTrue(dimension_type.startswith(path.parent.name + ":"))
                 self.assertNotIn(dimension_type, ranges)
                 ranges[dimension_type] = (low, high)
-        # Cold Sweat's own Moon and Mars offsets are already playable and stay as they are.
-        kept = {"minecraft:overworld", "ad_astra:moon", "ad_astra:mars"}
+        # Cold Sweat's own Moon offset is already playable and stays as it is.
+        kept = {"minecraft:overworld", "ad_astra:moon"}
         planets = {}
         for dimension, celsius in official.items():
             if dimension in kept:
